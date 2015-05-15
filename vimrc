@@ -156,11 +156,11 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " Abbreviations
-abbrev pft PHPUnit_Framework_TestCase
+" abbrev pft PHPUnit_Framework_TestCase
 
-abbrev gm !php artisan generate:model
-abbrev gc !php artisan generate:controller
-abbrev gmig !php artisan generate:migration
+" abbrev gm !php artisan generate:model
+" abbrev gc !php artisan generate:controller
+" abbrev gmig !php artisan generate:migration
 
 " Auto-remove trailing spaces
 autocmd BufWritePre *.php :%s/\s\+$//e
