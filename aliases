@@ -1,0 +1,72 @@
+# MacOSX
+alias ll="ls -lah"
+alias c="clear"
+alias edit-host="sudo vi /etc/hosts"
+alias hs="cd ~/Menus1001/Homestead && vagrant up"
+alias chrome="/usr/bin/open -a /Applications/Google\ Chrome.app"
+alias sublime="/usr/bin/open -a /Applications/Sublime\ Text.app"
+alias showfiles="defaults write com.apple.finder AppleShowAllFiles true"
+alias hidefiles="defaults write com.apple.finder AppleShowAllFiles false"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias loadsshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
+alias restartApache="sudo apachectl restart"
+alias aliases="cat ~/.aliases | grep -i alias"
+alias killdock="defaults delete com.apple.dock expose-animation-duration; killall Dock"
+alias fastdock="defaults write com.apple.dock expose-animation-duration -float 0.01; killall Dock"
+alias shred="srm -r -m -v"
+alias checkphp="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
+alias flush_cache="dscacheutil -flushcache"
+alias vi="gvim"
+alias so="source .aliases .zshrc .vimrc"
+
+# Vagrant
+alias v='vagrant version && vagrant global-status'
+alias vst='vagrant status'
+alias vup='vagrant up'
+alias vdo='vagrant halt'
+alias vssh='vagrant ssh'
+alias vkill='vagrant destroy'
+
+# Laravel and Composer
+alias pa="php artisan"
+alias pacc="php artisan cache:clear"
+alias par="php artisan routes"
+alias pam="php artisan migrate"
+alias pam:r="php artisan migrate:refresh"
+alias pase="php artisan serve"
+alias pam:roll="php artisan migrate:rollback"
+alias pam:rs="php artisan migrate:refresh --seed"
+alias pda="php artisan dumpautoload"
+
+# Jeffrey Way Generators Package
+alias pagc="php artisan generate:controller"
+alias pagm="php artisan generate:model"
+alias pagv="php artisan generate:view"
+alias pagm="php artisan generate:migration"
+alias pagf="php artisan generate:form"
+alias pagp="php artisan generate:pivot"
+
+# Composer
+alias cu="composer update -vvv"
+alias ci="composer install"
+alias cda="composer dump-autoload -o"
+alias csu="composer self-update"
+
+# Directory
+alias backend="cd ~/Menus1001/1001backend-dev/"
+alias homestead="cd ~/Menus1001/Homestead"
+alias code="cd ~/Code"
+alias ..="cd .."
+alias ...="cd ../.."
+alias h="cd ~/"
+
+# Git
+alias ga="git add"
+alias gaa="git add ."
+alias gc='git commit -m'
+alias gcc='git commit -v -m'
+alias gp="git push"
+alias gs="git status"
+alias gl="git log"
+alias glp="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+alias glol="git log --oneline"
