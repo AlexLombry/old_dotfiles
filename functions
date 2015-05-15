@@ -2,8 +2,3 @@ function take {
     mkdir $1
     cd $1
 }
-
-# Allow me to type gc and commit without always typing the quotes
-function gc {
-    git commit -m "${1}"
-}
