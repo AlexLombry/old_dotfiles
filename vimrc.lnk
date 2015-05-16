@@ -18,6 +18,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'xsbeats/vim-blade'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
