@@ -19,6 +19,7 @@ alias flush_cache="dscacheutil -flushcache"
 alias vi="gvim"
 alias so="source .aliases .zshrc .vimrc"
 alias vimrc="vim ~/.vimrc"
+alias ctags="`brew --prefix`/bin/ctags"
 
 # Vagrant
 alias v='vagrant version && vagrant global-status'

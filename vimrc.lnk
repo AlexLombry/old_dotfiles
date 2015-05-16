@@ -12,13 +12,20 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tobyS/pdv'
 Plugin 'Shougo/vimproc'
 Plugin 'Shougo/unite.vim'
-Plugin 'm2mdas/phpcomplete-extended'
-Plugin 'm2mdas/phpcomplete-extended-laravel'
+" Plugin 'm2mdas/phpcomplete-extended'
+" Plugin 'm2mdas/phpcomplete-extended-laravel'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'xsbeats/vim-blade'
+Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'tpope/vim-fugitive'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Shougo/neocomplete.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -145,8 +152,11 @@ set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusl
 
 autocmd cursorhold * set nohlsearch
 autocmd cursormoved * set hlsearch
-autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
+" Used for php completion
+" autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+" autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+" autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
 " Remove search results
 command! H let @/=""
 
@@ -175,29 +185,13 @@ nmap <leader>lca :e app/config/app.php<cr>81Gf(%O
 nmap <leader>lcd :e app/config/database.php<cr>
 nmap <leader>lc :e composer.json<cr>
 
-" Concept - load underlying class for Laravel
-function! FacadeLookup()
-    let facade = input('Facade Name: ')
-    let classes = {
-\       'Form': 'Html/FormBuilder.php',
-\       'Html': 'Html/HtmlBuilder.php',
-\       'File': 'Filesystem/Filesystem.php',
-\       'Eloquent': 'Database/Eloquent/Model.php'
-\   }
-
-    execute ":edit vendor/laravel/framework/src/Illuminate/" . classes[facade]
-endfunction
-nmap ,lf :call FacadeLookup()<cr>
-
 " CtrlP Stuff
-
 " Familiar commands for file/symbol browsing
 map <D-p> :CtrlP<cr>
 map <C-r> :CtrlPBufTag<cr>
 
 " I don't want to pull up these folders/files when calling CtrlP
 set wildignore+=*/vendor/**
-set wildignore+=*/public/forum/**
 
 " Open splits
 nmap vs :vsplit<cr>
@@ -216,3 +210,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " New things to come
+
+" Import class for php namespace plugin
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
+
+" Set tags
+set tags+=./tags.vendors,tags.vendors
+" let g:phpcomplete_index_composer_command="composer"
