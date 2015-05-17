@@ -32,7 +32,6 @@ filetype plugin indent on    " required
 " Vim configuration and colorscheme
 syntax on
 colorscheme xoria256
-
 " Pathogen configuration
 execute pathogen#infect()
 

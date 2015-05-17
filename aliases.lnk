@@ -1,12 +1,9 @@
 # MacOSX
 alias ll="ls -lah"
-alias c="clear"
 alias edit-host="sudo vi /etc/hosts"
 alias hs="cd ~/Menus1001/Homestead && vagrant up"
 alias chrome="/usr/bin/open -a /Applications/Google\ Chrome.app"
 alias sublime="/usr/bin/open -a /Applications/Sublime\ Text.app"
-alias showfiles="defaults write com.apple.finder AppleShowAllFiles true"
-alias hidefiles="defaults write com.apple.finder AppleShowAllFiles false"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias loadsshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias restartApache="sudo apachectl restart"
@@ -40,14 +37,6 @@ alias pam:roll="php artisan migrate:rollback"
 alias pam:rs="php artisan migrate:refresh --seed"
 alias pda="php artisan dumpautoload"
 
-# Jeffrey Way Generators Package
-alias pagc="php artisan generate:controller"
-alias pagm="php artisan generate:model"
-alias pagv="php artisan generate:view"
-alias pagm="php artisan generate:migration"
-alias pagf="php artisan generate:form"
-alias pagp="php artisan generate:pivot"
-
 # Composer
 alias cu="composer update -vvv"
 alias ci="composer install"
@@ -70,8 +59,40 @@ alias gcc='git commit -v -m'
 alias gp="git push"
 alias gs="git status"
 alias gl="git log"
-alias glp="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
-alias glol="git log --oneline"
 
 # Alias from new functions file
 alias ss=go_to_code
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Disable Spotlight
+alias spotoff="sudo mdutil -a -i off"
+# Enable Spotlight
+alias spoton="sudo mdutil -a -i on"
+
+# Intuitive map function
+# For example, to list all directories that contain a certain file:
+# find . -name .gitattributes | map dirname
+alias map="xargs -n1"
+
+# Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
+
+# Flush Directory Service cache
+alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+
+# Clean up LaunchServices to remove duplicates in the “Open With” menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""

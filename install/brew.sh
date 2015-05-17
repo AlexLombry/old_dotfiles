@@ -10,6 +10,7 @@ brew install ack
 brew install tree
 brew install wget
 brew install youtube-dl
+brew install ngrep
 
 # development tools
 brew install git
