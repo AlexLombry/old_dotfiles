@@ -26,8 +26,4 @@ Used to install Brew, many program on brew and Powerline for Vim
 
 ### Helpers
 
-To complete installation of YouComplete
-
-    cd .vim/bundle/YouCompleteMe
-
-    ./install.sh --clang-completer
+To complete ..
