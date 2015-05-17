@@ -2,3 +2,15 @@ function take {
     mkdir $1
     cd $1
 }
+
+function piclat {
+    lat=$(mdls $1 | grep Latitude | awk '{print $3}') 
+    long=$(mdls $1 | grep Longitude | awk '{print $3}')
+    echo Photo was taken at $lat / $long
+
+    echo https://www.google.fr/maps/search/$lat,$long
+
+    if [ -n "$lat" ]; then
+        open https://www.google.fr/maps/search/$lat,$long
+    fi
+}
