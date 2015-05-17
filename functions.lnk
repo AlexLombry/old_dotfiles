@@ -19,3 +19,7 @@ function gpush {
     git add .
     git commit -m "$1"
 }
+
+function go_to_code {
+    cd ~/Code/$1 
+}

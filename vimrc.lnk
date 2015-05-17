@@ -4,11 +4,10 @@ set t_Co=256
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv'
 Plugin 'Shougo/vimproc'
 Plugin 'Shougo/unite.vim'
@@ -24,31 +23,20 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Shougo/neocomplete.vim'
+Plugin '2072/PHP-Indenting-for-VIm'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" All of your Plugins must be added before the following line
+" Vundle configuration
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
+" Vim configuration and colorscheme
 syntax on
 colorscheme xoria256
+
+" Pathogen configuration
 execute pathogen#infect()
 
-"set guifont=Inconsolata\ for\ Powerline:h15
-set guifont=Menlo\ for\ Powerline:h17
+set guifont=Inconsolata\ for\ Powerline:h15
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
@@ -80,11 +68,11 @@ set autowrite  "Save on buffer switch
 set mouse=a
 set showmatch
 
+" Powerline bar configuration
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
 
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
+" Create leader to do extra key combinations, like <leader>w save file
 let mapleader = ","
 let g:mapleader = ","
 
@@ -102,7 +90,6 @@ imap jj <esc>
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
 "easier window navigation
-
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
@@ -114,8 +101,8 @@ nmap <C-<> :vertical resize -5<cr>
 nmap 25 :vertical resize 40<cr>
 nmap 50 <c-w>=
 nmap 75 :vertical resize 120<cr>
-
 nmap <C-b> :NERDTreeToggle<cr>
+nmap <C-l> :call PhpCsFixerFixFile()<cr>
 
 "Load the current buffer in Chrome
 nmap ,c :!open -a Google\ Chrome<cr>
@@ -146,6 +133,7 @@ let g:EasyMotion_leader_key = '<Leader>'
 let g:Powerline_symbols = 'fancy'
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
+set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 autocmd cursorhold * set nohlsearch
@@ -179,6 +167,7 @@ nmap <leader>lca :e app/config/app.php<cr>81Gf(%O
 nmap <leader>lcd :e app/config/database.php<cr>
 nmap <leader>lc :e composer.json<cr>
 
+
 " CtrlP Stuff
 " Familiar commands for file/symbol browsing
 map <D-p> :CtrlP<cr>
@@ -211,3 +200,17 @@ noremap <Leader>u :call PhpInsertUse()<CR>
 
 " Set tags
 set tags+=./tags.vendors,tags.vendors
+
+" Set PHP auto format
+let g:PHP_autoformatcomment = 1
+let g:PHP_outdentSLComments = 1
+let g:PHP_default_indenting = 1
+let g:PHP_removeCRwhenUnix = 1
+let g:PHP_BracesAtCodeLevel = 0
+
+" If php-cs-fixer is in $PATH, you don't need to define line below
+let g:php_cs_fixer_enable_default_mapping = 1
+let g:php_cs_fixer_path='php-cs-fixer'
+let g:php_cs_fixer_level = "psr2"                  " which level ?
+let g:php_cs_fixer_config = "default"             " configuration
+let g:php_cs_fixer_php_path = "php"               " Path to PHP

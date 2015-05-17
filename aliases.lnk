@@ -72,3 +72,6 @@ alias gs="git status"
 alias gl="git log"
 alias glp="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 alias glol="git log --oneline"
+
+# Alias from new functions file
+alias ss=go_to_code
