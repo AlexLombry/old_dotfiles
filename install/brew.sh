@@ -1,4 +1,7 @@
 #!/bin/bash
+# Installer OhMyZsh
+curl -L http://install.ohmyz.sh | sh
+
 # Install brew.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 

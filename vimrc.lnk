@@ -12,8 +12,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tobyS/pdv'
 Plugin 'Shougo/vimproc'
 Plugin 'Shougo/unite.vim'
-" Plugin 'm2mdas/phpcomplete-extended'
-" Plugin 'm2mdas/phpcomplete-extended-laravel'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
@@ -153,10 +151,6 @@ set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusl
 autocmd cursorhold * set nohlsearch
 autocmd cursormoved * set hlsearch
 
-" Used for php completion
-" autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
-" autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-" autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
 " Remove search results
 command! H let @/=""
 
@@ -217,4 +211,3 @@ noremap <Leader>u :call PhpInsertUse()<CR>
 
 " Set tags
 set tags+=./tags.vendors,tags.vendors
-" let g:phpcomplete_index_composer_command="composer"
