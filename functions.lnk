@@ -51,6 +51,15 @@ function v() {
     fi;
 }
 
+# open gvim more quickly
+function vi() {
+    if [ $# -eq 0 ]; then
+        gvim .;
+    else
+        gvim "$@";
+    fi;
+}
+
 # open sublime more quickly
 function s() {
     if [ $# -eq 0 ]; then

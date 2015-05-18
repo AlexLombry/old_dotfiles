@@ -13,7 +13,7 @@ alias fastdock="defaults write com.apple.dock expose-animation-duration -float 0
 alias shred="srm -r -m -v"
 alias checkphp="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
 alias flush_cache="dscacheutil -flushcache"
-alias vi="gvim"
+#alias vi="gvim"
 alias so="source ~/.aliases ~/.zshrc ~/.vimrc"
 alias vimrc="vim ~/.vimrc"
 alias ctags="`brew --prefix`/bin/ctags"
@@ -83,6 +83,8 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+# Launch the screensave, aze because it's easy to type with my keyboard
+alias aze="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"

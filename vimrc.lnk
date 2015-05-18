@@ -35,7 +35,7 @@ colorscheme xoria256
 " Pathogen configuration
 execute pathogen#infect()
 
-set guifont=Inconsolata\ for\ Powerline:h15
+set guifont=Inconsolata\ for\ Powerline:h13
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
@@ -45,6 +45,7 @@ set encoding=utf-8
 let g:Powerline_symbols = 'fancy'
 set term=xterm-256color
 
+set nohidden
 set showmode                    " always show what mode we're currently editing in
 set nowrap                      " don't wrap lines
 set tabstop=4                   " a tab is four spaces
@@ -201,11 +202,11 @@ noremap <Leader>u :call PhpInsertUse()<CR>
 set tags+=./tags.vendors,tags.vendors
 
 " Set PHP auto format
-let g:PHP_autoformatcomment = 1
-let g:PHP_outdentSLComments = 1
-let g:PHP_default_indenting = 1
-let g:PHP_removeCRwhenUnix = 1
-let g:PHP_BracesAtCodeLevel = 0
+" let g:PHP_autoformatcomment = 1
+" let g:PHP_outdentSLComments = 1
+" let g:PHP_default_indenting = 1
+" let g:PHP_removeCRwhenUnix = 1
+" let g:PHP_BracesAtCodeLevel = 0
 
 " If php-cs-fixer is in $PATH, you don't need to define line below
 let g:php_cs_fixer_enable_default_mapping = 1
@@ -215,6 +216,5 @@ let g:php_cs_fixer_config = "default"             " configuration
 let g:php_cs_fixer_php_path = "php"               " Path to PHP
 
 " source vimrc file when saving it
-" autocmd bufwritepost .vimrc source ~/.vimrc
 " Delete all buffer
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
