@@ -11,7 +11,7 @@ Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv'
 Plugin 'Shougo/vimproc'
 Plugin 'Shougo/unite.vim'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -23,6 +23,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'tpope/vim-commentary'
 " Plugin '2072/PHP-Indenting-for-VIm'
 
 " Vundle configuration
@@ -35,7 +36,7 @@ colorscheme xoria256
 " Pathogen configuration
 execute pathogen#infect()
 
-set guifont=Inconsolata\ for\ Powerline:h13
+set guifont=Menlo\ for\ Powerline:h13
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
@@ -133,7 +134,7 @@ let g:EasyMotion_leader_key = '<Leader>'
 let g:Powerline_symbols = 'fancy'
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
-set showtabline=2 " Always display the tabline, even if there is only one tab
+set showtabline=0 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 autocmd cursorhold * set nohlsearch
@@ -187,10 +188,10 @@ nmap :ed :edit %:p:h/
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Syntastic configuration
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " New things to come
 
@@ -218,3 +219,4 @@ let g:php_cs_fixer_php_path = "php"               " Path to PHP
 " source vimrc file when saving it
 " Delete all buffer
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
+let g:powerline_config_overrides={'common': {'reload_config': 0}}
