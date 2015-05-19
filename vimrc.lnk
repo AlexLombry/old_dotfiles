@@ -1,4 +1,7 @@
-set nocompatible   " Disable vi-compatibility
+" VIM Configuration - Alex Lombry
+
+" Disable vi compatibility
+set nocompatible
 set t_Co=256
 
 " set the runtime path to include Vundle and initialize
@@ -11,7 +14,7 @@ Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv'
 Plugin 'Shougo/vimproc'
 Plugin 'Shougo/unite.vim'
-" Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -31,16 +34,17 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Vim configuration and colorscheme
-syntax on
+syntax enable
 colorscheme xoria256
 " Pathogen configuration
 execute pathogen#infect()
 
-set guifont=Menlo\ for\ Powerline:h13
+" GUI Options
+set guifont=Source\ Code\ Pro\ for\ Powerline:h10
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
-set linespace=15
+set linespace=10
 set termencoding=utf-8
 set encoding=utf-8
 let g:Powerline_symbols = 'fancy'
@@ -60,14 +64,20 @@ set backspace=indent,eol,start  " allow backspacing over everything in insert mo
 set autoindent                  " always set autoindenting on
 set copyindent                  " copy the previous indentation on autoindenting
 set number                      " always show line numbers
+
+" -- Search
 set ignorecase                  " ignore case when searching
 set smartcase                   " ignore case if search pattern is all lowercase,
 set timeout timeoutlen=200 ttimeoutlen=100
+
+" -- Beep
 set visualbell           " don't beep
 set noerrorbells         " don't beep
+
 set autowrite  "Save on buffer switch
 set mouse=a
 set showmatch
+
 
 " Powerline bar configuration
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
@@ -118,6 +128,9 @@ nmap :sp :rightbelow sp<cr>
 nmap :bp :BufSurfBack<cr>
 nmap :bn :BufSurfForward<cr>
 
+" Run php linter on current file
+map <Leader>l :!php -l %<cr>
+
 highlight Search cterm=underline
 
 " Swap files out of the project root
@@ -134,7 +147,18 @@ let g:EasyMotion_leader_key = '<Leader>'
 let g:Powerline_symbols = 'fancy'
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
-set showtabline=0 " Always display the tabline, even if there is only one tab
+
+"if has("gui_running")
+"    set fuoptions=maxvert,maxhorz
+"    au GUIEnter * set fullscreen
+"endif
+
+" Set tabline only for gui
+if has("gui_running")
+    set showtabline=2
+endif
+
+" set showtabline=0 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 autocmd cursorhold * set nohlsearch

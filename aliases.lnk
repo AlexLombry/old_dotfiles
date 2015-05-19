@@ -18,6 +18,8 @@ alias so="source ~/.aliases ~/.zshrc ~/.vimrc"
 alias vimrc="vim ~/.vimrc"
 alias ctags="`brew --prefix`/bin/ctags"
 
+alias :q="exit"
+
 # Vagrant
 alias va='vagrant version && vagrant global-status'
 alias vst='vagrant status'
