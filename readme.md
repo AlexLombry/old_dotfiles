@@ -24,6 +24,11 @@ Used to install Brew, many program on brew and Powerline for Vim
 
   Run **:PluginInstall** in vim or launch vim with : **vim +PluginInstall +qall**
 
-### Helpers
+### iTerm2
+
+Copy the configuration file : 
+	
+	cp ~/dotfiles/iterm2/config/com.googlecode.iterm2.plist ~/Library/Preferences/
+
 
 To complete ..

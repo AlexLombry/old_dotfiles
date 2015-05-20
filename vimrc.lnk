@@ -34,7 +34,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Vim configuration and colorscheme
-syntax enable
+syntax on
 colorscheme xoria256
 " Pathogen configuration
 execute pathogen#infect()
@@ -244,3 +244,4 @@ let g:php_cs_fixer_php_path = "php"               " Path to PHP
 " Delete all buffer
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 let g:powerline_config_overrides={'common': {'reload_config': 0}}
+let g:solarized_termcolors=256
