@@ -4,13 +4,15 @@ These are my config files to set up my system.
 
 I also had a lot of aliases. You might like some of them.
 
-
 ## Installation
 
     git clone git://github.com/AlexLombry/dotfiles ~/dotfiles
 
-
 ### Launch in order
+
+Software you need 
+
+    bash ~/dotfiles/install/01-software.sh
 
 Used to create all symlink for vim, zshrc
 
@@ -30,5 +32,6 @@ Copy the configuration file :
 	
 	cp ~/dotfiles/iterm2/config/com.googlecode.iterm2.plist ~/Library/Preferences/
 
-
 To complete ..
+
+Don't forget to install 1Password, Alfred 2, SpiderOak, Seil, Karabiner, Avast, Little Snitch

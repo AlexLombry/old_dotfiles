@@ -68,6 +68,6 @@ rm mac_GitHub.zip
 
 rm -rf ~/mac_installation
 
-echo Script finished
+echo "Script finished"
 
 exit
