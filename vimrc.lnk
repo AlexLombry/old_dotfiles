@@ -35,12 +35,26 @@ filetype plugin indent on    " required
 
 " Vim configuration and colorscheme
 syntax on
+" colorscheme xoria256
+
+" solarized options 
+set background=dark
 colorscheme xoria256
+
+" Set no background color and use terminal one
+highlight Normal ctermbg=none guibg=#393f4b
+highlight NonText ctermbg=none guibg=#393f4b
+highlight LineNr guibg=#393f4b ctermbg=none
+" if !has("gui_running")
+"    let g:solarized_termtrans=1
+"    let g:solarized_termcolors=256
+" endif
+
 " Pathogen configuration
 execute pathogen#infect()
 
 " GUI Options
-set guifont=Source\ Code\ Pro\ for\ Powerline:h10
+set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
