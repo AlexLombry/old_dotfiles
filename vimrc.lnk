@@ -28,6 +28,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-commentary'
 " Plugin '2072/PHP-Indenting-for-VIm'
+Plugin 'chriskempson/base16-vim'
 
 " Vundle configuration
 call vundle#end()            " required
@@ -35,11 +36,13 @@ filetype plugin indent on    " required
 
 " Vim configuration and colorscheme
 syntax on
-" colorscheme xoria256
 
-" solarized options 
+" solarized options
 set background=dark
-colorscheme xoria256
+" colorscheme xoria256
+colorscheme base16-ocean
+" If base-16 colorscheme
+let base16colorspace=256  " Access colors present in 256 colorspace
 
 " Set no background color and use terminal one
 highlight Normal ctermbg=none guibg=#393f4b
