@@ -269,7 +269,7 @@ let g:solarized_termcolors=256
 " close NERDTree after a file is opened
 let g:NERDTreeQuitOnOpen=0
 " show hidden files in NERDTree
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
 
 " toggle syntastic
 nmap <leader>s :SyntasticToggleMode<cr>
