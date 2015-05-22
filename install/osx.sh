@@ -5,6 +5,9 @@ echo "Configuring MacOSX"
 echo "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+echo "not showing hidden files by default"
+defaults write com.apple.Finder AppleShowAllFiles -bool false
+
 echo "only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
@@ -14,14 +17,14 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 echo "Show the ~/Library folder in Finder"
 chflags nohidden ~/Library
 
-echo "disable resume system wide"
-defaults write NSGlobalDomainNSQuitAlwaysKeepWindows -bool false
-
 echo "Use current directory as default search scope in Finder"
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 echo "Show Path bar in Finder"
 defaults write com.apple.finder ShowPathbar -bool true
+
+echo "Automatically hide and show the Dock"
+defaults write com.apple.dock autohide -bool false
 
 echo "Show Status bar in Finder"
 defaults write com.apple.finder ShowStatusBar -bool true
