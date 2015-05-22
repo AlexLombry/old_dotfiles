@@ -29,7 +29,6 @@ brew install tmux
 brew install git-flow
 brew install ccat
 brew install Cmake
-brew install nvm
 
 # Install Powerline for vim
 # Powerline already configured on my .vimrc file
@@ -45,8 +44,5 @@ git clone git://github.com/powerline/fonts.git ~/powerlinefonts
 bash ~/powerlinefonts/install.sh
 rm -rf ~/powerlinefonts
 
-echo "installing node (from nvm)"
-nvm install stable
-nvm alias default stable
-
 echo "Installation finished"
+exit

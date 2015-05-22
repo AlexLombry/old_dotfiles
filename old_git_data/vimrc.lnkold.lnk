@@ -261,3 +261,15 @@ let g:php_cs_fixer_php_path = "php"               " Path to PHP
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 let g:powerline_config_overrides={'common': {'reload_config': 0}}
 let g:solarized_termcolors=256
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" close NERDTree after a file is opened
+let g:NERDTreeQuitOnOpen=0
+" show hidden files in NERDTree
+let NERDTreeShowHidden=1
+
+" toggle syntastic
+nmap <leader>s :SyntasticToggleMode<cr>
