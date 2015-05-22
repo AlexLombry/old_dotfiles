@@ -1,5 +1,14 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+export DOTFILES=$HOME/dotfiles
+
+# define the code directory
+if [[ -d ~/code ]]; then
+    export CODE_DIR=~/code
+fi
+
+# load all zsh config files
+#for config ($DOTFILES/zsh/*.lnk) source $config
 
 # Source file
 . ~/.aliases
