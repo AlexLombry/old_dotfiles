@@ -109,15 +109,6 @@ alias :q="exit"
 alias backend="cd ~/Menus1001/1001backend-dev/"
 alias homestead="cd ~/Menus1001/Homestead"
 
-# Git
-alias ga="git add"
-alias gaa="git add ."
-alias gc='git commit -m'
-alias gcc='git commit -v -m'
-alias gp="git push"
-alias gs="git status"
-alias gl="git log"
-
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 
 # View HTTP traffic
