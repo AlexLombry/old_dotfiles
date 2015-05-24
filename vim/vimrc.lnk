@@ -39,7 +39,8 @@ syntax on
 " solarized options
 set background=dark
 " colorscheme xoria256
-colorscheme base16-tomorrow
+" colorscheme base16-tomorrow
+colorscheme facebook 
 " If base-16 colorscheme
 let base16colorspace=256  " Access colors present in 256 colorspace
 
@@ -111,7 +112,7 @@ nnoremap j gj
 nnoremap k gk
 
 "Easy escaping to normal model
-imap jj <esc>
+imap jk <esc>
 
 "Auto change directory to match current file ,cd
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
