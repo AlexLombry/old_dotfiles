@@ -28,7 +28,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'chriskempson/base16-vim'
-
+Plugin 'tpope/vim-surround'
 " Vundle configuration
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -57,7 +57,7 @@ highlight LineNr guibg=#393f4b ctermbg=none
 execute pathogen#infect()
 
 " GUI Options
-set guifont=Source\ Code\ Pro\ for\ Powerline:h11
+set guifont=Source\ Code\ Pro\ for\ Powerline:h10
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
