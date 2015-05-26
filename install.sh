@@ -22,8 +22,15 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 echo "Set the Magic Wallpaper"
-sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = 'img/wallpaper.png'"
+sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$HOME/dotfiles/img/wallpaper.png'"
 killall Dock
 
 echo "configuring zsh as default shell"
 chsh -s $(which zsh)
+
+echo "Create backups and swap directory for .vim"
+mkdir ~/.vim/backups
+mkdir ~/.vim/swap
+
+echo "Launch Vim and configuring it"
+vim +PluginInstall +qall

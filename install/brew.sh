@@ -23,10 +23,7 @@ brew install htop
 
 echo "Install Developer tools"
 # development tools
-brew install git
-brew install hub
 brew install tmux
-brew install git-flow
 brew install ccat
 brew install Cmake
 brew install nvm
@@ -38,6 +35,7 @@ brew install python
 brew install coreutils
 brew install macvim --override-system-vim --with-cscope --with-lua --HEAD
 brew install vim --env-std --override-system-vim --with-lua
+brew install reattach-to-user-namespace
 
 echo "Configure Powerline for Vim and iTerm2"
 pip install git+git://github.com/powerline/powerline
