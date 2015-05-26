@@ -274,3 +274,5 @@ let g:NERDTreeQuitOnOpen=0
 
 " toggle syntastic
 nmap <leader>s :SyntasticToggleMode<cr>
+
+set clipboard=unnamed
