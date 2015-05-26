@@ -75,6 +75,8 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 alias killdock="defaults delete com.apple.dock expose-animation-duration; killall Dock"
 alias fastdock="defaults write com.apple.dock expose-animation-duration -float 0.01; killall Dock"
 
+alias killmenubar="killall -KILL SystemUIServer"
+
 # Enable/Disable Spotlight
 alias spoton="sudo mdutil -a -i on"
 alias spotoff="sudo mdutil -a -i off"
