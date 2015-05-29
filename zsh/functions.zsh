@@ -2,6 +2,11 @@
 # functions
 ####################
 
+# Open url with google chrome on mac
+function url() {
+    open -a google\ chrome "$@"   
+}
+
 # print available colors and their numbers
 function colours() {
     for i in {0..255}; do
