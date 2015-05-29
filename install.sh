@@ -11,7 +11,13 @@ if [ "$(uname)" == "Darwin" ]; then
         source install/software.sh
     fi
 
-    read -p "Do you want to install brew software and composer, zsh .. (y/n) " RESPB
+    read -p "Do you want to update your MacOSX Configuration (y/n) " RESPD
+    if [ "$RESPD" = "y" ]; then
+        echo "updating macosx configuration"
+        source install/osx.sh
+    fi
+
+    read -p "Do you want to install brew, composer, zsh ... RECOMMANDED (y/n) " RESPB
     if [ "$RESPB" = "y" ]; then
         echo "install brew and all things"
         source install/brew.sh
@@ -33,9 +39,4 @@ if [ "$(uname)" == "Darwin" ]; then
         vim +PluginInstall +qall
     fi
 
-    read -p "Do you want to update your MacOSX Configuration (y/n) " RESPD
-    if [ "$RESPD" = "y" ]; then
-        echo "updating macosx configuration"
-        source install/osx.sh
-    fi
 fi
