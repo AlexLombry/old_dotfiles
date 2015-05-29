@@ -8,9 +8,14 @@ xcode-select --install
 echo "Install Oh-My-Zsh"
 curl -L http://install.ohmyz.sh | sh
 
-# Install brew.
+# Install brew
 echo "Install HomeBrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install composer
+echo "Installing composer and move it on command line"
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
 
 # cli tools
 echo "Install Command line tools"
