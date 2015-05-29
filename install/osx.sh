@@ -2,6 +2,19 @@
 
 echo "Configuring MacOSX"
 
+# Set your personnal computer name
+read -p "Do you want to set the ComputerName (y/n) " RESP
+if [ "$RESP" = "y" ]; then
+    read -p "What name do you want ?" PERSONAME
+    if [ -n "$PERSONAME" ]; then
+        sudo scutil --set ComputerName "$PERSONAME"
+        sudo scutil --set HostName "$PERSONAME"
+        sudo scutil --set LocalHostName "$PERSONAME"
+    fi
+else
+    echo "Skip this step"
+fi
+
 echo "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 

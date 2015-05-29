@@ -5,32 +5,37 @@ echo "Installing dotfiles"
 if [ "$(uname)" == "Darwin" ]; then
     echo "running on OSX"
 
-    echo "install software for mac"
-    source install/software.sh
+    read -p "Do you want to install basic software (google chrome, etc) (y/n) " RESPA
+    if [ "$RESPA" = "y" ]; then
+        echo "install software for mac"
+        source install/software.sh
+    fi
 
-    echo "install brew and all things"
-    source install/brew.sh
+    read -p "Do you want to install brew software and composer, zsh .. (y/n) " RESPB
+    if [ "$RESPB" = "y" ]; then
+        echo "install brew and all things"
+        source install/brew.sh
 
-    echo "generate all symlinks"
-    source install/link.sh
+        echo "generate all symlinks"
+        source install/link.sh
 
-    echo "updating macosx configuration"
-    source install/osx.sh
+        echo "Cloning Vundle for vim"
+        git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-    echo "Cloning Vundle for vim"
-    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+        echo "configuring zsh as default shell"
+        chsh -s $(which zsh)
+
+        echo "Create backups and swap directory for .vim"
+        mkdir -p ~/.vim/backups
+        mkdir -p ~/.vim/swap
+
+        echo "Launch Vim and configuring it"
+        vim +PluginInstall +qall
+    fi
+
+    read -p "Do you want to update your MacOSX Configuration (y/n) " RESPD
+    if [ "$RESPD" = "y" ]; then
+        echo "updating macosx configuration"
+        source install/osx.sh
+    fi
 fi
-
-echo "Set the Magic Wallpaper"
-sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$HOME/dotfiles/img/wallpaper.png'"
-killall Dock
-
-echo "configuring zsh as default shell"
-chsh -s $(which zsh)
-
-echo "Create backups and swap directory for .vim"
-mkdir ~/.vim/backups
-mkdir ~/.vim/swap
-
-echo "Launch Vim and configuring it"
-vim +PluginInstall +qall

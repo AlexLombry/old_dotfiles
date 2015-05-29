@@ -73,6 +73,8 @@ bind -r L resize-pane -R 4
 ##############################
 #### Color & Style Settings ###
 ###############################
+# set-option -g default-command "reattach-to-user-namespace -l zsh"
+set-option -g default-command "which reattach-to-user-namespace > /dev/null && reattach-to-user-namespace -l $SHELL || $SHELL"
 
 source ~/dotfiles/tmux/theme.sh
 #source ~/dotfiles/tmux/human.sh
