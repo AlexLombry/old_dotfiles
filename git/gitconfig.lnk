@@ -21,6 +21,7 @@
     sh = show --pretty=format: --name-only
     last = log -1 HEAD
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
     excludesfile = /Users/alex/.gitignore_global
     quotepath = false

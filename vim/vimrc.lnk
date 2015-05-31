@@ -110,6 +110,7 @@ nmap <leader>w :w!<cr>
 " Down is really the next line
 nnoremap j gj
 nnoremap k gk
+nnoremap <Leader>b :bp<CR>
 
 "Easy escaping to normal model
 imap jk <esc>
@@ -276,3 +277,4 @@ let g:NERDTreeQuitOnOpen=0
 nmap <leader>s :SyntasticToggleMode<cr>
 
 set clipboard=unnamed
+set showbreak=↪
