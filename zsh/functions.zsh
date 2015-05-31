@@ -7,6 +7,18 @@ function url() {
     open -a google\ chrome "$@"   
 }
 
+# Working
+function myopen()
+{
+    url "http://my.1001menus.com/$@"
+}
+
+# Open dev 1001
+function myopendev()
+{
+    url "http://my.1001menus.dev/$@"
+}
+
 # print available colors and their numbers
 function colours() {
     for i in {0..255}; do
