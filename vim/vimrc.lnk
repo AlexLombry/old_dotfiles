@@ -277,4 +277,3 @@ let g:NERDTreeQuitOnOpen=0
 nmap <leader>s :SyntasticToggleMode<cr>
 
 set clipboard=unnamed
-set showbreak=↪
