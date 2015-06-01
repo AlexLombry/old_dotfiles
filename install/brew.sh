@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Install XCode Developer tools
-echo "Install developer tools from XCode"
-xcode-select --install
-
 # Installer OhMyZsh
 echo "Install Oh-My-Zsh"
 curl -L http://install.ohmyz.sh | sh

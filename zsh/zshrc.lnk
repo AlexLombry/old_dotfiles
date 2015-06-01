@@ -15,9 +15,10 @@ for config ($DOTFILES/zsh/*.zsh) source $config
 #. ~/.functions
 
 # Theme
-# ZSH_THEME="crunch"
+ZSH_THEME="crunch"
 # ZSH_THEME="agnoster"
-ZSH_THEME="bureau"
+# ZSH_THEME="bureau"
+# ZSH_THEME="amuse"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -91,3 +92,4 @@ export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 # For a full list of active aliases, run `alias`.
 export TERM="xterm-256color"
 export PATH="/usr/local/sbin:$PATH"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"

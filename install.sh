@@ -2,8 +2,13 @@
 
 echo "Installing dotfiles"
 
+
 if [ "$(uname)" == "Darwin" ]; then
     echo "running on OSX"
+
+    # Install XCode Developer tools
+    echo "Install developer tools from XCode"
+    xcode-select --install
 
     read -p "Do you want to install basic software (google chrome, etc) (y/n) " RESPA
     if [ "$RESPA" = "y" ]; then
