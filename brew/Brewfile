@@ -1,0 +1,42 @@
+# Alex Lombry brew's file
+tap homebrew/php
+
+install ack
+install tree
+install wget
+install youtube-dl
+install ngrep
+install htop
+
+# development tools
+install tmux
+install ccat
+install Cmake
+install nvm
+
+# Install Powerline for vim
+# Powerline already configured on my .vimrc file
+install python
+install coreutils
+install macvim --override-system-vim --with-cscope --with-lua --HEAD
+install vim --env-std --override-system-vim --with-lua
+install reattach-to-user-namespace
+
+# Install Cask
+install caskroom/cask/brew-cask
+
+# Install Casks
+cask install alfred
+cask install caffeine
+cask install flux
+
+cask install virtualbox
+cask install vagrant
+
+cask install google-chrome
+cask install iterm2
+cask install phpstorm
+cask install sequel-pro
+
+cask install adium
+cask install slack

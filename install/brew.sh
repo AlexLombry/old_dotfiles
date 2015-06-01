@@ -12,6 +12,9 @@ curl -L http://install.ohmyz.sh | sh
 echo "Install HomeBrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+echo "Installing brew cask for install gui app"
+brew install caskroom/cask/brew-cask
+
 # Install composer
 echo "Installing composer and move it on command line"
 curl -sS https://getcomposer.org/installer | php
