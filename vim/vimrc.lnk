@@ -100,7 +100,7 @@ set showmatch
 
 set scrolloff=1
 set lazyredraw                  " Don't redraw the screen when running macros.
-
+set wildmode=list:full,full
 " Powerline bar configuration
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
