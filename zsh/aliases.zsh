@@ -114,4 +114,11 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
+# Wi-Fi Commands
+alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport"
 alias wifireboot="networksetup -setairportpower en0 off; networksetup -setairportpower en0 on"
+alias wifihardware="networksetup -listallhardwareports"
+alias wifiscan="airport scan"
+alias wifitake="networksetup -setairportnetwork en0 $1"
+alias ssid="airport -I|awk '/^ *SSID/ {print $2}'"
+alias iface="networksetup -listallhardwareports|grep -A1 Wi-Fi|awk '/Device:/ {print $2}'"
