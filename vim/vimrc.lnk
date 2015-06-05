@@ -19,7 +19,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'xsbeats/vim-blade'
 Plugin 'stephpy/vim-php-cs-fixer'
-" Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Shougo/neocomplete.vim'
@@ -27,9 +26,8 @@ Plugin 'tpope/vim-commentary'
 Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'jlanzarotta/bufexplorer'
-" Plugin 'wincent/Command-T'
-" Plugin 'xolox/vim-misc'
-" Plugin 'xolox/vim-easytags'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'osyo-manga/vim-over'
 
 " Vundle configuration
 call vundle#end()            " required
@@ -41,9 +39,9 @@ syntax on
 " solarized options
 set background=dark
 " colorscheme xoria256
-" colorscheme base16-tomorrow
+" colorscheme codeschool
 colorscheme facebook 
-" colorscheme kalisi 
+
 " If base-16 colorscheme
 let base16colorspace=256  " Access colors present in 256 colorspace
 
@@ -51,10 +49,10 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 highlight Normal ctermbg=none guibg=#393f4b
 highlight NonText ctermbg=none guibg=#393f4b
 highlight LineNr guibg=#393f4b ctermbg=none
-" if !has("gui_running")
-"    let g:solarized_termtrans=1
-"    let g:solarized_termcolors=256
-" endif
+if !has("gui_running")
+    let g:solarized_termtrans=1
+    let g:solarized_termcolors=256
+ endif
 
 " Pathogen configuration
 execute pathogen#infect()
@@ -267,7 +265,6 @@ let g:php_cs_fixer_php_path = "php"               " Path to PHP
 " Delete all buffer
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 let g:powerline_config_overrides={'common': {'reload_config': 0}}
-let g:solarized_termcolors=256
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
@@ -282,3 +279,18 @@ let g:NERDTreeQuitOnOpen=0
 nmap <leader>s :SyntasticToggleMode<cr>
 
 set clipboard=unnamed
+
+" fast scrolling
+set ttyfast
+
+" Retain buffer until quit
+set hidden
+
+" Line numbers are nice
+set ruler
+
+" turn off nohlsearch
+nmap <silent> <leader><Space> :nohlsearch<CR>
+
+" Switch between files with ,,
+nnoremap <leader><leader> <c-^>
