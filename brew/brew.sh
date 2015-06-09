@@ -6,6 +6,7 @@ curl -L http://install.ohmyz.sh | sh
 
 # Install brew
 echo "Install HomeBrew"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install brews
 brew install $(cat Brewfile|grep -v "#")
