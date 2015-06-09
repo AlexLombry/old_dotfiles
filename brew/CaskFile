@@ -1,15 +1,15 @@
 # Install Casks
-cask install alfred
-cask install caffeine
-cask install flux
+# alfred
+# caffeine
+# flux
 
-cask install virtualbox
-cask install vagrant
+virtualbox
+vagrant
 
-cask install google-chrome
-cask install iterm2
-cask install phpstorm
-cask install sequel-pro
+# google-chrome
+# iterm2
+# phpstorm
+# sequel-pro
 
-cask install adium
-cask install slack
+# adium
+slack
