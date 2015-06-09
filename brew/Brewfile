@@ -1,26 +1,24 @@
 # Alex Lombry brew's file
-brew tap homebrew/php
-
-brew install ack
-brew install tree
-brew install wget
-brew install youtube-dl
-brew install ngrep
-brew install htop
+ack
+tree
+wget
+youtube-dl
+ngrep
+htop
 
 # development tools
-brew install tmux
-brew install ccat
-brew install Cmake
-brew install nvm
+tmux
+ccat
+Cmake
+nvm
 
 # Install Powerline for vim
 # Powerline already configured on my .vimrc file
-brew install python
-brew install coreutils
-brew install macvim --override-system-vim --with-cscope --with-lua --HEAD
-brew install vim --env-std --override-system-vim --with-lua
-brew install reattach-to-user-namespace
+python
+coreutils
+macvim --override-system-vim --with-cscope --with-lua --HEAD
+vim --env-std --override-system-vim --with-lua
+reattach-to-user-namespace
 
 # Install Cask
-brew install caskroom/cask/brew-cask
+caskroom/cask/brew-cask

@@ -1,4 +1,3 @@
-
 " Disable vi compatibility
 set nocompatible
 set t_Co=256
@@ -35,15 +34,11 @@ filetype plugin indent on    " required
 
 " Vim configuration and colorscheme
 syntax on
-
-" solarized options
 set background=dark
-" colorscheme xoria256
-" colorscheme codeschool
 colorscheme facebook 
 
 " If base-16 colorscheme
-let base16colorspace=256  " Access colors present in 256 colorspace
+" let base16colorspace=256  " Access colors present in 256 colorspace
 
 " Set no background color and use terminal one
 highlight Normal ctermbg=none guibg=#393f4b
@@ -55,13 +50,14 @@ if !has("gui_running")
  endif
 
 " Pathogen configuration
-execute pathogen#infect()
+" execute pathogen#infect()
 
 " GUI Options
 set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
+
 set linespace=10
 set termencoding=utf-8
 set encoding=utf-8
@@ -89,16 +85,17 @@ set smartcase                   " ignore case if search pattern is all lowercase
 set timeout timeoutlen=200 ttimeoutlen=100
 
 " -- Beep
-set visualbell           " don't beep
-set noerrorbells         " don't beep
+set visualbell                  " don't beep
+set noerrorbells                " don't beep
 
-set autowrite  "Save on buffer switch
+set autowrite                   "Save on buffer switch
 set mouse=a
 set showmatch
-
+set showcmd                     " show command in status line
 set scrolloff=1
 set lazyredraw                  " Don't redraw the screen when running macros.
 set wildmode=list:full,full
+
 " Powerline bar configuration
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
@@ -121,27 +118,13 @@ imap jk <esc>
 "Auto change directory to match current file ,cd
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
-"easier window navigation
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
-
-
 "Resize vsplit
 nmap <C-v> :vertical resize +5<cr>
 nmap <C-<> :vertical resize -5<cr>
-nmap 25 :vertical resize 40<cr>
-nmap 50 <c-w>=
-nmap 75 :vertical resize 120<cr>
+
+" Plugin
 nmap <C-b> :NERDTreeToggle<cr>
 nmap <C-l> :call PhpCsFixerFixFile()<cr>
-
-"Load the current buffer in Chrome
-nmap ,c :!open -a Google\ Chrome<cr>
-
-"Show (partial) command in the status line
-set showcmd
 
 " Create split below
 nmap :sp :rightbelow sp<cr>
@@ -159,9 +142,6 @@ highlight Search cterm=underline
 set backupdir=~/.vim/backups//
 set directory=~/.vim/swap//
 
-" Run PHPUnit tests
-map <Leader>t :!phpunit %<cr>
-
 " Easy motion stuff
 let g:EasyMotion_leader_key = '<Leader>'
 
@@ -169,11 +149,6 @@ let g:EasyMotion_leader_key = '<Leader>'
 let g:Powerline_symbols = 'fancy'
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
-
-"if has("gui_running")
-"    set fuoptions=maxvert,maxhorz
-"    au GUIEnter * set fullscreen
-"endif
 
 " Set tabline only for gui
 if has("gui_running")
@@ -195,13 +170,6 @@ command! H let @/=""
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-" Abbreviations
-" abbrev pft PHPUnit_Framework_TestCase
-
-" abbrev gm !php artisan generate:model
-" abbrev gc !php artisan generate:controller
-" abbrev gmig !php artisan generate:migration
-
 " Auto-remove trailing spaces
 autocmd BufWritePre *.php :%s/\s\+$//e
 
@@ -214,10 +182,11 @@ nmap <leader>lca :e app/config/app.php<cr>81Gf(%O
 nmap <leader>lcd :e app/config/database.php<cr>
 nmap <leader>lc :e composer.json<cr>
 
-
 " CtrlP Stuff
 " Familiar commands for file/symbol browsing
-map <D-p> :CtrlP<cr>
+if has("gui_macvim") && has("gui_running")
+    map <D-p> :CtrlP<cr>
+endif
 map <C-r> :CtrlPBufTag<cr>
 
 " Command T Stuff (comment now)
