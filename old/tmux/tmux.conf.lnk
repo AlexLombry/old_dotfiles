@@ -1,0 +1,80 @@
+# Prefix key
+set -g prefix C-w
+unbind C-b
+bind C-w send-prefix
+bind-key w send-prefix # for nested tmux sessions
+bind-key L last-window
+
+# Keys
+bind k confirm kill-window
+#bind K confirm kill-server
+bind % split-window -h
+bind : split-window -v
+bind < resize-pane -L 1
+bind > resize-pane -R 1
+bind - resize-pane -D 1
+bind + resize-pane -U 1
+bind . command-prompt
+bind a last-window
+bind space command-prompt -p index "select-window"
+bind r source-file ~/.tmux.conf
+
+# Options
+set -g bell-action none
+set -g set-titles on
+set -g set-titles-string "tmux (#I:#W)"
+set -g base-index 1
+set -g status-left ""
+set -g status-left-attr bold
+set -g status-right "tmux"
+set -g pane-active-border-bg black
+set -g pane-active-border-fg black
+set -g default-terminal "screen-256color"
+
+# Window options
+setw -g monitor-activity off
+setw -g automatic-rename on
+
+# Colors
+setw -g window-status-current-fg colour191
+set -g status-bg default
+set -g status-fg white
+set -g message-bg default
+set -g message-fg colour191
+
+# Make mouse useful in copy mode
+setw -g mode-mouse on
+set -g mouse-select-pane on
+set -g mouse-resize-pane on
+set -g mouse-select-window on
+
+######################
+##### Key Bindings ####
+#######################
+
+# reload config file
+bind r source-file ~/.tmux.conf \; display "Config Reloaded!"
+
+# pane movement shortcuts
+#bind h select-pane -L
+#bind j select-pane -D
+#bind k select-pane -U
+#bind l select-pane -R
+
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+
+# Resize pane shortcuts
+bind -r H resize-pane -L 4 
+bind -r J resize-pane -D 4
+bind -r K resize-pane -U 4
+bind -r L resize-pane -R 4
+
+##############################
+#### Color & Style Settings ###
+###############################
+# set-option -g default-command "reattach-to-user-namespace -l zsh"
+set-option -g default-command "which reattach-to-user-namespace > /dev/null && reattach-to-user-namespace -l $SHELL || $SHELL"
+
+source ~/dotfiles/tmux/theme.sh
+#source ~/dotfiles/tmux/human.sh

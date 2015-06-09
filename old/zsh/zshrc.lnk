@@ -10,8 +10,15 @@ fi
 # load all zsh config files
 for config ($DOTFILES/zsh/*.zsh) source $config
 
+# Source file
+#. ~/.aliases
+#. ~/.functions
+
 # Theme
 ZSH_THEME="crunch"
+# ZSH_THEME="agnoster"
+# ZSH_THEME="bureau"
+# ZSH_THEME="amuse"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
