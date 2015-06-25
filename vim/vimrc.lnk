@@ -35,15 +35,15 @@ filetype plugin indent on    " required
 " Vim configuration and colorscheme
 syntax on
 set background=dark
-colorscheme facebook 
+colorscheme xoria256 
 
 " If base-16 colorscheme
 " let base16colorspace=256  " Access colors present in 256 colorspace
 
 " Set no background color and use terminal one
-highlight Normal ctermbg=none guibg=#393f4b
-highlight NonText ctermbg=none guibg=#393f4b
-highlight LineNr guibg=#393f4b ctermbg=none
+" highlight Normal ctermbg=none guibg=#393f4b
+" highlight NonText ctermbg=none guibg=#393f4b
+" highlight LineNr guibg=#393f4b ctermbg=none
 if !has("gui_running")
     let g:solarized_termtrans=1
     let g:solarized_termcolors=256
