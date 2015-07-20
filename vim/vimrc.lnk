@@ -35,15 +35,15 @@ filetype plugin indent on    " required
 " Vim configuration and colorscheme
 syntax on
 set background=dark
-colorscheme xoria256 
+colorscheme facebook 
 
 " If base-16 colorscheme
 " let base16colorspace=256  " Access colors present in 256 colorspace
 
 " Set no background color and use terminal one
-" highlight Normal ctermbg=none guibg=#393f4b
-" highlight NonText ctermbg=none guibg=#393f4b
-" highlight LineNr guibg=#393f4b ctermbg=none
+highlight Normal ctermbg=none guibg=#393f4b
+highlight NonText ctermbg=none guibg=#393f4b
+highlight LineNr guibg=#393f4b ctermbg=none
 if !has("gui_running")
     let g:solarized_termtrans=1
     let g:solarized_termcolors=256
@@ -53,7 +53,7 @@ if !has("gui_running")
 " execute pathogen#infect()
 
 " GUI Options
-set guifont=Source\ Code\ Pro\ for\ Powerline:h12
+set guifont=Source\ Code\ Pro\ for\ Powerline:10
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
@@ -76,7 +76,7 @@ set shiftwidth=4                " number of spaces to use for autoindenting
 set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set autoindent                  " always set autoindenting on
-set copyindent                  " copy the previous indentation on autoindenting
+" set copyindent                  " copy the previous indentation on autoindenting
 set number                      " always show line numbers
 
 " -- Search
