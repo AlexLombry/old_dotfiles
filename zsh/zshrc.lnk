@@ -9,7 +9,7 @@ fi
 
 # load all zsh config files
 for config ($DOTFILES/zsh/*.zsh) source $config
-
+source .1001alias
 # Theme
 ZSH_THEME="crunch"
 
