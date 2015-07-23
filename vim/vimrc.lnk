@@ -53,12 +53,14 @@ if !has("gui_running")
 " execute pathogen#infect()
 
 " GUI Options
-set guifont=Source\ Code\ Pro\ for\ Powerline:10
+set guifont=Source\ Code\ Pro\ for\ Powerline:8
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
 
-set linespace=10
+" Unset fucking indentation when paste some code 
+set paste
+set linespace=5
 set termencoding=utf-8
 set encoding=utf-8
 let g:Powerline_symbols = 'fancy'
