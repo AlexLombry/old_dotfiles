@@ -99,14 +99,13 @@ alias aliases="cat ~/.aliases | grep -i alias"
 alias edit-host="sudo vi /etc/hosts"
 alias shred="srm -r -m -v"
 alias checkphp="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
-alias flush_cache="dscacheutil -flushcache"
+alias flushcache="sudo dscacheutil -flushcache"
 alias vimrc="vim ~/.vimrc"
 alias ctags="`brew --prefix`/bin/ctags"
 alias :q="exit"
 
 # Directory
 alias backend="cd ~/Menus1001/1001backend-dev/"
-alias homestead="cd ~/Menus1001/Homestead"
 
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 
@@ -122,3 +121,8 @@ alias wifiscan="airport scan"
 alias wifitake="networksetup -setairportnetwork en0 $1"
 alias ssid="airport -I|awk '/^ *SSID/ {print $2}'"
 alias iface="networksetup -listallhardwareports|grep -A1 Wi-Fi|awk '/Device:/ {print $2}'"
+alias vm="cd ~/Menus1001/Homestead; vagrant ssh;"
+
+# Mysql Aliases
+alias mysql="/usr/local/mysql/bin/mysql"
+alias mysqladmin="/usr/local/mysql/bin/mysqladmin"
