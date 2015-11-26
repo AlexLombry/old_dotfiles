@@ -95,7 +95,7 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias loadsshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias restartApache="sudo apachectl restart"
 alias aliases="cat ~/.aliases | grep -i alias"
-alias edit-host="sudo vi /etc/hosts"
+alias etcho="sudo vi /etc/hosts"
 alias shred="srm -r -m -v"
 alias checkphp="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
 alias flushcache="sudo dscacheutil -flushcache"
