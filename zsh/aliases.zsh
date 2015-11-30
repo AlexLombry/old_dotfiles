@@ -28,7 +28,7 @@ alias du='du -h -c' # calculate disk usage for a folder
 # Applications
 alias mou='open -a Mou.app'
 alias mark='open -a Marked.app'
-alias ios='open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
+alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias chrome="/usr/bin/open -a /Applications/Google\ Chrome.app"
 alias sublime="/usr/bin/open -a /Applications/Sublime\ Text.app"
 alias subl="sublime"

@@ -12,5 +12,9 @@ nvm
 python
 coreutils
 jpegoptim
+ffmpeg
 gnu-sed
 irssi
+cloc
+nmap
+mackup
