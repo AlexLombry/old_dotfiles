@@ -11,6 +11,7 @@ alias git-amend='git commit --amend -C HEAD'
 alias git-undo='git reset --soft HEAD~1'
 alias git-count='git shortlog -sn'
 alias git-undopush="git push -f origin HEAD^:master"
+alias nah="git reset --had; git clean -df;"
 
 # git root
 # alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
