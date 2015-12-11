@@ -134,6 +134,9 @@ nmap :sp :rightbelow sp<cr>
 nmap :bp :BufSurfBack<cr>
 nmap :bn :BufSurfForward<cr>
 
+" Mapping for phpunit
+nmap ,t :!phpunit<cr>
+
 " Run php linter on current file
 map <Leader>l :!php -l %<cr>
 

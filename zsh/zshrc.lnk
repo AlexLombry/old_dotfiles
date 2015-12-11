@@ -11,7 +11,7 @@ fi
 for config ($DOTFILES/zsh/*.zsh) source $config
 source ~/.1001alias
 # Theme
-ZSH_THEME="crunch"
+ZSH_THEME="taybalt"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
