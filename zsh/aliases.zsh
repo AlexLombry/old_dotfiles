@@ -102,6 +102,7 @@ alias flushcache="sudo dscacheutil -flushcache"
 alias vimrc="vim ~/.vimrc"
 alias ctags="brew --prefix /bin/ctags"
 alias :q="exit"
+alias vimr="open -a vimr $1"
 
 # Directory
 alias backend="cd ~/Menus1001/1001backend-dev/"
