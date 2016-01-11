@@ -12,6 +12,15 @@ COL_BLUE=$ESC_SEQ"34;01m"
 COL_MAGENTA=$ESC_SEQ"35;01m"
 COL_CYAN=$ESC_SEQ"36;01m"
 
+function routes()
+{
+    if [ $# -eq 0 ]; then
+        php artisan route:list
+    else
+        php artisan route:list | grep ${1}
+    fi
+}
+
 function iok() {
     echo -e "\n$COL_GREEN [ok] $COL_RESET "$1
 }
