@@ -44,13 +44,13 @@ function url() {
 # Working
 function myopen()
 {
-    url "http://my.1001menus.com/$@"
+    url "http://app.zenchef.com/$@"
 }
 
 # Open dev 1001
 function myopendev()
 {
-    url "http://my.1001menus.dev/$@"
+    url "http://app.zenchef.dev/$@"
 }
 
 # print available colors and their numbers

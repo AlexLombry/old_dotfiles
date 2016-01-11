@@ -5,19 +5,14 @@ alias gc='git commit -m'
 alias gcc='git commit -v -m'
 alias gp="git push"
 alias gs="git status"
-alias gl="git log"
 
 alias git-amend='git commit --amend -C HEAD'
 alias git-undo='git reset --soft HEAD~1'
 alias git-count='git shortlog -sn'
 alias git-undopush="git push -f origin HEAD^:master"
-alias nah="git reset --had; git clean -df;"
+alias nah="git reset --hard; git clean -df;"
 
 # git root
-# alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
-
-# alias sub-pull='git submodule foreach git pull origin master'
-
 function give-credit() {
     git commit --amend --author $1 <$2> -C HEAD
 }

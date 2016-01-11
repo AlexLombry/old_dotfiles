@@ -124,3 +124,10 @@ alias mysql="/usr/local/mysql/bin/mysql"
 alias mysqladmin="/usr/local/mysql/bin/mysqladmin"
 alias photoshop="open -a Adobe\ Photoshop\ CC\ 2014 $1"
 alias api="cd ~/Code/api.1001menus.io"
+
+# iOS
+alias simulator="open -a Simulator.app --args -CurrentDeviceUDID $1"
+alias list-simulator="xcrun simctl list"
+
+# Unix
+alias genpass="pwgen -Cs 26 1 | tr -d ' ' | tr -d '\n' | pbcopy"
