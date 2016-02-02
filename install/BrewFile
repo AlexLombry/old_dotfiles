@@ -1,4 +1,4 @@
-# Alex Lombry brew's file
+# brew's file
 ack
 tree
 wget
@@ -17,5 +17,4 @@ gnu-sed
 irssi
 cloc
 nmap
-mackup
 awsebcli
