@@ -15,11 +15,14 @@ else
     echo "Skip this step"
 fi
 
-echo "Install vagrant box homestead"
-vagrant box add laravel/homestead
-
 echo "Global require of homestead"
 composer global require "laravel/homestead=~2.0"
 
 echo "Add composer bin path into your zshrc file"
 echo "~/.composer/vendor/bin:$PATH" >> ~/.zshrc
+
+echo "Source your zshrc file and init homestead"
+source ~/.zshrc
+~/.composer/vendor/bin/homestead init
+
+echo "You have to update you .homestead/Homestead.yaml file and then do a homestead up"
