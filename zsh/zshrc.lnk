@@ -9,7 +9,7 @@ fi
 
 # load all zsh config files
 for config ($DOTFILES/zsh/*.zsh) source $config
-source ~/.1001alias
+
 # Theme
 ZSH_THEME="taybalt"
 
@@ -61,7 +61,7 @@ export EDITOR='vim'
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
-export PATH="/Users/alex/.composer/vendor/bin:$PATH"
+export PATH="~/.composer/vendor/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

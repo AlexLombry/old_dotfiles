@@ -11,11 +11,11 @@ if [ "$(uname)" == "Darwin" ]; then
     bash install/02-zsh.sh
 
     echo "Brew Script"
-    bash install 03-brew.sh
+    bash install/03-brew.sh
 
     echo "Vim Script"
-    bash install 04-vim.sh
+    bash install/04-vim.sh
 
     echo "Link Script"
-    bash install 05-link.sh
+    bash install/05-link.sh
 fi

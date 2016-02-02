@@ -4,8 +4,8 @@
     clean = git media clean %f
     smudge = git media smudge %f
 [user]
-    name = Alex Lombry
-    email = alex.lombry@gmail.com
+    name = Your Name
+    email = yourname@mail.tld
 [push]
     default = matching
 [credential]
@@ -23,7 +23,7 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
     lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
-    excludesfile = /Users/alex/.gitignore_global
+    excludesfile = ~/.gitignore_global
     quotepath = false
 [difftool "sourcetree"]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
