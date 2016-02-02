@@ -9,9 +9,9 @@ brew install tmux
 brew install reattach-to-user-namespace
 
 echo "Create vim swap and backup dir"
-mkdir -p ~/.vim/backups
-mkdir -p ~/.vim/swap
-mkdir -p ~/.vim/colors
+mkdir ~/.vim/backups
+mkdir ~/.vim/swap
+mkdir ~/.vim/colors
 curl -o ~/.vim/colors/facebook.vim https://raw.githubusercontent.com/farfanoide/vim-facebook/master/colors/facebook.vim
 
 echo "Cloning Vundle for vim"
@@ -19,3 +19,6 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 echo "Launch Vim and configuring it"
 vim +PluginInstall +qall
+
+echo "Copying Taybalt theme from Taylor"
+cp ~/dotfiles/zsh/theme/taybalt.zsh-theme ~/.oh-my-zsh/themes/taybalt.zsh-theme
