@@ -26,8 +26,9 @@ if !has("gui_running")
 " execute pathogen#infect()
 
 " GUI Options
-" set guifont=Source\ Code\ Pro\ for\ Powerline:10
-set guifont=Consolas\ bold:h12
+" set guifont="Fira Mono Medium for Powerline:h11"
+" set guifont="Fira Mono Medium for Powerline:h11"
+set guifont=Fira_Mono_Medium_for_Powerline:h18
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
