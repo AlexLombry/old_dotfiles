@@ -26,5 +26,3 @@ source ~/.zshrc
 ~/.composer/vendor/bin/homestead init
 
 echo "You have to update your .homestead/Homestead.yaml file and then do a homestead up"
-
-
