@@ -8,10 +8,14 @@ brew install vim --env-std --override-system-vim --with-lua
 brew install tmux
 brew install reattach-to-user-namespace
 
+echo "Delete just in case old .vim/* folders"
+rm -rf ~/.vim/*
+
 echo "Create vim swap and backup dir"
 mkdir ~/.vim/backups
 mkdir ~/.vim/swap
 mkdir ~/.vim/colors
+mkdir ~/.vim/autoload
 curl -o ~/.vim/colors/facebook.vim https://raw.githubusercontent.com/farfanoide/vim-facebook/master/colors/facebook.vim
 
 echo "Cloning Vundle for vim"
