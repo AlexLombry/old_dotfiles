@@ -18,4 +18,7 @@ if [ "$(uname)" == "Darwin" ]; then
 
     echo "Link Script"
     bash install/05-link.sh
+
+    echo "Homestead"
+    bash install/06-homestead.sh
 fi
