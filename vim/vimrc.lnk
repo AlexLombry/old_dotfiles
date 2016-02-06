@@ -1,152 +1,116 @@
 " Disable vi compatibility
 set nocompatible
-set t_Co=256
 
 " source plugins file
 so ~/.vim/plugins.vim
 
-" Vim configuration and colorscheme
-syntax on
-set background=dark
-colorscheme facebook 
+syntax enable
+set backspace=indent,eol,start                                          "Make backspace behave like every other editor.
+let mapleader = ',' 						    	"The default is \, but a comma is much better.
+set number								"Let's activate line numbers.
 
-" If base-16 colorscheme
-" let base16colorspace=256  " Access colors present in 256 colorspace
 
-" Set no background color and use terminal one
-highlight Normal ctermbg=none guibg=#393f4b
-highlight NonText ctermbg=none guibg=#393f4b
-highlight LineNr guibg=#393f4b ctermbg=none
-if !has("gui_running")
-    let g:solarized_termtrans=1
-    let g:solarized_termcolors=256
- endif
 
-" Pathogen configuration
-" execute pathogen#infect()
 
-" GUI Options
-" set guifont="Fira Mono Medium for Powerline:h11"
-" set guifont="Fira Mono Medium for Powerline:h11"
-set guifont=Fira_Mono_Medium_for_Powerline:h18
-set guioptions-=T " Removes top toolbar
-set guioptions-=r " Removes right hand scroll bar
-set go-=L " Removes left hand scroll bar
+"-------------Visuals--------------"
+colorscheme atom-dark-256
+set t_CO=256								"Use 256 colors. This is useful for Terminal Vim.
+set guifont=Fira_Code:h17						"Set the default font family and size.
+set guioptions-=e							"We don't want Gui tabs.
+set linespace=15   						        "Macvim-specific line-height.
 
-set linespace=5
-set termencoding=utf-8
-set encoding=utf-8
-let g:Powerline_symbols = 'fancy'
-set term=xterm-256color
+set guioptions-=l                                                       "Disable Gui scrollbars.
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
 
-set nohidden
-set showmode                    " always show what mode we're currently editing in
-set nowrap                      " don't wrap lines
-set tabstop=4                   " a tab is four spaces
-set smarttab
-set tags=tags
-set softtabstop=4               " when hitting <BS>, pretend like a tab is removed, even if spaces
-set expandtab                   " expand tabs by default (overloadable per file type later)
-set shiftwidth=4                " number of spaces to use for autoindenting
-set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
-set backspace=indent,eol,start  " allow backspacing over everything in insert mode
-set autoindent                  " always set autoindenting on
-" set copyindent                  " copy the previous indentation on autoindenting
-set number                      " always show line numbers
 
-" -- Search
-set ignorecase                  " ignore case when searching
-set smartcase                   " ignore case if search pattern is all lowercase,
-set timeout timeoutlen=200 ttimeoutlen=100
 
-" -- Beep
-set visualbell                  " don't beep
-set noerrorbells                " don't beep
 
-set autowrite                   "Save on buffer switch
-set mouse=a
-set showmatch
-set showcmd                     " show command in status line
-set scrolloff=1
-set lazyredraw                  " Don't redraw the screen when running macros.
-set wildmode=list:full,full
+"-------------Search--------------"
+set hlsearch								"Highlight all matched terms.
+set incsearch								"Incrementally highlight, as we type.
 
+
+
+
+"-------------Split Management--------------"
+set splitbelow 								"Make splits default to below...
+set splitright								"And to the right. This feels more natural.
+
+"We'll set simpler mappings to switch between splits.
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
+
+
+"-------------Mappings--------------"
+"Make it easy to edit the Vimrc file.
+nmap <Leader>vi :tabedit $MYVIMRC<cr>
+
+"Add simple highlight removal.
+nmap <Leader><space> :nohlsearch<cr>
+
+"Quickly browse to any tag/symbol in the project.
+"Tip: run ctags -R to regenerated the index.
+nmap <Leader>f :tag<space>
+
+
+
+
+"-------------Plugins--------------"
+"/
+"/ CtrlP
+"/
+let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
+
+nmap <C-p> :CtrlP<cr>
+nmap <C-r> :CtrlPBufTag<cr>
+nmap <C-e> :CtrlPMRUFiles<cr>
+
+
+"/
+"/ NERDTree
+"/
+let NERDTreeHijackNetrw = 0
+
+"Make NERDTree easier to toggle.
+nmap <c-b> :NERDTreeToggle<cr>
+
+
+
+
+"-------------Auto-Commands--------------"
+"Automatically source the Vimrc file on save.
+
+augroup autosourcing
+	autocmd!
+	autocmd BufWritePost .vimrc source %
+augroup END
+
+
+
+
+"-------------Tips and Reminders--------------"
+" - Press 'zz' to instantly center the line where the cursor is located.
 " Powerline bar configuration
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
 
-" Create leader to do extra key combinations, like <leader>w save file
-let mapleader = ","
-let g:mapleader = ","
-
-" Fast saves
-nmap <leader>w :w!<cr>
-
-" Down is really the next line
-nnoremap j gj
-nnoremap k gk
-nnoremap <Leader>b :ToggleBufExplorer<CR>
-
 "Easy escaping to normal model
 imap jk <esc>
-
-"Auto change directory to match current file ,cd
-nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
-
-"Resize vsplit
-nmap <C-v> :vertical resize +5<cr>
-nmap <C-<> :vertical resize -5<cr>
-
-" Plugin
-nmap <C-b> :NERDTreeToggle<cr>
 nmap <C-l> :call PhpCsFixerFixFile()<cr>
-
-" Create split below
-nmap :sp :rightbelow sp<cr>
-
-" Quickly go forward or backward to buffer
-nmap :bp :BufSurfBack<cr>
-nmap :bn :BufSurfForward<cr>
-
-" Mapping for phpunit
-nmap ,t :!phpunit<cr>
 
 " Run php linter on current file
 map <Leader>l :!php -l %<cr>
-
-highlight Search cterm=underline
 
 " Swap files out of the project root
 set backupdir=~/.vim/backups//
 set directory=~/.vim/swap//
 
-" Easy motion stuff
-let g:EasyMotion_leader_key = '<Leader>'
-
-" Powerline (Fancy thingy at bottom stuff)
-let g:Powerline_symbols = 'fancy'
-set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
-
-" Set tabline only for gui
-if has("gui_running")
-    set showtabline=2
-endif
-
-" set showtabline=0 " Always display the tabline, even if there is only one tab
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-
-autocmd cursorhold * set nohlsearch
-autocmd cursormoved * set hlsearch
-
-" Remove search results
-command! H let @/=""
-
-" If you prefer the Omni-Completion tip window to close when a selection is
-" made, these lines close it on movement in insert mode or when leaving
-" insert mode
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " Auto-remove trailing spaces
 autocmd BufWritePre *.php :%s/\s\+$//e
@@ -154,52 +118,8 @@ autocmd BufWritePre *.php :%s/\s\+$//e
 " Edit todo list for project
 nmap ,todo :e todo.txt<cr>
 
-" Laravel framework commons
-nmap <leader>lr :e app/routes.php<cr>
-nmap <leader>lca :e app/config/app.php<cr>81Gf(%O
-nmap <leader>lcd :e app/config/database.php<cr>
-nmap <leader>lc :e composer.json<cr>
-
-" CtrlP Stuff
-" Familiar commands for file/symbol browsing
-if has("gui_macvim") && has("gui_running")
-    map <D-p> :CtrlP<cr>
-endif
-map <C-r> :CtrlPBufTag<cr>
-
-" Command T Stuff (comment now)
-" map <Leader>h :CommandT<CR>
-" map <Leader>rf :CommandTFlush<CR>:CommandT<CR>
-map <Leader>vi :tabe ~/.vimrc<CR>
-
-" I don't want to pull up these folders/files when calling CtrlP
-set wildignore+=*/vendor/**
-
-" Open splits
-nmap vs :vsplit<cr>
-nmap sp :split<cr>
-
-" Create/edit file in the current directory
-nmap :ed :edit %:p:h/
-
-" Use for ctrlP plugin
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-" Syntastic configuration
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-
 " Set tags
 set tags+=./tags.vendors,tags.vendors
-
-" Set PHP auto format
-" let g:PHP_autoformatcomment = 1
-" let g:PHP_outdentSLComments = 1
-" let g:PHP_default_indenting = 1
-" let g:PHP_removeCRwhenUnix = 1
-" let g:PHP_BracesAtCodeLevel = 0
 
 " If php-cs-fixer is in $PATH, you don't need to define line below
 let g:php_cs_fixer_enable_default_mapping = 1
@@ -213,31 +133,15 @@ let g:php_cs_fixer_php_path = "php"               " Path to PHP
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 let g:powerline_config_overrides={'common': {'reload_config': 0}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" close NERDTree after a file is opened
-let g:NERDTreeQuitOnOpen=0
-" show hidden files in NERDTree
-" let NERDTreeShowHidden=1
-
-" toggle syntastic
-nmap <leader>s :SyntasticToggleMode<cr>
-
 set clipboard=unnamed
-
 " fast scrolling
 set ttyfast
-
 " Retain buffer until quit
 set hidden
-
 " Line numbers are nice
 set ruler
 
 " turn off nohlsearch
 nmap <silent> <leader><Space> :nohlsearch<CR>
-
 " Switch between files with ,,
 nnoremap <leader><leader> <c-^>
