@@ -17,9 +17,10 @@ mkdir ~/.vim/swap
 mkdir ~/.vim/colors
 mkdir ~/.vim/autoload
 curl -o ~/.vim/colors/facebook.vim https://raw.githubusercontent.com/farfanoide/vim-facebook/master/colors/facebook.vim
+curl -o ~/.vim/colors/atom-dark-256.vim https://raw.githubusercontent.com/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim
 
 echo "Cloning Vundle for vim"
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 echo "Launch Vim and configuring it"
 vim +PluginInstall +qall
