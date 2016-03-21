@@ -11,7 +11,7 @@ for file in $linkables ; do
     target="$HOME/.$( basename $file ".lnk" )"
 
     echo "Backup your old file"
-    mv $target $target.backup.$BACKUP_TIME
+    mv $target backup.$target.$BACKUP_TIME
 
     echo "Create link for $file"
     ln -s $DOTFILES/$file $target

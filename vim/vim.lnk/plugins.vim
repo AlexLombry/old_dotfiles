@@ -11,6 +11,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'arnaud-lb/vim-php-namespace'
 
 " Vundle configuration
 call vundle#end()            " required
