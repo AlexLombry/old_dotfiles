@@ -3,9 +3,7 @@ ack
 tree
 wget
 youtube-dl
-ngrep
 htop
-tmux
 ccat
 Cmake
 nvm
@@ -14,7 +12,4 @@ coreutils
 jpegoptim
 ffmpeg
 gnu-sed
-irssi
 cloc
-nmap
-awsebcli

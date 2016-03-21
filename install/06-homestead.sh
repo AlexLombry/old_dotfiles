@@ -8,7 +8,7 @@ echo "Global require of homestead"
 composer global require "laravel/homestead=~2.0"
 
 echo "Add composer bin path into your zshrc file"
-echo "\nexport PATH=\"/Users/$USER/.composer/vendor/bin:\$PATH"\" >> ~/.zshrc
+echo "export PATH=/Users/$USER/.composer/vendor/bin:\$PATH" >> ~/.zshrc
 
 echo "Source your zshrc file and init homestead"
 source ~/.zshrc

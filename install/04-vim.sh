@@ -14,7 +14,8 @@ rm -rf ~/.vim/*
 echo "Create vim swap and backup dir"
 mkdir ~/.vim/backups
 mkdir ~/.vim/swap
-mkdir ~/.vim/colors
+mkdir ~/.vim/bundle
+mkdir ~/.vim/color
 mkdir ~/.vim/autoload
 curl -o ~/.vim/colors/facebook.vim https://raw.githubusercontent.com/farfanoide/vim-facebook/master/colors/facebook.vim
 curl -o ~/.vim/colors/atom-dark-256.vim https://raw.githubusercontent.com/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim
