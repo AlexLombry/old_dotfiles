@@ -50,18 +50,6 @@ function url() {
     open -a google\ chrome "$@"   
 }
 
-# Working
-function myopen()
-{
-    url "http://app.zenchef.com/$@"
-}
-
-# Open dev 1001
-function myopendev()
-{
-    url "http://app.zenchef.dev/$@"
-}
-
 # print available colors and their numbers
 function colours() {
     for i in {0..255}; do
