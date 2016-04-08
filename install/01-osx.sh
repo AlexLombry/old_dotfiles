@@ -32,7 +32,7 @@ echo "Expand save dialog by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 echo "Show the ~/Library folder in Finder"
-chflags hidden ~/Library
+chflags nohidden ~/Library
 
 echo "Use current directory as default search scope in Finder"
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
