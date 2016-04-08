@@ -169,8 +169,8 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-"}'<cr>
 "-------------Tips and Reminders--------------"
 " - Press 'zz' to instantly center the line where the cursor is located.
 " Powerline bar configuration
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
-set laststatus=2
+" source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+" set laststatus=2
 
 "Easy escaping to normal model
 imap jk <esc>
@@ -188,7 +188,7 @@ nmap ,todo :e todo.txt<cr>
 " source vimrc file when saving it
 " Delete all buffer
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
-let g:powerline_config_overrides={'common': {'reload_config': 0}}
+"let g:powerline_config_overrides={'common': {'reload_config': 0}}
 
 " turn off nohlsearch
 nmap <silent> <leader><Space> :nohlsearch<CR>
