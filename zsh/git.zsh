@@ -1,8 +1,8 @@
 # Git
 alias ga="git add"
 alias gaa="git add ."
-alias gc='git commit -m'
-alias gcc='git commit -v -m'
+#alias gc='git commit -m'
+alias gccc='git commit -m'
 alias gp="git push"
 alias gs="git status"
 
