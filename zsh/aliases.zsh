@@ -136,3 +136,13 @@ alias -s rb=vim
 alias -s log="less -MN"
 alias -s html="open"
 alias -s php=vim
+
+transfer() {
+    # write to output to tmpfile because of progress bar
+    tmpfile=$( mktemp -t transferXXX )
+    curl --progress-bar --upload-file $1 https://transfer.sh/$(basename $1) >> $tmpfile;
+    cat $tmpfile;
+    rm -f $tmpfile;
+}
+
+alias transfer=transfer
