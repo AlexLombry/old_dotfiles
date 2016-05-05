@@ -9,7 +9,6 @@ set backspace=indent,eol,start                                          "Make ba
 let mapleader = ',' 						    	"The default is \, but a comma is much better.
 set number								"Let's activate line numbers.
 
-
 "-------------Visuals--------------"
 colorscheme atom-dark-256
 set t_CO=256								"Use 256 colors. This is useful for Terminal Vim.
@@ -22,15 +21,9 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 
-
-
-
 "-------------Search--------------"
 set hlsearch								"Highlight all matched terms.
 set incsearch								"Incrementally highlight, as we type.
-
-
-
 
 "-------------Split Management--------------"
 set splitbelow 								"Make splits default to below...
@@ -91,15 +84,11 @@ set hidden
 " Line numbers are nice
 set ruler
 
-
-
-
 "We'll set simpler mappings to switch between splits.
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
 nmap <C-H> <C-W><C-H>
 nmap <C-L> <C-W><C-L>
-
 
 "-------------Mappings--------------"
 "Make it easy to edit the Vimrc file.
@@ -111,9 +100,6 @@ nmap <Leader><space> :nohlsearch<cr>
 "Quickly browse to any tag/symbol in the project.
 "Tip: run ctags -R to regenerated the index.
 nmap <Leader>f :tag<space>
-
-
-
 
 "-------------Plugins--------------"
 "/
@@ -135,9 +121,6 @@ let NERDTreeHijackNetrw = 0
 "Make NERDTree easier to toggle.
 nmap <c-b> :NERDTreeToggle<cr>
 
-
-
-
 "-------------Auto-Commands--------------"
 "Automatically source the Vimrc file on save.
 
@@ -146,8 +129,6 @@ augroup autosourcing
 	autocmd BufWritePost .vimrc source %
 augroup END
 
-
-
 function! IPhpInsertUse()
     call PhpInsertUse()
     call feedkeys('a',  'n')
@@ -155,14 +136,12 @@ endfunction
 autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
 
-
 function! IPhpExpandClass()
     call PhpExpandClass()
     call feedkeys('a', 'n')
 endfunction
 autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
-
 
 vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-"}'<cr>
 

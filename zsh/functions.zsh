@@ -21,6 +21,10 @@ function routes()
     fi
 }
 
+function plex-refresh() {
+    ssh dan 'cd "/Applications/Plex Media Server.app/Contents/MacOS/"; ./Plex\ Media\ Scanner -s'
+}
+
 function iok() {
     echo -e "\n$COL_GREEN [ok] $COL_RESET "$1
 }
