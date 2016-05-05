@@ -94,7 +94,6 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 # Divers
 alias loadsshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias restartApache="sudo apachectl restart"
-alias aliases="cat ~/.aliases | grep -i alias"
 alias etcho="sudo vi /etc/hosts"
 alias shred="srm -r -m -v"
 alias checkphp="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
@@ -146,3 +145,8 @@ transfer() {
 }
 
 alias transfer=transfer
+alias mysqldump="/usr/local/mysql/bin/mysqldump"
+
+alias mute="osascript -e 'set volume output muted true'"
+alias sup="osascript -e 'set volume 10'"
+

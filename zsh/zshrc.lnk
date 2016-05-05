@@ -87,6 +87,8 @@ export PATH="~/.composer/vendor/bin:$PATH"
 # For a full list of active aliases, run `alias`.
 export TERM="xterm-256color"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/Users/alex/HakShinKen/spark-installer:$PATH"
+export PATH="/Users/alex/HakShinKen/installer:$PATH"
 export GEM_HOME=$HOME/Software/ruby
 export PATH=$PATH:$HOME/Software/ruby/bin
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
