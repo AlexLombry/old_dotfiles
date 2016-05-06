@@ -26,12 +26,9 @@ alias df='df -h' # disk free, in Gigabytes, not bytes
 alias du='du -h -c' # calculate disk usage for a folder
 
 # Applications
-alias mou='open -a Mou.app'
-alias mark='open -a Marked.app'
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias chrome="/usr/bin/open -a /Applications/Google\ Chrome.app"
 alias sublime="/usr/bin/open -a /Applications/Sublime\ Text.app"
-alias subl="sublime"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -52,9 +49,6 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # File size
 alias fs="stat -f \"%z bytes\""
-
-# ROT13-encode text. Works for decoding, too! ;)
-alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
 # Empty the Trash on all mounted volumes and the main HDD
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
@@ -79,11 +73,13 @@ alias spotoff="sudo mdutil -a -i off"
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
 # Launch the screensave, aze because it's easy to type with my keyboard
 alias aze="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
@@ -94,17 +90,16 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 # Divers
 alias loadsshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias restartApache="sudo apachectl restart"
-alias etcho="sudo vi /etc/hosts"
+alias etcho="sudo vim /etc/hosts"
 alias shred="srm -r -m -v"
 alias checkphp="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
 alias flushcache="sudo dscacheutil -flushcache"
 alias vimrc="vim ~/.vimrc"
 #alias ctags="brew --prefix /bin/ctags"
 alias :q="exit"
-alias vimr="open -a vimr $1"
 
 # Directory
-alias backend="cd ~/Menus1001/1001backend-dev/"
+alias backend="cd ~/Code/1001backend-dev/"
 
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 
@@ -116,7 +111,7 @@ alias wifiscan="airport scan"
 alias wifitake="networksetup -setairportnetwork en0 $1"
 alias ssid="airport -I|awk '/^ *SSID/ {print $2}'"
 alias iface="networksetup -listallhardwareports|grep -A1 Wi-Fi|awk '/Device:/ {print $2}'"
-alias vm="cd ~/Menus1001/Homestead; vagrant ssh;"
+alias vm="cd ~/Homestead; vagrant ssh;"
 
 # Mysql Aliases
 alias mysql="/usr/local/mysql/bin/mysql"
