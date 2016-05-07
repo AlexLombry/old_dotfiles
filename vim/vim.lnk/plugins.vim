@@ -14,6 +14,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'tpope/vim-commentary'
 
 " Vundle configuration
 call vundle#end()            " required
