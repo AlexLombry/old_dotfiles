@@ -101,6 +101,12 @@ nmap <Leader><space> :nohlsearch<cr>
 "Tip: run ctags -R to regenerated the index.
 nmap <Leader>f :tag<space>
 
+" -------------Abbr ---------------"
+abbr funciton function
+abbr teh the
+abbr tempalte template
+abbr fitler filter
+
 "-------------Plugins--------------"
 "/
 "/ CtrlP
@@ -171,5 +177,12 @@ nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 
 " turn off nohlsearch
 nmap <silent> <leader><Space> :nohlsearch<CR>
-" Switch between files with ,,
+
+" Switch between files with
 nnoremap <leader><leader> <c-^>
+
+" moving up and down work as you would expect
+nnoremap <silent> j gj
+nnoremap <silent> k gk
+nnoremap <silent> ^ g^
+nnoremap <silent> $ g$
