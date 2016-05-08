@@ -10,7 +10,7 @@ let mapleader = ',' 						    	"The default is \, but a comma is much better.
 set number								"Let's activate line numbers.
 
 "-------------Visuals--------------"
-colorscheme atom-dark-256
+colorscheme peacocks-in-space
 set t_CO=256								"Use 256 colors. This is useful for Terminal Vim.
 set guifont=Fira_Code:h17						"Set the default font family and size.
 set guioptions-=e							"We don't want Gui tabs.
