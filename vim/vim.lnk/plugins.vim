@@ -16,6 +16,12 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'tpope/vim-commentary'
 Plugin 'chriskempson/base16-vim'
+Plugin 'tobyS/vmustache'
+Plugin 'tobyS/pdv'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'rking/ag.vim'
+Plugin 'skwp/greplace.vim'
 
 " Vundle configuration
 call vundle#end()            " required

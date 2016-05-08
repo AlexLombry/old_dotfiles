@@ -29,7 +29,7 @@ hi IncSearch        guifg=#252b39   ctermfg=236     guibg=#d5d5ca   gui=NONE
 hi Search           cterm=underline guifg=NONE      guibg=NONE      gui=underline
 hi Directory        guifg=#abd683   ctermfg=150     guibg=NONE      gui=NONE
 hi Folded           guifg=#7081be   ctermfg=67      guibg=#252b39   gui=NONE
-hi Normal           guifg=#c3cee3   ctermfg=252     guibg=#252b39   gui=NONE        ctermbg=4
+hi Normal           guifg=#c3cee3   ctermfg=252     guibg=#252b39   gui=NONE        ctermbg=none
 hi Boolean          cterm=bold      guifg=#e4eaf0   ctermfg=7       guibg=NONE      gui=bold
 hi Character        guifg=#d5d5ca   ctermfg=252     guibg=NONE      gui=NONE
 hi Comment          guifg=#7081be   ctermfg=67      guibg=NONE      gui=NONE
