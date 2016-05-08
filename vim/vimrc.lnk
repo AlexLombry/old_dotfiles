@@ -10,9 +10,13 @@ let mapleader = ',' 						    	"The default is \, but a comma is much better.
 set number								"Let's activate line numbers.
 
 "-------------Visuals--------------"
-set background=dark
-colorscheme base16 
+" set background=$BACKGROUND
+" colorscheme $THEME
 set t_CO=256								"Use 256 colors. This is useful for Terminal Vim.
+
+set background=dark
+colorscheme facebook
+
 set guifont=Source\ Code\ Pro\ for\ powerline:h17						"Set the default font family and size.
 set guioptions-=e							"We don't want Gui tabs.
 set linespace=15   						        "Macvim-specific line-height.
@@ -126,7 +130,7 @@ nmap <C-e> :CtrlPMRUFiles<cr>
 let NERDTreeHijackNetrw = 0
 
 "Make NERDTree easier to toggle.
-nmap <c-b> :NERDTreeToggle<cr>
+nmap <C-b> :NERDTreeToggle<cr>
 
 "-------------Auto-Commands--------------"
 "Automatically source the Vimrc file on save.
@@ -160,10 +164,10 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-"}'<cr>
 
 "Easy escaping to normal model
 imap jk <esc>
-nmap <C-l> :call PhpCsFixerFixFile()<cr>
 
 " Run php linter on current file
 map <Leader>l :!php -l %<cr>
+nmap <leader>m :call PhpCsFixerFixFile()<cr>
 
 " Auto-remove trailing spaces
 autocmd BufWritePre *.php :%s/\s\+$//e
@@ -187,3 +191,22 @@ nnoremap <silent> j gj
 nnoremap <silent> k gk
 nnoremap <silent> ^ g^
 nnoremap <silent> $ g$
+
+"/
+"/ pdv
+"/
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+
+nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
+
+"/
+"/ Ultisnips
+"/
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" Search
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
+

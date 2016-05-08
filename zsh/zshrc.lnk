@@ -109,7 +109,7 @@ export APP_ENV="mac"
 
 # Base16 Shell
 if [ -z "$THEME" ]; then
-    export THEME="base16-atelierlakeside"
+    export THEME="base16-tomorrow"
 fi
 
 if [ -z "$BACKGROUND" ]; then
