@@ -8,6 +8,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Install brews
 echo "Install Brew command line software"
 brew tap homebrew/php
+brew tap homebrew/services
 brew install $(cat $HOME/dotfiles/install/BrewFile|grep -v "#")
 
 # Install Cask
