@@ -144,3 +144,4 @@ alias mysqldump="/usr/local/mysql/bin/mysqldump"
 
 alias mute="osascript -e 'set volume output muted true'"
 alias sup="osascript -e 'set volume 10'"
+alias tm="bash ~/dotfiles/tmux/tm"
