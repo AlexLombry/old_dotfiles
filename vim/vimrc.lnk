@@ -210,3 +210,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
 
+nnoremap <Up> :echomsg "use k"<cr>
+nnoremap <Down> :echomsg "use j"<cr>
+nnoremap <Left> :echomsg "use h"<cr>
+nnoremap <Right> :echomsg "use l"<cr>
