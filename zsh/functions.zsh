@@ -12,6 +12,11 @@ COL_BLUE=$ESC_SEQ"34;01m"
 COL_MAGENTA=$ESC_SEQ"35;01m"
 COL_CYAN=$ESC_SEQ"36;01m"
 
+function homestead() {
+    cd ~/Homestead
+    vagrant $*
+}
+
 function routes()
 {
     if [ $# -eq 0 ]; then
