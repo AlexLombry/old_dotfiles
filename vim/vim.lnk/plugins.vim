@@ -22,6 +22,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'rking/ag.vim'
 Plugin 'skwp/greplace.vim'
+Plugin 'keith/swift.vim'
 
 " Vundle configuration
 call vundle#end()            " required
