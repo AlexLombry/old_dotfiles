@@ -17,7 +17,7 @@ set t_CO=256								"Use 256 colors. This is useful for Terminal Vim.
 set background=dark
 colorscheme facebook 
 
-set guifont=Source\ Code\ Pro\ for\ powerline:h17						"Set the default font family and size.
+set guifont=Source\ Code\ Pro\ for\ powerline:h13						"Set the default font family and size.
 set guioptions-=e							"We don't want Gui tabs.
 set linespace=15   						        "Macvim-specific line-height.
 
@@ -25,6 +25,7 @@ set guioptions-=l                                                       "Disable
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
+set guioptions-=T
 
 "-------------Search--------------"
 set hlsearch								"Highlight all matched terms.
@@ -34,9 +35,6 @@ set incsearch								"Incrementally highlight, as we type.
 set splitbelow 								"Make splits default to below...
 set splitright								"And to the right. This feels more natural.
 
-set guifont=Fira_Mono_Medium_for_Powerline:h18
-set guioptions-=T " Removes top toolbar
-set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
 
 set linespace=5
