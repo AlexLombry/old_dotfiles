@@ -23,7 +23,8 @@ Plugin 'honza/vim-snippets'
 Plugin 'rking/ag.vim'
 Plugin 'skwp/greplace.vim'
 Plugin 'keith/swift.vim'
-
+Plugin 'FredKSchott/CoVim'
+Plugin 'ryanoasis/vim-devicons'
 " Vundle configuration
 call vundle#end()            " required
 filetype plugin indent on    " required

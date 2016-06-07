@@ -32,3 +32,11 @@ function g() {
         git s
     fi
 }
+
+function git-clean() {
+    if [[ $# > 0 ]]; then
+        git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | xargs -n 1 git branch -d
+    else
+        git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop"
+    fi
+}
