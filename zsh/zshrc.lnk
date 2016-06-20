@@ -61,8 +61,8 @@ export EDITOR='vim'
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
-export PATH="~/Users/alex/.composer/vendor/bin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+export PATH="/Users/alex/.composer/vendor/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
