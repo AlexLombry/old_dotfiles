@@ -124,7 +124,7 @@ alias simulator="open -a Simulator.app --args -CurrentDeviceUDID $1"
 alias list-simulator="xcrun simctl list"
 
 # Unix
-alias genpass="pwgen -Cs 26 1 | tr -d ' ' | tr -d '\n' | pbcopy"
+alias genpass="pwgen -Csy 26 1 | tr -d ' ' | tr -d '\n' | pbcopy"
 
 alias -s rb=vim
 alias -s log="less -MN"
