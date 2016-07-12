@@ -17,6 +17,19 @@ function homestead() {
     vagrant $*
 }
 
+function zenup() {
+    cd ~/homestead
+    vagrant up
+    open -a phpstorm ~/Code/1001backend-dev
+    open -a phpstorm ~/Code/api.1001menus.io
+}
+
+function zendown() {
+    cd ~/homestead
+    vagrant halt
+    pkill phpstorm
+}
+
 function routes()
 {
     if [ $# -eq 0 ]; then
@@ -56,7 +69,7 @@ function ierror() {
 
 # Open url with google chrome on mac
 function url() {
-    open -a google\ chrome "$@"   
+    open -a google\ chrome "$@"
 }
 
 # print available colors and their numbers
