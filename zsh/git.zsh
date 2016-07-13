@@ -14,10 +14,12 @@ alias nah="git reset --hard; git clean -df;"
 function merging() {
     git checkout master 
     git pull 
-    git merge $1 
+    git merge $1
+    git push
     git checkout develop 
     git pull
     git merge $1
+    git push
 }
 
 # git root
