@@ -11,6 +11,15 @@ alias git-count='git shortlog -sn'
 alias git-undopush="git push -f origin HEAD^:master"
 alias nah="git reset --hard; git clean -df;"
 
+function merging() {
+    git checkout master 
+    git pull 
+    git merge $1 
+    git checkout develop 
+    git pull
+    git merge $1
+}
+
 # git root
 function give-credit() {
     git commit --amend --author $1 <$2> -C HEAD
