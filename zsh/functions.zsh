@@ -232,3 +232,25 @@ function vi() {
 function tre() {
     tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+function laramagic() {
+    PROJECT=$1
+    cd ~/Web
+    laravel new $PROJECT
+    cd $PROJECT
+    git init
+    git add .
+    git commit -m "First commit."
+    open "http://$PROJECT.dev"
+}
+
+function lumenmagic() {
+    PROJECT=$1
+    cd ~/Web
+    lumen new $PROJECT
+    cd $PROJECT
+    git init
+    git add .
+    git commit -m "First commit."
+    open "http://$PROJECT.dev"
+}
