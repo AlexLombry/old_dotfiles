@@ -114,8 +114,8 @@ alias iface="networksetup -listallhardwareports|grep -A1 Wi-Fi|awk '/Device:/ {p
 alias vm="cd ~/Homestead; vagrant ssh;"
 
 # Mysql Aliases
-alias mysql="/usr/local/mysql/bin/mysql"
-alias mysqladmin="/usr/local/mysql/bin/mysqladmin"
+# alias mysql="/usr/local/mysql/bin/mysql"
+# alias mysqladmin="/usr/local/mysql/bin/mysqladmin"
 alias photoshop="open -a Adobe\ Photoshop\ CC\ 2014 $1"
 alias api="cd ~/Code/api.1001menus.io"
 
