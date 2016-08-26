@@ -2,9 +2,9 @@
 echo "Installing dotfiles"
 
 if [ "$(uname)" == "Darwin" ]; then
-    echo "running on OSX"
+    echo "running on macOS"
 
-    echo "Install OSX"
+    echo "Install macOS"
     bash install/01-osx.sh
 
     echo "Zsh Script"
