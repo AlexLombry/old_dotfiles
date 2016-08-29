@@ -1,6 +1,8 @@
 <?php
 // on récupère tous les models de manière récursive dans un tableau en construisant le namespace et le nom.
 ini_set('memory_limt', -1);
+$laravelUrl = "/Users/alex/Code/app.zenchef.com/1001backend-dev";
+
 /**
  * Debug
  * @param  mixed $m
@@ -59,24 +61,32 @@ function recursiveUpdate($rPath, $modelArray)
 
 // Get all models and create one array to get them all
 $modelArray = array();
-$models = recursiveArray(realpath("/Users/alex/Code/app.zenchef.com/1001backend-dev/app/Models"));
+$models = recursiveArray(realpath("{$laravelUrl}/app/Models"));
 
 foreach ($models as $model) {
-    $path = str_replace('/Users/alex/Code/app.zenchef.com/1001backend-dev/app/Models', 'App\\Models', $model->getPath());
+    $path = str_replace($laravelUrl . '/app/Models', 'App\\Models', $model->getPath());
     $name = $model->getFilename();
     $filename = str_replace('.php', '', $model->getFilename());
     $path = str_replace('/', '\\', $path);
+
     $old_use = "use {$filename};";
     $use = "use {$path}\\{$filename};";
+
     $old_point = "{$filename}::";
     $point = "{$path}\\{$filename}::";
-    $modelArray[] = compact('path', 'name', 'filename', 'path', 'old_use', 'use', 'old_point', 'point');
+
+    $old_relation = str_replace('::', '', $old_point);
+    $relation = str_replace('::', '', $point);
+
+    $modelArray[] = compact(
+        'path', 'name', 'filename', 'path', 'old_use', 'use', 'old_point', 'point', 'old_relation', 'relation'
+    );
 }
 
 $folders = [
-    "/Users/alex/Code/app.zenchef.com/1001backend-dev/app/Console",
-    "/Users/alex/Code/app.zenchef.com/1001backend-dev/app/Menus1001",
-    "/Users/alex/Code/app.zenchef.com/1001backend-dev/app/Http/Controllers"
+    "{$laravelUrl}/app/Console",
+    "{$laravelUrl}/app/Menus1001",
+    "{$laravelUrl}/app/Http/Controllers"
 ];
 
 array_map(function ($folder) use ($modelArray) {
