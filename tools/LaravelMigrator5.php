@@ -15,34 +15,31 @@ function dd($m) {
 
 /**
  * Recursive iterator helper
- * @param  string $rPath
+ * @param string $rPath
  * @return array
  */
 function recursiveArray($rPath)
 {
-    $iterator = new RecursiveDirectoryIterator($rPath);
-    $array = array();
-    $objects = new RecursiveIteratorIterator($iterator, RecursiveIteratorIterator::SELF_FIRST);
+    $tabs = array();
+
+    $objects = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($rPath),
+        RecursiveIteratorIterator::SELF_FIRST
+    );
 
     foreach ($objects as $object) {
-        if (! $object->isFile()) {
-            continue;
-        }
-
-        if ($object->getExtension() != 'php') {
-            continue;
-        }
-
-        $array[] = $object;
+        if (!$object->isFile()) continue;
+        if ($object->getExtension() != 'php') continue;
+        $tabs[] = $object;
     }
 
-    return $array;
+    return $tabs;
 }
 
 /**
  * Recursive update depends on path
- * @param  string $rPath
- * @param  array $modelArray
+ * @param string $rPath
+ * @param array $modelArray
  * @return mixed
  */
 function recursiveUpdate($rPath, $modelArray)
@@ -50,9 +47,7 @@ function recursiveUpdate($rPath, $modelArray)
     $updateArray = array();
     $updates = recursiveArray(realpath($rPath));
     foreach ($updates as $update) {
-        if ($update->getExtension() != 'php') {
-            continue;
-        }
+        if ($update->getExtension() != 'php') continue;
 
         $file = $update->getPathName();
         echo $file . "\n";
@@ -68,6 +63,7 @@ function recursiveUpdate($rPath, $modelArray)
 // Get all models and create one array to get them all
 $modelArray = array();
 $models = recursiveArray(realpath("{$basePath}/app/Models"));
+
 foreach ($models as $model) {
     $path = str_replace('{$basePath}/app/Models', 'App\\Models', $model->getPath());
     $name = $model->getFilename();
