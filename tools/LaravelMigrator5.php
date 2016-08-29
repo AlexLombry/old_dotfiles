@@ -31,6 +31,7 @@ function recursiveArray($rPath)
     }
     return $array;
 }
+
 /**
  * Recursive update depends on path
  * @param  string $rPath
@@ -50,13 +51,16 @@ function recursiveUpdate($rPath, $modelArray)
         foreach ($modelArray as $m) {
             $getFile = file_get_contents($file);
             $output = preg_replace("/".$m['old_use']."/", $m['use'], $getFile);
+            //$output = preg_replace("/".$m['old_point']."/", $m['point'], $getFile);
             file_put_contents($file, $output);
         }
     }    
 }
+
 // Get all models and create one array to get them all
 $modelArray = array();
 $models = recursiveArray(realpath("/Users/alex/Code/app.zenchef.com/1001backend-dev/app/Models"));
+
 foreach ($models as $model) {
     $path = str_replace('/Users/alex/Code/app.zenchef.com/1001backend-dev/app/Models', 'App\\Models', $model->getPath());
     $name = $model->getFilename();
@@ -64,13 +68,17 @@ foreach ($models as $model) {
     $path = str_replace('/', '\\', $path);
     $old_use = "use {$filename};";
     $use = "use {$path}\\{$filename};";
-    $modelArray[] = compact('path', 'name', 'filename', 'path', 'old_use', 'use');
+    $old_point = "{$filename}::";
+    $point = "{$path}\\{$filename}::";
+    $modelArray[] = compact('path', 'name', 'filename', 'path', 'old_use', 'use', 'old_point', 'point');
 }
+
 $folders = [
     "/Users/alex/Code/app.zenchef.com/1001backend-dev/app/Console",
     "/Users/alex/Code/app.zenchef.com/1001backend-dev/app/Menus1001",
     "/Users/alex/Code/app.zenchef.com/1001backend-dev/app/Http/Controllers"
 ];
+
 array_map(function ($folder) use ($modelArray) {
     return recursiveUpdate($folder, $modelArray);    
 }, $folders);
