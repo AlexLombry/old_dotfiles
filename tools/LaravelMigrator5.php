@@ -1,6 +1,7 @@
 <?php
 // on récupère tous les models de manière récursive dans un tableau en construisant le namespace et le nom.
 ini_set('memory_limt', -1);
+$laravelUrl = "/Users/alex/Web/zenchef52";
 
 /**
  * Debug
@@ -80,9 +81,9 @@ foreach ($models as $model) {
 }
 
 $folders = [
-    "/Users/alex/Web/zenchef52/app/Console",
-    "/Users/alex/Web/zenchef52/app/Menus1001",
-    "/Users/alex/Web/zenchef52/app/Http/Controllers"
+    "{$laravelUrl}/app/Console",
+    "{$laravelUrl}/app/Menus1001",
+    "{$laravelUrl}/app/Http/Controllers"
 ];
 
 array_map(function ($folder) use ($modelArray) {
