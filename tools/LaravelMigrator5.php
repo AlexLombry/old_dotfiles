@@ -1,7 +1,7 @@
 <?php
 // on récupère tous les models de manière récursive dans un tableau en construisant le namespace et le nom.
 ini_set('memory_limt', -1);
-$laravelUrl = "/Users/alex/Web/zenchef52";
+$basePath = "/Users/alex/Web/zenchef52";
 
 /**
  * Debug
@@ -67,9 +67,9 @@ function recursiveUpdate($rPath, $modelArray)
 
 // Get all models and create one array to get them all
 $modelArray = array();
-$models = recursiveArray(realpath("/Users/alex/Web/zenchef52/app/Models"));
+$models = recursiveArray(realpath("{$basePath}/app/Models"));
 foreach ($models as $model) {
-    $path = str_replace('/Users/alex/Web/zenchef52/app/Models', 'App\\Models', $model->getPath());
+    $path = str_replace('{$basePath}/app/Models', 'App\\Models', $model->getPath());
     $name = $model->getFilename();
     $filename = str_replace('.php', '', $model->getFilename());
 
@@ -81,9 +81,9 @@ foreach ($models as $model) {
 }
 
 $folders = [
-    "{$laravelUrl}/app/Console",
-    "{$laravelUrl}/app/Menus1001",
-    "{$laravelUrl}/app/Http/Controllers"
+    "{$basePath}/app/Console",
+    "{$basePath}/app/Menus1001",
+    "{$basePath}/app/Http/Controllers"
 ];
 
 array_map(function ($folder) use ($modelArray) {
