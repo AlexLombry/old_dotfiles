@@ -1,21 +1,35 @@
-#!/bin/bash
-echo "Installing dotfiles"
+#!/usr/bin/env bash
+source ./lib.sh
 
-if [ "$(uname)" == "Darwin" ]; then
-    echo "running on macOS"
-
-    echo "Install macOS"
-    bash install/01-osx.sh
-
-    echo "Zsh Script"
-    bash install/02-zsh.sh
-
-    echo "Brew Script"
-    bash install/03-brew.sh
-
-    echo "Vim Script"
-    bash install/04-vim.sh
-
-    echo "Link Script"
-    bash install/05-link.sh
+# make a backup directory for overwritten dotfiles
+if [[ ! -e ~/dotfiles_backup ]]; then
+    mkdir ~/dotfiles_backup
 fi
+
+# Install Oh-My-Zsh
+echo "Install Oh-My-Zsh"
+curl -L http://install.ohmyz.sh | sh
+
+echo $0 | grep zsh > /dev/null 2>&1 | true
+if [[ ${PIPESTATUS[0]} != 0 ]]; then
+    running "changing your login shell to zsh"
+    chsh -s $(which zsh);ok
+else
+    bot "looks like you are already using zsh. woot!"
+fi
+
+symlinkifne .ackrc
+symlinkifne .crontab
+symlinkifne .ctags
+symlinkifne .gitconfig
+symlinkifne .gitignore_global
+symlinkifne .htoprc
+symlinkifne .vim
+symlinkifne .vimrc
+symlinkifne .zshrc
+
+# create all symlinks
+./osx.sh
+./vim.sh
+
+bot "Woot! All done."

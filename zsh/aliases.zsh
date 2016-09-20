@@ -144,7 +144,7 @@ alias mysqldump="/usr/local/mysql/bin/mysqldump"
 
 alias mute="osascript -e 'set volume output muted true'"
 alias sup="osascript -e 'set volume 10'"
-alias tm="bash ~/dotfiles/tmux/tm"
 alias nah='git reset --hard;git clean -df;'
 alias laraclean="composer dumpautoload -o && php artisan cache:clear && php artisan view:clear && php artisan clear-compiled && php artisan optimize"
 alias zrsync="rsync -avzhP"
+alias httpbench="wrk -t12 -c400 -d30s"
