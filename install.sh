@@ -28,8 +28,9 @@ symlinkifne .vim
 symlinkifne .vimrc
 symlinkifne .zshrc
 
+popd > /dev/null 2>&1
+
 # create all symlinks
 ./osx.sh
-./vim.sh
 
 bot "Woot! All done."
