@@ -2,7 +2,7 @@
 set nocompatible
 
 " source plugins file
-so ~/.vim/plugins.vim
+so ~/dotfiles/.vim/plugins.vim
 
 syntax enable
 set backspace=indent,eol,start                                          "Make backspace behave like every other editor.
