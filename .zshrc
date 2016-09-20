@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export DOTFILES=$HOME/dotfiles
+source ~/.1001alias
 
 # define the code directory
 if [[ -d ~/Code ]]; then
