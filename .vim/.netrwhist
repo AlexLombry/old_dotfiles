@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/alex/Code/api.1001menus.io'
+let g:netrw_dirhist_2='/Users/alex/Desktop'
+let g:netrw_dirhist_3='/Users/alex'

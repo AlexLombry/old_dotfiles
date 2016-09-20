@@ -1,0 +1,23 @@
+# brew's file
+ack
+tree
+wget --with-iri
+youtube-dl
+htop
+ccat
+Cmake
+nvm
+python
+coreutils
+jpegoptim
+ffmpeg
+gnu-sed
+cloc
+the_silver_searcher
+reattach-to-user-namespace
+hub
+ctags
+openssl
+node
+pv
+homebrew/dupes/screen
