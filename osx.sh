@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# include my library helpers for colorized echo and require_brew, etc
+# include my library helpers for colorized running and require_brew, etc
 source ./lib.sh
 
 # Ask for the administrator password upfront
@@ -16,10 +16,10 @@ bot "OK, let's roll..."
 # install homebrew
 #####
 
-echo "Configuring MacOSX"
+running "Configuring MacOSX"
 
 # Install XCode Developer tools
-echo "Install developer tools from XCode"
+running "Install developer tools from XCode"
 xcode-select --install
 
 # Set your personnal computer name
@@ -32,77 +32,79 @@ if [ "$RESP" = "y" ]; then
         sudo scutil --set LocalHostName "$PERSONAME"
     fi
 else
-    echo "Skip this step"
+    running "Skip this step"
 fi
 
-echo "Finder: show all filename extensions"
+running "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-echo "not showing hidden files by default"
+running "not showing hidden files by default"
 defaults write com.apple.Finder AppleShowAllFiles -bool false
 
-echo "only use UTF-8 in Terminal.app"
+running "only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
-echo "Expand save dialog by default"
+running "Expand save dialog by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
-echo "Show the ~/Library folder in Finder"
+running "Show the ~/Library folder in Finder"
 chflags nohidden ~/Library
 
-echo "Use current directory as default search scope in Finder"
+running "Use current directory as default search scope in Finder"
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-echo "Show Path bar in Finder"
+running "Show Path bar in Finder"
 defaults write com.apple.finder ShowPathbar -bool true
 
-echo "Disable autohide for the Dock"
+running "Disable autohide for the Dock"
 defaults write com.apple.dock autohide -bool false
 
-echo "Show Status bar in Finder"
+running "Show Status bar in Finder"
 defaults write com.apple.finder ShowStatusBar -bool true
 
-echo "Set a blazingly fast keyboard repeat rate"
+running "Set a blazingly fast keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 2
 
-echo "Set a shorter Delay until key repeat"
+running "Set a shorter Delay until key repeat"
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-#echo "Disable tap to click (Trackpad)"
+#running "Disable tap to click (Trackpad)"
 #defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool false
 
-echo "Enable Safari’s debug menu"
+running "Enable Safari’s debug menu"
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
-echo "Disable smart quotes as it’s annoying for messages that contain code"
+running "Disable smart quotes as it’s annoying for messages that contain code"
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
-echo "Disable natural Lion-style scrolling"
+running "Disable natural Lion-style scrolling"
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
-echo "Kill affected applications"
+running "Kill affected applications"
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
 
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
+read -p "Do you want to tweak your SSD (y/n) " RSSD
+if [ "$RSSD" = "y" ]; then
+    running "Disable local Time Machine snapshots"
+    sudo tmutil disablelocal;ok
 
-running "Disable local Time Machine snapshots"
-sudo tmutil disablelocal;ok
+    running "Disable hibernation (speeds up entering sleep mode)"
+    sudo pmset -a hibernatemode 0;ok
 
-running "Disable hibernation (speeds up entering sleep mode)"
-sudo pmset -a hibernatemode 0;ok
+    running "Remove the sleep image file to save disk space"
+    sudo rm -rf /Private/var/vm/sleepimage;ok
 
-running "Remove the sleep image file to save disk space"
-sudo rm -rf /Private/var/vm/sleepimage;ok
+    running "Create a zero-byte file instead"
+    sudo touch /Private/var/vm/sleepimage;ok
 
-running "Create a zero-byte file instead"
-sudo touch /Private/var/vm/sleepimage;ok
-
-running "…and make sure it can’t be rewritten"
-sudo chflags uchg /Private/var/vm/sleepimage;ok
-
-
+    running "…and make sure it can’t be rewritten"
+    sudo chflags uchg /Private/var/vm/sleepimage;ok
+else
+    running "Ok, let's move on"
+fi
 ###############################################################################
 # Homebrew sweets                                                             #
 ###############################################################################
@@ -148,7 +150,7 @@ fi
 bot "installing homebrew command-line tools"
 
 # Install brews
-echo "Install Brew command line software"
+running "Install Brew command line software"
 brew tap homebrew/php > /dev/null 2>&1
 brew tap homebrew/services > /dev/null 2>&1
 brew tap homebrew/dupes > /dev/null 2>&1
