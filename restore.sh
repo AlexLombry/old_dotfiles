@@ -18,10 +18,9 @@ bot "Restoring dotfiles from backup..."
 pushd ~ > /dev/null 2>&1
 
 function updatedotfile {
-
     if [[ -e ~/$1 ]]; then
         unlink $1;
-        echo -en "project dotfile $1 removed";ok
+        echo -en "project dotfiles $1 removed";ok
     fi
 
     if [[ -e ~/dotfiles_backup/$1 ]]; then

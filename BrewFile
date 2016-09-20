@@ -21,3 +21,4 @@ openssl
 node
 pv
 homebrew/dupes/screen
+gawk
