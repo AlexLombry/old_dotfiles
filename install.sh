@@ -3,12 +3,15 @@ source ./lib.sh
 
 # make a backup directory for overwritten dotfiles
 if [[ ! -e ~/dotfiles_backup ]]; then
+    running "Backup your current files"
     mkdir ~/dotfiles_backup
+    ok
 fi
 
 # Install Oh-My-Zsh
-echo "Install Oh-My-Zsh"
+running "Install Oh-My-Zsh"
 curl -L http://install.ohmyz.sh | sh
+ok 
 
 echo $0 | grep zsh > /dev/null 2>&1 | true
 if [[ ${PIPESTATUS[0]} != 0 ]]; then
