@@ -16,11 +16,12 @@ bot "OK, let's roll..."
 # install homebrew
 #####
 
-running "Configuring MacOSX"
+bot "Configuring MacOSX"
 
 # Install XCode Developer tools
 running "Install developer tools from XCode"
 xcode-select --install
+ok
 
 # Set your personnal computer name
 read -p "Do you want to set the ComputerName (y/n) " RESP
@@ -33,6 +34,7 @@ if [ "$RESP" = "y" ]; then
     fi
 else
     running "Skip this step"
+    ok
 fi
 ok
 
@@ -151,7 +153,7 @@ ok
 ###############################################################################
 #Install command-line tools using Homebrew                                    #
 ###############################################################################
-# Make sure we’re using the latest Homebrew
+# Make sure we are using the latest Homebrew
 running "updating homebrew"
 brew update
 ok
