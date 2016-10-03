@@ -34,7 +34,6 @@ if [ "$RESP" = "y" ]; then
     fi
 else
     running "Skip this step"
-    ok
 fi
 ok
 
@@ -82,15 +81,15 @@ running "Set a shorter Delay until key repeat"
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 ok
 
-#running "Disable tap to click (Trackpad)"
-#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool false
-#ok
+running "Enable tap to click (Trackpad)"
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+ok
 
-running "Enable Safari’s debug menu"
+running "Enable Safari's debug menu"
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 ok
 
-running "Disable smart quotes as it’s annoying for messages that contain code"
+running "Disable smart quotes as it's annoying for messages that contain code"
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 ok
 
@@ -113,14 +112,14 @@ if [ "$RSSD" = "y" ]; then
     running "Disable hibernation (speeds up entering sleep mode)"
     sudo pmset -a hibernatemode 0;ok
 
-    running "Remove the sleep image file to save disk space"
-    sudo rm -rf /Private/var/vm/sleepimage;ok
+    # running "Remove the sleep image file to save disk space"
+    # sudo rm -rf /Private/var/vm/sleepimage;ok
 
-    running "Create a zero-byte file instead"
-    sudo touch /Private/var/vm/sleepimage;ok
+    # running "Create a zero-byte file instead"
+    # sudo touch /Private/var/vm/sleepimage;ok
 
-    running "…and make sure it can’t be rewritten"
-    sudo chflags uchg /Private/var/vm/sleepimage;ok
+    # running "…and make sure it can’t be rewritten"
+    # sudo chflags uchg /Private/var/vm/sleepimage;ok
 else
     running "Ok, let's move on"
     ok

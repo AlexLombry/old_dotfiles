@@ -17,12 +17,16 @@ mkdir ~/.vim/colors
 mkdir ~/.vim/autoload
 curl https://raw.githubusercontent.com/farfanoide/vim-facebook/master/colors/facebook.vim -o ~/.vim/colors/facebook.vim
 curl https://raw.githubusercontent.com/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim -o ~/.vim/colors/atom-dark-256.vim
+ok
 
 running "Cloning Vundle for vim"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+ok
 
 running "Launch Vim and configuring it"
 vim +PluginInstall +qall
+ok
 
 running "Copying Taybalt theme from Taylor"
 cp ~/dotfiles/zsh/theme/taybalt.zsh-theme ~/.oh-my-zsh/themes/taybalt.zsh-theme
+ok
