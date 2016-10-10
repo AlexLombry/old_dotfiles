@@ -11,6 +11,7 @@ python
 coreutils
 jpegoptim
 ffmpeg
+libav
 gnu-sed
 cloc
 the_silver_searcher

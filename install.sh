@@ -34,6 +34,6 @@ symlinkifne .zshrc
 popd > /dev/null 2>&1
 
 # create all symlinks
-./osx.sh
+./macos.sh
 
 bot "Woot! All done."

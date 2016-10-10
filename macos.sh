@@ -101,6 +101,25 @@ running "Kill affected applications"
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
 ok
 
+running "Reveal IP address, hostname, OS version when clicking the clock in the login window"
+defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+ok
+
+###############################################################################
+# Screen                                                                      #
+###############################################################################
+running "Save screenshots to the desktop"
+defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+ok
+
+running "Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)"
+defaults write com.apple.screencapture type -string "png"
+ok 
+
+running "Disable shadow in screenshots"
+defaults write com.apple.screencapture disable-shadow -bool true
+ok 
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
@@ -120,6 +139,8 @@ if [ "$RSSD" = "y" ]; then
 
     # running "…and make sure it can’t be rewritten"
     # sudo chflags uchg /Private/var/vm/sleepimage;ok
+    running "Disable motion sensor, not used for SSD"
+    sudo pmset -a sms 0
 else
     running "Ok, let's move on"
     ok
