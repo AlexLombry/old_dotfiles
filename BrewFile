@@ -23,3 +23,5 @@ node
 pv
 homebrew/dupes/screen
 gawk
+awscli
+awsebcli
