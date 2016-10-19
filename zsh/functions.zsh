@@ -302,3 +302,11 @@ function skill() {
 function fixperms(){
     find . \( -name "*.sh" -or -type d \) -exec chmod 755 {} \; && find . -type f ! -name "*.sh" -exec chmod 644 {} \;
 }
+
+function serve_php() {
+    if [ $# -eq 1 ]; then
+        php -S 0.0.0.0:$1
+    else
+        php -S 0.0.0.0:8000
+    fi
+}
