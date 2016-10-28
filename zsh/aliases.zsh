@@ -99,7 +99,7 @@ alias vimrc="vim ~/.vimrc"
 alias :q="exit"
 
 # Directory
-alias backend="cd ~/Code/1001backend-dev/"
+alias backend="cd ~/Code/app.zenchef.com/"
 
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 
