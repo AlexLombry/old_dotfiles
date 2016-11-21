@@ -13,6 +13,10 @@ running "Install Oh-My-Zsh"
 curl -L http://install.ohmyz.sh | sh
 ok 
 
+running "Copying Taybalt theme from Taylor"
+cp ~/dotfiles/zsh/theme/taybalt.zsh-theme ~/.oh-my-zsh/themes/taybalt.zsh-theme
+ok
+
 echo $0 | grep zsh > /dev/null 2>&1 | true
 if [[ ${PIPESTATUS[0]} != 0 ]]; then
     running "changing your login shell to zsh"
@@ -21,6 +25,10 @@ else
     bot "looks like you are already using zsh. woot!"
 fi
 
+# Launch MacOS Script
+./macos.sh
+
+# create all symlinks
 symlinkifne .ackrc
 symlinkifne .crontab
 symlinkifne .ctags
@@ -32,8 +40,5 @@ symlinkifne .vimrc
 symlinkifne .zshrc
 
 popd > /dev/null 2>&1
-
-# create all symlinks
-./macos.sh
 
 bot "Woot! All done."
