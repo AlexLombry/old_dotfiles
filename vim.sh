@@ -26,7 +26,3 @@ ok
 running "Launch Vim and configuring it"
 vim +PluginInstall +qall
 ok
-
-running "Copying Taybalt theme from Taylor"
-cp ~/dotfiles/zsh/theme/taybalt.zsh-theme ~/.oh-my-zsh/themes/taybalt.zsh-theme
-ok

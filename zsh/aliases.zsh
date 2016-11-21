@@ -113,10 +113,6 @@ alias ssid="airport -I|awk '/^ *SSID/ {print $2}'"
 alias iface="networksetup -listallhardwareports|grep -A1 Wi-Fi|awk '/Device:/ {print $2}'"
 alias vm="cd ~/Homestead; vagrant ssh;"
 
-# Mysql Aliases
-# alias mysql="/usr/local/mysql/bin/mysql"
-# alias mysqladmin="/usr/local/mysql/bin/mysqladmin"
-alias photoshop="open -a Adobe\ Photoshop\ CC\ 2014 $1"
 alias api="cd ~/Code/api.1001menus.io"
 
 # iOS
@@ -140,7 +136,6 @@ transfer() {
 }
 
 alias transfer=transfer
-alias mysqldump="/usr/local/mysql/bin/mysqldump"
 
 alias mute="osascript -e 'set volume output muted true'"
 alias sup="osascript -e 'set volume 10'"

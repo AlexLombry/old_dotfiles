@@ -1,5 +1,5 @@
 <?php
-$content = file_get_contents('https://chrisblackwell.me/');
+$content = file_get_contents('https://sites.com/');
 // create dom element and suppress warning
 $pageElement = new DOMDocument();
 @$pageElement->loadHTML($content);

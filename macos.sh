@@ -128,8 +128,8 @@ if [ "$RSSD" = "y" ]; then
     running "Disable local Time Machine snapshots"
     sudo tmutil disablelocal;ok
 
-    running "Disable hibernation (speeds up entering sleep mode)"
-    sudo pmset -a hibernatemode 0;ok
+    # running "Disable hibernation (speeds up entering sleep mode)"
+    # sudo pmset -a hibernatemode 0;ok
 
     # running "Remove the sleep image file to save disk space"
     # sudo rm -rf /Private/var/vm/sleepimage;ok
