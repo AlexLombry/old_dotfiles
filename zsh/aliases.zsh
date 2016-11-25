@@ -160,3 +160,4 @@ alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v
 
 alias fuck='sudo $(history -p \!\!)'
 alias deletefilerecursive="find . -type f -print0 | xargs -0 rm"
+alias sshs="bash ~/dotfiles/tools/ssh-manager.sh"
