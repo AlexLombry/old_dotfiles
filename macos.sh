@@ -197,10 +197,10 @@ brew tap homebrew/php > /dev/null 2>&1
 brew tap homebrew/services > /dev/null 2>&1
 brew tap homebrew/dupes > /dev/null 2>&1
 brew tap homebrew/versions > /dev/null 2>&1
-require_brew $(cat $HOME/dotfiles/install/BrewFile|grep -v "#")
+require_brew $(cat $HOME/dotfiles/BrewFile|grep -v "#")
 
 # Install casks
-require_cask $(cat $HOME/dotfiles/install/CaskFile|grep -v "#")
+require_cask $(cat $HOME/dotfiles/CaskFile|grep -v "#")
 
 bot "installing fonts via homebrew casks..."
 brew tap caskroom/fonts > /dev/null 2>&1
