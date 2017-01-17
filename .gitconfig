@@ -11,7 +11,7 @@
 [push]
 	default = current
 [credential]
-    helper = osxkeychain
+	helper = osxkeychain
 [alias]
     pl = pull --rebase
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
