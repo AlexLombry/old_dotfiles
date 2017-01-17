@@ -35,8 +35,8 @@ export PATH="/Users/alex/.composer/vendor/bin:$PATH"
 export TERM="xterm-256color"
 export PATH="/usr/local/sbin:$PATH"
 
-#export GEM_HOME=$HOME/.gem
-#export PATH=$GEM_HOME/bin:$PATH
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export APP_ENV="mac"
