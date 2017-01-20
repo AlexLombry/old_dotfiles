@@ -113,7 +113,7 @@ alias ssid="airport -I|awk '/^ *SSID/ {print $2}'"
 alias iface="networksetup -listallhardwareports|grep -A1 Wi-Fi|awk '/Device:/ {print $2}'"
 alias vm="cd ~/Homestead; vagrant ssh;"
 
-alias api="cd ~/Code/api.1001menus.io"
+alias api="cd ~/Code/api.zenchef.com"
 
 # iOS
 alias simulator="open -a Simulator.app --args -CurrentDeviceUDID $1"
