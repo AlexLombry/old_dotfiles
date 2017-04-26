@@ -22,6 +22,21 @@ function merging() {
     git push
 }
 
+# Add commit and push all in once
+function gsend()
+{
+    git add .
+    git commit -m "$1"
+
+    echo "Do you want to push your modification?"
+    select yn in "Yes" "No"; do
+        case $yn in
+            Yes ) git push; break;;
+            No ) break;;
+        esac
+    done
+}
+
 # git root
 function give-credit() {
     git commit --amend --author $1 <$2> -C HEAD

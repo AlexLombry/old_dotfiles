@@ -11,7 +11,8 @@ fi
 for config ($DOTFILES/zsh/*.zsh) source $config
 
 # Theme
-ZSH_THEME="blinks"
+#ZSH_THEME="blinks"
+ZSH_THEME="robbyrussell"
 
 #plugins=(git brew vagrant composer command-not-found github)
 
