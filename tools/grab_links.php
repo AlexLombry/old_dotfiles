@@ -13,4 +13,3 @@ for ($i = 0; $i < $hrefs->length; $i++) {
     $links[] = $hrefs->item($i)->getAttribute('href');
 }
 var_dump($links);
-//return json_encode($links);
