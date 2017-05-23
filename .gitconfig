@@ -1,7 +1,7 @@
 # gitconfig
 [user]
-    name = Alex Lombry
-    email = alex.lombry@gmail.com
+	name = Alex Lombry
+	email = alex.lombry@gmail.com
 [github]
     user = AlexLombry    
 [filter "media"]

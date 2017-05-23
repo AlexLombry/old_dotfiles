@@ -27,14 +27,7 @@ function gsend()
 {
     git add .
     git commit -m "$1"
-
-    echo "Do you want to push your modification?"
-    select yn in "Yes" "No"; do
-        case $yn in
-            Yes ) git push; break;;
-            No ) break;;
-        esac
-    done
+    git push
 }
 
 # git root
