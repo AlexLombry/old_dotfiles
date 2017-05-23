@@ -310,3 +310,8 @@ function serve_php() {
         php -S 0.0.0.0:8000
     fi
 }
+
+function aire() {
+    networksetup -setairportpower en0 off
+    networksetup -setairportpower en0 on
+}
