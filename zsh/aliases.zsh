@@ -29,6 +29,7 @@ alias du='du -h -c' # calculate disk usage for a folder
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias chrome="/usr/bin/open -a /Applications/Google\ Chrome.app"
 alias sublime="/usr/bin/open -a /Applications/Sublime\ Text.app"
+alias vscode="/usr/bin/open -a /Applications/Visual\ Studio\ Code.app"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
