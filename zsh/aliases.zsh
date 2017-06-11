@@ -99,7 +99,8 @@ alias vimrc="vim ~/.vimrc"
 alias :q="exit"
 
 # Directory
-alias backend="cd ~/Code/app.zenchef.com/"
+alias backend="cd ~/Zenchef/app.zenchef.com/"
+alias api="cd ~/Zenchef/api.zenchef.com"
 
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 
@@ -112,8 +113,6 @@ alias wifitake="networksetup -setairportnetwork en0 $1"
 alias ssid="airport -I|awk '/^ *SSID/ {print $2}'"
 alias iface="networksetup -listallhardwareports|grep -A1 Wi-Fi|awk '/Device:/ {print $2}'"
 alias vm="cd ~/Homestead; vagrant ssh;"
-
-alias api="cd ~/Code/api.zenchef.com"
 
 # iOS
 alias simulator="open -a Simulator.app --args -CurrentDeviceUDID $1"

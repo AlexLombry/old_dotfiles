@@ -1,7 +1,7 @@
 <?php
 // on récupère tous les models de manière récursive dans un tableau en construisant le namespace et le nom.
 ini_set('memory_limt', -1);
-$laravelUrl = "/Users/alex/Code/app.zenchef.com";
+$laravelUrl = "/Users/alex/Zenchef/app.zenchef.com";
 
 /**
  * Debug
