@@ -18,14 +18,14 @@ function homestead() {
 }
 
 function zenup() {
-    cd ~/homestead
+    cd ~/Homestead
     vagrant up
-    open -a phpstorm ~/Code/1001backend-dev
-    open -a phpstorm ~/Code/api.1001menus.io
+    open -a phpstorm ~/Zenchef/app.zenchef.com
+    open -a phpstorm ~/Zenchef/api.zenchef.com
 }
 
 function zendown() {
-    cd ~/homestead
+    cd ~/Homestead
     vagrant halt
     pkill phpstorm
 }
