@@ -162,3 +162,6 @@ alias fuck='sudo $(history -p \!\!)'
 alias deletefilerecursive="find . -type f -print0 | xargs -0 rm"
 alias sshs="bash ~/dotfiles/tools/ssh-manager.sh"
 alias hssh="homestead ssh"
+
+alias httpapi="ngrok http 192.168.10.10:80 -host-header=api.zenchef.dev"
+alias httpapp="ngrok http 192.168.10.10:80 -host-header=app.zenchef.dev"
