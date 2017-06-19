@@ -315,3 +315,20 @@ function aire() {
     networksetup -setairportpower en0 off
     networksetup -setairportpower en0 on
 }
+
+function ft() {
+  find . -name "$2" -exec grep -il "$1" {} \;
+}
+
+
+function findreplace(){
+    printf "Search: ${1}\n"
+    printf "Replace: ${2}\n"
+    printf "In: ${3}\n\n"
+
+    find . -name "*${3}" -type f | xargs perl -pi -e 's/${1}/${2}/g'
+}
+
+function grepit(){
+    find . -name "*${2}" -print | xargs grep -nir "${1}"
+}
