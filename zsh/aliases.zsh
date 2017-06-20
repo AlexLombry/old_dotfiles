@@ -102,6 +102,7 @@ alias :q="exit"
 # Directory
 alias backend="cd ~/Zenchef/app.zenchef.com/"
 alias api="cd ~/Zenchef/api.zenchef.com"
+alias zen="cd ~/Zenchef/"
 
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 
@@ -169,6 +170,5 @@ alias httpapp="ngrok http 192.168.10.10:80 -host-header=app.zenchef.dev"
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 alias ifconfig-ext='curl ifconfig.me'
 alias dss='du -sck * | sort -n'
-
 
 
