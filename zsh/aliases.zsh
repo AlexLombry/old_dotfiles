@@ -171,4 +171,6 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 alias ifconfig-ext='curl ifconfig.me'
 alias dss='du -sck * | sort -n'
 
+alias bubu="brew update && brew upgrade --all && brew cleanup"
+
 
