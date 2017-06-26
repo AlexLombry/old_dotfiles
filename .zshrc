@@ -2,6 +2,9 @@
 export ZSH=$HOME/.oh-my-zsh
 export DOTFILES=$HOME/dotfiles
 
+autoload -U promptinit; promptinit
+prompt pure
+
 # define the code directory
 if [[ -d ~/Code ]]; then
     export CODE_DIR=~/Code
@@ -13,6 +16,7 @@ for config ($DOTFILES/zsh/*.zsh) source $config
 # Theme
 #ZSH_THEME="blinks"
 ZSH_THEME="robbyrussell"
+#ZSH_THEME=""
 #ZSH_THEME="avit"
 
 #plugins=(git brew vagrant composer command-not-found github)
