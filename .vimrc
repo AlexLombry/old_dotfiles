@@ -16,7 +16,8 @@ set t_CO=256								"Use 256 colors. This is useful for Terminal Vim.
 
 set background=dark
 " colorscheme atom-dark-256 
-colorscheme hybrid
+" colorscheme hybrid
+colorscheme material-theme
 set guifont=Source\ Code\ Pro\ for\ powerline:h13						"Set the default font family and size.
 set guioptions-=e							"We don't want Gui tabs.
 set linespace=15   						        "Macvim-specific line-height.
