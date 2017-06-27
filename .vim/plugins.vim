@@ -24,6 +24,7 @@ Plugin 'skwp/greplace.vim'
 Plugin 'keith/swift.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'jdkanani/vim-material-theme'
 
 " Vundle configuration
 call vundle#end()            " required
