@@ -61,3 +61,5 @@ export APP_ENV="mac"
 # if [ -z "$BACKGROUND" ]; then
 #    export BACKGROUND="dark"
 # fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -209,3 +209,4 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
 
+set rtp+=/usr/local/opt/fzf
