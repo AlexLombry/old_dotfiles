@@ -199,6 +199,9 @@ brew tap homebrew/dupes > /dev/null 2>&1
 brew tap homebrew/versions > /dev/null 2>&1
 require_brew $(cat $HOME/dotfiles/BrewFile|grep -v "#")
 
+# Install shell extensions
+/usr/local/opt/fzf/install
+
 # Install casks
 require_cask $(cat $HOME/dotfiles/CaskFile|grep -v "#")
 
