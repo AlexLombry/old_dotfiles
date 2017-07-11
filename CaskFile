@@ -13,6 +13,6 @@ qlprettypatch
 quicklook-csv
 betterzipql
 qlimagesize
-webpquicklook
+# webpquicklook
 suspicious-package
-Caskroom/cask/franz
+# Caskroom/cask/franz
