@@ -16,3 +16,5 @@ qlimagesize
 # webpquicklook
 suspicious-package
 # Caskroom/cask/franz
+vagrant
+vagrant-manager

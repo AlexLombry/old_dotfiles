@@ -39,6 +39,8 @@ symlinkifne .vim
 symlinkifne .vimrc
 symlinkifne .zshrc
 
+require_vagrant_plugin vagrant-scp
+
 popd > /dev/null 2>&1
 
 bot "Woot! All done."
