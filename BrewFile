@@ -2,6 +2,8 @@
 yarn
 ack
 tree
+pwgen
+wrk
 wget --with-iri
 youtube-dl
 htop
