@@ -108,6 +108,7 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 
 # Wi-Fi Commands
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport"
+alias wificlean="sudo python ~/dotfiles/tools/cleanwifi_macos.py;"
 alias wifireboot="networksetup -setairportpower en0 off; networksetup -setairportpower en0 on"
 alias wifihardware="networksetup -listallhardwareports"
 alias wifiscan="airport scan"
