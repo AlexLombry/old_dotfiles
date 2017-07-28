@@ -1371,7 +1371,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/alex</string>
+			<string>~/</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -2005,7 +2005,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/alex</string>
+			<string>~/</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -2641,7 +2641,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/alex</string>
+			<string>~/</string>
 		</dict>
 	</array>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
@@ -2694,7 +2694,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/alex/dotfiles/tools</string>
+	<string>~/dotfiles/tools</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
