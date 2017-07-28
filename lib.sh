@@ -126,6 +126,6 @@ function symlinkifne {
         fi
     fi
     # create the link
-    ln -s /Users/alex/dotfiles/$1 /Users/alex/$1
+    ln -s ~/dotfiles/$1 ~/$1
     echo -en 'linked';ok
 }
