@@ -674,8 +674,10 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Code/iterm2-material-design</string>
+	<string>~/Desktop</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -720,13 +722,21 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>1150 273 599 388 0 0 2560 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>343 165 918 495 0 0 1440 878 </string>
+	<string>2380 -203 918 498 1440 -540 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>48 10 1386 868 0 0 1440 878 </string>
+	<string>0 330 650 548 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>475 176 890 698 0 0 1440 878 </string>
+	<string>0 330 650 548 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 17 2506 1401 0 0 2560 1418 </string>
+	<string>599 330 650 548 0 0 1440 878 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>2 283 650 548 0 0 1440 878 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>1464 -526 892 592 1440 -540 2560 1418 </string>
+	<key>NSWindow Frame iTerm Window 5</key>
+	<string>448 66 1010 748 0 0 2560 1418 </string>
+	<key>NSWindow Frame iTerm Window 6</key>
+	<string>469 670 1210 748 0 0 2560 1418 </string>
 	<key>NeverWarnAboutShortLivedSessions_EF141D9E-A1A7-44C4-ACC5-CD24B9BF22CB</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_EF141D9E-A1A7-44C4-ACC5-CD24B9BF22CB_selection</key>
@@ -2694,7 +2704,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>~/dotfiles/tools</string>
+	<string>/Users/alex/dotfiles/tools</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -2704,7 +2714,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-07-17T08:51:50Z</date>
+	<date>2017-08-30T15:39:47Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
