@@ -12,14 +12,21 @@ alias git-undopush="git push -f origin HEAD^:master"
 alias nah="git reset --hard; git clean -df;"
 
 function merging() {
-    git checkout master 
-    git pull 
-    git merge $1
-    git push
-    git checkout develop 
+    git checkout master
     git pull
     git merge $1
     git push
+    git checkout develop
+    git pull
+    git merge $1
+    git push
+}
+
+function git_update() {
+    git pull
+    git checkout develop
+    git pull
+    git checkout master
 }
 
 # Add commit and push all in once
