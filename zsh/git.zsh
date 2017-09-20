@@ -4,6 +4,7 @@ alias gaa="git add ."
 alias gccc='git commit -m'
 alias gp="git push"
 alias gs="git status"
+alias gss="git status -sb"
 
 alias git-amend='git commit --amend -C HEAD'
 alias git-undo='git reset --soft HEAD~1'
