@@ -173,5 +173,5 @@ alias ifconfig-ext='curl ifconfig.me'
 alias dss='du -sck * | sort -n'
 
 alias bubu="brew update && brew upgrade --all && brew cleanup"
-
+alias phpunit="vendor/bin/phpunit"
 
