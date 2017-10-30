@@ -27,7 +27,7 @@ export EDITOR='vim'
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
 export PATH="~/.composer/vendor/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
