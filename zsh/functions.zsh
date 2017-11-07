@@ -332,3 +332,8 @@ function findreplace(){
 function grepit(){
     find . -name "*${2}" -print | xargs grep -nir "${1}"
 }
+
+function killTouchbar(){
+    sudo pkill "Touch Bar agent";
+    sudo killall "ControlStrip";
+}
