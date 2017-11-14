@@ -337,3 +337,33 @@ function killTouchbar(){
     sudo pkill "Touch Bar agent";
     sudo killall "ControlStrip";
 }
+
+# Xcode via @orta
+function openx(){ 
+  if test -n "$(find . -maxdepth 1 -name '*.xcworkspace' -print -quit)"
+  then
+    echo "Opening workspace"
+    open *.xcworkspace
+    return
+  else
+    if test -n "$(find . -maxdepth 1 -name '*.xcodeproj' -print -quit)"
+    then
+      echo "Opening project"
+      open *.xcodeproj
+      return  
+    else
+      echo "Nothing found"
+    fi
+  fi
+}
+
+# Go to the root of the current git project, or just go one folder up
+function up() {
+  export git_dir="$(git rev-parse --show-toplevel 2> /dev/null)"
+  if [ -z $git_dir ]
+  then
+    cd ..
+  else
+    cd $git_dir
+  fi
+}

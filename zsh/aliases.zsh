@@ -8,6 +8,8 @@ else # OS X `ls`
     colorflag="-G"
 fi
 
+alias zshrc="sublime ~/.zshrc"
+
 # Filesystem aliases
 alias ..='cd ..'
 alias ...='cd ../..'
