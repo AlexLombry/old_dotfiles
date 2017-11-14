@@ -114,3 +114,8 @@ for file in $files ; do
     filename="$(ls $file | cut -d. -f1 | cut -d/ -f2)"
     ln -s $pwd$file ~/.$filename
 done
+
+mkdir -p ~/Code/
+git clone https://github.com/banga/powerline-shell
+cd powerline-shell
+sudo python setup.py install
