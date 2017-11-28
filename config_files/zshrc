@@ -16,7 +16,8 @@ for config ($DOTFILES/zsh/*.zsh) source $config
 # Theme
 # ZSH_THEME="blinks"
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="smt"
+# ZSH_THEME="smt"
+ZSH_THEME="gnzh"
 
 #plugins=(git brew vagrant composer command-not-found github)
 
@@ -32,6 +33,9 @@ export PATH="~/.composer/vendor/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+# Visual Studio Code Xdebug configuration for PHP Debug Plugin
+export XDEBUG_CONFIG="idekey=VSCODE"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"

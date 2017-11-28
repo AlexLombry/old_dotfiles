@@ -678,7 +678,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Desktop</string>
+	<string>~/Dropbox/Images/AlexWall/movie</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
@@ -720,17 +720,17 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>-1352 -507 823 77 -2560 -540 2560 1418 </string>
+	<string>-1352 -453 823 77 -2560 -540 2560 1418 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>-1567 229 620 392 -2560 -540 2560 1418 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>1150 273 599 388 0 0 2560 1418 </string>
+	<string>-1410 -267 606 469 -2560 -540 2560 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-1834 -3 796 473 -2560 -540 2560 1417 </string>
+	<string>-1834 43 918 452 -2560 -540 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-2560 -486 2560 1364 -2560 -540 2560 1418 </string>
+	<string>-2251 -265 1778 1018 -2560 -540 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>69 57 650 625 0 0 1440 877 </string>
+	<string>0 323 570 550 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>599 330 650 548 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -915,8 +915,8 @@
 				<key>Red Component</key>
 				<real>0.094117647058823528</real>
 			</dict>
-			<key>Background Image Location</key>
-			<string></string>
+			<key>Background Image Is Tiled</key>
+			<false/>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -930,6 +930,8 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Blend</key>
+			<real>1</real>
 			<key>Blink Allowed</key>
 			<true/>
 			<key>Blinking Cursor</key>
@@ -1325,7 +1327,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodePowerline-Regular 14</string>
+			<string>SauceCodePowerline-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1371,7 +1373,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.064217363165680483</real>
+			<real>0.098669495558375647</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -2724,9 +2726,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-13T21:05:10Z</date>
+	<date>2017-11-22T09:36:42Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>Secure Input</key>
+	<true/>
 	<key>ShowBookmarkName</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
