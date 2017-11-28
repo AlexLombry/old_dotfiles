@@ -15,10 +15,10 @@ set number								"Let's activate line numbers.
 set t_CO=256								"Use 256 colors. This is useful for Terminal Vim.
 
 set background=dark
-colorscheme atom-dark-256
+" colorscheme atom-dark-256
 " colorscheme hybrid
 " colorscheme material-theme
-
+color dracula
 " set guifont=Source\ Code\ Pro\ for\ powerline:h13						"Set the default font family and size.
 set guifont=Hack:h13						"Set the default font family and size.
 

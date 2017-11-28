@@ -177,3 +177,4 @@ alias dss='du -sck * | sort -n'
 alias bubu="brew update && brew upgrade --all && brew cleanup"
 alias phpunit="vendor/bin/phpunit"
 
+alias emailgrep='grep -E -o "\b[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9.-]+\b"'
