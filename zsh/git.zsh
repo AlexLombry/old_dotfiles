@@ -60,20 +60,18 @@ function g() {
     fi
 }
 
-function gf() {
-    if [[ $# > 0 ]]; then
-        # if there are arguments, send them to git
-        git flow $@
-    else
-        # otherwise, run git status
-        git flow log
-    fi
-}
-
 function git-clean() {
     if [[ $# > 0 ]]; then
         git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | xargs -n 1 git branch -d
     else
         git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop"
+    fi
+}
+
+function gf() {
+    if [[ $# > 0 ]]; then
+        git flow $@
+    else
+        git flow log
     fi
 }
