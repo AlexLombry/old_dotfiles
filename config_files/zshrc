@@ -37,6 +37,12 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 # Visual Studio Code Xdebug configuration for PHP Debug Plugin
 export XDEBUG_CONFIG="idekey=VSCODE"
 
+# Java home for Android development
+export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
