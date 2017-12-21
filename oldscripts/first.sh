@@ -29,6 +29,15 @@ running "not showing hidden files by default"
 defaults write com.apple.Finder AppleShowAllFiles -bool false
 ok
 
+running "Disable smart quotes and dashes"
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+ok
+
+running "Correct spelling automatically"
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+ok
+
 running "only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 ok
@@ -80,6 +89,55 @@ ok
 running "Disable natural Lion-style scrolling"
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 ok
+
+
+# ==============================================
+# Finder
+# ==============================================
+echo "Setting Finder preferences"
+
+running "Expand the Open with and Sharing & Permissions panes"
+defaults write com.apple.finder FXInfoPanesExpanded -dict OpenWith -bool true Privileges -bool true
+ok
+
+running "Show status bar"
+defaults write com.apple.finder ShowStatusBar -bool true
+ok
+
+running "New window points to home"
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+ok
+
+running "Finder: disable window animations and Get Info animations"
+defaults write com.apple.finder DisableAllAnimations -bool true
+ok
+
+running "Show icons for hard drives, servers, and removable media on the desktop"
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+ok
+
+running "Finder: show all filename extensions"
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+ok
+
+running "Finder: allow text selection in Quick Look"
+defaults write com.apple.finder QLEnableTextSelection -bool true
+ok
+
+running "When performing a search, search the current folder by default"
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+ok
+
+running "Avoid creating .DS_Store files on network volumes"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+ok
+
+running "Use column view"
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+ok 
 
 running "Kill affected applications"
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done

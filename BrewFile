@@ -1,34 +1,141 @@
-# brew's file
-yarn
-ack
-tree
-pwgen
-wrk
-wget --with-iri
-youtube-dl
-htop
-ccat
-Cmake
-nvm
-python
-coreutils
-jpegoptim
-ffmpeg
-libav
-gnu-sed
-cloc
-the_silver_searcher
-reattach-to-user-namespace
-hub
-ctags
-openssl
-node
-pv
-homebrew/dupes/screen
-gawk
-awscli
-awsebcli
-fzf
-composer
-phraseapp
-carthage
+tap "jlhonora/lsusb"
+tap "vapor/tap"
+tap "phrase/brewed"
+tap "homebrew/dupes"
+tap "homebrew/core"
+tap "homebrew/php"
+tap "homebrew/versions"
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "caskroom/fonts"
+tap "caskroom/versions"
+tap "caskroom/cask"
+cask "xquartz"
+brew "ack"
+brew "autoconf"
+brew "automake"
+brew "aws-elasticbeanstalk"
+brew "awscli"
+brew "blueutil"
+brew "git"
+brew "carthage"
+brew "ccat"
+brew "cloc"
+brew "cmake"
+brew "cocoapods", link: false
+brew "coreutils"
+brew "ctags"
+brew "curl"
+brew "dnsmasq", restart_service: true
+brew "exiftool"
+brew "faac"
+brew "lame"
+brew "xvid"
+brew "ffmpeg"
+brew "figlet"
+brew "fontconfig"
+brew "fzf"
+brew "gmp"
+brew "mpfr"
+brew "gawk"
+brew "gd"
+brew "gettext"
+brew "git-flow-avh"
+brew "gnu-sed"
+brew "libffi"
+brew "nettle"
+brew "gnutls"
+brew "htop"
+brew "pcre"
+brew "httpd", restart_service: true
+brew "hub"
+brew "jasper"
+brew "jpegoptim"
+brew "libav"
+brew "libtool"
+brew "libusb"
+brew "libusb-compat"
+brew "libgphoto2"
+brew "libicns"
+brew "libidn"
+brew "little-cms2"
+brew "makedepend"
+brew "mas"
+brew "media-info"
+brew "mysql", restart_service: true
+brew "net-snmp"
+brew "nmap"
+brew "nvm"
+brew "pkg-config"
+brew "pv"
+brew "pwgen"
+brew "reattach-to-user-namespace"
+brew "sane-backends"
+brew "screen"
+brew "swiftlint"
+brew "testdisk"
+brew "the_silver_searcher"
+brew "tree"
+brew "unixodbc"
+brew "vim"
+brew "wget"
+brew "wine"
+brew "wrk"
+brew "yarn"
+brew "youtube-dl"
+brew "homebrew/php/composer"
+brew "homebrew/php/php71", args: ["with-httpd"]
+brew "homebrew/php/php71-xdebug"
+brew "homebrew/php/phpunit"
+brew "jlhonora/lsusb/lsusb"
+brew "phrase/brewed/phraseapp"
+brew "vapor/tap/cmysql"
+brew "vapor/tap/vapor"
+cask "atom"
+cask "betterzipql"
+cask "firefox"
+cask "franz"
+cask "google-chrome"
+cask "hyper"
+cask "iterm2"
+cask "macdown"
+cask "macvim"
+cask "ngrok"
+cask "qlimagesize"
+cask "sequel-pro"
+cask "suspicious-package"
+cask "vagrant"
+cask "vagrant-manager"
+cask "virtualbox"
+cask "vlc"
+cask "webpquicklook"
+cask "wifi-explorer"
+cask "caskroom/fonts/font-droid-sans-mono-for-powerline"
+cask "caskroom/fonts/font-hack"
+cask "caskroom/fonts/font-inconsolata-for-powerline"
+cask "caskroom/fonts/font-roboto-mono"
+cask "caskroom/fonts/font-source-code-pro-for-powerline"
+mas "BetterSnapTool", id: 417375580
+mas "Brightness Slider", id: 456624497
+mas "DaisyDisk", id: 411643860
+mas "Devslopes", id: 1183088305
+mas "Encrypto", id: 935235287
+mas "File Info Professional", id: 717126567
+mas "GarageBand", id: 682658836
+mas "Gemini 2", id: 1090488118
+mas "iMovie", id: 408981434
+mas "iNet Network Scanner", id: 403304796
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Medis", id: 1063631769
+mas "Moom", id: 419330170
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Parcel", id: 639968404
+mas "Pixelmator", id: 407963104
+mas "Skitch", id: 425955336
+mas "Spark", id: 1176895641
+mas "SSH Config Editor", id: 1109319285
+mas "The Unarchiver", id: 425424353
+mas "Trello", id: 1278508951
+mas "Xcode", id: 497799835
