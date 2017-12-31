@@ -142,6 +142,17 @@ running "Disable shadow in screenshots"
 defaults write com.apple.screencapture disable-shadow -bool true
 ok
 
+running "No animation for hiding dock"
+defaults write com.apple.dock autohide-time-modifier -int 0
+ok
+
+running "Show full file path"
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+ok
+
+bot "Please run command defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \"LOCK MESSAGE\""
+ok
+
 # ==============================================
 # Kill affected applications
 # ==============================================
