@@ -178,3 +178,4 @@ alias emailgrep='grep -E -o "\b[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9.-]+\b"'
 alias t='vendor/bin/phpunit'
 
 alias be='bundle exec'
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'

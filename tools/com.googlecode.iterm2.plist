@@ -732,17 +732,17 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>-1383 -336 823 77 -2560 -540 2560 1418 </string>
+	<string>-1383 -224 823 77 -2560 -314 2560 1418 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>-1567 229 620 392 -2560 -540 2560 1418 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1410 -267 606 469 -2560 -540 2560 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-1727 -37 918 492 -2560 -540 2560 1418 </string>
+	<string>-1727 170 918 492 -2560 -314 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-997 -392 997 1270 -2560 -540 2560 1418 </string>
+	<string>-2560 -248 1186 514 -2560 -314 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>532 278 650 600 0 0 1440 878 </string>
+	<string>-1296 554 650 550 -2560 -314 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>599 330 650 548 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1335,7 +1335,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>RobotoMonoForPowerline-Regular 13</string>
+			<string>RobotoMonoForPowerline-Regular 11</string>
 			<key>Open Toolbelt</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -2738,7 +2738,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-21T09:17:45Z</date>
+	<date>2018-01-09T08:50:52Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
