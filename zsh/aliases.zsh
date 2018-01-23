@@ -176,6 +176,7 @@ alias bubu="brew update && brew upgrade --all && brew cleanup"
 
 alias emailgrep='grep -E -o "\b[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9.-]+\b"'
 alias t='vendor/bin/phpunit'
+alias tf='vendor/bin/phpunit --filter $1'
 
 alias be='bundle exec'
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
