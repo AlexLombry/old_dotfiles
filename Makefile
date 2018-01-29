@@ -3,7 +3,7 @@
 .DEFAULT_GOAL= help
 
 help:
-	printf "Alex Dotfiles\n\n"
+	printf "Dotfiles\n\n"
 	awk '/^[a-zA-Z\-\_0-9]+:/ { \
 		helpMessage = match(lastLine, /^## (.*)/); \
 		if (helpMessage) { \
