@@ -17,7 +17,7 @@ ok
 
 brew_bin=$(which brew) 2>&1 > /dev/null
 if [[ $? != 0 ]]; then
-    action "installing homebrew"
+    action "Install homebrew"
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     if [[ $? != 0 ]]; then
         error "unable to install homebrew, script $0 abort!"
