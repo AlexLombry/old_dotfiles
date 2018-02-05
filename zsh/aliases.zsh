@@ -102,8 +102,8 @@ alias vimrc="vim ~/.vimrc"
 alias :q="exit"
 
 # Directory
-alias backend="cd ~/Zenchef/app.zenchef.com/"
-alias api="cd ~/Zenchef/api.zenchef.com"
+alias backend="cd ~/Zenchef/app.zenchef/"
+alias api="cd ~/Zenchef/api.zenchef/"
 alias zen="cd ~/Zenchef/"
 
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
