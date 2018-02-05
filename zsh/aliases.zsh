@@ -160,7 +160,6 @@ alias files.open='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|
 # Files in use in the Users directory
 alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|grep Users'
 
-alias fuck='sudo $(history -p \!\!)'
 alias deletefilerecursive="find . -type f -print0 | xargs -0 rm"
 alias sshs="bash ~/dotfiles/tools/ssh-manager.sh"
 alias hssh="homestead ssh"
@@ -180,3 +179,5 @@ alias tf='vendor/bin/phpunit --filter $1'
 
 alias be='bundle exec'
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+
+alias bsr="brew services restart $1"
