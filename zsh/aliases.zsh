@@ -98,6 +98,7 @@ alias shred="srm -r -m -v"
 alias checkphp="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
 alias flushcache="sudo dscacheutil -flushcache"
 alias vimrc="vim ~/.vimrc"
+alias zrc="vim ~/.zshrc"
 #alias ctags="brew --prefix /bin/ctags"
 alias :q="exit"
 
