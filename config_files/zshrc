@@ -14,7 +14,6 @@ fi
 for config ($DOTFILES/zsh/*.zsh) source $config
 
 # Theme
-# ZSH_THEME="blinks"
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="smt"
 ZSH_THEME="gnzh"
@@ -43,7 +42,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -58,36 +57,22 @@ export PATH=$GEM_HOME/bin:$PATH
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export APP_ENV="mac"
 
-# Base16 Shell
-# if [ -z "$THEME" ]; then
-#     export THEME="base16-tomorrow"
+# function powerline_precmd() {
+#     # PS1="$(powerline-shell --shell zsh $?)"
+# }
+# 
+# function install_powerline_precmd() {
+#   for s in "${precmd_functions[@]}"; do
+#     if [ "$s" = "powerline_precmd" ]; then
+#       return
+#     fi
+#   done
+#   # precmd_functions+=(powerline_precmd)
+# }
+# 
+# if [ "$TERM" != "linux" ]; then
+#     # install_powerline_precmd
 # fi
-
-# BASE16_SHELL="$DOTFILES/.config/base16-shell/$THEME.$BACKGROUND.sh"
-
-# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-# source $BASE16_SHELL
-
-# if [ -z "$BACKGROUND" ]; then
-#    export BACKGROUND="dark"
-# fi
-
-function powerline_precmd() {
-    PS1="$(powerline-shell --shell zsh $?)"
-}
-
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
-
-if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
-fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

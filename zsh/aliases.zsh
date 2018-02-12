@@ -125,20 +125,35 @@ alias simulator="open -a Simulator.app --args -CurrentDeviceUDID $1"
 alias list-simulator="xcrun simctl list"
 
 # Unix
-alias genpass="pwgen -Csy 26 1 | tr -d ' ' | tr -d '\n' | pbcopy"
+alias genpass="pwgen -CsB 26 1 | tr -d ' ' | tr -d '\n' | pbcopy"
 
 alias -s rb=vim
 alias -s log="less -MN"
 alias -s html="open"
 alias -s php=vim
 
-transfer() {
-    # write to output to tmpfile because of progress bar
-    tmpfile=$( mktemp -t transferXXX )
-    curl --progress-bar --upload-file $1 https://transfer.sh/$(basename $1) >> $tmpfile;
-    cat $tmpfile;
-    rm -f $tmpfile;
-}
+transfer() { 
+    if [ $# -eq 0 ]; then 
+        echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; 
+        return 1; 
+    fi 
+    tmpfile=$( mktemp -t transferXXX ); 
+    if tty -s; then 
+        basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); 
+        curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; 
+    else 
+        curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; 
+    fi; 
+
+    echo "\n\n";
+    cat $tmpfile; 
+    current=$( cat $tmpfile )
+    echo "\n\n";
+
+    open -a "Google Chrome" $current;
+
+    rm -f $tmpfile; 
+} 
 
 alias transfer=transfer
 
@@ -182,3 +197,6 @@ alias be='bundle exec'
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
 alias bsr="brew services restart $1"
+alias co="code ."
+
+alias phraseapp-pull="cd ~/Zenchef/app.zenchef.com/public/i18n_locales; phraseapp pull; cd ~/Zenchef/app.zenchef.com/resources/lang; phraseapp pull; cd ~/Zenchef/app.zenchef.com/public/locales; phraseapp pull;"
