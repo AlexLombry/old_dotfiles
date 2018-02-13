@@ -198,5 +198,3 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
 alias bsr="brew services restart $1"
 alias co="code ."
-
-alias phraseapp-pull="cd ~/Zenchef/app.zenchef.com/public/i18n_locales; phraseapp pull; cd ~/Zenchef/app.zenchef.com/resources/lang; phraseapp pull; cd ~/Zenchef/app.zenchef.com/public/locales; phraseapp pull;"

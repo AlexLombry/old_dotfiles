@@ -371,3 +371,11 @@ function up() {
 function compresspdf() {
     gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-"screen"} -dCompatibilityLevel=1.4 -sOutputFile="$2" "$1"
 }
+
+function phraseapp-up() {
+    current=$(echo $PWD)
+
+    cd $current/public/i18n_locales; phraseapp pull;
+    cd $current/resources/lang; phraseapp pull;
+    cd $current/public/locales; phraseapp pull;
+}
