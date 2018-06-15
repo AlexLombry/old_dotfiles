@@ -23,6 +23,13 @@ function merging() {
     git push
 }
 
+function wip()
+{
+    git status
+    git add .
+    git commit -m "Work In Progress"
+}
+
 function git_update() {
     git pull
     git checkout develop

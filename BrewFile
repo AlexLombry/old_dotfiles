@@ -2,14 +2,13 @@ tap "jlhonora/lsusb"
 tap "vapor/tap"
 tap "phrase/brewed"
 tap "homebrew/dupes"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "homebrew/php"
 tap "homebrew/versions"
+tap "homebrew/cask"
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 tap "homebrew/services"
-tap "caskroom/fonts"
-tap "caskroom/versions"
-tap "caskroom/cask"
 cask "xquartz"
 brew "ack"
 brew "autoconf"
@@ -19,9 +18,11 @@ brew "awscli"
 brew "blueutil"
 brew "carthage"
 brew "ccat"
+brew "certbot"
 brew "cloc"
 brew "cmake"
-brew "cocoapods", link: false
+brew "cocoapods"
+brew "composer"
 brew "coreutils"
 brew "ctags"
 brew "curl"
@@ -34,65 +35,70 @@ brew "ffmpeg"
 brew "figlet"
 brew "fontconfig"
 brew "fzf"
+brew "gettext"
 brew "gmp"
 brew "mpfr"
 brew "gawk"
 brew "gd"
-brew "gettext"
 brew "little-cms2"
 brew "ghostscript"
 brew "git"
 brew "git-flow-avh"
-brew "gnu-sed"
 brew "libffi"
+brew "pcre"
+brew "gnu-sed"
 brew "nettle"
 brew "gnutls"
 brew "handbrake"
+brew "hashcat"
 brew "htop"
-brew "pcre"
+brew "httpie"
 brew "hub"
+brew "libusb"
+brew "libimobiledevice"
+brew "ideviceinstaller"
 brew "jasper"
 brew "jpegoptim"
 brew "libav"
 brew "libdnet"
 brew "libtool"
-brew "libusb"
 brew "libusb-compat"
 brew "libgphoto2"
 brew "libicns"
 brew "libidn"
-brew "libimobiledevice"
 brew "makedepend"
 brew "mas"
+brew "mcrypt"
 brew "media-info"
-brew "mysql", restart_service: true
+brew "mysql", restart_service: true, link: false
+brew "mysql@5.6", restart_service: true, link: true
 brew "net-snmp"
 brew "nginx", restart_service: true
 brew "nmap"
 brew "nvm"
+brew "unixodbc"
+brew "php-cs-fixer"
+brew "php@7.1", restart_service: true, link: true
+brew "phpunit"
 brew "pkg-config"
 brew "pv"
 brew "pwgen"
 brew "reattach-to-user-namespace"
+brew "redis", restart_service: true
 brew "sane-backends"
 brew "screen"
+brew "supervisor", restart_service: true
 brew "swiftlint"
 brew "testdisk"
 brew "the_silver_searcher"
 brew "tree"
-brew "unixodbc"
 brew "vim"
 brew "wget"
 brew "wine"
 brew "wrk"
 brew "yarn"
 brew "youtube-dl"
-brew "homebrew/php/composer"
-brew "homebrew/php/php-cs-fixer"
-brew "homebrew/php/php71", args: ["with-httpd"]
-brew "homebrew/php/php71-mcrypt"
-brew "homebrew/php/php71-xdebug"
-brew "homebrew/php/phpunit"
+brew "zlib"
 brew "jlhonora/lsusb/lsusb"
 brew "phrase/brewed/phraseapp"
 brew "vapor/tap/cmysql"
@@ -104,7 +110,9 @@ cask "franz"
 cask "google-chrome"
 cask "hyper"
 cask "iina"
+cask "insomnia"
 cask "iterm2"
+cask "kitty"
 cask "macdown"
 cask "macvim"
 cask "ngrok"
@@ -117,11 +125,13 @@ cask "virtualbox"
 cask "vlc"
 cask "webpquicklook"
 cask "wifi-explorer"
-cask "caskroom/fonts/font-droid-sans-mono-for-powerline"
-cask "caskroom/fonts/font-hack"
-cask "caskroom/fonts/font-inconsolata-for-powerline"
-cask "caskroom/fonts/font-roboto-mono"
-cask "caskroom/fonts/font-source-code-pro-for-powerline"
+cask "zenmap"
+cask "homebrew/cask-fonts/font-droid-sans-mono-for-powerline"
+cask "homebrew/cask-fonts/font-hack"
+cask "homebrew/cask-fonts/font-inconsolata-for-powerline"
+cask "homebrew/cask-fonts/font-pt-mono"
+cask "homebrew/cask-fonts/font-roboto-mono"
+cask "homebrew/cask-fonts/font-source-code-pro-for-powerline"
 mas "BetterSnapTool", id: 417375580
 mas "Brightness Slider", id: 456624497
 mas "Colors", id: 581915465
@@ -132,20 +142,28 @@ mas "File Info Professional", id: 717126567
 mas "GarageBand", id: 682658836
 mas "Gemini 2", id: 1090488118
 mas "Helium", id: 1054607607
+mas "hisuite", id: 1232508288
 mas "iMovie", id: 408981434
 mas "iNet Network Scanner", id: 403304796
 mas "Keynote", id: 409183694
+mas "Mactracker", id: 430255202
 mas "Magnet", id: 441258766
 mas "Medis", id: 1063631769
+mas "MindNode", id: 1289197285
 mas "Moom", id: 419330170
+mas "NetworkUtilityX", id: 979299240
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
 mas "Pixelmator", id: 407963104
+mas "Rested", id: 421879749
 mas "RSS Bot", id: 605732865
 mas "Skitch", id: 425955336
 mas "Spark", id: 1176895641
 mas "SSH Config Editor", id: 1109319285
 mas "The Unarchiver", id: 425424353
 mas "Trello", id: 1278508951
+mas "Twitter", id: 409789998
+mas "Twitterrific", id: 1289378661
+mas "Who's On My WiFi", id: 909760813
 mas "Xcode", id: 497799835

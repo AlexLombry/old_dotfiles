@@ -150,6 +150,10 @@ running "Show full file path"
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 ok
 
+running "Show expanded state for printing"
+defaults write -g PMPrintingExpandedStateForPrint -bool TRUE
+ok
+
 bot "Please run command defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \"LOCK MESSAGE\""
 ok
 
