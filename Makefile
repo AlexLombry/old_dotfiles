@@ -1,4 +1,4 @@
-.PHONY: macos software vim
+.PHONY: macos software vim links
 .SILENT:
 .DEFAULT_GOAL= help
 
@@ -25,3 +25,7 @@ software:
 ## Install vim
 vim:
 	bash ./shell/vim.sh
+
+## Install links
+links:
+	bash ./shell/links.sh
