@@ -70,8 +70,7 @@ brew "makedepend"
 brew "mas"
 brew "mcrypt"
 brew "media-info"
-brew "mysql", restart_service: true, link: false
-brew "mysql@5.6", restart_service: true, link: true
+brew "mysql@5.7", restart_service: true, link: true
 brew "net-snmp"
 brew "nginx", restart_service: true
 brew "nmap"
@@ -94,7 +93,6 @@ brew "the_silver_searcher"
 brew "tree"
 brew "vim"
 brew "wget"
-brew "wine"
 brew "wrk"
 brew "yarn"
 brew "youtube-dl"
@@ -103,29 +101,19 @@ brew "jlhonora/lsusb/lsusb"
 brew "phrase/brewed/phraseapp"
 brew "vapor/tap/cmysql"
 brew "vapor/tap/vapor"
-cask "atom"
 cask "betterzipql"
 cask "firefox"
-cask "franz"
 cask "google-chrome"
-cask "hyper"
 cask "iina"
-cask "insomnia"
 cask "iterm2"
-cask "kitty"
 cask "macdown"
 cask "macvim"
 cask "ngrok"
 cask "qlimagesize"
 cask "sequel-pro"
 cask "suspicious-package"
-cask "vagrant"
-cask "vagrant-manager"
-cask "virtualbox"
 cask "vlc"
 cask "webpquicklook"
-cask "wifi-explorer"
-cask "zenmap"
 cask "homebrew/cask-fonts/font-droid-sans-mono-for-powerline"
 cask "homebrew/cask-fonts/font-hack"
 cask "homebrew/cask-fonts/font-inconsolata-for-powerline"
@@ -135,7 +123,6 @@ cask "homebrew/cask-fonts/font-source-code-pro-for-powerline"
 mas "BetterSnapTool", id: 417375580
 mas "Brightness Slider", id: 456624497
 mas "DaisyDisk", id: 411643860
-mas "Devslopes", id: 1183088305
 mas "Encrypto", id: 935235287
 mas "iMovie", id: 408981434
 mas "iNet Network Scanner", id: 403304796
