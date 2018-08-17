@@ -120,3 +120,5 @@ setopt share_history
 
 # fix delete key on macOS
 [ $MACOS ] && bindkey "\e[3~" delete-char
+export APP_ENV="mac"
+export APP_ENV="mac"
