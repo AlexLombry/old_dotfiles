@@ -198,3 +198,15 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
 alias bsr="brew services restart $1"
 alias co="code ."
+
+alias dkc="docker-compose"
+
+alias dls="docker container ls"
+alias dlsa="docker container ls -a"
+alias dlsaq="docker container ls -qa"
+alias dstpoall="docker container stop $(docker container ls -qa)"
+alias drmall="docker container rm $(docker container ls -qa)"
+
+function dshell() {
+    (docker container exec -ti $1 bash) || (docker container exec -ti $1 sh);   
+}
