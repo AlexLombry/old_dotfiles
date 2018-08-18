@@ -102,11 +102,6 @@ alias zrc="vim ~/.zshrc"
 #alias ctags="brew --prefix /bin/ctags"
 alias :q="exit"
 
-# Directory
-alias backend="cd ~/Zenchef/app.zenchef/"
-alias api="cd ~/Zenchef/api.zenchef/"
-alias zen="cd ~/Zenchef/"
-
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 
 # Wi-Fi Commands
@@ -178,29 +173,24 @@ alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v
 
 alias deletefilerecursive="find . -type f -print0 | xargs -0 rm"
 alias sshs="bash ~/dotfiles/tools/ssh-manager.sh"
-alias hssh="homestead ssh"
-
-alias httpapi="ngrok http 192.168.10.10:80 -host-header=api.zenchef.dev"
-alias httpapp="ngrok http 192.168.10.10:80 -host-header=app.zenchef.dev"
 
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 alias ifconfig-ext='curl ifconfig.me'
 alias dss='du -sck * | sort -n'
-
-alias bubu="brew update && brew upgrade --all && brew cleanup"
 
 alias emailgrep='grep -E -o "\b[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9.-]+\b"'
 alias t='vendor/bin/phpunit'
 alias tf='vendor/bin/phpunit --filter $1'
 
 alias be='bundle exec'
-alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
+alias bubu="brew update && brew upgrade --all && brew cleanup"
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias bsr="brew services restart $1"
+
 alias co="code ."
 
 alias dkc="docker-compose"
-
 alias dls="docker container ls"
 alias dlsa="docker container ls -a"
 alias dlsaq="docker container ls -qa"
