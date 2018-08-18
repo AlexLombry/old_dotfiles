@@ -14,18 +14,18 @@ help:
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)
 
-## Prepare macOS system
+## || Prepare macOS system
 macos:
 	bash ./shell/macos.sh
 
-## Install software
+## || Install software
 software:
 	bash ./shell/software.sh
 
-## Install vim
+## || Install vim
 vim:
 	bash ./shell/vim.sh
 
-## Install links
+## || Install links
 links:
 	bash ./shell/links.sh
