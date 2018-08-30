@@ -53,3 +53,5 @@ git clone https://github.com/banga/powerline-shell
 cd powerline-shell
 sudo python setup.py install
 ok
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
