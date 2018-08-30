@@ -16,7 +16,7 @@ for config ($DOTFILES/zsh/*.zsh) source $config
 # Theme
 ZSH_THEME="smt"
 
-#plugins=(git brew vagrant composer command-not-found github)
+plugins=(zsh-autosuggestions git brew composer command-not-found github)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,4 +121,6 @@ setopt share_history
 # fix delete key on macOS
 [ $MACOS ] && bindkey "\e[3~" delete-char
 export APP_ENV="mac"
-export APP_ENV="mac"
+
+export APPLICATION_FOLDER=/Users/alex/Code
+alias dossh="cd /Users/alex/Code/homestead-docker && make ssh"
