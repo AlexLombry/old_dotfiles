@@ -121,6 +121,5 @@ setopt share_history
 # fix delete key on macOS
 [ $MACOS ] && bindkey "\e[3~" delete-char
 export APP_ENV="mac"
-
 export APPLICATION_FOLDER=/Users/alex/Code
 alias dossh="cd /Users/alex/Code/homestead-docker && make ssh"
