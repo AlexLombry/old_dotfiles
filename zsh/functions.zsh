@@ -12,24 +12,6 @@ COL_BLUE=$ESC_SEQ"34;01m"
 COL_MAGENTA=$ESC_SEQ"35;01m"
 COL_CYAN=$ESC_SEQ"36;01m"
 
-function homestead() {
-    cd ~/Homestead
-    vagrant $*
-}
-
-function zenup() {
-    cd ~/Homestead
-    vagrant up
-    open -a phpstorm ~/Zenchef/app.zenchef.com
-    open -a phpstorm ~/Zenchef/api.zenchef.com
-}
-
-function zendown() {
-    cd ~/Homestead
-    vagrant halt
-    pkill phpstorm
-}
-
 function routes()
 {
     if [ $# -eq 0 ]; then

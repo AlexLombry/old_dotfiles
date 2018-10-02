@@ -81,7 +81,7 @@ export APP_ENV="mac"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-cdpath=(~/Zenchef ~/Code/)
+cdpath=(~/OWP ~/Code/)
 
 # Keypad
 # 0 . Enter
