@@ -16,9 +16,11 @@ for config ($DOTFILES/zsh/*.zsh) source $config
 # Theme
 ZSH_THEME="smt"
 
-plugins=(zsh-autosuggestions git brew composer command-not-found github)
+plugins=(zsh-autosuggestions git brew command-not-found github kubectl)
 
 source $ZSH/oh-my-zsh.sh
+
+source ~/.owp.zsh
 
 export EDITOR='vim'
 
@@ -33,15 +35,13 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 export PATH="${PATH}:$(brew --prefix homebrew/core/php@7.1)/bin"
 export PATH="/usr/local/opt/php@7.1/bin:~/.composer/vendor/bin:$PATH"
-#export PATH="/usr/local/opt/php@7.1/bin:$PATH"
-#export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
-
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Visual Studio Code Xdebug configuration for PHP Debug Plugin
 export XDEBUG_CONFIG="idekey=VSCODE"
 
 # Java home for Android development
-export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -122,4 +122,8 @@ setopt share_history
 [ $MACOS ] && bindkey "\e[3~" delete-char
 export APP_ENV="mac"
 export APPLICATION_FOLDER=/Users/alex/Code
-alias dossh="cd /Users/alex/Code/homestead-docker && make ssh"
+
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+export HOMEBREW_FORCE_BREWED_CURL=1
