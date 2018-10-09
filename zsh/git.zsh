@@ -12,6 +12,7 @@ alias git-count='git shortlog -sn'
 alias git-undopush="git push -f origin HEAD^:master"
 alias nah="git reset --hard; git clean -df;"
 alias gcp="git checkout ."
+alias git-count-lines="git ls-files | xargs -n1 git blame --line-porcelain | gsed -n 's/^author //p' | sort -f | uniq -ic | sort -nr"
 
 function merging() {
     git checkout master
