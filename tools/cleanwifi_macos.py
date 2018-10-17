@@ -15,30 +15,30 @@ try:
         netw = plistlib.readPlist('/Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist')
         netw = netw["KnownNetworks"]
     except:
-        print "Plist is miss or nothing saved"
+        print("Plist is miss or nothing saved")
         quit()
 except:
-    print "No wireless, exist ..."
+    print("No wireless, exist ...")
     quit()
 
 opennet = []
 
-print "-------- Networks lists --------"
+print("-------- Networks lists --------")
 
 for wifilst in netw:
     wifi = netw["{0}".format(wifilst)]
-    print "[+] [Network {0}] - [Encryption: {1}]".format(wifi["SSID"].data, wifi["SecurityType"])
+    print("[+] [Network {0}] - [Encryption: {1}]".format(wifi["SSID"].data, wifi["SecurityType"]))
     if (wifi["SecurityType"] == "Open"):
         opennet.append(wifi["SSID"].data)
 
 if len(opennet):
-    print "\n"
-    print "------ Delete open network ------"
-    print "---------------------------------"
-    print "------ POPUPS IF NOT SUDO -------"
-    print "---------------------------------"
-    print "\n"
+    print("\n")
+    print("------ Delete open network ------")
+    print("---------------------------------")
+    print("------ POPUPS IF NOT SUDO -------")
+    print("---------------------------------")
+    print("\n")
 
     for network in opennet:
-        print "[-] Delete {}".format(network)
+        print("[-] Delete {}".format(network))
         subprocess.call(["/usr/sbin/networksetup", "-removepreferredwirelessnetwork", interface, network])

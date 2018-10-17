@@ -18,7 +18,8 @@ set background=dark
 " colorscheme atom-dark-256
 " colorscheme hybrid
 " colorscheme material-theme
-color dracula
+color WWDC16
+" color dracula
 " set guifont=Source\ Code\ Pro\ for\ powerline:h13						"Set the default font family and size.
 set guifont=Hack:h13						"Set the default font family and size.
 
@@ -213,3 +214,5 @@ set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
 
 set rtp+=/usr/local/opt/fzf
+
+let g:wwdc16_use16 = 1

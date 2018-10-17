@@ -31,6 +31,7 @@ alias du='du -h -c' # calculate disk usage for a folder
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias chrome="/usr/bin/open -a /Applications/Google\ Chrome.app"
 alias sublime="/usr/bin/open -a /Applications/Sublime\ Text.app"
+alias subl="/usr/bin/open -a /Applications/Sublime\ Text.app"
 alias vscode="/usr/bin/open -a /Applications/Visual\ Studio\ Code.app"
 
 # Network
@@ -40,9 +41,6 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
-# Flush Directory Service cache
-alias flush="dscacheutil -flushcache"
 
 # Trim new lines and copy to clipboard
 alias trimcopy="tr -d '\n' | pbcopy"
@@ -81,7 +79,7 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias lock="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
 
 # Flush Directory Service cache
-alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+alias flush="sudo dscacheutil -flushcache && killall -HUP mDNSResponder"
 
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
@@ -96,7 +94,6 @@ alias restartApache="sudo apachectl restart"
 alias etcho="sudo vim /etc/hosts"
 alias shred="srm -r -m -v"
 alias checkphp="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
-alias flushcache="sudo dscacheutil -flushcache"
 alias vimrc="vim ~/.vimrc"
 alias zrc="vim ~/.zshrc"
 #alias ctags="brew --prefix /bin/ctags"
@@ -113,7 +110,6 @@ alias wifiscan="airport scan"
 alias wifitake="networksetup -setairportnetwork en0 $1"
 alias ssid="airport -I|awk '/^ *SSID/ {print $2}'"
 alias iface="networksetup -listallhardwareports|grep -A1 Wi-Fi|awk '/Device:/ {print $2}'"
-alias vm="cd ~/Homestead; vagrant ssh;"
 
 # iOS
 alias simulator="open -a Simulator.app --args -CurrentDeviceUDID $1"
