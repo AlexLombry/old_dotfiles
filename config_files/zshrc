@@ -14,7 +14,8 @@ fi
 for config ($DOTFILES/zsh/*.zsh) source $config
 
 # Theme
-ZSH_THEME="smt"
+# ZSH_THEME="smt"
+ZSH_THEME="agnoster"
 
 plugins=(zsh-autosuggestions git brew command-not-found github kubectl)
 
