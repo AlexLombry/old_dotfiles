@@ -1651,12 +1651,14 @@
 	<string>2049 110 445 394 0 0 2560 1418 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 783 620 392 0 0 2560 1418 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 126 606 469 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2112 1791 928 394 716 900 2560 1417 </string>
+	<string>411 246 928 394 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>716 900 2560 1417 716 900 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1440 420 1080 1897 1440 420 1080 1897 </string>
+	<string>716 1619 1280 698 716 900 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>1440 1308 1440 1230 1440 0 1440 2538 </string>
 	<key>NeverWarnAboutShortLivedSessions_5402210F-8A1B-44D9-81C6-009F9582185B</key>
@@ -1671,6 +1673,8 @@
 	<array>
 		<dict>
 			<key>ASCII Anti Aliased</key>
+			<true/>
+			<key>ASCII Ligatures</key>
 			<true/>
 			<key>Ambiguous Double Width</key>
 			<false/>
@@ -2241,7 +2245,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Menlo-Regular 13</string>
+			<string>SauceCodePowerline-Regular 13</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Open Toolbelt</key>
