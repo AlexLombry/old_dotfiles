@@ -14,17 +14,7 @@ alias nah="git reset --hard; git clean -df;"
 alias gcp="git checkout ."
 alias git-count-lines="git ls-files | xargs -n1 git blame --line-porcelain | gsed -n 's/^author //p' | sort -f | uniq -ic | sort -nr"
 
-function merging() {
-    git checkout master
-    git pull
-    git merge $1
-    git push
-    git checkout develop
-    git pull
-    git merge $1
-    git push
-}
-
+# Work in progress
 function wip()
 {
     git status
@@ -32,23 +22,8 @@ function wip()
     git commit -m "Work In Progress"
 }
 
-function git_update() {
-    git pull
-    git checkout develop
-    git pull
-    git checkout master
-}
-
-# Add commit and push all in once
-function gsend()
-{
-    git add .
-    git commit -m "$1"
-    git push
-}
-
 # git root
-function give-credit() {
+function git-give-credit() {
     git commit --amend --author $1 <$2> -C HEAD
 }
 
@@ -71,9 +46,9 @@ function g() {
 
 function git-clean() {
     if [[ $# > 0 ]]; then
-        git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | xargs -n 1 git branch -d
+        git branch --merged | grep -v "\*" | grep -v "master" | grep -v "dev" | xargs -n 1 git branch -d
     else
-        git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop"
+        git branch --merged | grep -v "\*" | grep -v "master" | grep -v "dev"
     fi
 }
 
@@ -86,7 +61,7 @@ function gf() {
 }
 
 # Rename branches
-function mvbranch()
+function git-rename-branch()
 {
     git branch -m $1 $2
     git push origin :$1

@@ -12,19 +12,6 @@ COL_BLUE=$ESC_SEQ"34;01m"
 COL_MAGENTA=$ESC_SEQ"35;01m"
 COL_CYAN=$ESC_SEQ"36;01m"
 
-function routes()
-{
-    if [ $# -eq 0 ]; then
-        php artisan route:list
-    else
-        php artisan route:list | grep ${1}
-    fi
-}
-
-function plex-refresh() {
-    ssh dan 'cd "/Applications/Plex Media Server.app/Contents/MacOS/"; ./Plex\ Media\ Scanner -s'
-}
-
 function iok() {
     echo -e "\n$COL_GREEN [ok] $COL_RESET "$1
 }
@@ -94,7 +81,7 @@ function piclat {
 }
 
 # take this repo and copy it to somewhere else minus the .git stuff.
-function gitexport(){
+function git-export(){
     mkdir -p "$1"
     git archive master | tar -x -C "$1"
 }
@@ -201,40 +188,9 @@ function v() {
     fi;
 }
 
-# open gvim more quickly
-function vi() {
-    if [ $# -eq 0 ]; then
-        gvim .;
-    else
-        gvim "$@";
-    fi;
-}
-
 # Better tree functionality
 function tre() {
     tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
-}
-
-function laramagic() {
-    PROJECT=$1
-    cd ~/Web
-    laravel new $PROJECT
-    cd $PROJECT
-    git init
-    git add .
-    git commit -m "First commit."
-    open "http://$PROJECT.dev"
-}
-
-function lumenmagic() {
-    PROJECT=$1
-    cd ~/Web
-    lumen new $PROJECT
-    cd $PROJECT
-    git init
-    git add .
-    git commit -m "First commit."
-    open "http://$PROJECT.dev"
 }
 
 #########################################
@@ -242,7 +198,14 @@ function lumenmagic() {
 # Utility Functions
 
 # Create a new git repo with one README commit and CD into it
-function gitnr() { mkdir $1; cd $1; git init; touch README; git add README; git commit -mFirst-commit;}
+function gitnr() { 
+    mkdir $1; 
+    cd $1; 
+    git init; 
+    touch README; 
+    git add README; 
+    git commit -mFirst-commit;
+}
 
 # Do a Matrix movie effect of falling characters
 function matrix1() {
@@ -285,7 +248,7 @@ function fixperms(){
     find . \( -name "*.sh" -or -type d \) -exec chmod 755 {} \; && find . -type f ! -name "*.sh" -exec chmod 644 {} \;
 }
 
-function serve_php() {
+function phpserve() {
     if [ $# -eq 1 ]; then
         php -S 0.0.0.0:$1
     else
@@ -301,7 +264,6 @@ function aire() {
 function ft() {
   find . -name "$2" -exec grep -il "$1" {} \;
 }
-
 
 function findreplace(){
     printf "Search: ${1}\n"
@@ -352,14 +314,6 @@ function up() {
 
 function compresspdf() {
     gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-"screen"} -dCompatibilityLevel=1.4 -sOutputFile="$2" "$1"
-}
-
-function phraseapp-up() {
-    current=$(echo $PWD)
-
-    cd $current/public/i18n_locales; phraseapp pull;
-    cd $current/resources/lang; phraseapp pull;
-    cd $current/public/locales; phraseapp pull;
 }
 
 # Send my public SSH key to another machine
