@@ -1,6 +1,4 @@
 tap "jlhonora/lsusb"
-tap "vapor/tap"
-tap "phrase/brewed"
 tap "homebrew/dupes"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
@@ -13,8 +11,6 @@ cask "xquartz"
 brew "ack"
 brew "autoconf"
 brew "automake"
-brew "aws-elasticbeanstalk"
-brew "awscli"
 brew "blueutil"
 brew "carthage"
 brew "ccat"
@@ -70,26 +66,16 @@ brew "makedepend"
 brew "mas"
 brew "mcrypt"
 brew "media-info"
-brew "mysql@5.7", restart_service: true, link: true
 brew "net-snmp"
-brew "nginx", restart_service: true
 brew "nmap"
 brew "nvm"
 brew "unixodbc"
-brew "php-cs-fixer"
-brew "php@7.1", restart_service: true, link: true
-brew "phpunit"
 brew "pkg-config"
 brew "pv"
 brew "pwgen"
 brew "reattach-to-user-namespace"
-brew "redis", restart_service: true
 brew "sane-backends"
 brew "screen"
-brew "supervisor", restart_service: true
-brew "swiftlint"
-brew "testdisk"
-brew "the_silver_searcher"
 brew "tree"
 brew "vim"
 brew "wget"
@@ -98,16 +84,12 @@ brew "yarn"
 brew "youtube-dl"
 brew "zlib"
 brew "jlhonora/lsusb/lsusb"
-brew "phrase/brewed/phraseapp"
-brew "vapor/tap/cmysql"
-brew "vapor/tap/vapor"
 cask "betterzipql"
 cask "firefox"
 cask "google-chrome"
 cask "iina"
 cask "iterm2"
 cask "macdown"
-cask "macvim"
 cask "ngrok"
 cask "qlimagesize"
 cask "sequel-pro"
@@ -128,13 +110,9 @@ mas "iMovie", id: 408981434
 mas "iNet Network Scanner", id: 403304796
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
-mas "Medis", id: 1063631769
 mas "Moom", id: 419330170
-mas "NetworkUtilityX", id: 979299240
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
-mas "SSH Config Editor", id: 1109319285
 mas "The Unarchiver", id: 425424353
-mas "Trello", id: 1278508951
 mas "Xcode", id: 497799835

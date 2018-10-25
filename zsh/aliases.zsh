@@ -1,5 +1,5 @@
 # reload zsh config
-alias reload!='source ~/.zshrc'
+alias rld='echo "Reloading Zshrc file" && source ~/.zshrc'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -9,6 +9,7 @@ else # OS X `ls`
 fi
 
 alias zshrc="sublime ~/.zshrc"
+alias dot="cd ~/dotfiles"
 
 # Filesystem aliases
 alias ..='cd ..'
@@ -75,9 +76,6 @@ alias spotoff="sudo mdutil -a -i off"
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
-# Launch the screensave, aze because it's easy to type with my keyboard
-alias lock="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
-
 # Flush Directory Service cache
 alias flush="sudo dscacheutil -flushcache && killall -HUP mDNSResponder"
 
@@ -92,11 +90,9 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias loadsshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias restartApache="sudo apachectl restart"
 alias etcho="sudo vim /etc/hosts"
-alias shred="srm -r -m -v"
 alias checkphp="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
 alias vimrc="vim ~/.vimrc"
 alias zrc="vim ~/.zshrc"
-#alias ctags="brew --prefix /bin/ctags"
 alias :q="exit"
 
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
