@@ -192,3 +192,7 @@ alias drmall="docker container rm $(docker container ls -qa)"
 function dshell() {
     (docker container exec -ti $1 bash) || (docker container exec -ti $1 sh);   
 }
+
+alias ng-web="ngrok http $1 -subdomain=webapp --region=eu"
+alias ng-api="ngrok http $1 -subdomain=webapi --region=eu"
+alias ng-lo="ngrok http $1 --subdomain=alombry"
