@@ -196,3 +196,5 @@ function dshell() {
 alias ng-web="ngrok http $1 -subdomain=webapp --region=eu"
 alias ng-api="ngrok http $1 -subdomain=webapi --region=eu"
 alias ng-lo="ngrok http $1 --subdomain=alombry"
+
+alias tojson="php ~/dotfiles/tools/toJson.php $1"
