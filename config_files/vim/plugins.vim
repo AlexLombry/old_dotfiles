@@ -25,6 +25,7 @@ Plugin 'keith/swift.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jdkanani/vim-material-theme'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " Vundle configuration
 call vundle#end()            " required

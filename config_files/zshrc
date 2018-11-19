@@ -29,8 +29,6 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH=$PATH:$(go env GOPATH)/bin
 
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
 # Visual Studio Code Xdebug configuration for PHP Debug Plugin
 export XDEBUG_CONFIG="idekey=VSCODE"
 
@@ -39,6 +37,12 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Hom
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+#Spark variable
+export SPARK_HOME=/usr/local/Cellar/apache-spark/2.3.2/libexec
+export PATH=$SPARK_HOME/bin:$PATH
+export PYSPARK_PYTHON=/usr/local/Cellar/python/3.7.0/libexec/bin/python
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
