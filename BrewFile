@@ -103,6 +103,18 @@ cask "homebrew/cask-fonts/font-inconsolata-for-powerline"
 cask "homebrew/cask-fonts/font-pt-mono"
 cask "homebrew/cask-fonts/font-roboto-mono"
 cask "homebrew/cask-fonts/font-source-code-pro-for-powerline"
+
+# Quick Look plugins
+cask "qlcolorcode"
+cask "qlstephen"
+cask "qlmarkdown"
+cask "quicklook-json"
+cask "qlimagesize"
+cask "webpquicklook"
+cask "suspicious-package"
+cask "quicklookase"
+cask "qlvideo"
+
 mas "BetterSnapTool", id: 417375580
 mas "Brightness Slider", id: 456624497
 mas "DaisyDisk", id: 411643860

@@ -16,16 +16,16 @@ help:
 
 ## || Prepare macOS system
 macos:
-	bash ./shell/macos.sh
+	bash ./scripts/macos.sh
 
 ## || Install software
 software:
-	bash ./shell/software.sh
+	bash ./scripts/software.sh
 
 ## || Install vim
 vim:
-	bash ./shell/vim.sh
+	bash ./scripts/vim.sh
 
 ## || Install links
 links:
-	bash ./shell/links.sh
+	bash ./scripts/links.sh

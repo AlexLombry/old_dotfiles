@@ -9,7 +9,7 @@ else # OS X `ls`
 fi
 
 alias zshrc="sublime ~/.zshrc"
-alias dot="cd ~/dotfiles"
+alias dot="cd ~/dotfiles; sublime ."
 
 # Filesystem aliases
 alias ..='cd ..'
