@@ -9,6 +9,10 @@ rm -rf ~/.vim
 mkdir -p ~/.vim/{backups,swap,bundle,colors,autoload}
 ok
 
+pwd="$(pwd)"
+
+ln -s $pwd/vim/vimrc ~/.vimrc
+
 running "Add new colorscheme"
 cp -R ~/dotfiles/vim/colors ~/.vim/
 ok 
