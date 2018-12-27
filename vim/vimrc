@@ -14,14 +14,11 @@ set number								"Let's activate line numbers.
 " colorscheme $THEME
 set t_CO=256								"Use 256 colors. This is useful for Terminal Vim.
 
+
 set background=dark
-colorscheme atom-dark-256
-" colorscheme hybrid
-" colorscheme material-theme
-" color WWDC16
-" color dracula
-" set guifont=Source\ Code\ Pro\ for\ powerline:h13						"Set the default font family and size.
-set guifont=Hack:h13						"Set the default font family and size.
+colorscheme dracula
+set anti enc=utf-8
+set guifont=Hack\ Regular:h11
 
 set guioptions-=e							"We don't want Gui tabs.
 set linespace=15   						        "Macvim-specific line-height.
@@ -216,3 +213,4 @@ let g:grep_cmd_opts = '--line-numbers --noheading'
 set rtp+=/usr/local/opt/fzf
 
 let g:wwdc16_use16 = 1
+Plugin 'wakatime/vim-wakatime'

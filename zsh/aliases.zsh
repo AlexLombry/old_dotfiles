@@ -8,7 +8,7 @@ else # OS X `ls`
     colorflag="-G"
 fi
 
-alias zshrc="sublime ~/.zshrc"
+alias vzz="sublime ~/.zshrc"
 alias dot="cd ~/dotfiles; sublime ."
 
 # Filesystem aliases
@@ -17,8 +17,9 @@ alias ...='cd ../..'
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias l="ls -lah ${colorflag}"
-alias la="ls -AF ${colorflag}"
+alias l="exa -abghl --git --color=automatic"
+alias la="exa -abghl --git --color=automatic"
+alias lla="exa -abghl --git --color=automatic"
 alias ll="ls -lFh ${colorflag}"
 alias lld="ls -l | grep ^d"
 alias rmf="rm -rf"
