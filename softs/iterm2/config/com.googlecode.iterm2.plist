@@ -1426,9 +1426,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>346 172 606 469 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1070 416 918 452 0 0 3008 1669 </string>
+	<string>853 370 918 452 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 45 1440 832 0 0 1440 877 </string>
+	<string>276 813 946 775 0 0 3008 1669 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>103 275 730 577 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1601,8 +1601,6 @@
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
-			<key>Background Image Location</key>
-			<string>/Users/alex/Dropbox/Images/AlexWall/newIT/mr.-robot-wallpapers-31622-2590178.jpg</string>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -3753,7 +3751,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-01-25T10:54:51Z</date>
+	<date>2019-02-11T08:08:03Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -6948,6 +6946,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.2.7beta1</string>
+	<string>3.2.7beta4</string>
 </dict>
 </plist>
