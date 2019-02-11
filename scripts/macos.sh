@@ -47,8 +47,8 @@ running "Show Path bar in Finder"
 defaults write com.apple.finder ShowPathbar -bool true
 ok
 
-running "Disable autohide for the Dock"
-defaults write com.apple.dock autohide -bool false
+running "Enable autohide for the Dock"
+defaults write com.apple.dock autohide -bool true
 ok
 
 running "Show Status bar in Finder"
@@ -77,6 +77,12 @@ ok
 
 running "Disable natural Lion-style scrolling"
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+ok
+
+bot "Speed up Dock switching"
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
+killall Dock
 ok
 
 # ==============================================
@@ -140,10 +146,6 @@ ok
 
 running "Disable shadow in screenshots"
 defaults write com.apple.screencapture disable-shadow -bool true
-ok
-
-running "No animation for hiding dock"
-defaults write com.apple.dock autohide-time-modifier -int 0
 ok
 
 running "Show full file path"
