@@ -43,16 +43,15 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/l
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export GOPATH="$HOME/Code"
+export GOPATH="$HOME/Code/"
 
-GOROOT=$HOME/Code
 export PATH=$PATH:$GOROOT/bin
 
 # Visual Studio Code Xdebug configuration for PHP Debug Plugin
 export XDEBUG_CONFIG="idekey=VSCODE"
 
 # Java home for Android development
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -131,9 +130,8 @@ source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 export HOMEBREW_FORCE_BREWED_CURL=1
 export DEV=true
 
-eval $(thefuck --alias)
 source ~/.owp.zsh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/alex/.sdkman"
-[[ -s "/Users/alex/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/alex/.sdkman/bin/sdkman-init.sh"
+#export SDKMAN_DIR="/Users/alex/.sdkman"
+#[[ -s "/Users/alex/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/alex/.sdkman/bin/sdkman-init.sh"
