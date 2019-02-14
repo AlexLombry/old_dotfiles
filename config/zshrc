@@ -22,7 +22,15 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 # Theme
-ZSH_THEME="smt"
+#ZSH_THEME="smt"
+ZSH_THEME="spaceship"
+
+SPACESHIP_PROMPT_ADD_NEWLINE="false"
+SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
+SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER"
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
+SPACESHIP_USER_SHOW="true"
+
 SOBOLE_THEME_MODE=dark
 
 # plugins=(zsh-autosuggestions git brew command-not-found kubectl)
