@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 source ~/dotfiles/scripts/lib.sh
 
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 # Install Oh-My-Zsh
 running "Install Oh-My-Zsh"
 if [ ! -d ~/.oh-my-zsh ]; then
@@ -27,11 +29,11 @@ fi
 ok
 
 running "Install all brew dependencies"
-brew bundle
+HOMEBREW_NO_AUTO_UPDATE=1 brew bundle
 ok
 
 running "Install shell extensions"
-brew install fzf
+HOMEBREW_NO_AUTO_UPDATE=1 brew install fzf
 /usr/local/opt/fzf/install
 ok
 
