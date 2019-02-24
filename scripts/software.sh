@@ -38,7 +38,7 @@ HOMEBREW_NO_AUTO_UPDATE=1 brew install fzf
 ok
 
 ###############################################################################
-# For file in config                                                    #
+# For file in config                                                          #
 ###############################################################################
 running "Install configuration file symlink"
 files=$( ls -1 -d config/* )

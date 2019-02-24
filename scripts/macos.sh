@@ -8,8 +8,6 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-bot "OK, let's roll..."
-
 running "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 ok
@@ -94,7 +92,7 @@ ok
 # ==============================================
 # Finder
 # ==============================================
-echo "Setting Finder preferences"
+bot "Setting Finder preferences"
 
 running "Expand the Open with and Sharing & Permissions panes"
 defaults write com.apple.finder FXInfoPanesExpanded -dict OpenWith -bool true Privileges -bool true
