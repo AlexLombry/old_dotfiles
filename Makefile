@@ -1,4 +1,4 @@
-.PHONY: macos software vim links
+.PHONY: macos software vim links debug
 .SILENT:
 .DEFAULT_GOAL= help
 
@@ -29,3 +29,7 @@ vim:
 ## || Install links
 links:
 	bash ./scripts/links.sh
+
+## || Debug command
+debug:
+	bash ./scripts/debug.sh
