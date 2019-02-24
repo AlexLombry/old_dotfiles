@@ -3,6 +3,21 @@ source ~/dotfiles/scripts/lib.sh
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+running "XCode Command Line Tools"
+if [ $(xcode-select -p &> /dev/null; printf $?) -ne 0 ]; then
+    xcode-select --install &> /dev/null
+    # Wait until the XCode Command Line Tools are installed
+    while [ $(xcode-select -p &> /dev/null; printf $?) -ne 0 ]; do
+        sleep 5
+    done
+    xcode-select -p &> /dev/null
+    if [ $? -eq 0 ]; then
+        # Prompt user to agree to the terms of the Xcode license
+        # https://github.com/alrra/dotfiles/issues/10
+       sudo xcodebuild -license
+   fi
+fi
+
 # Install Oh-My-Zsh
 running "Install Oh-My-Zsh"
 if [ ! -d ~/.oh-my-zsh ]; then
@@ -37,18 +52,6 @@ HOMEBREW_NO_AUTO_UPDATE=1 brew install fzf
 /usr/local/opt/fzf/install
 ok
 
-###############################################################################
-# For file in config                                                          #
-###############################################################################
-running "Install configuration file symlink"
-files=$( ls -1 -d config/* )
-for file in $files ; do
-    pwd="$(pwd)/"
-    filename="$(ls $file | cut -d. -f1 | cut -d/ -f2)"
-    ln -s $pwd$file ~/.$filename
-done
-ok
-
 # running "Install Powerline shell"
 # mkdir -p ~/Code/
 # git clone https://github.com/b-ryan/powerline-shell
@@ -61,4 +64,16 @@ running "Install Zsh Plugins"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+ok
+
+###############################################################################
+# For file in config                                                          #
+###############################################################################
+running "Install configuration file symlink"
+files=$( ls -1 -d config/* )
+for file in $files ; do
+    pwd="$(pwd)/"
+    filename="$(ls $file | cut -d. -f1 | cut -d/ -f2)"
+    ln -s $pwd$file ~/.$filename
+done
 ok
