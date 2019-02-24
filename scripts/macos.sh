@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 source ~/dotfiles/scripts/lib.sh
 
+running "Close any open System Preferences panes, to prevent them from overriding"
+ok
+
+bot "settings we’re about to change"
+osascript -e 'tell application "System Preferences" to quit'
+
 # Ask for the administrator password upfront
 bot "I need you to enter your sudo password so I can install some things:"
 sudo -v
