@@ -91,6 +91,8 @@ cask "webpquicklook"
 cask "suspicious-package"
 cask "quicklookase"
 cask "qlvideo"
+
+# Useful
 cask "appcleaner"
 cask "dashlane"
 cask "jetbrains-toolbox"
@@ -108,6 +110,9 @@ cask "intellij-idea"
 cask "protonvpn"
 cask "microsoft-office"
 cask "microsoft-teams"
+cask "setapp"
+cask "robo-3t"
+cask "pritunl"
 
 mas "Brightness Slider", id: 456624497
 mas "DaisyDisk", id: 411643860
