@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<workflow>
-  <name>Philips Hue Controller</name>
-  <version>2.4.1</version>
-  <bundle>hue-alfred-workflow</bundle>
-  <updated>1477359681</updated>
-  <file>philips.hue_.controller.v2.4.1.alfredworkflow</file>
-</workflow>
