@@ -1,4 +1,4 @@
-.PHONY: macos software vim links debug
+.PHONY: macos software vim links debug sshfix 
 .SILENT:
 .DEFAULT_GOAL= help
 
@@ -33,3 +33,7 @@ links:
 ## || Debug command
 debug:
 	bash ./scripts/debug.sh
+
+## || Fix SSH Permission
+sshfix:
+	sudo chmod -R u+x ~/.ssh	
