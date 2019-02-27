@@ -115,6 +115,7 @@ cask "avast-security"
 cask "coconutbattery"
 cask "dropbox"
 cask "tresorit"
+cast "intel-power-gadget"
 
 mas "Brightness Slider", id: 456624497
 mas "DaisyDisk", id: 411643860
