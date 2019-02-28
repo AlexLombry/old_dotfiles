@@ -213,4 +213,4 @@ let g:grep_cmd_opts = '--line-numbers --noheading'
 set rtp+=/usr/local/opt/fzf
 
 let g:wwdc16_use16 = 1
-Plugin 'wakatime/vim-wakatime'
+" Plugin 'wakatime/vim-wakatime'
