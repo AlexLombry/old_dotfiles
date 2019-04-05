@@ -45,7 +45,6 @@ source $DOTFILES/zsh/git.zsh
 # User configuration
 export EDITOR='vim'
 
-#export GOBIN="/Users/alex/Code/bin/"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -65,11 +64,6 @@ export XDEBUG_CONFIG="idekey=VSCODE"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Spark variable
-export SPARK_HOME=/usr/local/Cellar/apache-spark/2.3.2/libexec
-export PATH=$SPARK_HOME/bin:$PATH
-export PATH=$HOME/.composer/vendor/bin:$PATH
-export PYSPARK_PYTHON=/usr/local/Cellar/python/3.7.0/libexec/bin/python
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export GO111MODULE=on
@@ -93,7 +87,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-cdpath=(~/Code/src/)
+cdpath=(~/Code/)
 
 # Keypad
 # 0 . Enter
@@ -139,17 +133,7 @@ source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.in
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 export HOMEBREW_FORCE_BREWED_CURL=1
-export DEV=true
-
-source ~/.owp.zsh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 #export SDKMAN_DIR="/Users/alex/.sdkman"
 #[[ -s "/Users/alex/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/alex/.sdkman/bin/sdkman-init.sh"
-
-export NVM_DIR="/Users/alex/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-wd() {
-  . /Users/alex/bin/wd/wd.sh
-}
