@@ -343,3 +343,17 @@ function thumbnail() {
 function encode() {
     ffmpeg -y -i $1 -c:v libx264 -preset slow -profile:v high -crf 18 -coder 1 -pix_fmt yuv420p -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 384k -profile:a aac_low $2
 }
+
+function startdev() {
+    open -a Docker
+    open -a PHPStorm
+    open -a Intellij\ Idea
+    hdiutil attach ~/SecureDev.dmg
+}
+
+function stopdev() {
+    osascript -e 'quit app "Docker"'
+    osascript -e 'quit app "PHPStorm"'
+    osascript -e 'quit app "Intellij Idea"'
+    diskutil unmount /Volumes/SecureDev
+}
