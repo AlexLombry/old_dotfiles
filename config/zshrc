@@ -24,6 +24,11 @@ antigen apply
 # Theme
 ZSH_THEME="smt"
 # ZSH_THEME="spaceship"
+# ZSH_THEME_RANDOM_CANDIDATES=(
+#   "robbyrussell"
+#   "agnoster"
+#   "smt"
+# )
 
 SPACESHIP_PROMPT_ADD_NEWLINE="false"
 SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
@@ -49,10 +54,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/l
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH="/usr/local/opt/php@7.2/bin:$PATH"
-export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
+export PATH="/usr/local/opt/php@7.1/bin:$PATH"
+export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
 export GOPATH="$HOME/Code/"
-
 export PATH=$PATH:$GOROOT/bin
 
 # Visual Studio Code Xdebug configuration for PHP Debug Plugin

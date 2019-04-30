@@ -346,9 +346,8 @@ function encode() {
 
 function startdev() {
     open -a Docker
-    open -a PHPStorm
     open -a Intellij\ Idea
-    hdiutil attach ~/SecureDev.dmg
+    hdiutil attach /Users/SecureDev.dmg
 }
 
 function stopdev() {
@@ -356,4 +355,10 @@ function stopdev() {
     osascript -e 'quit app "PHPStorm"'
     osascript -e 'quit app "Intellij Idea"'
     diskutil unmount /Volumes/SecureDev
+}
+
+function destroy_docker() {
+    docker kill $(docker ps -q);
+    docker rm $(docker ps -a -q); 
+    docker rmi $(docker images -q)
 }

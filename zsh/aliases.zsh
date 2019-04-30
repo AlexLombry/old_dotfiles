@@ -201,3 +201,5 @@ alias ng-lo="ngrok http $1 --subdomain=alombry"
 alias tojson="php ~/dotfiles/tools/toJson.php $1"
 
 alias laraclean="php artisan cache:clear; php artisan config:clear; php artisan optimize:clear; php artisan route:clear; php artisan view:clear;"
+
+alias backend="cd /Volumes/SecureDev/"
