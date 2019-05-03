@@ -18,33 +18,13 @@ antigen bundle osx
 antigen bundle kubectl
 antigen bundle jsontools
 antigen bundle zsh-users/zsh-syntax-highlighting
-# antigen theme tobyjamesthomas/pi 
-# antigen theme sobolevn/sobole-zsh-theme
-antigen theme denysdovhan/spaceship-prompt
-
 antigen apply
 
 # Theme
-ZSH_THEME="spaceship"
-# ZSH_THEME="pi"
-# ZSH_THEME="smt"
-# ZSH_THEME="spaceship"
-# ZSH_THEME_RANDOM_CANDIDATES=(
-#   "robbyrussell"
-#   "agnoster"
-#   "smt"
-# )
+ZSH_THEME="smt"
 
-SPACESHIP_PROMPT_ADD_NEWLINE="false"
-SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
-SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER"
-SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
-SPACESHIP_USER_SHOW="true"
-
-SOBOLE_THEME_MODE=dark
-
-# plugins=(zsh-autosuggestions git brew command-not-found kubectl)
-# plugins=(git osx kubectl jsontools)
+plugins=(zsh-autosuggestions git brew command-not-found kubectl)
+plugins=(git osx kubectl jsontools)
 
 # Zsh custom
 source $ZSH/oh-my-zsh.sh
@@ -66,7 +46,8 @@ export GOPATH="$HOME/Code/"
 export PATH=$PATH:$GOROOT/bin
 
 # Visual Studio Code Xdebug configuration for PHP Debug Plugin
-export XDEBUG_CONFIG="idekey=VSCODE"
+#export XDEBUG_CONFIG="idekey=VSCODE"
+export XDEBUG_CONFIG="idekey=INTELLIJ"
 
 # Java home for Android development
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home
@@ -144,12 +125,12 @@ source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 
 export HOMEBREW_FORCE_BREWED_CURL=1
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-#export SDKMAN_DIR="/Users/alex/.sdkman"
-#[[ -s "/Users/alex/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/alex/.sdkman/bin/sdkman-init.sh"
-
 PATH="/Users/alex/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/alex/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/Users/alex/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/Users/alex/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/alex/perl5"; export PERL_MM_OPT;
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+#export SDKMAN_DIR="/Users/alex/.sdkman"
+#[[ -s "/Users/alex/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/alex/.sdkman/bin/sdkman-init.sh"
