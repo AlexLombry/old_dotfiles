@@ -8,6 +8,11 @@
 [credential]
 	helper = osxkeychain
 [alias]
+	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
+	oops = commit --amend --no-edit
+	rc = rebase --continue
+	rs = rebase --skip
+	rbi = "!f() { git rebase -i HEAD~$1; }; f"
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     count = shortlog -sn
     df = diff --color
@@ -16,8 +21,8 @@
     br = branch -a
     sh = show --pretty=format: --name-only
     last = log -1 HEAD
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-    lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lgg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    lggg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     # show what I did today
     day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
     s = status --short
@@ -28,6 +33,7 @@
 	hooksPath = /Users/alex/dotfiles/softs/git/hooks
 [color]
     ui = true
+    status = always
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
@@ -55,3 +61,4 @@
 	rebase = true
 [merge]
 	ff = false
+	conflictStyle = diff3 
