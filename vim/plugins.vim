@@ -26,7 +26,10 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jdkanani/vim-material-theme'
 Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'fatih/vim-go'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'majutsushi/tagbar'
+Plugin 'junegunn/fzf.vim'
+Plugin 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 
 " Vundle configuration
 call vundle#end()            " required
