@@ -21,7 +21,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 # Theme
-ZSH_THEME="smt"
+ZSH_THEME="agnoster"
 
 plugins=(zsh-autosuggestions git brew command-not-found kubectl)
 plugins=(git osx kubectl jsontools)
@@ -47,7 +47,7 @@ export PATH=$PATH:$GOROOT/bin
 
 # Visual Studio Code Xdebug configuration for PHP Debug Plugin
 #export XDEBUG_CONFIG="idekey=VSCODE"
-export XDEBUG_CONFIG="idekey=INTELLIJ"
+export XDEBUG_CONFIG="idekey=VSCODE"
 
 # Java home for Android development
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home
@@ -134,3 +134,4 @@ PERL_MM_OPT="INSTALL_BASE=/Users/alex/perl5"; export PERL_MM_OPT;
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 #export SDKMAN_DIR="/Users/alex/.sdkman"
 #[[ -s "/Users/alex/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/alex/.sdkman/bin/sdkman-init.sh"
+POWERLEVEL9K_MODE='nerdfont-complete'
