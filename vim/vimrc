@@ -50,7 +50,8 @@ set t_CO=256								"Use 256 colors. This is useful for Terminal Vim.
 set background=dark
 colorscheme dracula
 set anti enc=utf-8
-set guifont=Hack\ Regular:h11
+" set guifont=Source\ Code\ Pro\ for\ Powerline":h13
+set guifont="Hack Regular Nerd Font Complete:h13"
 
 set guioptions-=e							"We don't want Gui tabs.
 set linespace=15   						        "Macvim-specific line-height.
@@ -165,6 +166,8 @@ let NERDTreeHijackNetrw = 0
 
 "Make NERDTree easier to toggle.
 nmap <C-b> :NERDTreeToggle<cr>
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
 
 "-------------Auto-Commands--------------"
 "Automatically source the Vimrc file on save.
@@ -235,6 +238,7 @@ let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 
 nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
 
+let g:airline#extensions#tabline#enabled = 1
 "/
 "/ Ultisnips
 "/

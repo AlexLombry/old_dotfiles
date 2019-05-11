@@ -22,7 +22,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'rking/ag.vim'
 Plugin 'skwp/greplace.vim'
 Plugin 'keith/swift.vim'
-Plugin 'ryanoasis/vim-devicons'
+" Plugin 'ryanoasis/vim-devicons'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jdkanani/vim-material-theme'
 Plugin 'ekalinin/Dockerfile.vim'
@@ -30,6 +30,8 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'majutsushi/tagbar'
 Plugin 'junegunn/fzf.vim'
 Plugin 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Vundle configuration
 call vundle#end()            " required

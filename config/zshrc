@@ -2,6 +2,20 @@
 export ZSH=$HOME/.oh-my-zsh
 export DOTFILES=$HOME/dotfiles
 
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export DISPLAY=":0.0"
+export EDITOR='vim'
+
+# zsh builtin to re-run last line. dangerous. do not want. use `!!`.
+disable r
+
 # define the code directory
 if [[ -d ~/Code ]]; then
     export CODE_DIR=~/Code
@@ -23,58 +37,40 @@ antigen apply
 # Theme
 ZSH_THEME="agnoster"
 
-plugins=(zsh-autosuggestions git brew command-not-found kubectl)
-plugins=(git osx kubectl jsontools)
+plugins=(zsh-autosuggestions git brew command-not-found jsontools osx)
 
-# Zsh custom
+# Zsh sourcecustom
 source $ZSH/oh-my-zsh.sh
-source $DOTFILES/zsh/aliases.zsh
-source $DOTFILES/zsh/functions.zsh
-source $DOTFILES/zsh/git.zsh
+for script in $DOTFILES/zsh/*.zsh; do source $script; done
 source ~/.pandacraft.zsh
 
 # User configuration
-export EDITOR='vim'
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH="/usr/local/opt/php@7.1/bin:$PATH"
-export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
-export GOPATH="$HOME/Code/"
-export PATH=$PATH:$GOROOT/bin
-
-# Visual Studio Code Xdebug configuration for PHP Debug Plugin
-#export XDEBUG_CONFIG="idekey=VSCODE"
-export XDEBUG_CONFIG="idekey=VSCODE"
-
-# Java home for Android development
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home
-
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
+export TERM="xterm-256color"
+export GEM_HOME=$HOME/.gem
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export GO111MODULE=on
+export GOPATH="$HOME/Code/"
 export HOMEBREW_NO_AUTO_UPDATE=1
-
-# ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-export TERM="xterm-256color"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+PATH+=:/usr/local/opt/coreutils/libexec/gnubin
+PATH+=:$HOME/.composer/vendor/bin
+PATH+=:/usr/local/opt/coreutils/libexec/gnubin
+PATH+=:/usr/local/opt/python/libexec/bin
+PATH+=:/usr/local/opt/php@7.1/bin
+PATH+=:/usr/local/opt/php@7.1/sbin
+PATH+=:$GOROOT/bin
+PATH+=$GEM_HOME/bin:$PATH
+PATH+=/usr/local/opt/nss/bin
 
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
 
-export PATH="/usr/local/opt/nss/bin:$PATH"
+export XDEBUG_CONFIG="idekey=VSCODE"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export APP_ENV="local"
+export APPLICATION_FOLDER=/Users/alex/Code
+export HOMEBREW_FORCE_BREWED_CURL=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -117,19 +113,17 @@ setopt share_history
 
 # fix delete key on macOS
 [ $MACOS ] && bindkey "\e[3~" delete-char
-export APP_ENV="local"
-export APPLICATION_FOLDER=/Users/alex/Code
 
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
-export HOMEBREW_FORCE_BREWED_CURL=1
+#source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+#source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
-PATH="/Users/alex/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/alex/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/alex/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/alex/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/alex/perl5"; export PERL_MM_OPT;
+## PERL PATH VAR
+#PATH="/Users/alex/perl5/bin${PATH:+:${PATH}}"; export PATH;
+#PERL5LIB="/Users/alex/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+#PERL_LOCAL_LIB_ROOT="/Users/alex/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+#PERL_MB_OPT="--install_base \"/Users/alex/perl5\""; export PERL_MB_OPT;
+#PERL_MM_OPT="INSTALL_BASE=/Users/alex/perl5"; export PERL_MM_OPT;
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 #export SDKMAN_DIR="/Users/alex/.sdkman"
