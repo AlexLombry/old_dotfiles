@@ -22,10 +22,9 @@
     sh = show --pretty=format: --name-only
     last = log -1 HEAD
     lgg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-    lggg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     # show what I did today
-    day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
     s = status --short
+    sb = status -sb
 [core]
 	excludesfile = /Users/alex/.gitignore_global
     quotepath = false
@@ -44,9 +43,8 @@
 	required = true
 	clean = git-lfs clean -- %f
 [user]
-	name = Alex Lombry
+	name = "Alex Lombry"
 	email = alex.lombry@gmail.com
-	name = Alex
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

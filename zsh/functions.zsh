@@ -68,7 +68,7 @@ function f() {
 }
 
 # get the gps coordinates from a picture
-function piclat {
+function lats_from_picture {
     lat=$(mdls $1 | grep Latitude | awk '{print $3}')
     long=$(mdls $1 | grep Longitude | awk '{print $3}')
     echo Photo was taken at $lat / $long
@@ -134,28 +134,6 @@ function extract() {
     fi
 }
 
-function scpp() {
-    scp "$1" yourname@yoururl.com:~/your_path/i;
-    echo "http://yoururl.com/i/$1" | pbcopy;
-}
-
-# syntax highlight the contents of a file or the clipboard and place the result on the clipboard
-function hl() {
-    if [ -z "$3" ]; then
-        src=$( pbpaste )
-    else
-        src=$( cat $3 )
-    fi
-
-    if [ -z "$2" ]; then
-        style="moria"
-    else
-        style="$2"
-    fi
-
-    echo $src | highlight -O rtf --syntax $1 --font Inconsoloata --style $style --line-number --font-size 24 | pbcopy
-}
-
 # humain more readable size for file and folder
 function fs() {
     if du -b /dev/null > /dev/null 2>&1; then
@@ -177,15 +155,6 @@ function light() {
 
 function dark() {
     export BACKGROUND="dark" && reload!
-}
-
-# open vim more quickly
-function v() {
-    if [ $# -eq 0 ]; then
-        vim .;
-    else
-        vim "$@";
-    fi;
 }
 
 # Better tree functionality
@@ -221,24 +190,6 @@ function manp() {
     man -t $1 | open -f -a /Applications/Preview.app
 }
 
-# Show normally hidden system and dotfile types of files
-# in Mac OSX Finder
-function showhiddenfiles() {
-    defaults write com.apple.Finder AppleShowAllFiles YES
-    osascript -e 'tell application "Finder" to quit'
-    sleep 0.25
-    osascript -e 'tell application "Finder" to activate'
-}
-
-# Hide (back to defaults) normally hidden system and dotfile types of files
-# in Mac OSX Finder
-function hidehiddenfiles() {
-    defaults write com.apple.Finder AppleShowAllFiles NO
-    osascript -e 'tell application "Finder" to quit'
-    sleep 0.25
-    osascript -e 'tell application "Finder" to activate'
-}
-
 # kill all instances of a process by name
 function skill() {
     sudo kill -9 `ps ax | grep $1 | grep -v grep | awk '{print $1}'`
@@ -254,27 +205,6 @@ function phpserve() {
     else
         php -S 0.0.0.0:8000
     fi
-}
-
-function aire() {
-    networksetup -setairportpower en0 off
-    networksetup -setairportpower en0 on
-}
-
-function ft() {
-  find . -name "$2" -exec grep -il "$1" {} \;
-}
-
-function findreplace(){
-    printf "Search: ${1}\n"
-    printf "Replace: ${2}\n"
-    printf "In: ${3}\n\n"
-
-    find . -name "*${3}" -type f | xargs perl -pi -e 's/${1}/${2}/g'
-}
-
-function grepit(){
-    find . -name "*${2}" -print | xargs grep -nir "${1}"
 }
 
 function killTouchbar(){
@@ -328,10 +258,6 @@ function cdf() {
     cd "$path"
 }
 
-function gotest() {
-    go test $* | sed ''/PASS/s//$(printf "\033[32mPASS\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | GREP_COLOR="01;33" egrep --color=always '\s*[a-zA-Z0-9\-_.]+[:][0-9]+[:]|^'
-}
-
 function duration() {
     ffmpeg -i $1 2>&1 | grep Duration | cut -d ' ' -f 4 | sed s/,//
 }
@@ -344,21 +270,39 @@ function encode() {
     ffmpeg -y -i $1 -c:v libx264 -preset slow -profile:v high -crf 18 -coder 1 -pix_fmt yuv420p -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 384k -profile:a aac_low $2
 }
 
-function startdev() {
-    open -a Docker
-    open -a Intellij\ Idea
-    hdiutil attach /Users/SecureDev.dmg
-}
+function reset_docker() {
+    docker kill $(docker ps -q)
 
-function stopdev() {
-    osascript -e 'quit app "Docker"'
-    osascript -e 'quit app "PHPStorm"'
-    osascript -e 'quit app "Intellij Idea"'
-    diskutil unmount /Volumes/SecureDev
-}
+    echo "delete volumes? (y/n): "
+    read volumes
+    if [[ $volumes =~ ^[Yy]$ ]]; then
+        docker volume rm $(docker volume ls -qf dangling=true)
+        docker volume ls -qf dangling=true | xargs -r docker volume rm
+    fi
 
-function destroy_docker() {
-    docker kill $(docker ps -q);
-    docker rm $(docker ps -a -q); 
-    # docker rmi $(docker images -q)
+    echo "delete networks? (y/n): "
+    read networks
+    if [[ $networks =~ ^[Yy]$ ]]; then
+        docker network ls  
+        docker network ls | grep "bridge"   
+        docker network rm $(docker network ls | grep "bridge" | awk '/ / { print $1 }')
+    fi
+
+    echo "remove docker images? (y/n): "
+    read images
+    if [[ $images =~ ^[Yy]$ ]]; then
+        docker images
+        docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+        docker images | grep "none"
+        docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')
+    fi
+
+    echo "remove docker containers? (y/n): "
+    read containers
+    if [[ $containers =~ ^[Yy]$ ]]; then
+        docker kill $(docker ps -q)
+        docker ps
+        docker ps -a
+        docker rm $(docker ps -qa --no-trunc --filter "status=exited")
+    fi
 }
