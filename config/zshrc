@@ -4,7 +4,8 @@ export DOTFILES=$HOME/dotfiles
 
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
-export LC_CTYPE="en_US.UTF-8"
+# export LC_CTYPE="en_US.UTF-8"
+export LC_CTYPE=C 
 export LC_MESSAGES="en_US.UTF-8"
 export LC_MONETARY="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"
@@ -12,6 +13,8 @@ export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export DISPLAY=":0.0"
 export EDITOR='vim'
+
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # zsh builtin to re-run last line. dangerous. do not want. use `!!`.
 disable r
@@ -29,7 +32,6 @@ source $DOTFILES/zsh/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle osx
-antigen bundle kubectl
 antigen bundle jsontools
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
@@ -63,7 +65,6 @@ PATH+=:/usr/local/opt/php@7.1/sbin
 PATH+=:$GOROOT/bin
 PATH+=$GEM_HOME/bin:$PATH
 PATH+=/usr/local/opt/nss/bin
-
 
 export XDEBUG_CONFIG="idekey=VSCODE"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
@@ -114,7 +115,6 @@ setopt share_history
 # fix delete key on macOS
 [ $MACOS ] && bindkey "\e[3~" delete-char
 
-
 #source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 #source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
@@ -129,3 +129,6 @@ setopt share_history
 #export SDKMAN_DIR="/Users/alex/.sdkman"
 #[[ -s "/Users/alex/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/alex/.sdkman/bin/sdkman-init.sh"
 POWERLEVEL9K_MODE='nerdfont-complete'
+
+alias backend="cd ~/Pandacraft"
+alias mage="cd ~/Pandacraft/magento"
