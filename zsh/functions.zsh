@@ -292,7 +292,7 @@ function reset_docker() {
     read images
     if [[ $images =~ ^[Yy]$ ]]; then
         docker images
-        docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+        docker images rmi $(docker images --filter "dangling=true" -q --no-trunc)
         docker images | grep "none"
         docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')
     fi
@@ -305,4 +305,14 @@ function reset_docker() {
         docker ps -a
         docker rm $(docker ps -qa --no-trunc --filter "status=exited")
     fi
+}
+
+function freeport {
+  PORT=$1
+  PID=`lsof -ti tcp:$PORT`
+  if [ -z "$PID"]; then
+    echo "No process running on port $PORT"
+  else
+    kill -KILL $PID
+  fi
 }

@@ -26,8 +26,6 @@ alias grep='grep --color=auto'
 # Applications
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias chrome="/usr/bin/open -a /Applications/Google\ Chrome.app"
-alias sublime="/usr/bin/open -a /Applications/Sublime\ Text.app"
-alias vscode="/usr/bin/open -a /Applications/Visual\ Studio\ Code.app"
 
 # Network
 alias webip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -46,10 +44,6 @@ alias fs="stat -f \"%z bytes\""
 
 # Empty the Trash on all mounted volumes and the main HDD
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
-
-# Show/hide hidden files in Finder
-alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 # Show/hide all desktop icons (useful when presenting)
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
@@ -136,12 +130,6 @@ alias bubu="brew update && brew upgrade --all && brew cleanup"
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias bsr="brew services restart $1"
 
-alias co="code ."
-
-alias dkc="docker-compose"
-alias dk-stop="docker container stop $(docker container ls -qa)"
-alias dk-rmall="docker container rm $(docker container ls -qa)"
-
 function dshell() {
     (docker container exec -ti $1 bash) || (docker container exec -ti $1 sh);   
 }
@@ -153,3 +141,5 @@ alias ng-lo="ngrok http $1 --subdomain=alombry"
 alias tojson="php ~/dotfiles/tools/toJson.php $1"
 
 alias laraclean="php artisan cache:clear; php artisan config:clear; php artisan optimize:clear; php artisan route:clear; php artisan view:clear;"
+
+alias generate_secure_string="openssl rand -base64 32"

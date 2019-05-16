@@ -1,16 +1,6 @@
 # Git
-alias ga="git add"
-alias gaa="git add ."
-alias gccc='git commit -m'
-alias gp="git push"
-alias gs="git status"
-alias gss="git status -sb"
-alias git-amend='git commit --amend -C HEAD'
-alias git-undo='git reset --soft HEAD~1'
-alias git-count='git shortlog -sn'
-alias git-undopush="git push -f origin HEAD^:master"
 alias nah="git reset --hard; git clean -df;"
-alias gcp="git checkout ."
+alias gss="git status -sb"
 alias git-count-lines="git ls-files | xargs -n1 git blame --line-porcelain | sed -n 's/^author //p' | sort -f | uniq -ic | sort -nr"
 alias wip='git status && git add . && git commit -m "Work In Progress"'
 
