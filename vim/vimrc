@@ -15,6 +15,11 @@ set laststatus=2
 " remove trailing whitespaces
 command! FixWhitespace :%s/\s\+$//e
 
+"
+" Sample command W
+" 
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
 "" Tabs
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
