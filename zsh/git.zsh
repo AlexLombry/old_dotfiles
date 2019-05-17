@@ -1,6 +1,8 @@
 # Git
 alias nah="git reset --hard; git clean -df;"
+alias gs="git status"
 alias gss="git status -sb"
+alias gccc="git commit -m"
 alias git-count-lines="git ls-files | xargs -n1 git blame --line-porcelain | sed -n 's/^author //p' | sort -f | uniq -ic | sort -nr"
 alias wip='git status && git add . && git commit -m "Work In Progress"'
 

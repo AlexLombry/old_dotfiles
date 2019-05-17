@@ -14,6 +14,8 @@ alias ...='cd ../..'
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+alias sublime="subl"
+
 alias l="exa -abghl --git --color=automatic"
 alias la="exa -abghl --git --color=automatic"
 alias lla="exa -abghl --git --color=automatic"
