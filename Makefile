@@ -1,4 +1,4 @@
-.PHONY: macos software vim links debug sshfix 
+.PHONY: macos software vim links code debug sshfix
 .SILENT:
 .DEFAULT_GOAL= help
 
@@ -30,10 +30,14 @@ vim:
 links:
 	bash ./scripts/links.sh
 
+## || 05 - Sublime, IntelliJ
+code:
+	bash ./scripts/code.sh
+
 ## || Debug command
 debug:
 	bash ./scripts/debug.sh
 
 ## || Fix SSH Permission
 sshfix:
-	sudo chmod -R u+x ~/.ssh	
+	sudo chmod -R u+x ~/.ssh
