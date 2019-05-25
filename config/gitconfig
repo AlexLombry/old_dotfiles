@@ -58,5 +58,4 @@
 [pull]
 	rebase = true
 [merge]
-	ff = false
 	conflictStyle = diff3 

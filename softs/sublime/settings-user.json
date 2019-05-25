@@ -1,0 +1,20 @@
+{
+    "font_face": "Roboto Mono",
+    "font_size": 16,
+    "ignored_packages":
+    [
+        // "Vintage"
+    ],
+    "margin": 4,
+    "line_padding_top": 6,
+    "line_padding_bottom": 6,
+    "scroll_past_end": true,
+    "translate_tabs_to_spaces": true,
+    "trim_automatic_white_space": true,
+    "trim_trailing_white_space_on_save": true,
+    "hot_exit": false,
+    "ensure_newline_at_eof_on_save": true,
+    "save_on_focus_lost": true,
+    "close_windows_when_empty": true,
+    "caret_style": "phase",
+}
