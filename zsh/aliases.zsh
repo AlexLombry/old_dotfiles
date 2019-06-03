@@ -133,7 +133,7 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias bsr="brew services restart $1"
 
 function dshell() {
-    (docker container exec -ti $1 bash) || (docker container exec -ti $1 sh);   
+    (docker container exec -ti $1 bash) || (docker container exec -ti $1 sh);
 }
 
 alias ng-web="ngrok http $1 -subdomain=webapp --region=eu"
@@ -145,3 +145,4 @@ alias tojson="php ~/dotfiles/tools/toJson.php $1"
 alias laraclean="php artisan cache:clear; php artisan config:clear; php artisan optimize:clear; php artisan route:clear; php artisan view:clear;"
 
 alias generate_secure_string="openssl rand -base64 32"
+alias fast="docker run --rm ddooo/fast"
