@@ -5,9 +5,11 @@ export DOTFILES=$HOME/dotfiles
 export PC_ROOT_FOLDER=$HOME/Pandacraft
 export PC_MAGENTO_ROOT_FOLDER=$PC_ROOT_FOLDER/magento
 
+export UNISONLOCALHOSTNAME=$(hostname)
+
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
-export LC_CTYPE=C 
+export LC_CTYPE=C
 export LC_MESSAGES="en_US.UTF-8"
 export LC_MONETARY="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"
