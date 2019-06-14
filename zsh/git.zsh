@@ -25,3 +25,36 @@ function git-rename-branch()
     git push origin :$1
     git push --set-upstream origin $2
 }
+
+function git_update() {
+    git pull
+    git checkout develop
+    git pull
+    git checkout master
+}
+
+# Add commit and push all in once
+function gsend()
+{
+    git add .
+    git commit -m "$1"
+    git push
+}
+
+# git root
+function give-credit() {
+    git commit --amend --author $1 <$2> -C HEAD
+}
+
+
+function hotfix-merge() {
+    git stash
+    git checkout master
+    git pull --rebase --autostash
+    git merge $1
+    git push
+    git checkout develop
+    git pull --rebase --autostash
+    git merge $1
+    git push
+}
