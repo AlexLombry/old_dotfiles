@@ -34,7 +34,7 @@ alias grep='grep --color=auto'
 # Applications
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias chrome="/usr/bin/open -a /Applications/Google\ Chrome.app"
-
+alias dot="cd ~/dotfiles; sublime ."
 # Network
 alias webip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -46,7 +46,7 @@ alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'
 alias trimcopy="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
-alias dsstore_delete="find . -name '*.DS_Store' -type f -ls -delete"
+alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'

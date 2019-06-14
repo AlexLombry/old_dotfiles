@@ -167,12 +167,12 @@ function tre() {
 # Utility Functions
 
 # Create a new git repo with one README commit and CD into it
-function gitnr() { 
-    mkdir $1; 
-    cd $1; 
-    git init; 
-    touch README; 
-    git add README; 
+function gitnr() {
+    mkdir $1;
+    cd $1;
+    git init;
+    touch README;
+    git add README;
     git commit -mFirst-commit;
 }
 
@@ -213,7 +213,7 @@ function killTouchbar(){
 }
 
 # Xcode via @orta
-function openx(){ 
+function openx(){
   if test -n "$(find . -maxdepth 1 -name '*.xcworkspace' -print -quit)"
   then
     echo "Opening workspace"
@@ -224,7 +224,7 @@ function openx(){
     then
       echo "Opening project"
       open *.xcodeproj
-      return  
+      return
     else
       echo "Nothing found"
     fi
@@ -283,8 +283,8 @@ function reset_docker() {
     echo "delete networks? (y/n): "
     read networks
     if [[ $networks =~ ^[Yy]$ ]]; then
-        docker network ls  
-        docker network ls | grep "bridge"   
+        docker network ls
+        docker network ls | grep "bridge"
         docker network rm $(docker network ls | grep "bridge" | awk '/ / { print $1 }')
     fi
 
@@ -315,4 +315,23 @@ function freeport {
   else
     kill -KILL $PID
   fi
+}
+
+# Create a data URL from a file
+function dataurl() {
+    local mimeType=$(file -b --mime-type "$1");
+    if [[ $mimeType == text/* ]]; then
+        mimeType="${mimeType};charset=utf-8";
+    fi
+    echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')";
+}
+
+# `o` with no arguments opens the current directory, otherwise opens the given
+# location
+function o() {
+    if [ $# -eq 0 ]; then
+        open .;
+    else
+        open "$@";
+    fi;
 }

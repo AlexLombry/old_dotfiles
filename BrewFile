@@ -8,6 +8,7 @@ tap "homebrew/services"
 tap "caskroom/cask"
 tap "eddieantonio/eddieantonio"
 
+brew "moreutils"
 brew "imgcat"
 brew "shellcheck"
 brew "exiftool"
