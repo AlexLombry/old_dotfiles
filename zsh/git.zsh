@@ -5,6 +5,7 @@ alias gss="git status -sb"
 alias gccc="git commit -m"
 alias git-count-lines="git ls-files | xargs -n1 git blame --line-porcelain | sed -n 's/^author //p' | sort -f | uniq -ic | sort -nr"
 alias wip='git status && git add . && git commit -m "Work In Progress"'
+alias gpra='git pull --rebase --autostash'
 
 # git root
 function git-give-credit() {
@@ -40,12 +41,6 @@ function gsend()
     git commit -m "$1"
     git push
 }
-
-# git root
-function give-credit() {
-    git commit --amend --author $1 <$2> -C HEAD
-}
-
 
 function hotfix-merge() {
     git stash

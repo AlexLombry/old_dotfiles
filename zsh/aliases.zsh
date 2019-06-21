@@ -164,3 +164,8 @@ alias laraclean="php artisan cache:clear; php artisan config:clear; php artisan 
 
 alias generate_secure_string="openssl rand -base64 32"
 alias fast="docker run --rm ddooo/fast"
+
+# Symfony aliases
+alias sf="bin/console"
+
+alias opcode="phpdbg -p $1"

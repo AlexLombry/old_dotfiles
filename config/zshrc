@@ -59,6 +59,7 @@ PATH+=:/usr/local/opt/php@7.1/sbin
 PATH+=:$GOROOT/bin
 PATH+=$GEM_HOME/bin:$PATH
 PATH+=/usr/local/opt/nss/bin
+PATH+=$HOME/.symfony/bin
 
 export GIT_SUBREPO_ROOT="/Users/alex/PutIo/git-subrepo"
 PATH+=:/path/to/git-subrepo/lib
@@ -67,7 +68,7 @@ PATH+=:/path/to/git-subrepo/lib
 export XDEBUG_CONFIG="idekey=INTELLIJ"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 MANPATH="/path/to/git-subrepo/man:$MANPATH"
-export APP_ENV="local"
+export APP_ENV="dev"
 export APPLICATION_FOLDER=$HOME/Pandacraft
 export HOMEBREW_FORCE_BREWED_CURL=1
 
