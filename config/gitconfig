@@ -25,14 +25,40 @@
     # show what I did today
     s = status --short
     sb = status -sb
+    rebase-on-top = ! \
+        CURRENT_BRANCH_TO_REBASE=$(git rev-parse --abbrev-ref HEAD) && \
+        BASE_BRANCH=$1 && shift && \
+        echo "==\\> Rebasing $CURRENT_BRANCH_TO_REBASE on top of $BASE_BRANCH" && \
+        git rebase --onto ${BASE_BRANCH} ${CURRENT_BRANCH_TO_REBASE}^ ${CURRENT_BRANCH_TO_REBASE} && \
+        echo "==\\> done 🚀"
 [core]
 	excludesfile = /Users/alex/.gitignore_global
     quotepath = false
 	editor = vim
 	hooksPath = /Users/alex/dotfiles/softs/git/hooks
+
 [color]
-    ui = true
-    status = always
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow
+    frag = magenta
+    old = red
+    new = green
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
@@ -47,7 +73,7 @@
 	email = alex.lombry@gmail.com
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -58,4 +84,4 @@
 [pull]
 	rebase = true
 [merge]
-	conflictStyle = diff3 
+	conflictStyle = diff3
