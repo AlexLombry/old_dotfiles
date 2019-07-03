@@ -167,5 +167,8 @@ alias fast="docker run --rm ddooo/fast"
 
 # Symfony aliases
 alias sf="bin/console"
-
+alias dsf="docker-compose exec app bin/console $1"
 alias opcode="phpdbg -p $1"
+
+# Lasy Docker
+alias ldc='lazydocker'

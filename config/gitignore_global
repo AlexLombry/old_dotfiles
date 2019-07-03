@@ -20,3 +20,22 @@ tags
 
 # typescript command garbage
 tscommand*.txt
+
+.DS_Store
+.DS_Store?
+
+
+Thumbs.db
+ehthumbs.db
+*.swp
+*.swo
+*.orig
+*~
+\#*\#
+
+.ropeproject/
+.idea/
+*.iml
+
+coverage/
+yarn-error.log
