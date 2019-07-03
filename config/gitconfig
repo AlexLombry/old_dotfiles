@@ -69,7 +69,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 [user]
-	name = "Alex Lombry"
+	name = Alex Lombry
 	email = alex.lombry@gmail.com
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
