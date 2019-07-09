@@ -339,3 +339,15 @@ function o() {
 function videoduration() {
     find . -type f -exec mediainfo --Inform="General;%Duration%" "{}" \; 2>/dev/null | awk '{s+=$1/1000} END {h=s/3600; s=s%3600; printf "%.2d:%.2d\n", int(h), int(s/60)}'
 }
+
+function rename_sf_db() {
+    echo sed 's/DATABASE_URL=mysql:\/\/db_user:db_password@127.0.0.1:3306\/db_name/DATABASE_URL=mysql:\/\/root:root@mysql:3306\/products/g' .env
+}
+
+function sonar() {
+    sonar-scanner \
+  -Dsonar.projectKey=$1 \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=$2
+}
