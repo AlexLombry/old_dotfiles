@@ -62,12 +62,13 @@ PATH+=:/usr/local/opt/coreutils/libexec/gnubin
 PATH+=:/usr/local/opt/python/libexec/bin
 PATH+=:/usr/local/opt/gettext/bin
 PATH+=:/usr/local/opt/mysql@5.7/bin
-PATH+=$HOME/.symfony/bin
-PATH+=/usr/local/opt/nss/bin
+PATH+=:$HOME/.symfony/bin
+PATH+=:/usr/local/opt/nss/bin
+PATH+=:$HOME/Downloads/sonar-scanner/bin
 
 # Go And Ruby
 PATH+=:$GOROOT/bin
-PATH+=$GEM_HOME/bin
+PATH+=:$GEM_HOME/bin
 
 export XDEBUG_CONFIG="idekey=INTELLIJ"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
