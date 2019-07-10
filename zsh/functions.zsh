@@ -341,7 +341,7 @@ function videoduration() {
 }
 
 function rename_sf_db() {
-    echo sed 's/DATABASE_URL=mysql:\/\/db_user:db_password@127.0.0.1:3306\/db_name/DATABASE_URL=mysql:\/\/root:root@mysql:3306\/products/g' .env
+    sed -i -- "s/db_user:db_password@127.0.0.1:3306\/db_name/root:root@mysql:3306\/$1/g" .env
 }
 
 function sonar() {
@@ -350,4 +350,38 @@ function sonar() {
   -Dsonar.sources=. \
   -Dsonar.host.url=http://localhost:9000 \
   -Dsonar.login=$2
+}
+
+function minimal_php_setup_for_composer() {
+    composer require --dev roave/security-advisories:dev-master sebastian/phpcpd phploc/phploc phpstan/phpstan phpmd/phpmd
+}
+
+function starter-api-platform()
+{
+    if [ -z "$1" ]; then
+        echo "You must give a folder name (create DB of same name)";
+    else
+        composer create-project symfony/skeleton $1
+        cd $1
+        git init
+        git add .
+        git commit -am "Create Project"
+        composer req api annotations migrations
+        composer req --dev fzaninotto/faker maker debug orm-fixtures
+        composer dump-autoload -o
+        sed -i '' "s/db_user:db_password@127.0.0.1:3306\/db_name/root:root@mysql:3306\/$1/g" .env
+        php bin/console doctrine:database:create -e dev --if-not-exists
+        rm -rf .env--
+
+        ## MySQL 8 and delete backup file
+        sed -i '' "s/'5.7'/'8.0'/g" config/packages/doctrine.yaml
+        rm -rf config/packages/doctrine.yaml--
+
+        git add .
+        git commit -am "Add first dependencies"
+
+        echo "Launch Symfony Server and create PHPStorm Project"
+        symfony serve --no-tls -d
+        /usr/local/bin/pstorm .
+    fi
 }
