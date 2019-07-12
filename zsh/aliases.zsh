@@ -172,3 +172,4 @@ alias opcode="phpdbg -p $1"
 
 # Lasy Docker
 alias ldc='lazydocker'
+alias perm_number="stat -f '%A %N' *"
