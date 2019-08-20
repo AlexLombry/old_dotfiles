@@ -370,7 +370,7 @@ function starter-api-platform()
         composer req --dev fzaninotto/faker maker debug orm-fixtures
         composer dump-autoload -o
         sed -i '' "s/db_user:db_password@127.0.0.1:3306\/db_name/root:root@mysql:3306\/$1/g" .env
-        php bin/console doctrine:database:create -e dev --if-not-exists
+        #php bin/console doctrine:database:create -e dev --if-not-exists
         rm -rf .env--
 
         ## MySQL 8 and delete backup file
@@ -384,4 +384,21 @@ function starter-api-platform()
         symfony serve --no-tls -d
         /usr/local/bin/pstorm .
     fi
+}
+
+function laraclean() {
+    if [[ -f "./artisan" ]]; then
+        php artisan cache:clear;
+        php artisan config:clear;
+        php artisan optimize:clear;
+        php artisan route:clear;
+        php artisan view:clear;
+    else
+        php bin/console cache:clear
+        php bin/console doctrine:cache:clear-metadata
+        php bin/console doctrine:cache:clear-query
+        php bin/console doctrine:cache:clear-result
+    fi
+
+    composer dump-autoload -o
 }
