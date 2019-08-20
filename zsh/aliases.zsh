@@ -143,8 +143,8 @@ alias path='echo -e ${PATH//:/\\n}'
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 alias dss='du -sck * | sort -n'
 
-alias t='vendor/bin/phpunit'
-alias tf='vendor/bin/phpunit --filter $1'
+alias t='bin/phpunit'
+alias tf='bin/phpunit --filter $1'
 
 alias bubu="brew update && brew upgrade --all && brew cleanup"
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
@@ -160,8 +160,6 @@ alias ng-lo="ngrok http $1 --subdomain=alombry"
 
 alias tojson="php ~/dotfiles/tools/toJson.php $1"
 
-alias laraclean="php artisan cache:clear; php artisan config:clear; php artisan optimize:clear; php artisan route:clear; php artisan view:clear;"
-
 alias generate_secure_string="openssl rand -base64 32"
 alias fast="docker run --rm ddooo/fast"
 
@@ -173,3 +171,13 @@ alias opcode="phpdbg -p $1"
 # Lasy Docker
 alias ldc='lazydocker'
 alias perm_number="stat -f '%A %N' *"
+
+alias cat=ccat
+alias messydesk="defaults write com.apple.finder CreateDesktop"
+
+alias bench="ab -n 500 -c 100 $1"
+
+# Go to development folders
+alias gih="cd ~/Development/GitHub"
+alias gla="cd ~/Development/GitLab"
+alias pri="cd ~/Development/Private"
