@@ -307,6 +307,11 @@ function reset_docker() {
     fi
 }
 
+function clean_docker() {
+    docker rmi $(docker images -q -f dangling=true)
+    docker rm $(docker ps -q -f status=exited)
+}
+
 function freeport {
   PORT=$1
   PID=`lsof -ti tcp:$PORT`
