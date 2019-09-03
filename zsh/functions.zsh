@@ -308,6 +308,7 @@ function reset_docker() {
 }
 
 function clean_docker() {
+    docker volume prune
     docker rmi $(docker images -q -f dangling=true)
     docker rm $(docker ps -q -f status=exited)
 }
