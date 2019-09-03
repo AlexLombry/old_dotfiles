@@ -4,4 +4,4 @@ dotfiles
 Install
 --------
 
-curl -L https://raw.github.com/alexlombry/dotfiles/master/init | bash -s
+curl -L https://raw.githubusercontent.com/AlexLombry/dotfiles/master/init | bash -s
