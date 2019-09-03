@@ -11,6 +11,7 @@ tap "homebrew/services"
 tap "jesseduffield/lazydocker"
 tap "jlhonora/lsusb"
 tap "sambadevi/powerlevel9k"
+
 brew "ack"
 brew "apktool"
 brew "autoconf"
