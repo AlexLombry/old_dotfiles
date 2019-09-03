@@ -71,6 +71,7 @@
 [user]
 	name = Alex Lombry
 	email = alex.lombry@gmail.com
+    signingkey = 0xD2B45F04D452ADC0
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
