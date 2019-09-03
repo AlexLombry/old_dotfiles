@@ -183,3 +183,4 @@ alias gla="cd ~/Development/GitLab"
 alias pri="cd ~/Development/Private"
 
 alias dump-docker="docker-compose exec php php /var/www/symfony/bin/console server:dump"
+alias dc="docker-compose"

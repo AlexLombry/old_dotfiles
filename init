@@ -1,0 +1,4 @@
+cd
+git clone https://github.com/AlexLombry/dotfiles.git
+cd dotfiles
+make

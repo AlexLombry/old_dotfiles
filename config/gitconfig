@@ -25,6 +25,8 @@
     # show what I did today
     s = status --short
     sb = status -sb
+    ci = commit
+    co = checkout
     rebase-on-top = ! \
         CURRENT_BRANCH_TO_REBASE=$(git rev-parse --abbrev-ref HEAD) && \
         BASE_BRANCH=$1 && shift && \
@@ -87,3 +89,5 @@
 	rebase = true
 [merge]
 	conflictStyle = diff3
+[github]
+    user = AlexLombry
