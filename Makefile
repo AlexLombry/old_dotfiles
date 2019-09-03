@@ -1,4 +1,4 @@
-.PHONY: macos software vim links code debug sshfix
+.PHONY: macos software vim links code debug sshfix git
 .SILENT:
 .DEFAULT_GOAL= help
 
@@ -41,3 +41,7 @@ debug:
 ## || Fix SSH Permission
 sshfix:
 	sudo chmod -R u+x ~/.ssh
+
+## || Git installation process (all echo)
+git:
+	bash ./scripts/git.sh
