@@ -1394,7 +1394,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/dotfiles/softs/iterm2/config</string>
+	<string>~/Dropbox/Images/avatar</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -1447,7 +1447,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>196 95 918 514 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>966 0 954 1057 0 0 1920 1057 </string>
+	<string>0 0 1440 877 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>720 23 714 854 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -1616,16 +1616,20 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.25490196078431371</real>
+				<real>0.24313725490196078</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.24313725490196078</real>
+				<real>0.23137254901960785</real>
 				<key>Red Component</key>
-				<real>0.22352941176470589</real>
+				<real>0.21176470588235294</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
+			<key>Background Image Location</key>
+			<string>/Users/alex/Dropbox/Images/avatar/github-logo-fusee.png</string>
+			<key>Background Image Mode</key>
+			<integer>3</integer>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1642,7 +1646,7 @@
 			<key>Badge Text</key>
 			<string></string>
 			<key>Blend</key>
-			<real>0.050000000000000003</real>
+			<real>0.085579091494845355</real>
 			<key>Blink Allowed</key>
 			<true/>
 			<key>Blinking Cursor</key>
@@ -3737,14 +3741,14 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{346, 714}</string>
+		<string>{728, 759}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>E767BEE2-5A63-4DB7-8DEF-25D31A57EC30</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>216</integer>
+	<integer>228</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -4555,7 +4559,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-27T08:48:17Z</date>
+	<date>2019-09-04T07:58:07Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
