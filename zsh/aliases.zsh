@@ -178,9 +178,9 @@ alias messydesk="defaults write com.apple.finder CreateDesktop"
 alias bench="ab -n 500 -c 100 $1"
 
 # Go to development folders
-alias gih="cd ~/Development/GitHub"
-alias gla="cd ~/Development/GitLab"
-alias pri="cd ~/Development/Private"
+alias gih="cd ~/Code/GitHub"
+alias gla="cd ~/Code/GitLab"
+alias pri="cd ~/Code/Private"
 
 alias dump-docker="docker-compose exec php php /var/www/symfony/bin/console server:dump"
 alias dc="docker-compose"

@@ -19,6 +19,8 @@ export COMPOSE_HTTP_TIMEOUT=120
 # export DOCKER_TLS_VERIFY=1
 # export DOCKER_MACHINE_NAME=dinghy
 
+export DOCKER_BUILDKIT=1
+
 GPG_TTY=$(tty)
 export GPG_TTY
 
