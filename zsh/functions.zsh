@@ -270,49 +270,6 @@ function encode() {
     ffmpeg -y -i $1 -c:v libx264 -preset slow -profile:v high -crf 18 -coder 1 -pix_fmt yuv420p -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 384k -profile:a aac_low $2
 }
 
-function reset_docker() {
-    docker kill $(docker ps -q)
-
-    echo "delete volumes? (y/n): "
-    read volumes
-    if [[ $volumes =~ ^[Yy]$ ]]; then
-        docker volume rm $(docker volume ls -qf dangling=true)
-        docker volume ls -qf dangling=true | xargs -r docker volume rm
-    fi
-
-    echo "delete networks? (y/n): "
-    read networks
-    if [[ $networks =~ ^[Yy]$ ]]; then
-        docker network ls
-        docker network ls | grep "bridge"
-        docker network rm $(docker network ls | grep "bridge" | awk '/ / { print $1 }')
-    fi
-
-    echo "remove docker images? (y/n): "
-    read images
-    if [[ $images =~ ^[Yy]$ ]]; then
-        docker images
-        docker images rmi $(docker images --filter "dangling=true" -q --no-trunc)
-        docker images | grep "none"
-        docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')
-    fi
-
-    echo "remove docker containers? (y/n): "
-    read containers
-    if [[ $containers =~ ^[Yy]$ ]]; then
-        docker kill $(docker ps -q)
-        docker ps
-        docker ps -a
-        docker rm $(docker ps -qa --no-trunc --filter "status=exited")
-    fi
-}
-
-function clean_docker() {
-    docker volume prune
-    docker rmi $(docker images -q -f dangling=true)
-    docker rm $(docker ps -q -f status=exited)
-}
-
 function freeport {
   PORT=$1
   PID=`lsof -ti tcp:$PORT`
