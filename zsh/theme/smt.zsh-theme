@@ -80,7 +80,7 @@ function git_time_since_commit() {
 }
 
 PROMPT='
-%{$fg[blue]%}%m%{$reset_color%} 福 %{$fg[cyan]%}%~ %{$reset_color%}$(git_prompt_short_sha)$(git_prompt_info)
-%{$fg[red]%}%!%{$reset_color%} $(prompt_char) : '
+%{$fg[blue]%}%m%{$reset_color%} %{$fg[cyan]%}%~ %{$reset_color%}$(git_prompt_short_sha)$(git_prompt_info)
+%{$fg[red]%}%!%{$reset_color%}$(prompt_char) : '
 
 RPROMPT='${return_status}$(git_time_since_commit)$(git_prompt_status)%{$reset_color%}'

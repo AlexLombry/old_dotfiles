@@ -3,6 +3,7 @@ alias nah="git reset --hard; git clean -df;"
 alias gs="git status"
 alias gss="git status -sb"
 alias gccc="git commit -S -m"
+
 alias git-count-lines="git ls-files | xargs -n1 git blame --line-porcelain | sed -n 's/^author //p' | sort -f | uniq -ic | sort -nr"
 alias wip='git status && git add . && git commit -m "Work In Progress"'
 alias gpra='git pull --rebase --autostash'
@@ -28,9 +29,9 @@ function git-rename-branch()
 }
 
 function git_update() {
-    git pull
+    git pull --rebase --autostash
     git checkout develop
-    git pull
+    git pull --rebase --autostash
     git checkout master
 }
 
@@ -42,14 +43,13 @@ function gsend()
     git push
 }
 
-function hotfix-merge() {
+function mergeondevelop()
+{
     git stash
-    git checkout master
-    git pull --rebase --autostash
-    git merge $1
-    git push
     git checkout develop
     git pull --rebase --autostash
+    git checkout $1
+    git rebase develop
+    git checkout develop
     git merge $1
-    git push
 }

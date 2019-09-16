@@ -52,7 +52,8 @@ fi
 
 # Theme
 # ZSH_THEME="agnoster"
-ZSH_THEME="awesomepanda"
+# ZSH_THEME="awesomepanda"
+ZSH_THEME="smt"
 autoload -U promptinit; promptinit
 
 plugins=(git brew command-not-found jsontools osx docker docker-compose sudo)

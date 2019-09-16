@@ -18,14 +18,11 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias db="cd ~/Dropbox"
 
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
-
 alias sublime="subl"
 
 alias l="exa -abghl --git --color=automatic"
 alias la="exa -abghl --git --color=automatic"
-alias lla="exa -abghl --git --color=automatic"
-alias ll="ls -laFh ${colorflag}"
+alias ll="exa -abghl --git --color=automatic"
 alias lld="ls -l | grep ^d"
 
 # Helpers
@@ -35,8 +32,8 @@ alias grep='grep --color=auto'
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias chrome="/usr/bin/open -a /Applications/Google\ Chrome.app"
 alias dot="cd ~/dotfiles; sublime ."
+
 # Network
-alias webip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
@@ -138,7 +135,7 @@ alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v
 alias deletefilerecursive="find . -type f -print0 | xargs -0 rm"
 
 # Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
+alias paths='echo -e ${PATH//:/\\n}'
 
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 alias dss='du -sck * | sort -n'
