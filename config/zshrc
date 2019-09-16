@@ -148,3 +148,6 @@ setopt share_history
 #[[ -s "/Users/alex/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/alex/.sdkman/bin/sdkman-init.sh"
 POWERLEVEL9K_MODE='nerdfont-complete'
 #zprof
+
+# added by travis gem
+[ -f /Users/alex/.travis/travis.sh ] && source /Users/alex/.travis/travis.sh
