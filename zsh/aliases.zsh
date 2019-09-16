@@ -150,10 +150,6 @@ alias bubu="brew update && brew upgrade --all && brew cleanup"
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias bsr="brew services restart $1"
 
-function dshell() {
-    (docker container exec -ti $1 bash) || (docker container exec -ti $1 sh);
-}
-
 alias ng-web="ngrok http $1 -subdomain=webapp --region=eu"
 alias ng-api="ngrok http $1 -subdomain=webapi --region=eu"
 alias ng-lo="ngrok http $1 --subdomain=alombry"
@@ -161,15 +157,11 @@ alias ng-lo="ngrok http $1 --subdomain=alombry"
 alias tojson="php ~/dotfiles/tools/toJson.php $1"
 
 alias generate_secure_string="openssl rand -base64 32"
-alias fast="docker run --rm ddooo/fast"
 
 # Symfony aliases
 alias sf="bin/console"
-alias dsf="docker-compose exec app bin/console $1"
 alias opcode="phpdbg -p $1"
 
-# Lasy Docker
-alias ldc='lazydocker'
 alias perm_number="stat -f '%A %N' *"
 
 alias cat=ccat
@@ -181,6 +173,3 @@ alias bench="ab -n 500 -c 100 $1"
 alias gih="cd ~/Code/GitHub"
 alias gla="cd ~/Code/GitLab"
 alias pri="cd ~/Code/Private"
-
-alias dump-docker="docker-compose exec php php /var/www/symfony/bin/console server:dump"
-alias dc="docker-compose"
