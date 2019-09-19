@@ -53,3 +53,5 @@ function mergeondevelop()
     git checkout develop
     git merge $1
 }
+
+alias hb="hub browse"
