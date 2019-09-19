@@ -378,3 +378,11 @@ function updateMac() {
     sudo gem cleanup
     composer self-update
 }
+
+function toMP3() {
+    for f in *.ac3; do
+        ffmpeg -i "$f" "$f.mp3"
+        # /usr/bin/afconvert -d '.mp3' -f MPG3 "$f" -o "$f.mp3"
+        echo "$f converted"
+    done
+}
