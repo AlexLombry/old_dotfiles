@@ -93,3 +93,5 @@
     user = AlexLombry
 [gui]
 	recentrepo = /Users/alex/Code/GitHub/Pandacraft/platform-api
+[gpg]
+	program = gpg
