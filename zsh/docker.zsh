@@ -7,7 +7,7 @@ alias ldc='lazydocker'
 alias dsf="docker-compose exec app bin/console $1"
 alias dump-docker="docker-compose exec php php /var/www/symfony/bin/console server:dump"
 alias dc="docker-compose"
-alias f="kubectl"
+alias k="kubectl"
 
 function buildtravis() {
     BUILDID="build-$RANDOM"

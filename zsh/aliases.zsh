@@ -140,8 +140,8 @@ alias paths='echo -e ${PATH//:/\\n}'
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 alias dss='du -sck * | sort -n'
 
-alias t='bin/phpunit'
-alias tf='bin/phpunit --filter $1'
+alias t='php -d memory_limit=-1 ./bin/phpunit'
+alias tf='php -d memory_limit=-1 ./bin/phpunit --filter $1'
 
 alias bubu="brew update && brew upgrade --all && brew cleanup"
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
