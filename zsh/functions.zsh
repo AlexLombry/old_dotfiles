@@ -369,3 +369,14 @@ function toMP3() {
         echo "$f converted"
     done
 }
+
+function encrypt() {
+    CUR_FILE=$1
+    gpg --output $CUR_FILE.gpg --encrypt --recipient alex.lombry@gmail.com $CUR_FILE
+}
+
+function decrypt() {
+    CUR_FILE=$1
+    gpg --output decrypted_$CUR_FILE --decrypt $CUR_FILE
+}
+
