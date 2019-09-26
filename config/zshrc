@@ -56,7 +56,7 @@ fi
 ZSH_THEME="smt"
 autoload -U promptinit; promptinit
 
-plugins=(git brew command-not-found jsontools osx docker docker-compose sudo)
+#plugins=(git brew command-not-found jsontools osx docker docker-compose sudo)
 
 # Zsh sourcecustom
 source $ZSH/oh-my-zsh.sh
