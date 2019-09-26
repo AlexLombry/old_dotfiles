@@ -1394,7 +1394,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Dropbox/Images/avatar</string>
+	<string>~/Downloads/wallpapers-master/Tech</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -1417,7 +1417,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -1443,13 +1443,15 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>520 561 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>650 498 620 392 0 0 1920 1057 </string>
+	<string>410 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>196 95 918 514 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1068 262 1233 978 0 0 2560 1417 </string>
+	<string>0 0 957 1057 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>720 23 714 854 0 0 1440 877 </string>
+	<string>720 485 490 392 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>197 47 490 392 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1626,8 +1628,6 @@
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
-			<key>Background Image Location</key>
-			<string>/Users/alex/Dropbox/Images/avatar/github-logo-fusee.png</string>
 			<key>Background Image Mode</key>
 			<integer>3</integer>
 			<key>Badge Color</key>
@@ -1646,7 +1646,7 @@
 			<key>Badge Text</key>
 			<string></string>
 			<key>Blend</key>
-			<real>0.085579091494845355</real>
+			<real>0.1077490737757732</real>
 			<key>Blink Allowed</key>
 			<true/>
 			<key>Blinking Cursor</key>
@@ -2058,7 +2058,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>CascadiaCode 15</string>
+			<string>SauceCodePowerline-Regular 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -2214,7 +2214,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.047005869289340106</real>
 			<key>Triggers</key>
 			<array>
 				<dict>
@@ -3713,23 +3713,24 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.3beta1</string>
-		<string>3.3.1beta1</string>
-		<string>3.3.0beta16</string>
-		<string>3.3.0beta11</string>
-		<string>3.3.0beta13</string>
-		<string>3.3.4beta1</string>
-		<string>3.3.2beta1</string>
 		<string>3.3.0beta10</string>
-		<string>3.3.5beta1</string>
+		<string>3.3.5beta2</string>
+		<string>3.3.0beta11</string>
+		<string>3.3.2beta1</string>
 		<string>3.3.0beta12</string>
+		<string>3.3.0beta13</string>
+		<string>3.3.1beta1</string>
+		<string>3.3.5beta1</string>
+		<string>3.3.0beta16</string>
 		<string>3.3.3beta2</string>
+		<string>3.3.4beta1</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
-		<string>Cascadia Code</string>
 		<string>Source Code Pro for Powerline</string>
-		<string>SF Mono</string>
-		<string>PT Mono</string>
+		<string>Droid Sans Mono for Powerline</string>
+		<string>Hack Nerd Font</string>
+		<string>Hack</string>
 	</array>
 	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
@@ -3741,16 +3742,16 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {2560, 1440}}</string>
+		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{1124, 874}</string>
+		<string>{870, 821}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>E767BEE2-5A63-4DB7-8DEF-25D31A57EC30</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>253</integer>
+	<integer>259</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -4280,6 +4281,22 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>title</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>title</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
 				<string>tmuxWindowTitle</string>
@@ -4561,7 +4578,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-09-20T10:41:00Z</date>
+	<date>2019-09-26T10:58:01Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -7777,7 +7794,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.5beta1</string>
+	<string>3.3.5beta2</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
