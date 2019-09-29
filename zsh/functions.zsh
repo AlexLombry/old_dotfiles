@@ -370,13 +370,30 @@ function toMP3() {
     done
 }
 
-function encrypt() {
+function gpgenc() {
     CUR_FILE=$1
     gpg --output $CUR_FILE.gpg --encrypt --recipient alex.lombry@gmail.com $CUR_FILE
 }
 
-function decrypt() {
+function gpgencwithrecipient() {
     CUR_FILE=$1
-    gpg --output decrypted_$CUR_FILE --decrypt $CUR_FILE
+    gpg --output $CUR_FILE.gpg --encrypt --recipient $2 $CUR_FILE
+}
+
+function gpgdec() {
+    CUR_FILE=$1
+    STRIP=$(echo $1 | sed 's/.gpg//')
+    gpg --output $STRIP --decrypt $CUR_FILE
+}
+
+function sslenc() {
+    CUR_FILE=$1
+    openssl enc -aes-256-cbc -salt -in $CUR_FILE -out $CUR_FILE.enc
+}
+
+function ssldec() {
+    CUR_FILE=$1
+    STRIP=$(echo $1 | sed 's/.enc//')
+    openssl enc -d -aes-256-cbc -in $CUR_FILE -out $STRIP
 }
 
