@@ -2,6 +2,7 @@ function dshell() {
     (docker container exec -ti $1 bash) || (docker container exec -ti $1 sh);
 }
 
+alias d="docker"
 alias fast="docker run --rm ddooo/fast"
 alias ldc='lazydocker'
 alias dsf="docker-compose exec app bin/console $1"

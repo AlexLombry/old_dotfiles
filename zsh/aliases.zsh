@@ -171,3 +171,5 @@ alias bench="ab -n 500 -c 100 $1"
 alias gih="cd ~/Code/GitHub"
 alias gla="cd ~/Code/GitLab"
 alias pri="cd ~/Code/Private"
+
+alias s="sublime"
