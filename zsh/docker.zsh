@@ -3,6 +3,10 @@ function dshell() {
 }
 
 alias d="docker"
+alias docvker="docker"
+alias dovker="docker"
+alias docekr="docker"
+alias dockver="docker"
 alias fast="docker run --rm ddooo/fast"
 alias ldc='lazydocker'
 alias dsf="docker-compose exec app bin/console $1"
