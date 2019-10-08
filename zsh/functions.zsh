@@ -397,3 +397,10 @@ function ssldec() {
     openssl enc -d -aes-256-cbc -in $CUR_FILE -out $STRIP
 }
 
+function ncx() {
+    nc -l -n -vv -p $1 -k
+}
+
+function ipinfo() {
+    curl http://ipinfo.io/$1
+}
