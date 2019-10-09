@@ -71,7 +71,7 @@ brew "nikto"
 brew "nmap"
 brew "nvm"
 brew "pgloader"
-brew "php@7.2", restart_service: true, link: true
+brew "php", restart_service: true, link: true
 brew "phpmd"
 brew "pv"
 brew "pwgen"

@@ -14,12 +14,12 @@ export ZSH=$HOME/.oh-my-zsh
 export DOTFILES=$HOME/dotfiles
 export DOCKER_CLIENT_TIMEOUT=120
 export COMPOSE_HTTP_TIMEOUT=120
-# export DOCKER_HOST=tcp://10.211.55.4:2376
+
+# export DOCKER_HOST=tcp://192.168.64.3:2376
 # export DOCKER_CERT_PATH=/Users/alex/.docker/machine/machines/dinghy
 # export DOCKER_TLS_VERIFY=1
 # export DOCKER_MACHINE_NAME=dinghy
-
-export DOCKER_BUILDKIT=1
+# export DOCKER_BUILDKIT=1
 
 GPG_TTY=$(tty)
 export GPG_TTY
