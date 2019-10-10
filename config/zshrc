@@ -152,3 +152,6 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 
 # added by travis gem
 [ -f /Users/alex/.travis/travis.sh ] && source /Users/alex/.travis/travis.sh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
