@@ -27,6 +27,21 @@ nnoremap <silent> <S-t> :tabnew<CR>
 "" Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
 
+" Jeffrey Way's style
+"Easy escaping to normal model
+imap jj <esc>
+" fast save
+nmap <leader>w :w!<cr>
+" Down is really the next line
+nnoremap j gj
+nnoremap k gk
+
+" Run PHPUnit tests
+map <Leader>t :!phpunit %<cr>
+
+"Auto change directory to match current file ,cd
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
 "" Opens an edit command with the path of the currently edited file filled in
 noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
@@ -36,6 +51,7 @@ noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 "" fzf.vim
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
+
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
 
 " The Silver Searcher
@@ -55,25 +71,25 @@ set t_CO=256								"Use 256 colors. This is useful for Terminal Vim.
 set background=dark
 colorscheme dracula
 set anti enc=utf-8
-" set guifont=Source\ Code\ Pro\ for\ Powerline":h13
-set guifont="Hack Regular Nerd Font Complete:h13"
+set guifont=Source\ Code\ Pro\ for\ Powerline":h13
+" set guifont="Hack Regular Nerd Font Complete:h13"
 
-set guioptions-=e							"We don't want Gui tabs.
-set linespace=15   						        "Macvim-specific line-height.
+set guioptions-=e			"We don't want Gui tabs.
+set linespace=15   			"Macvim-specific line-height.
 
-set guioptions-=l                                                       "Disable Gui scrollbars.
+set guioptions-=l           "Disable Gui scrollbars.
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 set guioptions-=T
 
 "-------------Search--------------"
-set hlsearch								"Highlight all matched terms.
-set incsearch								"Incrementally highlight, as we type.
+set hlsearch				"Highlight all matched terms.
+set incsearch				"Incrementally highlight, as we type.
 
 "-------------Split Management--------------"
-set splitbelow 								"Make splits default to below...
-set splitright								"And to the right. This feels more natural.
+set splitbelow 				"Make splits default to below...
+set splitright				"And to the right. This feels more natural.
 
 set go-=L " Removes left hand scroll bar
 
@@ -84,33 +100,33 @@ set fileencoding=utf-8
 set fileencodings=utf-8
 
 set nohidden
-set showmode                    " always show what mode we're currently editing in
-set nowrap                      " don't wrap lines
-set tabstop=4                   " a tab is four spaces
+set showmode                 " always show what mode we're currently editing in
+set nowrap                   " don't wrap lines
+set tabstop=4                " a tab is four spaces
 set smarttab
 set tags=tags
-set softtabstop=4               " when hitting <BS>, pretend like a tab is removed, even if spaces
-set expandtab                   " expand tabs by default (overloadable per file type later)
-set shiftwidth=4                " number of spaces to use for autoindenting
-set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
-set autoindent                  " always set autoindenting on
-set number                      " always show line numbers
+set softtabstop=4            " when hitting <BS>, pretend like a tab is removed, even if spaces
+set expandtab                " expand tabs by default (overloadable per file type later)
+set shiftwidth=4             " number of spaces to use for autoindenting
+set shiftround               " use multiple of shiftwidth when indenting with '<' and '>'
+set autoindent               " always set autoindenting on
+set number                   " always show line numbers
 
 " -- Search
-set ignorecase                  " ignore case when searching
-set smartcase                   " ignore case if search pattern is all lowercase,
+set ignorecase               " ignore case when searching
+set smartcase                " ignore case if search pattern is all lowercase,
 set timeout timeoutlen=200 ttimeoutlen=100
 
 " -- Beep
-set visualbell                  " don't beep
-set noerrorbells                " don't beep
+set visualbell               " don't beep
+set noerrorbells             " don't beep
 
-set autowrite                   "Save on buffer switch
+set autowrite                " Save on buffer switch
 set mouse=a
 set showmatch
-set showcmd                     " show command in status line
+set showcmd                  " show command in status line
 set scrolloff=1
-set lazyredraw                  " Don't redraw the screen when running macros.
+set lazyredraw               " Don't redraw the screen when running macros.
 set wildmode=list:full,full
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
@@ -158,6 +174,11 @@ abbr fitler filter
 "/
 let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
+
+
+
+
+
 
 nmap <C-p> :CtrlP<cr>
 nmap <C-r> :CtrlPBufTag<cr>
@@ -214,10 +235,6 @@ nmap <leader>m :call PhpCsFixerFixFile()<cr>
 " Auto-remove trailing spaces
 autocmd BufWritePre *.php :%s/\s\+$//e
 
-" Edit todo list for project
-nmap ,todo :e todo.txt<cr>
-
-" source vimrc file when saving it
 " Delete all buffer
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 "let g:powerline_config_overrides={'common': {'reload_config': 0}}
@@ -252,9 +269,4 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Search
-set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
-
-set rtp+=/usr/local/opt/fzf
-
-let g:wwdc16_use16 = 1
