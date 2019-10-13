@@ -43,11 +43,14 @@ if [[ $? != 0 ]]; then
 fi
 ok
 
-running "Install all brew dependencies"
-HOMEBREW_NO_AUTO_UPDATE=1 brew bundle
-ok
+read -p "Do you want to run Brew Bundle (Can be very long) ?(y|N)" response
+if [ "$response" = "y" ]; then
+    running "Install all brew dependencies"
+    HOMEBREW_NO_AUTO_UPDATE=1 brew bundle
+    ok
+fi
 
-running "Install shell extensions"
-HOMEBREW_NO_AUTO_UPDATE=1 brew install fzf
-/usr/local/opt/fzf/install
-ok
+# running "Install shell extensions"
+# HOMEBREW_NO_AUTO_UPDATE=1 brew install fzf
+# /usr/local/opt/fzf/install
+# ok

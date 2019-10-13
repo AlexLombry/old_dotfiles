@@ -7,7 +7,7 @@ files=$( ls -1 -d config/* )
 for file in $files ; do
     pwd="$(pwd)/"
     filename="$(ls $file | cut -d. -f1 | cut -d/ -f2)"
-    mv ~/.$filename ~/.$filename.bkp1-`date +%Y-%m-%d.%H:%M:%S`
+    unlink ~/.$filename
     ln -s $pwd$file ~/.$filename
 done
 ok
