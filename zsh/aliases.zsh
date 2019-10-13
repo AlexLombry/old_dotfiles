@@ -63,6 +63,10 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 
+#
+alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
 # Change dock animation
 alias killdock="defaults delete com.apple.dock expose-animation-duration; killall Dock"
 alias fastdock="defaults write com.apple.dock expose-animation-duration -float 0.01; killall Dock"

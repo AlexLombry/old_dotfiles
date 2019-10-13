@@ -10,9 +10,11 @@ bash ./macos/software.sh
 ok
 
 running "Install vim"
-bash ./macos/vim.sh
+bash ./vim/vim.sh
 ok
 
 running "Install links"
 bash ./macos/links.sh
 ok
+
+echo 'source ~/.zsh_ext' >> ~/.zshrc
