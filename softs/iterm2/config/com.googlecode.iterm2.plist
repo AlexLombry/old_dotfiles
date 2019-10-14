@@ -1538,7 +1538,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>230 833 592 584 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1008 254 1226 1035 0 0 2560 1417 </string>
+	<string>1007 579 650 578 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 1026 712 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -3823,16 +3823,16 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {2560, 1440}}</string>
+		<string>{{0, 0}, {1280, 720}}</string>
 		<key>topLeft</key>
-		<string>{210, 1175}</string>
+		<string>{269, 595}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>E767BEE2-5A63-4DB7-8DEF-25D31A57EC30</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>305</integer>
+	<integer>309</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -4663,7 +4663,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-10-12T21:00:45Z</date>
+	<date>2019-10-13T14:42:16Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -4671,7 +4671,7 @@
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Secure Input</key>
-	<true/>
+	<false/>
 	<key>SeparateStatusBarsPerPane</key>
 	<true/>
 	<key>Show Toolbelt</key>
@@ -4725,7 +4725,7 @@
 	<key>UseCompactLabel</key>
 	<true/>
 	<key>UseLionStyleFullscreen</key>
-	<false/>
+	<true/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WebKitDefaultFontSize</key>
