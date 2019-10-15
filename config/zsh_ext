@@ -26,6 +26,7 @@ for script in $DOTFILES/zsh/*.zsh; do source $script; done
 
 PATH+=:$HOME/.composer/vendor/bin
 PATH+=:$HOME/.symfony/bin
+PATH+=:/usr/local/sbin
 
 export HOMEBREW_FORCE_BREWED_CURL=1
 

@@ -14,6 +14,7 @@ pwd="$(pwd)"
 
 ln -s $pwd/vim/vimrc ~/.vimrc
 ln -s $pwd/vim/plugins.vim ~/.vim/plugins.vim
+ln -s $pwd/vim/ideavimrc ~/.ideavimrc
 
 running "Add new colorscheme"
 cp -R ~/dotfiles/vim/colors ~/.vim/
