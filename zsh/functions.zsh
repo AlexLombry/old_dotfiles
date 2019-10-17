@@ -37,7 +37,7 @@ function bot() {
 }
 
 function running() {
-    echo -en "$YELLOW ⇒ $RESET"$1": "
+    echo -en "\n$YELLOW ⇒ $RESET"$1": "
 }
 
 function action() {
@@ -45,7 +45,7 @@ function action() {
 }
 
 function warn() {
-    echo -e "$YELLOW [warning] $RESET "$1
+    echo -e "\n$YELLOW [warning] $RESET "$1
 }
 
 function error() {
