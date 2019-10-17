@@ -1,20 +1,60 @@
 #!/usr/bin/env bash
-source ~/dotfiles/zsh/functions.zsh
+source ~/dotfiles/scripts/zsh/functions.zsh
 
-running "Prepare macOS system"
-bash ./macos/macos.sh
-ok
+ZSH=${ZSH:-~/.oh-my-zsh}
 
-running "Install software"
-bash ./macos/software.sh
-ok
+function xcodetools() {
+    running "XCode Command Line Tools"
+    if [ $(xcode-select -p &> /dev/null; printf $?) -ne 0 ]; then
+        xcode-select --install &> /dev/null
+        # Wait until the XCode Command Line Tools are installed
+        while [ $(xcode-select -p &> /dev/null; printf $?) -ne 0 ]; do
+            sleep 5
+        done
+        xcode-select -p &> /dev/null
+        if [ $? -eq 0 ]; then
+            # Prompt user to agree to the terms of the Xcode license
+            # https://github.com/alrra/dotfiles/issues/10
+           sudo xcodebuild -license
+       fi
+    fi
+}
 
-running "Install vim"
-bash ./vim/vim.sh
-ok
+function brewbundle() {
+    # Prompt for user choice on running brew bundle command
+    action "${YELLOW}Do you want to run Brew Bundle ? [Y/n]${RESET} "
+    read opt
+    case $opt in
+        y*|Y*|"") running "Running brew bundle" && brew bundle ;;
+        n*|N*) echo "Brew bundle skipped."; ;;
+        *) echo "Invalid choice. Action skipped."; ;;
+    esac
+}
 
-running "Install links"
-bash ./macos/links.sh
-ok
+function main() {
+    setup_color
 
-echo 'source ~/.zsh_ext' >> ~/.zshrc
+    xcodetools
+
+    task "os"
+
+    # Install HomeBrew
+    if ! command_exists brew; then
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        # Needed for the rest
+        HOMEBREW_NO_AUTO_UPDATE=1 brew install go-task/tap/go-task
+    fi
+
+    # Install ZSH
+    if [ ! -d "$ZSH" ]; then
+        task "zsh"
+    fi
+
+    brewbundle
+    task "links"
+
+    running "Running Task !\n"
+    task --list
+}
+
+main "$@"

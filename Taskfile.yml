@@ -1,5 +1,4 @@
 # https://taskfile.dev
-
 version: '2'
 
 vars:
@@ -11,39 +10,40 @@ tasks:
     cmds:
       - task --list
 
-  # Global setup
-  setup:
-    silent: true
-    desc: "Setup installation"
-    cmds:
-      - task: "setup:os"
-      - task: "setup:zsh"
-
   # Setup OS
-  "setup:os":
+  os:
     silent: true
     desc: "Setup OS"
     cmds:
       - echo "Setup OS starting..."
-      - bash macos/macos.sh
+      - bash scripts/macos/macos.sh
       - echo "Setup OS done!"
 
   # Setup Zsh
-  "setup:zsh":
+  zsh:
     silent: true
-    desc: "Setup OS"
+    desc: "Setup Oh My Zsh"
     cmds:
       - echo "Setup OMZ - Core"
       - if [ ! -d "oh-my-zsh" ]; then curl -L http://install.ohmyz.sh | sh; fi
-      - curl -L http://install.ohmyz.sh | sh
       - chsh -s $(which zsh);
+      - echo 'source ~/.zsh_ext' >> ~/.zshrc
       - echo "Setup ZSH done!"
 
-  # Setup Zsh
-  "setup:vim":
+  # Setup Vim
+  vim:
     silent: true
     desc: "Setup Vim"
     cmds:
       - echo "Setup Vim"
-      - bash vim/vim.sh
+      - bash scripts/vim/vim.sh
       - echo "Setup Vim done!"
+
+  # Setup Links
+  links:
+    silent: true
+    desc: "Setup Symlinks of configuration files"
+    cmds:
+      - echo "Setup Vim"
+      - bash scripts/macos/links.sh
+      - echo "Setup Links done!"

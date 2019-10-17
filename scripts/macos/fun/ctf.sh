@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/dotfiles/zsh/functions.zsh
+source ~/dotfiles/scripts/zsh/functions.zsh
 
 brew update
 
