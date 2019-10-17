@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 source ~/dotfiles/zsh/functions.zsh
 
-brew install vim --with-override-system-vi --with-lua
+brew install vim
 
 running "Create vim swap and backup dir"
 rm -rf ~/.vim
-mv ~/.vimrc ~/.vimrc.`date +%Y-%m-%d.%H:%M:%S`
+mv ~/.vimrc ~/.vimrc.`date +%Y-%m-%d.%H:%M:%S`.autobackup
+mv ~/.ideavimrc ~/.ideavimrc.`date +%Y-%m-%d.%H:%M:%S`.autobackup
 mkdir -p ~/.vim/{backups,swap,bundle,colors,autoload}
 
 pwd="$(pwd)"

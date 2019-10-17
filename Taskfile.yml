@@ -16,8 +16,8 @@ tasks:
     silent: true
     desc: "Setup installation"
     cmds:
-      - task: "setup:shell"
       - task: "setup:os"
+      - task: "setup:zsh"
 
   # Setup OS
   "setup:os":
@@ -25,6 +25,25 @@ tasks:
     desc: "Setup OS"
     cmds:
       - echo "Setup OS starting..."
-      - defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
-      - echo "Dock auto hide modifier set to 0"
+      - bash macos/macos.sh
       - echo "Setup OS done!"
+
+  # Setup Zsh
+  "setup:zsh":
+    silent: true
+    desc: "Setup OS"
+    cmds:
+      - echo "Setup OMZ - Core"
+      - if [ ! -d "oh-my-zsh" ]; then curl -L http://install.ohmyz.sh | sh; fi
+      - curl -L http://install.ohmyz.sh | sh
+      - chsh -s $(which zsh);
+      - echo "Setup ZSH done!"
+
+  # Setup Zsh
+  "setup:vim":
+    silent: true
+    desc: "Setup Vim"
+    cmds:
+      - echo "Setup Vim"
+      - bash vim/vim.sh
+      - echo "Setup Vim done!"
