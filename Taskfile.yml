@@ -1,0 +1,30 @@
+# https://taskfile.dev
+
+version: '2'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  # Default
+  default:
+    cmds:
+      - task --list
+
+  # Global setup
+  setup:
+    silent: true
+    desc: "Setup installation"
+    cmds:
+      - task: "setup:shell"
+      - task: "setup:os"
+
+  # Setup OS
+  "setup:os":
+    silent: true
+    desc: "Setup OS"
+    cmds:
+      - echo "Setup OS starting..."
+      - defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
+      - echo "Dock auto hide modifier set to 0"
+      - echo "Setup OS done!"
