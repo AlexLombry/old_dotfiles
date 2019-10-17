@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/dotfiles/macos/lib.sh
+source ~/dotfiles/zsh/functions.zsh
 
 running "Install configuration file symlink"
 

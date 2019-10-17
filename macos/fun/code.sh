@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/dotfiles/macos/lib.sh
+source ~/dotfiles/zsh/functions.zsh
 
 action "Create symlinks to get back your Sublime configuration from Dropbox"
 echo cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
