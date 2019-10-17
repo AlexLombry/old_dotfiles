@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/dotfiles/macos/lib.sh
+source ~/dotfiles/zsh/functions.zsh
 
 running "Close any open System Preferences panes, to prevent them from overriding"
 ok

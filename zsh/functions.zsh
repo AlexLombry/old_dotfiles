@@ -3,37 +3,53 @@
 ####################
 # Colors
 
-ESC_SEQ="\x1b["
-COL_RESET=$ESC_SEQ"39;49;00m"
-COL_RED=$ESC_SEQ"31;01m"
-COL_GREEN=$ESC_SEQ"32;01m"
-COL_YELLOW=$ESC_SEQ"33;01m"
-COL_BLUE=$ESC_SEQ"34;01m"
-COL_MAGENTA=$ESC_SEQ"35;01m"
-COL_CYAN=$ESC_SEQ"36;01m"
-
-function iok() {
-    echo -e "\n$COL_GREEN [ok] $COL_RESET "$1
+function setup_color() {
+    # Only use colors if connected to a terminal
+    if [ -t 1 ]; then
+        ESC_SEQ="\x1b["
+        RESET=$ESC_SEQ"39;49;00m"
+        RED=$ESC_SEQ"31;01m"
+        GREEN=$ESC_SEQ"32;01m"
+        YELLOW=$ESC_SEQ"33;01m"
+        BLUE=$ESC_SEQ"34;01m"
+        MAGENTA=$ESC_SEQ"35;01m"
+        CYAN=$ESC_SEQ"36;01m"
+    else
+        ESC_SEQ=""
+        RESET=$ESC_SEQ""
+        RED=$ESC_SEQ""
+        GREEN=$ESC_SEQ""
+        YELLOW=$ESC_SEQ""
+        BLUE=$ESC_SEQ""
+        MAGENTA=$ESC_SEQ""
+        CYAN=$ESC_SEQ""
+    fi
 }
 
-function ibot() {
-    echo -e "\n$COL_GREEN\[._.]/$COL_RESET - "$1
+setup_color
+
+function ok() {
+    echo -e "\n$GREEN [ok] $RESET "$1
 }
 
-function irunning() {
-    echo -en "$COL_YELLOW ⇒ $COL_RESET"$1": "
+function bot() {
+    echo -e "\n$GREEN\[._.]/$RESET - "$1
 }
 
-function iaction() {
-    echo -e "\n$COL_YELLOW [action]: $COL_RESET\n ⇒ $1..."
+function running() {
+    echo -en "$YELLOW ⇒ $RESET"$1": "
 }
 
-function iwarn() {
-    echo -e "$COL_YELLOW [warning] $COL_RESET "$1
+function action() {
+    echo -e "\n$YELLOW [action]: $RESET\n ⇒ $1..."
 }
 
-function ierror() {
-    echo -e "$COL_RED [error] $COL_RESET "$1
+function warn() {
+    echo -e "$YELLOW [warning] $RESET "$1
+}
+
+function error() {
+    echo -e "$RED [error] $RESET "$1
 }
 
 # Open url with google chrome on mac
@@ -403,4 +419,8 @@ function ncx() {
 
 function ipinfo() {
     curl http://ipinfo.io/$1
+}
+
+function command_exists() {
+    command -v "$@" >/dev/null 2>&1
 }

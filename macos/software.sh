@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-source ~/dotfiles/macos/lib.sh
-
-export HOMEBREW_NO_AUTO_UPDATE=1
+source ~/dotfiles/zsh/functions.zsh
 
 running "XCode Command Line Tools"
 if [ $(xcode-select -p &> /dev/null; printf $?) -ne 0 ]; then
@@ -24,33 +22,17 @@ if [ ! -d ~/.oh-my-zsh ]; then
     curl -L http://install.ohmyz.sh | sh
     chsh -s $(which zsh);
 fi
-ok
 
-###############################################################################
-# Homebrew sweets                                                             #
-###############################################################################
-running "checking homebrew install"
-ok
-
-brew_bin=$(which brew) 2>&1 > /dev/null
-if [[ $? != 0 ]]; then
-    action "Install homebrew"
+running "Homebrew installation"
+if ! command_exists brew; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    if [[ $? != 0 ]]; then
-        error "unable to install homebrew, script $0 abort!"
-        exit -1
-    fi
-fi
-ok
-
-read -p "Do you want to run Brew Bundle (Can be very long) ?(y|N)" response
-if [ "$response" = "y" ]; then
-    running "Install all brew dependencies"
-    HOMEBREW_NO_AUTO_UPDATE=1 brew bundle
-    ok
 fi
 
-# running "Install shell extensions"
-# HOMEBREW_NO_AUTO_UPDATE=1 brew install fzf
-# /usr/local/opt/fzf/install
-# ok
+# Prompt for user choice on running brew bundle command
+action "${YELLOW}Do you want to run Brew Bundle ? [Y/n]${RESET} "
+read opt
+case $opt in
+    y*|Y*|"") running "Running brew bundle" && brew bundle ;;
+    n*|N*) echo "Brew bundle skipped."; ;;
+    *) echo "Invalid choice. Action skipped."; ;;
+esac
