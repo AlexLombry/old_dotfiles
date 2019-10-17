@@ -4641,7 +4641,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/alex/dotfiles/softs/iterm2/config</string>
+	<string>/Users/alex/.dotfiles/softs/iterm2/config</string>
 	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
 	<false/>
 	<key>Print In Black And White</key>
