@@ -29,5 +29,6 @@ PATH+=:$HOME/.symfony/bin
 PATH+=:/usr/local/sbin
 
 export HOMEBREW_FORCE_BREWED_CURL=1
+eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
