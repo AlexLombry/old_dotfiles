@@ -1,49 +1,45 @@
 # https://taskfile.dev
 version: '2'
 
-vars:
-  GREETING: Hello, World!
-
 tasks:
-  # Default
   default:
     cmds:
       - task --list
 
-  # Setup OS
   os:
     silent: true
-    desc: "Setup OS"
+    desc: "Configure macOS default system"
     cmds:
-      - echo "Setup OS starting..."
       - bash scripts/macos/macos.sh
       - echo "Setup OS done!"
 
-  # Setup Zsh
   zsh:
     silent: true
-    desc: "Setup Oh My Zsh"
+    desc: "Install oh my zsh and source zsh extension file"
     cmds:
-      - echo "Setup OMZ - Core"
       - if [ ! -d "oh-my-zsh" ]; then curl -L http://install.ohmyz.sh | sh; fi
       - chsh -s $(which zsh);
       - echo 'source ~/.zsh_ext' >> ~/.zshrc
       - echo "Setup ZSH done!"
 
-  # Setup Vim
   vim:
     silent: true
-    desc: "Setup Vim"
+    desc: "Install Vim packages with Vundle and plugins"
     cmds:
-      - echo "Setup Vim"
       - bash scripts/vim/vim.sh
       - echo "Setup Vim done!"
 
-  # Setup Links
   links:
     silent: true
-    desc: "Setup Symlinks of configuration files"
+    desc: "Create all dotfiles symlinks"
     cmds:
-      - echo "Setup Vim"
       - bash scripts/macos/links.sh
       - echo "Setup Links done!"
+
+  sublime:
+    silent: true
+    desc: "Setup Sublime Text 3 Dropbox preferences"
+    cmds:
+      - echo "Setup Sublime Text 3"
+      - rm -rf cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+      - ln -s /Users/alex/Dropbox/Sublime/User /Users/alex/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
