@@ -169,6 +169,17 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 running "Disable apple sound beep feedback"
 defaults write "com.apple.sound.beep.feedback" -int 1
 
+running "Fix issue with Audio Bluetooth"
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" 80
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 48
+defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 40
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 48
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 53
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 48
+defaults write com.apple.BluetoothAudioAgent "Stream – Flush Ring on Packet Drop (editable)" 30
+defaults write com.apple.BluetoothAudioAgent "Stream – Max Outstanding Packets (editable)" 15
+defaults write com.apple.BluetoothAudioAgent "Stream Resume Delay" "0.75"
+
 # ==============================================
 # Kill affected applications
 # ==============================================
