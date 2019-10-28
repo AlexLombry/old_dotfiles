@@ -43,3 +43,11 @@ tasks:
       - echo "Setup Sublime Text 3"
       - rm -rf cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
       - ln -s /Users/alex/Dropbox/Sublime/User /Users/alex/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+
+  php:
+    silent: true
+    desc: "Forcing reinstallation of PHP"
+    cmds:
+      - echo "Setup PHP "
+      - bash scripts/macos/php.sh
+      - echo "Setup PHP done!"
