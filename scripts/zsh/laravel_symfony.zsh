@@ -1,8 +1,18 @@
+function art() {
+    if [[ -f "./artisan" ]]; then
+        php -d memory_limit=-1 artisan $@
+    elif [[ -f "./bin/console" ]]; then
+        php -d memory_limit=-1 bin/console $@
+    else
+        echo "Unable to know what kind of project this is"
+    fi
+}
+
 function migrate() {
     if [[ -f "./artisan" ]]; then
-        php artisan migrate $1
+        php artisan migrate $@
     else
-        php bin/console doctrine:migrations:migrate $1
+        php bin/console doctrine:migrations:migrate $@
     fi
 }
 
