@@ -1,4 +1,4 @@
-function art() {
+function sf() {
     if [[ -f "./artisan" ]]; then
         php -d memory_limit=-1 artisan $@
     elif [[ -f "./bin/console" ]]; then
