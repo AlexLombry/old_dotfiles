@@ -160,8 +160,7 @@ alias tojson="php ~/.dotfiles/tools/toJson.php $1"
 
 alias generate_secure_string="openssl rand -base64 32"
 
-# Symfony aliases
-alias sf="bin/console"
+alias a="php artisan"
 alias opcode="phpdbg -p $1"
 
 alias perm_number="stat -f '%A %N' *"
