@@ -169,15 +169,18 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 running "Disable apple sound beep feedback"
 defaults write "com.apple.sound.beep.feedback" -int 1
 
-running "Fix issue with Audio Bluetooth"
+running "14 days for Calendar"
+defaults write com.apple.iCal n\ days\ of\ week 14
 
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
+# running "Fix issue with Audio Bluetooth"
+
+# defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" 80
+# defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 80
+# defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 80
+# defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" 80
+# defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80
+# defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80
+# defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
 
 # ==============================================
 # Kill affected applications
