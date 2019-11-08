@@ -80,7 +80,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>320 321 799 448 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 348 1440 529 0 0 1440 877 </string>
+	<string>0 213 1920 844 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>176 49 650 529 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -249,8 +249,6 @@
 				<key>Red Component</key>
 				<real>0.11444091796875</real>
 			</dict>
-			<key>Background Image Location</key>
-			<string>/Users/alex/Dropbox/Images/AlexWall/newIT/84122.jpg</string>
 			<key>Background Image Mode</key>
 			<integer>2</integer>
 			<key>Badge Color</key>
@@ -737,7 +735,7 @@
 			<key>Title Components</key>
 			<integer>512</integer>
 			<key>Transparency</key>
-			<real>0.27330861357868019</real>
+			<real>0.028785295050761418</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -772,14 +770,14 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1440, 900}}</string>
+		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{36, 877}</string>
+		<string>{390, 782}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>8403C642-C8DF-4FD8-A15B-53F28CAC4486</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>3</integer>
+	<integer>5</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1565,7 +1563,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-11-06T13:43:17Z</date>
+	<date>2019-11-07T14:00:08Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
