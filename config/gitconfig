@@ -81,7 +81,7 @@
 	trustExitCode = true
 [commit]
 	template = .gitmessage
-	gpgsign = true
+	gpgsign = false
 [rerere]
 	enable = true
 [pull]
