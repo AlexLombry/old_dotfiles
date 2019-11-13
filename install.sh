@@ -25,7 +25,7 @@ function brewbundle() {
     action "${YELLOW}Do you want to run Brew Bundle ? [Y/n]${RESET} "
     read opt
     case $opt in
-        y*|Y*|"") running "Running brew bundle" && brew bundle ;;
+        y*|Y*|"") running "Running brew bundle" && HOMEBREW_NO_AUTO_UPDATE=1 brew bundle ;;
         n*|N*) echo "Brew bundle skipped."; ;;
         *) echo "Invalid choice. Action skipped."; ;;
     esac

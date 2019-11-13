@@ -4,7 +4,7 @@ alias gs="git status"
 alias gaa="git add ."
 alias gss="git status -sb"
 alias gc="git commit -m"
-alias gccc="git commit -S -m"
+alias gccc="git commit -m"
 
 alias git-count-lines="git ls-files | xargs -n1 git blame --line-porcelain | sed -n 's/^author //p' | sort -f | uniq -ic | sort -nr"
 alias wip='git status && git add . && git commit -m "Work In Progress"'
