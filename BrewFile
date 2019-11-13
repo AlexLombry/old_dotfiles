@@ -1,7 +1,5 @@
 cask_args appdir: "/Applications"
 
-tap "caskroom/cask"
-tap "caskroom/fonts"
 tap "eddieantonio/eddieantonio"
 tap "homebrew/bundle"
 tap "homebrew/cask"
