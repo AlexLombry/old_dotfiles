@@ -1,0 +1,66 @@
+version: '3.7'
+
+services:
+  redis:
+    container_name: redis
+    networks:
+      - alexnet
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  mysql:
+    container_name: mysql
+    networks:
+      - alexnet
+    image: mysql:8.0.17
+    command: ["--default-authentication-plugin=mysql_native_password"]
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: develop
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    restart: on-failure
+    volumes:
+      - "~/.docker_data/mysql:/var/lib/mysql"
+
+  minio:
+    container_name: minio
+    networks:
+      - alexnet
+    image: minio/minio
+    ports:
+      - 10500:9000
+    command: server /export
+    volumes:
+      - minio:/root/.minio/
+    environment:
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: minio
+      PLAY_ACCESS_KEY: minio
+      PLAY_SECRET_KEY: minio
+
+  createbuckets:
+    container_name: create_bucket
+    networks:
+      - alexnet
+    image: minio/mc
+    links:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc config host add myminio http://minio:9000 user password;
+      /usr/bin/mc rm -r --force myminio/alex;
+      /usr/bin/mc mb myminio/alex;
+      /usr/bin/mc policy download myminio/alex;
+      exit 0;
+      "
+
+networks:
+  alexnet:
+    driver: bridge
+
+volumes:
+  minio:

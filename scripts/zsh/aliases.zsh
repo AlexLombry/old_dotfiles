@@ -18,7 +18,8 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias db="cd ~/Dropbox"
 
-alias sublime="subl"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias sublime=subl
 
 alias l="exa -abghl --git --color=automatic"
 alias la="exa -abghl --git --color=automatic"
