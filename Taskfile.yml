@@ -51,3 +51,16 @@ tasks:
       - echo "Setup PHP "
       - bash scripts/macos/php.sh
       - echo "Setup PHP done!"
+
+  dev-start:
+    silent: true
+    desc: "Launch Docker with Redis, MySQL and Minio"
+    cmds:
+      - docker-compose -f ./scripts/macos/docker-compose.yml up -d
+      - docker-compose -f ./scripts/macos/docker-compose.yml start createbuckets
+
+  dev-stop:
+    silent: true
+    desc: "Launch Docker with Redis, MySQL and Minio"
+    cmds:
+      - docker-compose -f ./scripts/macos/docker-compose.yml down

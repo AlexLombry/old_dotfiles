@@ -98,4 +98,4 @@ mas "iNet Network Scanner", id: 403304796
 mas "Magnet", id: 441258766
 mas "Parcel", id: 639968404
 mas "The Unarchiver", id: 425424353
-mas "Xcode", id: 497799835
+#mas "Xcode", id: 497799835
