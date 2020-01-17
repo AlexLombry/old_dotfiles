@@ -92,3 +92,6 @@
     user = AlexLombry
 [gpg]
 	program = gpg
+[rebase]
+	autostash = true
+	autosquash = true
