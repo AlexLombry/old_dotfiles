@@ -25,7 +25,9 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'junegunn/fzf.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
+Plugin 'janko/vim-test'
+Plugin 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+Plugin 'dense-analysis/ale'
 " Vundle configuration
 call vundle#end()            " required
 filetype plugin indent on    " required

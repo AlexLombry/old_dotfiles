@@ -424,3 +424,11 @@ function ipinfo() {
 function command_exists() {
     command -v "$@" >/dev/null 2>&1
 }
+
+function arc() {
+    tar -zcvf "$1.tar.gz" "$1"
+}
+
+function unarc() {
+    tar -xvf "$1"
+}
