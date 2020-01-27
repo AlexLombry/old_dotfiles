@@ -170,7 +170,7 @@ running "Disable apple sound beep feedback"
 defaults write "com.apple.sound.beep.feedback" -int 1
 
 running "14 days for Calendar"
-defaults write com.apple.iCal n\ days\ of\ week 14
+defaults write com.apple.iCal n\ days\ of\ week 7
 
 # running "Fix issue with Audio Bluetooth"
 
