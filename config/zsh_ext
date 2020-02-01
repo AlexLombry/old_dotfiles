@@ -27,8 +27,5 @@ for script in $DOTFILES/scripts/zsh/*.zsh; do source $script; done
 PATH+=:$HOME/.composer/vendor/bin
 PATH+=:$HOME/.symfony/bin
 PATH+=:/usr/local/sbin
-source ~/Code/tooling/manomano.zsh
 export HOMEBREW_FORCE_BREWED_CURL=1
 eval $(thefuck --alias)
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
