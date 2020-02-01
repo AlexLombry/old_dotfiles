@@ -55,6 +55,7 @@ function main() {
 
     running "Running Task !\n"
     task --list
+    $(brew --prefix)/opt/fzf/install
 }
 
 main "$@"
