@@ -27,7 +27,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'janko/vim-test'
 Plugin 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-Plugin 'dense-analysis/ale'
+" Plugin 'dense-analysis/ale'
+" Use release branch (Recommend)
+" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Vundle configuration
 call vundle#end()            " required
 filetype plugin indent on    " required

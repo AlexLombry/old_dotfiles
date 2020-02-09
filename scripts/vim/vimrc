@@ -5,9 +5,14 @@ set nocompatible
 so ~/.dotfiles/scripts/vim/plugins.vim
 
 syntax enable
-set backspace=indent,eol,start                                          "Make backspace behave like every other editor.
-let mapleader = ','                                 "The default is \, but a comma is much better.
-set number                              "Let's activate line numbers.
+" Make backspace behave like every other editor.
+set backspace=indent,eol,start
+
+"The default is \, but a comma is much better.
+let mapleader = ','
+
+" Let's activate line numbers.
+set number
 
 "" Status bar
 set laststatus=2
@@ -66,7 +71,8 @@ nnoremap <silent> <leader>sh :terminal<CR>
 "-------------Visuals--------------"
 " set background=$BACKGROUND
 " colorscheme $THEME
-set t_CO=256                                "Use 256 colors. This is useful for Terminal Vim.
+"Use 256 colors. This is useful for Terminal Vim.
+set t_CO=256
 
 set background=dark
 colorscheme dracula
@@ -175,15 +181,9 @@ abbr fitler filter
 let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
-
-
-
-
-
 nmap <C-p> :CtrlP<cr>
 nmap <C-r> :CtrlPBufTag<cr>
 nmap <C-e> :CtrlPMRUFiles<cr>
-
 
 "/
 "/ NERDTree
