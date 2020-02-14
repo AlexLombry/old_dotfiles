@@ -1,8 +1,4 @@
 # gitconfig
-[filter "media"]
-    required = true
-    clean = git media clean %f
-    smudge = git media smudge %f
 [push]
 	default = current
 [credential]
@@ -80,7 +76,6 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = .gitmessage
 	gpgsign = false
 [rerere]
 	enable = true

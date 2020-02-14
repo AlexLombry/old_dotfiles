@@ -1,7 +1,7 @@
 # Git
 alias nah="git reset --hard; git clean -df;"
 alias gs="git status"
-alias gaa="git add ."
+alias gaa="git add -p"
 alias gss="git status -sb"
 alias gc="git commit -m"
 alias gccc="git commit -m"
