@@ -2,7 +2,7 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 export APP_ENV="dev"
-export XDEBUG_CONFIG="idekey=INTELLIJ"
+export XDEBUG_CONFIG="idekey=phpstorm"
 export DOTFILES=$HOME/.dotfiles
 export DOCKER_CLIENT_TIMEOUT=120
 export COMPOSE_HTTP_TIMEOUT=120
@@ -27,5 +27,8 @@ for script in $DOTFILES/scripts/zsh/*.zsh; do source $script; done
 PATH+=:$HOME/.composer/vendor/bin
 PATH+=:$HOME/.symfony/bin
 PATH+=:/usr/local/sbin
+
+source $HOME/Code/tooling/manomano.zsh
+
 export HOMEBREW_FORCE_BREWED_CURL=1
 eval $(thefuck --alias)
