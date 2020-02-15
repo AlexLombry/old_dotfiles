@@ -9,7 +9,7 @@ syntax enable
 set backspace=indent,eol,start
 
 "The default is \, but a comma is much better.
-let mapleader = ','
+let mapleader = ';'
 
 " Let's activate line numbers.
 set number
