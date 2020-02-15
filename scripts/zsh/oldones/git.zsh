@@ -1,10 +1,10 @@
 # Git
 alias nah="git reset --hard; git clean -df;"
-# alias gs="git status"
-# alias gaa="git add -p"
-# alias gss="git status -sb"
-# alias gc="git commit -m"
-# alias gccc="git commit -m"
+alias gs="git status"
+alias gaa="git add -p"
+alias gss="git status -sb"
+alias gc="git commit -m"
+alias gccc="git commit -m"
 
 alias git-count-lines="git ls-files | xargs -n1 git blame --line-porcelain | sed -n 's/^author //p' | sort -f | uniq -ic | sort -nr"
 alias wip='git status && git add . && git commit -m "Work In Progress"'
@@ -45,5 +45,15 @@ function gsend()
     git push
 }
 
+function mergeondevelop()
+{
+    git stash
+    git checkout develop
+    git pull --rebase --autostash
+    git checkout $1
+    git rebase develop
+    git checkout develop
+    git merge $1
+}
+
 alias hb="hub browse"
-alias lb="lab browse"
