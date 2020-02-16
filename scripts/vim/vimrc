@@ -75,10 +75,10 @@ nnoremap <silent> <leader>sh :terminal<CR>
 set t_CO=256
 
 set background=dark
-colorscheme dracula
+" colorscheme dracula
+colorscheme solarized8_high
 set anti enc=utf-8
 set guifont=Source\ Code\ Pro\ for\ Powerline":h13
-" set guifont="Hack Regular Nerd Font Complete:h13"
 
 set guioptions-=e           "We don't want Gui tabs.
 set linespace=15            "Macvim-specific line-height.
