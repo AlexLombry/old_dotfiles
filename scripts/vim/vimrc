@@ -29,6 +29,7 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
+
 "" Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
 
@@ -37,6 +38,10 @@ nnoremap <leader>. :lcd %:p:h<CR>
 imap jj <esc>
 " fast save
 nmap <leader>w :w!<cr>
+
+" Fast save and quit
+nmap <leader>q :wq!<cr>
+
 " Down is really the next line
 nnoremap j gj
 nnoremap k gk
