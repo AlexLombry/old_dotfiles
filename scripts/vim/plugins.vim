@@ -31,7 +31,7 @@ Plugin 'lifepillar/vim-solarized8'
 "Plugin 'dense-analysis/ale'
 " Use release branch (Recommend)
 " Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-
+Plugin 'dikiaap/minimalist'
 " Vundle configuration
 call vundle#end()            " required
 filetype plugin indent on    " required

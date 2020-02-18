@@ -81,7 +81,8 @@ set t_CO=256
 
 set background=dark
 " colorscheme dracula
-colorscheme solarized8_high
+" colorscheme solarized8_high
+colorscheme minimalist
 set anti enc=utf-8
 set guifont=Source\ Code\ Pro\ for\ Powerline":h13
 
