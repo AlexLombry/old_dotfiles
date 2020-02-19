@@ -13,6 +13,11 @@ alias dsf="docker-compose exec app bin/console $1"
 alias dump-docker="docker-compose exec php php /var/www/symfony/bin/console server:dump"
 alias dc="docker-compose"
 alias k="kubectl"
+alias dcd="docker-compose down"
+alias dcud="docker-compose up -d"
+alias dclf="docker-compose logs -f"
+alias dps="docker ps"
+alias dcps="docker-compose ps"
 
 function buildtravis() {
     BUILDID="build-$RANDOM"
