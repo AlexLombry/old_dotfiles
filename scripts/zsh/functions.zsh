@@ -353,15 +353,14 @@ function starter-api-platform()
         rm -rf .env--
 
         ## MySQL 8 and delete backup file
-        sed -i '' "s/'5.7'/'8.0'/g" config/packages/doctrine.yaml
-        rm -rf config/packages/doctrine.yaml--
+        # sed -i '' "s/'5.7'/'8.0'/g" config/packages/doctrine.yaml
+        # rm -rf config/packages/doctrine.yaml--
 
         git add .
         git commit -am "Add first dependencies"
 
         echo "Launch Symfony Server and create PHPStorm Project"
         symfony serve --no-tls -d
-        /usr/local/bin/pstorm .
     fi
 }
 

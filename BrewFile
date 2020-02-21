@@ -74,6 +74,7 @@ brew "youtube-dl"
 brew "jlhonora/lsusb/lsusb"
 brew "brightness"
 brew "hadolint"
+brew "mycli"
 
 # Languages
 brew "php", restart_service: true, link: true

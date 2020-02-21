@@ -32,6 +32,7 @@ Plugin 'lifepillar/vim-solarized8'
 " Use release branch (Recommend)
 " Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'dikiaap/minimalist'
+Plugin 'micha/vim-colors-solarized'
 " Vundle configuration
 call vundle#end()            " required
 filetype plugin indent on    " required
