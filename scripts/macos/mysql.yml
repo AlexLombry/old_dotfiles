@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  mysql:
+    container_name: mysql
+    networks:
+      - alexnet
+    image: mysql:5.6
+    command: ["--default-authentication-plugin=mysql_native_password"]
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: develop
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    restart: on-failure
+    volumes:
+      - "~/.docker_data/mysql:/var/lib/mysql"
+
+networks:
+  alexnet:
+    driver: bridge
