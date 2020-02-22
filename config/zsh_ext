@@ -29,7 +29,7 @@ PATH+=:$HOME/.symfony/bin
 PATH+=:/usr/local/sbin
 PATH+=:/usr/local/opt/awscli@1/bin
 
-source $HOME/Code/tooling/manomano.zsh
+source $CODEFOLDER/tooling/manomano.zsh
 
 export HOMEBREW_FORCE_BREWED_CURL=1
 eval $(thefuck --alias)

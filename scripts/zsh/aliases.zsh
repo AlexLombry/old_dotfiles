@@ -25,7 +25,7 @@ alias l="exa -abghl --git --color=automatic"
 alias la="exa -abghl --git --color=automatic"
 alias ll="exa -abghl --git --color=automatic"
 alias lld="ls -l | grep ^d"
-
+alias gs="gst"
 # Helpers
 alias grep='grep --color=auto'
 
