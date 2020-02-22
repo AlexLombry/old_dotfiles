@@ -27,6 +27,7 @@ for script in $DOTFILES/scripts/zsh/*.zsh; do source $script; done
 PATH+=:$HOME/.composer/vendor/bin
 PATH+=:$HOME/.symfony/bin
 PATH+=:/usr/local/sbin
+PATH+=:/usr/local/opt/awscli@1/bin
 
 source $HOME/Code/tooling/manomano.zsh
 
