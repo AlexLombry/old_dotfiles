@@ -77,6 +77,7 @@ tasks:
       - brew services start skhd
       - chmod +x ~/.yabairc
       - chmod +x ~/.skhdrc
+      - echo "you have to run on Recovery OS csrutil enable --without debug --without fs"
 
   yabai-remove:
     silent: true
