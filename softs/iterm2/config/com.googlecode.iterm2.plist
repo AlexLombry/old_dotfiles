@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AdjustWindowForFontSizeChange</key>
+	<false/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>ApplePressAndHoldEnabled</key>
@@ -939,6 +941,8 @@
 	<false/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
+	<key>HideScrollbar</key>
+	<true/>
 	<key>Hotkey</key>
 	<true/>
 	<key>HotkeyChar</key>
@@ -949,8 +953,12 @@
 	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>262401</integer>
+	<key>IRMemory</key>
+	<integer>4</integer>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
+	<key>MaxVertically</key>
+	<false/>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/.dotfiles/softs/iterm2/colors</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -1003,7 +1011,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 768 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>11 653 1255 1002 0 0 3008 1692 </string>
+	<string>615 27 585 1627 0 0 3008 1692 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1807,12 +1815,12 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {3008, 1692}}</string>
 		<key>topLeft</key>
-		<string>{237, 855}</string>
+		<string>{336, 1279}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>06B28624-6B17-4B88-BE08-C8D3823388EE</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>73</integer>
+	<integer>76</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
