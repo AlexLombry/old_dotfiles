@@ -33,14 +33,10 @@ nnoremap <silent> <S-t> :tabnew<CR>
 "" Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
 
-" Jeffrey Way's style
-"Easy escaping to normal model
-imap jj <esc>
-" fast save
-nmap <leader>w :w!<cr>
-
-" Fast save and quit
-nmap <leader>q :wq!<cr>
+" fast save and quit
+nmap <leader>w :w<cr>
+nmap <leader>q :q<cr>
+nmap <leader>wq :wq!<cr>
 
 " Down is really the next line
 nnoremap j gj
@@ -78,11 +74,7 @@ nnoremap <silent> <leader>sh :terminal<CR>
 " colorscheme $THEME
 "Use 256 colors. This is useful for Terminal Vim.
 set t_CO=256
-
 set background=dark
-" colorscheme dracula
-" colorscheme solarized
-" colorscheme solarized8_high
 colorscheme minimalist
 let g:solarized_termcolors=256
 
@@ -135,7 +127,6 @@ set timeout timeoutlen=200 ttimeoutlen=100
 " -- Beep
 set visualbell               " don't beep
 set noerrorbells             " don't beep
-
 set autowrite                " Save on buffer switch
 set mouse=a
 set showmatch
@@ -158,7 +149,7 @@ set ttyfast
 set hidden
 
 " Line numbers are nice
-set ruler
+" set ruler
 
 "We'll set simpler mappings to switch between splits.
 nmap <C-J> <C-W><C-J>
@@ -182,11 +173,9 @@ abbr funciton function
 abbr teh the
 abbr tempalte template
 abbr fitler filter
+abbr dokcer docker
 
-"-------------Plugins--------------"
-"/
-"/ CtrlP
-"/
+"-------------CTRL+P Plugin--------------"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
@@ -194,28 +183,26 @@ nmap <C-p> :CtrlP<cr>
 nmap <C-r> :CtrlPBufTag<cr>
 nmap <C-e> :CtrlPMRUFiles<cr>
 
-"/
-"/ NERDTree
-"/
-let NERDTreeHijackNetrw = 0
-
-"Make NERDTree easier to toggle.
+"-------------NERDTree Configurations--------------"
 nmap <C-b> :NERDTreeToggle<cr>
 let g:NERDTreeDirArrowExpandable="+"
+let NERDTreeHijackNetrw = 0
 let g:NERDTreeDirArrowCollapsible="~"
+let NERDTreeShowHidden=1
 
 "-------------Auto-Commands--------------"
 "Automatically source the Vimrc file on save.
-
 augroup autosourcing
     autocmd!
     autocmd BufWritePost .vimrc source %
 augroup END
 
+"-------------PHP Scripting Sections--------------"
 function! IPhpInsertUse()
     call PhpInsertUse()
     call feedkeys('a',  'n')
 endfunction
+
 autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
 
@@ -223,6 +210,7 @@ function! IPhpExpandClass()
     call PhpExpandClass()
     call feedkeys('a', 'n')
 endfunction
+
 autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
 
@@ -230,9 +218,7 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-"}'<cr>
 
 "-------------Tips and Reminders--------------"
 " - Press 'zz' to instantly center the line where the cursor is located.
-" Powerline bar configuration
-" source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
-" set laststatus=2
+"------------/Tips and Reminders/-------------"
 
 "Easy escaping to normal model
 imap jk <esc>
@@ -246,7 +232,6 @@ autocmd BufWritePre *.php :%s/\s\+$//e
 
 " Delete all buffer
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
-"let g:powerline_config_overrides={'common': {'reload_config': 0}}
 
 " turn off nohlsearch
 nmap <silent> <leader><Space> :nohlsearch<CR>
@@ -259,23 +244,7 @@ nnoremap <silent> j gj
 nnoremap <silent> k gk
 nnoremap <silent> ^ g^
 nnoremap <silent> $ g$
+
+" Can be super anoying, when you type ( it expands the end of it
 inoremap ( ()<left>
 inoremap { {}<left>
-
-"/
-"/ pdv
-"/
-let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
-
-nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
-
-" let g:airline#extensions#tabline#enabled = 1
-"/
-"/ Ultisnips
-"/
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-" Search
-let g:grep_cmd_opts = '--line-numbers --noheading'
