@@ -46,11 +46,14 @@ function main() {
     fi
 
     # Install ZSH
-    if [ ! -d "$ZSH" ]; then
-        task "zsh"
-    fi
+    # if [ ! -d "$ZSH" ]; then
+    #     task "zsh"
+    # fi
+
+    task "zsh"
 
     brewbundle
+
     task "links"
 
     running "Running Task !\n"
