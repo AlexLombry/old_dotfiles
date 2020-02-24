@@ -972,7 +972,7 @@
 		<key>0xf702-0x380000</key>
 		<dict>
 			<key>Action</key>
-			<integer>39</integer>
+			<integer>32</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -993,7 +993,7 @@
 		<key>0xf703-0x380000</key>
 		<dict>
 			<key>Action</key>
-			<integer>32</integer>
+			<integer>39</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -1112,7 +1112,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 498 620 392 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>11 26 577 1016 0 0 1920 1080 </string>
+	<string>11 18 820 489 0 0 1680 1050 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1921,7 +1921,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>BE4B08CF-D6AB-49CE-80D0-465CAAF52AF6</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>38</integer>
+	<integer>39</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
