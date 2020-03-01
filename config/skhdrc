@@ -44,13 +44,15 @@ shift + alt - 0 : yabai -m space --balance
 # shift + cmd - w : yabai -m window --resize top:0:20
 
 # increase size of the left-child (decrease size of right-child) of the containing node
-shift + alt - a : yabai -m window --ratio rel:0.2
+shift + alt - d : yabai -m window --ratio rel:0.2
 
 # increase size of the right-child (decrease size of left-child) of the containing node
-shift + alt - d : yabai -m window --ratio rel:-0.2
+shift + alt - a : yabai -m window --ratio rel:-0.2
 
 # set the value of the split directly:
 shift + alt - w : yabai -m window --ratio abs:0.75
+
+ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 .blacklist [
     "terminal"
