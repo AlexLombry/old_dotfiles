@@ -10,6 +10,7 @@ tap "homebrew/services"
 tap "jlhonora/lsusb"
 tap "sambadevi/powerlevel9k"
 tap "go-task/tap"
+tap "teamookla/speedtest"
 
 # GUI Software
 cask "tor-browser"
@@ -18,10 +19,8 @@ cask "vlc"
 cask "alfred"
 cask "appcleaner"
 cask "avast-security"
-cask "coconutbattery"
 cask "google-chrome"
 cask "insomnia"
-cask "intel-power-gadget"
 cask "iterm2"
 cask "dropbox"
 cask "ngrok"
@@ -75,6 +74,7 @@ brew "jlhonora/lsusb/lsusb"
 brew "brightness"
 brew "hadolint"
 brew "mycli"
+brew "speedtest"
 
 # Languages
 brew "php", restart_service: true, link: true
@@ -96,7 +96,6 @@ mas "DaisyDisk", id: 411643860
 mas "Encrypto", id: 935235287
 mas "iMazing HEIC Converter", id: 1292198261
 mas "iNet Network Scanner", id: 403304796
-mas "Magnet", id: 441258766
 mas "Parcel", id: 639968404
 mas "The Unarchiver", id: 425424353
-#mas "Xcode", id: 497799835
+mas "Xcode", id: 497799835
