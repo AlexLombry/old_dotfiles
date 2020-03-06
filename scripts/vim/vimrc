@@ -278,3 +278,25 @@ vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 " Extract method from selection
 vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 nnoremap <silent> gd :call phpactor#GotoDefinition()<CR>
+
+
+
+
+" TESTING PURPOSE FOR NOW, DO THOSE HELPS ME TO USE VIM
+
+" Ignore turds left behind by Mercurial.
+let g:NERDTreeIgnore=['\.orig']
+
+" The default of 31 is just a little too narrow.
+let g:NERDTreeWinSize=40
+
+" Disable display of '?' text and 'Bookmarks' label.
+let g:NERDTreeMinimalUI=1
+
+" Let <Leader><Leader> (^#) return from NERDTree window.
+let g:NERDTreeCreatePrefix='silent keepalt keepjumps'
+
+" Single-click to toggle directory nodes, double-click to open non-directory
+" nodes.
+let g:NERDTreeMouseMode=2
+

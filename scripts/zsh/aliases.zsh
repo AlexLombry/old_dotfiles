@@ -177,3 +177,4 @@ alias gla="cd ~/Code/GitLab"
 alias pri="cd ~/Code/Private"
 
 alias s="sublime"
+alias gentags="ctags -R --exclude=.git --exclude=node_modules"
