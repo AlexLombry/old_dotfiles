@@ -6,21 +6,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'scrooloose/nerdtree'
-" Plugin 'tpope/vim-fugitive'
-" Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'tpope/vim-surround'
-" Plugin 'tpope/vim-commentary'
-" Plugin 'rking/ag.vim'
-" Plugin 'sheerun/vim-polyglot'
-" Plugin 'junegunn/fzf.vim'
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-" Plugin 'lifepillar/vim-solarized8'
-" Plugin 'dikiaap/minimalist'
-" Plugin 'micha/vim-colors-solarized'
 Plugin 'dikiaap/minimalist'
+
 " NERDTree
 Plugin 'scrooloose/nerdtree'
 
@@ -52,6 +39,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'matthewbdaly/vim-filetype-settings'
 
+Plugin 'chriskempson/base16-vim'
 
 " Vundle configuration
 call vundle#end()            " required
