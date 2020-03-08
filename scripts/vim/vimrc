@@ -12,8 +12,8 @@ set backspace=indent,eol,start
 let mapleader = ';'
 
 " Let's activate line numbers.
-set number
-
+set relativenumber
+set noswapfile
 "" Status bar
 set laststatus=2
 
@@ -192,7 +192,7 @@ let g:NERDTreeDirArrowExpandable="+"
 let NERDTreeHijackNetrw = 0
 let g:NERDTreeDirArrowCollapsible="~"
 let NERDTreeShowHidden=1
-
+let NERDTreeMinimalUI=1
 "-------------Auto-Commands--------------"
 "Automatically source the Vimrc file on save.
 augroup autosourcing
