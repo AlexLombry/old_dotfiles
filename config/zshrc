@@ -1,0 +1,16 @@
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="materialshell"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+# export PATH="/usr/local/opt/awscli@1/bin:$PATH"
+
+export CODEFOLDER="$HOME/Code"
+
+source ~/.zsh_ext
+
