@@ -1805,7 +1805,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 498 620 392 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>10 556 1898 488 0 0 1920 1080 </string>
+	<string>10 28 1898 1016 0 0 1920 1080 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2520,7 +2520,7 @@
 			<key>Title Components</key>
 			<integer>512</integer>
 			<key>Transparency</key>
-			<real>0.12877538071065991</real>
+			<real>0.0</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -2564,7 +2564,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>BE4B08CF-D6AB-49CE-80D0-465CAAF52AF6</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>61</integer>
+	<integer>62</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
