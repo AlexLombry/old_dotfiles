@@ -3,6 +3,7 @@ version: '2'
 
 tasks:
   default:
+    silent: true
     cmds:
       - task --list
 
@@ -17,14 +18,16 @@ tasks:
     silent: true
     desc: "Install oh my zsh and source zsh extension file"
     cmds:
-      - if [ ! -d "oh-my-zsh" ]; then curl -L http://install.ohmyz.sh | sh; fi
+      - rm -rf $HOME/.oh-my-zsh
+      - rm -rf $HOME/.config/base16-shell
       - chsh -s $(which zsh);
+      - curl -L http://install.ohmyz.sh | sh
       - rm -rf $HOME/.zshrc
       - ln -s $PWD/config/zshrc $HOME/.zshrc
+      - mkdir -p $HOME/.config
       - git clone https://github.com/chriskempson/base16-shell.git $HOME/.config/base16-shell
-      - source $HOME/.zshrc
-      - base16_tomorrow-night
-      - echo "Setup ZSH done!"
+      - curl -L -o ~/.oh-my-zsh/custom/themes/materialshell.zsh-theme https://raw.githubusercontent.com/carloscuesta/materialshell/master/materialshell.zsh
+      - echo "Reload your terminal and run base16_tomorrow-night command"
 
   vim:
     silent: true
@@ -55,19 +58,6 @@ tasks:
       - echo "Setup PHP "
       - bash scripts/macos/php.sh
       - echo "Setup PHP done!"
-
-  dev-start:
-    silent: true
-    desc: "Launch Docker with Redis, MySQL and Minio"
-    cmds:
-      - docker-compose -f ./scripts/macos/docker-compose.yml up -d
-      - docker-compose -f ./scripts/macos/docker-compose.yml start createbuckets
-
-  dev-stop:
-    silent: true
-    desc: "Launch Docker with Redis, MySQL and Minio"
-    cmds:
-      - docker-compose -f ./scripts/macos/docker-compose.yml down
 
   yabai-install:
     silent: true
@@ -108,3 +98,21 @@ tasks:
       - sudo yabai --uninstall-sa
       - sudo yabai --install-sa
       - killall Dock
+
+  spaceship:
+    silent: true
+    desc: "Install Spaceship ZSH Plugins"
+    cmds:
+      - git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+      - git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+      - ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+  ctf:
+    silent: true
+    desc: "CTF Hacking Tools"
+    cmds:
+      - brew update
+      - export HOMEBREW_NO_AUTO_UPDATE=1
+      - brew install aircrack-ng bfg binutils binwalk cifer dex2jar dns2tcp fcrackzip foremost hashpump hydra john
+      - brew install knock netpbm nmap pngcheck socat sqlmap tcpflow tcpreplay tcptrace ucspi-tcp xpdf xz
+      - brew cleanup

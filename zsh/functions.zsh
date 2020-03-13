@@ -2,7 +2,6 @@
 # functions
 ####################
 # Colors
-
 function setup_color() {
     # Only use colors if connected to a terminal
     if [ -t 1 ]; then
@@ -387,7 +386,7 @@ function toMP3() {
 
 function gpgenc() {
     CUR_FILE=$1
-    gpg --output $CUR_FILE.gpg --encrypt --recipient alex.lombry@gmail.com $CUR_FILE
+    gpg --output $CUR_FILE.gpg --encrypt --recipient $2 $CUR_FILE
 }
 
 function gpgencwithrecipient() {
