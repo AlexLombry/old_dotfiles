@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.dotfiles/scripts/zsh/functions.zsh
+source ~/.dotfiles/zsh/functions.zsh
 
 ZSH=${ZSH:-~/.oh-my-zsh}
 
@@ -33,10 +33,7 @@ function brewbundle() {
 
 function main() {
     setup_color
-
     xcodetools
-
-    task "os"
 
     # Install HomeBrew
     if ! command_exists brew; then
@@ -45,15 +42,9 @@ function main() {
         HOMEBREW_NO_AUTO_UPDATE=1 brew install go-task/tap/go-task
     fi
 
-    # Install ZSH
-    # if [ ! -d "$ZSH" ]; then
-    #     task "zsh"
-    # fi
-
+    task "os"
     task "zsh"
-
     brewbundle
-
     task "links"
 
     running "Running Task !\n"

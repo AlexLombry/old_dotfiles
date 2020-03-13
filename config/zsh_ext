@@ -22,14 +22,16 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # zsh builtin to re-run last line. dangerous. do not want. use `!!`.
 disable r
 
-for script in $DOTFILES/scripts/zsh/*.zsh; do source $script; done
+for script in $DOTFILES/zsh/*.zsh; do source $script; done
 
 PATH+=:$HOME/.composer/vendor/bin
 PATH+=:$HOME/.symfony/bin
 PATH+=:/usr/local/sbin
 PATH+=:/usr/local/opt/awscli@1/bin
 
-source $CODEFOLDER/tooling/manomano.zsh
+if [ -d "$CODEFOLDER/tooling/" ]; then
+    source $CODEFOLDER/tooling/manomano.zsh
+fi
 
 export HOMEBREW_FORCE_BREWED_CURL=1
 
@@ -39,6 +41,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-chpwd() ls
+# When doing cd command the ls is launch just after
+# chpwd() ls
 
 eval $(thefuck --alias)
