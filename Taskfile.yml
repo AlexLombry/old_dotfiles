@@ -11,7 +11,7 @@ tasks:
     silent: true
     desc: "Configure macOS default system"
     cmds:
-      - bash scripts/macos/macos.sh
+      - bash macos/macos.sh
       - echo "Setup OS done!"
 
   zsh:
@@ -33,14 +33,14 @@ tasks:
     silent: true
     desc: "Install Vim packages with Vundle and plugins"
     cmds:
-      - bash scripts/vim/vim.sh
+      - bash vim/vim.sh
       - echo "Setup Vim done!"
 
   links:
     silent: true
     desc: "Create all dotfiles symlinks"
     cmds:
-      - bash scripts/macos/links.sh
+      - bash macos/links.sh
       - echo "Setup Links done!"
 
   sublime:
@@ -56,7 +56,7 @@ tasks:
     desc: "Forcing reinstallation of PHP"
     cmds:
       - echo "Setup PHP "
-      - bash scripts/macos/php.sh
+      - bash macos/php.sh
       - echo "Setup PHP done!"
 
   yabai-install:
