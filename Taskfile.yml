@@ -116,3 +116,9 @@ tasks:
       - brew install aircrack-ng bfg binutils binwalk cifer dex2jar dns2tcp fcrackzip foremost hashpump hydra john
       - brew install knock netpbm nmap pngcheck socat sqlmap tcpflow tcpreplay tcptrace ucspi-tcp xpdf xz
       - brew cleanup
+
+  kymsu:
+    silent: true
+    desc: "Installation of Kymsu updater"
+    cmds:
+      - bash macos/kymsu.sh
