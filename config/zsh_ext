@@ -44,4 +44,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # When doing cd command the ls is launch just after
 # chpwd() ls
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 eval $(thefuck --alias)
