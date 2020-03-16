@@ -50,6 +50,11 @@ function main() {
     running "Running Task !\n"
     task --list
     $(brew --prefix)/opt/fzf/install
+    
+    running "Installing Python"
+    curl https://bootstrap.pypa.io/get-pip.py -o "$HOME/Downloads/get-pip.py"
+    python "$HOME/Downloads/get-pip.py" --user
+    ok
 }
 
 main "$@"
