@@ -28,7 +28,7 @@ PATH+=:$HOME/.composer/vendor/bin
 PATH+=:$HOME/.symfony/bin
 PATH+=:/usr/local/sbin
 PATH+=:/usr/local/opt/awscli@1/bin
-
+PATH+=:$HOME/Library/Python/2.7/bin
 if [ -d "$CODEFOLDER/tooling/" ]; then
     source $CODEFOLDER/tooling/manomano.zsh
 fi
