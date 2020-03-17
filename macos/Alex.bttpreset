@@ -1,5 +1,6 @@
 {
-  "BTTPresetName" : "Default",
+  "BTTPresetName" : "Alex",
+  "BTTPresetColor" : "86.819850, 222.615000, 184.139708, 255.000000",
   "BTTGeneralSettings" : {
     "BTTPathSampleSize" : 100,
     "BTTCMOnTop" : true,
@@ -142,16 +143,8 @@
     "showOtherTriggersTab" : true,
     "BSTSnapAreaDefaultPictoDistanceFromLeft" : 0.10000000149011612
   },
-  "BTTPresetUUID" : "55A72C3C-DCB8-4C04-96D6-9226C8AA1717",
+  "BTTPresetUUID" : "D28E1A9D-65C3-4413-B094-71C57EC0DCAD",
   "BTTPresetContent" : [
-    {
-      "BTTAppBundleIdentifier" : "com.apple.finder",
-      "BTTAppName" : "Finder",
-      "BTTAppAutoInvertIcon" : 1,
-      "BTTTriggers" : [
-
-      ]
-    },
     {
       "BTTAppBundleIdentifier" : "BT.G",
       "BTTAppName" : "Global",
@@ -177,7 +170,81 @@
           "BTTOrder" : 0,
           "BTTDisplayOrder" : 0,
           "BTTAutoAdaptToKeyboardLayout" : 0
+        },
+        {
+          "BTTTriggerType" : 0,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : -1,
+          "BTTPredefinedActionName" : "No Action",
+          "BTTLayoutIndependentActionChar" : "f",
+          "BTTAutoAdaptActionToKeyboardLayout" : true,
+          "BTTShortcutToSend" : "58,3",
+          "BTTAdditionalConfiguration" : "655394",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 2332,
+          "BTTRepeatDelay" : 0,
+          "BTTUUID" : "8474D9DE-F3BB-448F-A905-57B5B549F8CB",
+          "BTTTriggerOnDown" : 1,
+          "BTTNotesInsteadOfDescription" : 0,
+          "BTTLayoutIndependentChar" : "s",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 1,
+          "BTTShortcutModifierKeys" : 655360,
+          "BTTOrder" : 3,
+          "BTTDisplayOrder" : 0,
+          "BTTAutoAdaptToKeyboardLayout" : 0
+        },
+        {
+          "BTTTriggerType" : 0,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 175,
+          "BTTPredefinedActionName" : "Resize window to Right Two Thirds",
+          "BTTAdditionalConfiguration" : "655394",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 2332,
+          "BTTRepeatDelay" : 0,
+          "BTTUUID" : "4FE04609-D67D-4079-9753-9BF1ED9397AB",
+          "BTTTriggerOnDown" : 1,
+          "BTTNotesInsteadOfDescription" : 0,
+          "BTTLayoutIndependentChar" : "d",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 2,
+          "BTTShortcutModifierKeys" : 655360,
+          "BTTOrder" : 2,
+          "BTTDisplayOrder" : 0,
+          "BTTAutoAdaptToKeyboardLayout" : 0
+        },
+        {
+          "BTTTriggerType" : 0,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 174,
+          "BTTPredefinedActionName" : "Resize window to Left Two Thirds",
+          "BTTAdditionalConfiguration" : "655394",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 2332,
+          "BTTRepeatDelay" : 0,
+          "BTTUUID" : "6B505A8B-28E4-4371-906D-6C7E8B282BC0",
+          "BTTTriggerOnDown" : 1,
+          "BTTNotesInsteadOfDescription" : 0,
+          "BTTLayoutIndependentChar" : "a",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 0,
+          "BTTShortcutModifierKeys" : 655360,
+          "BTTOrder" : 1,
+          "BTTDisplayOrder" : 0,
+          "BTTAutoAdaptToKeyboardLayout" : 0
         }
+      ]
+    },
+    {
+      "BTTAppBundleIdentifier" : "com.apple.finder",
+      "BTTAppName" : "Finder",
+      "BTTAppAutoInvertIcon" : 1,
+      "BTTTriggers" : [
+
       ]
     }
   ],
