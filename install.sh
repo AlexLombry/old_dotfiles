@@ -31,6 +31,13 @@ function brewbundle() {
     esac
 }
 
+function docker_install() {
+    curl -O https://download.docker.com/mac/stable/Docker.dmg $HOME/Downloads/Docker.dmg
+    hdiutil attach -nobrowse $HOME/Downloads/Docker.dmg
+    rsync -a /Volumes/Docker/Docker.app /Applications/
+    hdiutil detach -quiet /Volumes/Docker
+}
+
 function main() {
     setup_color
     xcodetools
@@ -50,10 +57,15 @@ function main() {
     running "Running Task !\n"
     task --list
     $(brew --prefix)/opt/fzf/install
-    
+    ok
+
     running "Installing Python"
     curl https://bootstrap.pypa.io/get-pip.py -o "$HOME/Downloads/get-pip.py"
     python "$HOME/Downloads/get-pip.py" --user
+    ok
+
+    running "Installing Docker"
+    docker_install
     ok
 }
 
