@@ -5,6 +5,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
+tap "homebrew/cask-drivers"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "jlhonora/lsusb"
@@ -31,6 +32,17 @@ cask "skype"
 cask "slack"
 cask "sublime-text"
 cask "suspicious-package"
+cask "jetbrains-toolbox"
+cask "transmission"
+cask "oracle-jdk"
+cask "steelseries-engine"
+cask "notion"
+cask "logitech-options"
+cask "microsoft-office"
+cask "postman"
+cask "pritunl"
+cask "iMazing"
+cask "1password"
 
 # CLI software
 brew "ack"
@@ -77,10 +89,11 @@ brew "mycli"
 brew "speedtest"
 
 # Languages
-brew "php", restart_service: true, link: true
+# brew "php", restart_service: true, link: true
 brew "node"
 brew "yarn"
 brew "go"
+brew "nvm"
 
 # Font face
 cask "font-fira-code"
@@ -98,4 +111,4 @@ mas "iMazing HEIC Converter", id: 1292198261
 mas "iNet Network Scanner", id: 403304796
 mas "Parcel", id: 639968404
 mas "The Unarchiver", id: 425424353
-mas "Xcode", id: 497799835
+# mas "Xcode", id: 497799835
