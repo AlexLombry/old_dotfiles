@@ -363,7 +363,7 @@ function starter-api-platform()
     fi
 }
 
-function updateMac() {
+function upgrade_mac() {
     sudo softwareupdate -i -a
     brew update
     brew upgrade
@@ -374,6 +374,7 @@ function updateMac() {
     sudo gem update
     sudo gem cleanup
     composer self-update
+
 }
 
 function toMP3() {
