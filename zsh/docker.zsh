@@ -68,4 +68,5 @@ function cleanup_docker() {
     docker system prune -fa
     docker rmi $(docker images -q -f dangling=true)
     docker rm $(docker ps -q -f status=exited)
+    docker volume rm $(docker volume ls -q)
 }
