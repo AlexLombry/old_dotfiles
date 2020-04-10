@@ -47,3 +47,4 @@ function gsend()
 
 alias hb="hub browse"
 alias lb="lab browse"
+alias glfh="git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -10"
