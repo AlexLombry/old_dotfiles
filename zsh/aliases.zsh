@@ -182,3 +182,5 @@ alias gentags="ctags -R --exclude=.git --exclude=node_modules"
 # ImageMagick 
 alias heictojpg="magick convert $1 $1.jpg"
 alias heictojpgdir="magick mogrify -monitor -format jpg *.HEIC"
+
+alias meh="echo '¯\_(ツ)_/¯' | pbcopy"
