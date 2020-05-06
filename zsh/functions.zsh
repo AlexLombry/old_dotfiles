@@ -363,7 +363,7 @@ function starter-api-platform()
     fi
 }
 
-function upgrade_mac() {
+function sysupdate() {
     sudo softwareupdate -i -a
     brew update
     brew upgrade
