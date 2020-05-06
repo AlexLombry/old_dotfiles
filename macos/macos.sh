@@ -19,6 +19,9 @@ sudo spctl --master-disable
 running "not showing hidden files by default"
 defaults write com.apple.Finder AppleShowAllFiles -bool false
 
+running "Schedule update once a day"
+defaults write SoftwareUpdate ScheduleFrequency -int 1
+
 running "Disable smart quotes and dashes"
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
