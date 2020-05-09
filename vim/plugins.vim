@@ -45,6 +45,9 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" Autoload ctags
+Plugin 'ludovicchabant/vim-gutentags'
+
 " Vundle configuration
 call vundle#end()            " required
 filetype plugin indent on    " required
