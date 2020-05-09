@@ -41,6 +41,10 @@ Plugin 'matthewbdaly/vim-filetype-settings'
 
 Plugin 'chriskempson/base16-vim'
 
+" Looking
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " Vundle configuration
 call vundle#end()            " required
 filetype plugin indent on    " required

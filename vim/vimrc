@@ -1,6 +1,7 @@
 " Disable vi compatibility
 set nocompatible
 
+set autoread " Autoread the file if modified outside of Vim
 " source plugins file
 so ~/.dotfiles/vim/plugins.vim
 
@@ -14,8 +15,15 @@ let mapleader = ';'
 " Let's activate line numbers.
 set relativenumber
 set noswapfile
-"" Status bar
-set laststatus=2
+set laststatus=2 " Always show the status bar
+set cursorline " Highlight the line where is the cursor
+set mouse=a " Enable mouse scrooling (just in case)
+set title " Show current editing file in title (tab title for example)
+
+" Swap and backup file options
+set noswapfile
+set nobackup
+set nowb
 
 " remove trailing whitespaces
 command! FixWhitespace :%s/\s\+$//e
@@ -110,17 +118,19 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
 
+" Indentation options
+set autoindent               " always set autoindenting on
+set expandtab                " expand tabs by default (overloadable per file type later)
+set tabstop=4                " a tab is four spaces
+set smarttab
+set softtabstop=4            " when hitting <BS>, pretend like a tab is removed, even if spaces
+set shiftwidth=4             " number of spaces to use for autoindenting
+
 set nohidden
 set showmode                 " always show what mode we're currently editing in
 set nowrap                   " don't wrap lines
-set tabstop=4                " a tab is four spaces
-set smarttab
 set tags=tags
-set softtabstop=4            " when hitting <BS>, pretend like a tab is removed, even if spaces
-set expandtab                " expand tabs by default (overloadable per file type later)
-set shiftwidth=4             " number of spaces to use for autoindenting
 set shiftround               " use multiple of shiftwidth when indenting with '<' and '>'
-set autoindent               " always set autoindenting on
 set number                   " always show line numbers
 
 " -- Search
@@ -132,7 +142,6 @@ set timeout timeoutlen=200 ttimeoutlen=100
 set visualbell               " don't beep
 set noerrorbells             " don't beep
 set autowrite                " Save on buffer switch
-set mouse=a
 set showmatch
 set showcmd                  " show command in status line
 set scrolloff=1
@@ -305,3 +314,7 @@ let g:NERDTreeCreatePrefix='silent keepalt keepjumps'
 " nodes.
 let g:NERDTreeMouseMode=2
 
+
+" Undo works
+set undofile " Maintain undo between session
+set undodir=~/.vim/undodir
