@@ -20,6 +20,7 @@ cp -R ~/.dotfiles/vim/colors ~/.vim/
 
 running "Cloning Vundle for vim"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 
 running "Launch Vim and configuring it"
 vim +PluginInstall +qall
