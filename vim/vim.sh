@@ -7,7 +7,7 @@ running "Create vim swap and backup dir"
 rm -rf ~/.vim
 mv ~/.vimrc ~/.vimrc.`date +%Y-%m-%d.%H:%M:%S`.autobackup
 mv ~/.ideavimrc ~/.ideavimrc.`date +%Y-%m-%d.%H:%M:%S`.autobackup
-mkdir -p ~/.vim/{backups,swap,bundle,colors,autoload}
+mkdir -p ~/.vim/{backups,swap,bundle,colors,autoload,undodir}
 
 pwd="$(pwd)"
 
