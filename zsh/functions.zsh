@@ -69,7 +69,7 @@ function colours() {
 }
 
 # Create a new directory and enter it
-function md() {
+function mkcd() {
     mkdir -p "$@" && cd "$@"
 }
 
@@ -83,7 +83,7 @@ function f() {
 }
 
 # get the gps coordinates from a picture
-function lats_from_picture {
+function lats-from-picture {
     lat=$(mdls $1 | grep Latitude | awk '{print $3}')
     long=$(mdls $1 | grep Longitude | awk '{print $3}')
     echo Photo was taken at $lat / $long
@@ -93,12 +93,6 @@ function lats_from_picture {
     if [ -n "$lat" ]; then
         open https://www.google.fr/maps/search/$lat,$long
     fi
-}
-
-# take this repo and copy it to somewhere else minus the .git stuff.
-function git-export(){
-    mkdir -p "$1"
-    git archive master | tar -x -C "$1"
 }
 
 # get gzipped size
@@ -314,11 +308,11 @@ function o() {
     fi;
 }
 
-function videoduration() {
+function video-duration() {
     find . -type f -exec mediainfo --Inform="General;%Duration%" "{}" \; 2>/dev/null | awk '{s+=$1/1000} END {h=s/3600; s=s%3600; printf "%.2d:%.2d\n", int(h), int(s/60)}'
 }
 
-function rename_sf_db() {
+function rename-sf-db() {
     sed -i -- "s/db_user:db_password@127.0.0.1:3306\/db_name/root:root@mysql:3306\/$1/g" .env
 }
 
@@ -330,7 +324,7 @@ function sonar() {
   -Dsonar.login=$2
 }
 
-function minimal_php_setup_for_composer() {
+function minimal-php-setup-for-composer() {
     composer require --dev roave/security-advisories:dev-master sebastian/phpcpd phploc/phploc phpstan/phpstan phpmd/phpmd
 }
 
@@ -377,7 +371,7 @@ function sysupdate() {
 
 }
 
-function toMP3() {
+function to-mp3() {
     for f in *.ac3; do
         ffmpeg -i "$f" "$f.mp3"
         # /usr/bin/afconvert -d '.mp3' -f MPG3 "$f" -o "$f.mp3"

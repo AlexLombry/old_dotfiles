@@ -50,5 +50,5 @@ function laraclean() {
 }
 
 function fixer() {
-    php -d memory_limit=-1 vendor/bin/php-cs-fixer fix -vvv --diff --dry-run --using-cache=no
+    php -d memory_limit=-1 vendor/bin/php-cs-fixer fix -vvv --diff --using-cache=no
 }

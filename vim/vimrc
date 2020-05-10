@@ -10,10 +10,10 @@ syntax enable
 set backspace=indent,eol,start
 
 "The default is \, but a comma is much better.
-let mapleader = ';'
+let mapleader = ','
 
 " Let's activate line numbers.
-set relativenumber
+" set relativenumber
 set noswapfile
 set laststatus=2 " Always show the status bar
 set cursorline " Highlight the line where is the cursor
@@ -245,7 +245,9 @@ nmap <leader>m :call PhpCsFixerFixFile()<cr>
 autocmd BufWritePre *.php :%s/\s\+$//e
 
 " Delete all buffer
-nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
+nmap <silent> <Leader>da :exec "1," . bufnr('$') . "bd"<cr>
+map <C-K> :bprev<CR>
+map <C-J> :bnext<CR>”
 
 " turn off nohlsearch
 nmap <silent> <leader><Space> :nohlsearch<CR>
