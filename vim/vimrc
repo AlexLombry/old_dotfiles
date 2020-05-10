@@ -245,7 +245,7 @@ autocmd BufWritePre *.php :%s/\s\+$//e
 
 " Delete all buffer
 nmap <silent> <Leader>da :exec "1," . bufnr('$') . "bd"<cr>
-map <C-B> :bnext<CR>
+map <silent> <leader>b :bnext<cr>
 
 " turn off nohlsearch
 nmap <silent> <leader><Space> :nohlsearch<CR>
@@ -292,7 +292,6 @@ vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 " Extract method from selection
 vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 nnoremap <silent> gd :call phpactor#GotoDefinition()<CR>
-
 
 " TESTING PURPOSE FOR NOW, DO THOSE HELPS ME TO USE VIM
 
