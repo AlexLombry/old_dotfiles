@@ -174,9 +174,6 @@ nmap <C-L> <C-W><C-L>
 "Make it easy to edit the Vimrc file.
 nmap <Leader>vi :tabedit $MYVIMRC<cr>
 
-"Add simple highlight removal.
-nmap <Leader><space> :nohlsearch<cr>
-
 "Quickly browse to any tag/symbol in the project.
 "Tip: run ctags -R to regenerated the index.
 nmap <Leader>f :tag<space>
@@ -203,7 +200,9 @@ let NERDTreeHijackNetrw = 0
 let g:NERDTreeDirArrowCollapsible="~"
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
+
 "-------------Auto-Commands--------------"
+
 "Automatically source the Vimrc file on save.
 augroup autosourcing
     autocmd!
@@ -246,8 +245,7 @@ autocmd BufWritePre *.php :%s/\s\+$//e
 
 " Delete all buffer
 nmap <silent> <Leader>da :exec "1," . bufnr('$') . "bd"<cr>
-map <C-K> :bprev<CR>
-map <C-J> :bnext<CR>”
+map <C-B> :bnext<CR>
 
 " turn off nohlsearch
 nmap <silent> <leader><Space> :nohlsearch<CR>
