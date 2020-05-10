@@ -297,6 +297,8 @@ nnoremap <silent> gd :call phpactor#GotoDefinition()<CR>
 
 nmap <leader>l :TagbarToggle<CR>
 
+" END OF TESTING
+
 " Ignore turds left behind by Mercurial.
 let g:NERDTreeIgnore=['\.orig']
 
