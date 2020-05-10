@@ -7,8 +7,9 @@ alias docvker="docker"
 alias dovker="docker"
 alias docekr="docker"
 alias dockver="docker"
-alias fast="docker run --rm ddooo/fast"
+
 alias ldc='lazydocker'
+alias lgi='lazygit'
 alias dsf="docker-compose exec app bin/console $1"
 alias dump-docker="docker-compose exec php php /var/www/symfony/bin/console server:dump"
 alias dc="docker-compose"
@@ -28,7 +29,7 @@ function buildtravis() {
     docker exec -it $BUILDID bash -l
 }
 
-function reset_docker() {
+function reset-docker() {
     docker kill $(docker ps -q)
 
     echo "delete volumes? (y/n): "
@@ -64,7 +65,7 @@ function reset_docker() {
     fi
 }
 
-function cleanup_docker() {
+function cleanup-docker() {
     docker system prune -fa
     docker rmi $(docker images -q -f dangling=true)
     docker rm $(docker ps -q -f status=exited)

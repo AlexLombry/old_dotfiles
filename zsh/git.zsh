@@ -1,10 +1,5 @@
 # Git
 alias nah="git reset --hard; git clean -df;"
-# alias gs="git status"
-# alias gaa="git add -p"
-# alias gss="git status -sb"
-# alias gc="git commit -m"
-# alias gccc="git commit -m"
 
 alias git-count-lines="git ls-files | xargs -n1 git blame --line-porcelain | sed -n 's/^author //p' | sort -f | uniq -ic | sort -nr"
 alias wip='git status && git add . && git commit -m "Work In Progress"'
@@ -30,19 +25,17 @@ function git-rename-branch()
     git push --set-upstream origin $2
 }
 
-function git_update() {
+function git-update() {
     git pull --rebase --autostash
     git checkout develop
     git pull --rebase --autostash
     git checkout master
 }
 
-# Add commit and push all in once
-function gsend()
-{
-    git add .
-    git commit -m "$1"
-    git push
+# take this repo and copy it to somewhere else minus the .git stuff.
+function git-export(){
+    mkdir -p "$1"
+    git archive master | tar -x -C "$1"
 }
 
 alias hb="hub browse"

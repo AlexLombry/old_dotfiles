@@ -14,10 +14,6 @@ alias ...='cd ../..'
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias db="cd ~/Dropbox"
-
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias sublime=subl
 
@@ -32,7 +28,7 @@ alias grep='grep --color=auto'
 # Applications
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias chrome="/usr/bin/open -a /Applications/Google\ Chrome.app"
-alias dot="cd ~/.dotfiles; sublime ."
+alias dot="cd ~/.dotfiles; vim ."
 
 # Network
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -55,7 +51,7 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 alias map="xargs -n1"
 
 # File size
-alias fs="stat -f \"%z bytes\""
+alias fss="stat -f \"%z bytes\""
 
 # Empty the Trash on all mounted volumes and the main HDD
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
@@ -94,18 +90,18 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 # Divers
 alias loadsshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias checkphp="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
-alias vimrc="vim ~/.vimrc"
+alias vrc="vim ~/.vimrc"
 alias zrc="vim ~/.zshrc"
 alias :q="exit"
 
 # Wi-Fi Commands
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport"
-alias wifi.clean="sudo python ~/.dotfiles/tools/cleanwifi_macos.py;"
-alias wifi.reboot="networksetup -setairportpower en0 off; networksetup -setairportpower en0 on"
-alias wifi.hardware="networksetup -listallhardwareports"
-alias wifi.scan="airport scan"
-alias wifi.take="networksetup -setairportnetwork en0 $1"
-alias wifi.ssid="airport -I|awk '/^ *SSID/ {print $2}'"
+alias wifi-clean="sudo python ~/.dotfiles/tools/cleanwifi_macos.py;"
+alias wifi-reboot="networksetup -setairportpower en0 off; networksetup -setairportpower en0 on"
+alias wifi-hardware="networksetup -listallhardwareports"
+alias wifi-scan="airport scan"
+alias wifi-take="networksetup -setairportnetwork en0 $1"
+alias wifi-ssid="airport -I|awk '/^ *SSID/ {print $2}'"
 alias iface="networksetup -listallhardwareports|grep -A1 Wi-Fi|awk '/Device:/ {print $2}'"
 
 # iOS
@@ -128,15 +124,15 @@ alias httpbench="wrk -t12 -c400 -d30s"
 
 # Show network connections
 # Often useful to prefix with SUDO to see more system level network usage
-alias net.connections='lsof -l -i +L -R -V'
-alias net.established='lsof -l -i +L -R -V | grep ESTABLISHED'
+alias net-connections='lsof -l -i +L -R -V'
+alias net-established='lsof -l -i +L -R -V | grep ESTABLISHED'
 
 # Files used, anywhere on the filesystem
-alias files.usage='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep'
+alias files-usage='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep'
 # Files being opened
-alias files.open='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|grep open'
+alias files-open='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|grep open'
 # Files in use in the Users directory
-alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|grep Users'
+alias files-usage-user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|grep Users'
 
 alias deletefilerecursive="find . -type f -print0 | xargs -0 rm"
 
@@ -159,7 +155,7 @@ alias ng-lo="ngrok http $1 --subdomain=alombry"
 
 alias tojson="php ~/.dotfiles/tools/toJson.php $1"
 
-alias generate_secure_string="openssl rand -base64 32"
+alias generate-secure-string="openssl rand -base64 32"
 
 alias a="php artisan"
 alias opcode="phpdbg -p $1"
@@ -179,7 +175,7 @@ alias pri="cd ~/Code/Private"
 alias s="sublime"
 alias gentags="ctags -R --exclude=.git --exclude=node_modules"
 
-# ImageMagick 
+# ImageMagick
 alias heictojpg="magick convert $1 $1.jpg"
 alias heictojpgdir="magick mogrify -monitor -format jpg *.HEIC"
 
