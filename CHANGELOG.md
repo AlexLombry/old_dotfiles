@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.3](https://github.com/AlexLombry/dotfiles/compare/v1.2.2...v1.2.3) (2020-05-10)
+
+
+### Bug Fixes
+
+* Remove duplicates, add only next buffer ([72c8c7d](https://github.com/AlexLombry/dotfiles/commit/72c8c7d5151927adf0c06288bc477addb96780a1))
+* Restore nerdtree C-B, put Leader b for buffer ([96c5e5b](https://github.com/AlexLombry/dotfiles/commit/96c5e5b1275b2d74c1d9331f3e0d6c231b115a07))
+
 ### [1.2.2](https://github.com/AlexLombry/dotfiles/compare/v1.2.1...v1.2.2) (2020-05-10)
 
 ### [1.2.1](https://github.com/AlexLombry/dotfiles/compare/v1.2.0...v1.2.1) (2020-05-09)
