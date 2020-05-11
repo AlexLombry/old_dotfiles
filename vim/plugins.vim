@@ -20,7 +20,8 @@ Plugin 'neomake/neomake'
 Plugin 'w0rp/ale'
 
 " PHP-specific integration
-Plugin 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
+" Plugin 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
+Plugin 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
 Plugin 'ncm2/ncm2'
 Plugin 'roxma/nvim-yarp'
 Plugin 'phpactor/ncm2-phpactor'
@@ -47,6 +48,8 @@ Plugin 'vim-airline/vim-airline-themes'
 
 " Autoload ctags
 Plugin 'ludovicchabant/vim-gutentags'
+
+Plugin 'majutsushi/tagbar'
 
 " Vundle configuration
 call vundle#end()            " required

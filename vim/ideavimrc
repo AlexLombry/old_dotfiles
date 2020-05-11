@@ -12,4 +12,4 @@ set commentary
 " https://github.com/Valloric/dotfiles/blob/master/intellij/ideavimrc
 " https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf
 set surround
-let mapleader = ";"
+let mapleader = ","
