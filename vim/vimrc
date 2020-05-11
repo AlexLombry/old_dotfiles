@@ -237,7 +237,7 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-"}'<cr>
 imap jk <esc>
 
 " Run php linter on current file
-map <Leader>l :!php -l %<cr>
+map <Leader>ll :!php -l %<cr>
 nmap <leader>m :call PhpCsFixerFixFile()<cr>
 
 " Auto-remove trailing spaces
@@ -294,6 +294,8 @@ vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 nnoremap <silent> gd :call phpactor#GotoDefinition()<CR>
 
 " TESTING PURPOSE FOR NOW, DO THOSE HELPS ME TO USE VIM
+
+nmap <leader>l :TagbarToggle<CR>
 
 " Ignore turds left behind by Mercurial.
 let g:NERDTreeIgnore=['\.orig']
