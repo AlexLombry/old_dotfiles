@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.4](https://github.com/AlexLombry/dotfiles/compare/v1.2.3...v1.2.4) (2020-05-11)
+
+
+### Bug Fixes
+
+* Replace mapLeader key ([5e1f101](https://github.com/AlexLombry/dotfiles/commit/5e1f1014048e4a21343c8cb2672db735ccb175bf))
+
 ### [1.2.3](https://github.com/AlexLombry/dotfiles/compare/v1.2.2...v1.2.3) (2020-05-10)
 
 
