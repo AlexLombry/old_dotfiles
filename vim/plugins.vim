@@ -55,6 +55,12 @@ Plugin 'majutsushi/tagbar'
 " Fancy start screen
 Plugin 'mhinz/vim-startify'
 
+" Better Json Syntax Highlighting
+Plugin 'elzr/vim-json', { 'for': 'json' }
+
+" Syntax for Dockerfile
+Plugin 'ekalinin/Dockerfile.vim'
+
 " Vundle configuration
 call vundle#end()            " required
 filetype plugin indent on    " required
