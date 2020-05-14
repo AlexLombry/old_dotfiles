@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/AlexLombry/dotfiles/compare/v1.3.1...v1.4.0) (2020-05-14)
+
+
+### Features
+
+* Installation of Alacritty with config ([f26c186](https://github.com/AlexLombry/dotfiles/commit/f26c186652a2086c2c73c0bd244d2ca85ad560f2))
+
 ### [1.3.1](https://github.com/AlexLombry/dotfiles/compare/v1.3.0...v1.3.1) (2020-05-14)
 
 ## [1.3.0](https://github.com/AlexLombry/dotfiles/compare/v1.2.4...v1.3.0) (2020-05-14)
