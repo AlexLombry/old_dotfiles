@@ -122,3 +122,12 @@ tasks:
     desc: "Installation of Kymsu updater"
     cmds:
       - bash macos/kymsu.sh
+
+  alacritty:
+    silent: true
+    desc: "Configuration for Alacritty"
+    cmds:
+      - brew update
+      - brew cask install alacritty
+      - mkdir -p $HOME/.config/alacritty
+      - ln -s $PWD/config/alacritty.yml $HOME/.config/alacritty/alacritty.yml
