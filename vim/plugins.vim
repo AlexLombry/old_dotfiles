@@ -49,7 +49,11 @@ Plugin 'vim-airline/vim-airline-themes'
 " Autoload ctags
 Plugin 'ludovicchabant/vim-gutentags'
 
+" Show variables on a tab
 Plugin 'majutsushi/tagbar'
+
+" Fancy start screen
+Plugin 'mhinz/vim-startify'
 
 " Vundle configuration
 call vundle#end()            " required
