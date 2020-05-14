@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/AlexLombry/dotfiles/compare/v1.2.4...v1.3.0) (2020-05-14)
+
+
+### Features
+
+* Add Startify on Vim ([f42e59f](https://github.com/AlexLombry/dotfiles/commit/f42e59f01d0556710fb3f961d0d1a768b6bcf37f))
+
 ### [1.2.4](https://github.com/AlexLombry/dotfiles/compare/v1.2.3...v1.2.4) (2020-05-11)
 
 
