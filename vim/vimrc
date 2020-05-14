@@ -358,3 +358,6 @@ let g:startify_bookmarks = [
 
 autocmd User Startified setlocal cursorline
 nmap <leader>st :Startify<cr>
+
+" Json Syntax
+let g:vim_json_syntax_conceal = 0
