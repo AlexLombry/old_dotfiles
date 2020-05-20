@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/AlexLombry/dotfiles/compare/v1.4.0...v1.4.1) (2020-05-20)
+
+
+### Bug Fixes
+
+* Change font for iTerm ([88765d1](https://github.com/AlexLombry/dotfiles/commit/88765d14a98710c4823d907c34f71daee13248af))
+
 ## [1.4.0](https://github.com/AlexLombry/dotfiles/compare/v1.3.1...v1.4.0) (2020-05-14)
 
 
