@@ -260,8 +260,8 @@ nnoremap <silent> ^ g^
 nnoremap <silent> $ g$
 
 " Can be super anoying, when you type ( it expands the end of it
-inoremap ( ()<left>
-inoremap { {}<left>
+" inoremap ( ()<left>
+" inoremap { {}<left>
 
 " PHPActor config
 setlocal omnifunc=phpactor#Complete

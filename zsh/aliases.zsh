@@ -180,3 +180,4 @@ alias heictojpg="magick convert $1 $1.jpg"
 alias heictojpgdir="magick mogrify -monitor -format jpg *.HEIC"
 
 alias meh="echo '¯\\\_(ツ)_/¯' | pbcopy"
+alias phptags="ctags -R --fields=+aimlS --languages=php"

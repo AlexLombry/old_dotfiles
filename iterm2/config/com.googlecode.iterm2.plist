@@ -1742,11 +1742,11 @@
 	<key>HotkeyChar</key>
 	<integer>44</integer>
 	<key>HotkeyCode</key>
-	<integer>46</integer>
+	<integer>43</integer>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>HotkeyModifiers</key>
-	<integer>262401</integer>
+	<integer>524576</integer>
 	<key>IRMemory</key>
 	<integer>8</integer>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -1754,9 +1754,13 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.dotfiles/iterm2/config</string>
+	<string>~/Desktop</string>
+	<key>NSNavLastUserSetHideExtensionButtonState</key>
+	<false/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{799, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{841, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -1799,9 +1803,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>880 744 799 448 0 0 2560 1440 </string>
+	<string>1083 899 841 470 0 0 3008 1669 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>1290 1038 620 392 0 0 3200 1777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>343 181 570 450 0 0 1440 877 </string>
+	<string>409 227 810 650 0 0 3008 1669 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>723 15 704 418 0 0 1440 900 </string>
 	<key>New Bookmarks</key>
@@ -2458,11 +2464,11 @@
 			<key>Name</key>
 			<string>Alex</string>
 			<key>Non Ascii Font</key>
-			<string>RobotoMono-Regular 12</string>
+			<string>RobotoMono-Regular 15</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>RobotoMono-Regular 13</string>
+			<string>RobotoMono-Regular 16</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -2542,6 +2548,7 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.9</string>
+		<string>3.3.11</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -2553,12 +2560,12 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {3008, 1692}}</string>
 		<key>topLeft</key>
-		<string>{381, 794}</string>
+		<string>{569, 1125}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>C9CE112C-9646-4453-B596-524243A90CF2</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>43</integer>
+	<integer>100</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3357,8 +3364,12 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-15T15:06:23Z</date>
+	<date>2020-06-10T21:43:50Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>3198270154</integer>
+	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>
 	<true/>
@@ -3401,7 +3412,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.9</string>
+	<string>3.3.11</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
