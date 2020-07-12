@@ -91,8 +91,9 @@ scrolling:
 font:
   # normal (roman) font face
   normal:
-    family: Jetbrains Mono
+    # family: Jetbrains Mono
     # family: Source Code Pro for Powerline
+    family: SF Mono 
     style: Regular
 
   # Point size
