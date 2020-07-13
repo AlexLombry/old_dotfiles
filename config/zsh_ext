@@ -29,9 +29,8 @@ PATH+=:$HOME/.symfony/bin
 PATH+=:/usr/local/sbin
 PATH+=:/usr/local/opt/awscli@1/bin
 PATH+=:$HOME/Library/Python/2.7/bin
-if [ -d "$CODEFOLDER/tooling/" ]; then
-    source $CODEFOLDER/tooling/manomano.zsh
-fi
+
+source $HOME/ManoMano/tooling/manomano.zsh
 
 export HOMEBREW_FORCE_BREWED_CURL=1
 export NVM_DIR="$HOME/.nvm"
