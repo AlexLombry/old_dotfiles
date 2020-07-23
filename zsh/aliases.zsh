@@ -29,7 +29,8 @@ alias grep='grep --color=auto'
 # Applications
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias chrome="/usr/bin/open -a /Applications/Google\ Chrome.app"
-alias dot="cd ~/.dotfiles; vim ."
+alias dot="cd ~/.dotfiles"
+alias codot="cd ~/.dotfiles; code ."
 
 # Network
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
