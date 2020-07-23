@@ -182,3 +182,4 @@ alias heictojpgdir="magick mogrify -monitor -format jpg *.HEIC"
 
 alias meh="echo '¯\\\_(ツ)_/¯' | pbcopy"
 alias phptags="ctags -R --fields=+aimlS --languages=php"
+alias todo="todo -action"

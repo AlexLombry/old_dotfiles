@@ -131,3 +131,11 @@ tasks:
       - brew cask install alacritty
       - mkdir -p $HOME/.config/alacritty
       - ln -s $PWD/config/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+
+  todolist:
+    silent: true
+    desc: "Download binaries of Todolist Cli App"
+    cmds:
+      - git clone git@github.com:AlexLombry/GoList.git ~/go/src/github.com/AlexLombry/GoList
+      - echo "Make go list and build"
+      - echo "Run mv /tmp/golist/todo /usr/local/bin/todo"

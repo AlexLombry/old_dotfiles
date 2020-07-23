@@ -27,7 +27,7 @@ Plugin 'roxma/nvim-yarp'
 Plugin 'phpactor/ncm2-phpactor'
 
 " Snippets
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " Comments

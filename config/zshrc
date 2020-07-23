@@ -13,4 +13,7 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 export CODEFOLDER="$HOME/code"
 autoload -U promptinit; promptinit
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 source ~/.zsh_ext
