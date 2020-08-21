@@ -29,6 +29,7 @@ PATH+=:$HOME/.symfony/bin
 PATH+=:/usr/local/sbin
 PATH+=:/usr/local/opt/awscli@1/bin
 PATH+=:$HOME/Library/Python/2.7/bin
+PATH+=:/usr/local/opt/openjdk/bin
 
 source $HOME/ManoMano/tooling/manomano.zsh
 
@@ -45,6 +46,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 # When doing cd command the ls is launch just after
 # chpwd() ls
+
+# autocd in these paths
+cdpath=($(echo $cdpath) $HOME/ManoMano/ $HOME/ManoMano/dev-workspace/www)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
