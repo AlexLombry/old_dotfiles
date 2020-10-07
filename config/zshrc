@@ -17,3 +17,4 @@ autoload -U promptinit; promptinit
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 source ~/.zsh_ext
+source ~/.mano.zsh

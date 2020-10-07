@@ -19,6 +19,7 @@ alias dcud="docker-compose up -d"
 alias dclf="docker-compose logs -f"
 alias dps="docker ps"
 alias dcps="docker-compose ps"
+alias dsq="docker stop \$(docker ps -qa)"
 
 function buildtravis() {
     BUILDID="build-$RANDOM"

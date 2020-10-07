@@ -12,6 +12,7 @@ tap "jlhonora/lsusb"
 tap "sambadevi/powerlevel9k"
 tap "go-task/tap"
 tap "teamookla/speedtest"
+tap "mykolaharmash/git-jump"
 
 # GUI Software
 cask "tor-browser"
@@ -87,6 +88,7 @@ brew "brightness"
 brew "hadolint"
 brew "mycli"
 brew "speedtest"
+brew "git-jump"
 
 # Languages
 # brew "php", restart_service: true, link: true

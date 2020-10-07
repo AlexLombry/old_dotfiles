@@ -33,6 +33,16 @@ PATH+=:/usr/local/opt/openjdk/bin
 
 source $HOME/ManoMano/tooling/manomano.zsh
 
+#### JAVA FOR KOTLIN
+export JAVA_13_HOME=$(/usr/libexec/java_home -v13)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
+alias java13='export JAVA_HOME=$JAVA_13_HOME'
+
+# default to Java 11
+java11
+
 export HOMEBREW_FORCE_BREWED_CURL=1
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
@@ -49,6 +59,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 # autocd in these paths
 cdpath=($(echo $cdpath) $HOME/ManoMano/ $HOME/ManoMano/dev-workspace/www)
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
