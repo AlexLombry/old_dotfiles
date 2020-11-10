@@ -60,6 +60,7 @@ Plugin 'elzr/vim-json', { 'for': 'json' }
 
 " Syntax for Dockerfile
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'udalov/kotlin-vim'
 
 " Vundle configuration
 call vundle#end()            " required

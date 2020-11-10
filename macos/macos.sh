@@ -172,7 +172,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 running "Disable apple sound beep feedback"
 defaults write "com.apple.sound.beep.feedback" -int 1
 
-running "14 days for Calendar"
+running "7 days for Calendar"
 defaults write com.apple.iCal n\ days\ of\ week 7
 
 # running "Fix issue with Audio Bluetooth"
