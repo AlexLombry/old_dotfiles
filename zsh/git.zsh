@@ -38,4 +38,9 @@ function git-export(){
     git archive master | tar -x -C "$1"
 }
 
+function git-upstream() {
+    echo "Launch git branch --set-upstream-to=origin/$1 $1"
+    git branch --set-upstream-to=origin/$1 $1
+}
+
 alias glfh="git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -10"
