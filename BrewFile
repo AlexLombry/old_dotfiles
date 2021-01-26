@@ -89,7 +89,8 @@ brew "brightness"
 brew "hadolint"
 brew "mycli"
 brew "speedtest"
-brew "git-jump"
+brew "gh"
+brew "glab"
 
 # Languages
 # brew "php", restart_service: true, link: true
