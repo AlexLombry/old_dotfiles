@@ -87,7 +87,7 @@ nnoremap <silent> <leader>sh :terminal<CR>
 set t_CO=256
 set background=dark
 " colorscheme minimalist
-colorscheme base16-tomorrow
+" colorscheme base16-tomorrow
 let g:solarized_termcolors=256
 
 set anti enc=utf-8
