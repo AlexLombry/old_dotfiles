@@ -91,6 +91,12 @@ brew "mycli"
 brew "speedtest"
 brew "gh"
 brew "glab"
+brew "qlcolorcode"
+brew "qlstephen"
+brew "qlmarkdown" 
+brew "quicklook-json" 
+brew "suspicious-package" 
+brew "apparency"
 
 # Languages
 # brew "php", restart_service: true, link: true
