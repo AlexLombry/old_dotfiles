@@ -112,6 +112,7 @@ cask "font-hack-nerd-font"
 cask "font-roboto-mono"
 cask "font-source-code-pro-for-powerline"
 cask "font-cascadia"
+cask "rectangle"
 
 # GUI Software from App Store
 mas "Brightness Slider", id: 456624497
