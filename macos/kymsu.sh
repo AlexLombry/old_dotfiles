@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.dotfiles/zsh/functions.zsh
+source ~/dotfiles/zsh/functions.zsh
 
 running "Installation of Keep Your Mac Stuff Updated"
 mkdir -p "$HOME/.installation"

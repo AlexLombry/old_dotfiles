@@ -29,8 +29,8 @@ alias grep='grep --color=auto'
 # Applications
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias chrome="/usr/bin/open -a /Applications/Google\ Chrome.app"
-alias dot="cd ~/.dotfiles"
-alias codot="cd ~/.dotfiles; code ."
+alias dot="cd ~/dotfiles"
+alias codot="cd ~/dotfiles; code ."
 
 # Network
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -98,7 +98,7 @@ alias :q="exit"
 
 # Wi-Fi Commands
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport"
-alias wifi-clean="sudo python ~/.dotfiles/tools/cleanwifi_macos.py;"
+alias wifi-clean="sudo python ~/dotfiles/tools/cleanwifi_macos.py;"
 alias wifi-reboot="networksetup -setairportpower en0 off; networksetup -setairportpower en0 on"
 alias wifi-hardware="networksetup -listallhardwareports"
 alias wifi-scan="airport scan"
@@ -155,7 +155,7 @@ alias ng-web="ngrok http $1 -subdomain=webapp --region=eu"
 alias ng-api="ngrok http $1 -subdomain=webapi --region=eu"
 alias ng-lo="ngrok http $1 --subdomain=alombry"
 
-alias tojson="php ~/.dotfiles/tools/toJson.php $1"
+alias tojson="php ~/dotfiles/tools/toJson.php $1"
 
 alias generate-secure-string="openssl rand -base64 32"
 
@@ -184,5 +184,5 @@ alias heictojpgdir="magick mogrify -monitor -format jpg *.HEIC"
 alias meh="echo '¯\\\_(ツ)_/¯' | pbcopy"
 alias phptags="ctags -R --fields=+aimlS --languages=php"
 alias todo="todo -action"
-alias runmysql="cd ~/.dotfiles/tools; docker-compose up -d"
+alias runmysql="cd ~/dotfiles/tools; docker-compose up -d"
 alias speed="speedtest --server-id=24215"

@@ -15,7 +15,7 @@ curl https://raw.githubusercontent.com/AlexLombry/dotfiles/master/init.sh | bash
 ### What's going on
 If you run the init.sh script, this is what's going to happened.
 
-1. Clone this repository into the ~/.dotfiles folder
+1. Clone this repository into the ~/dotfiles folder
 2. Install the macOS Command Line Tools and accept the licence agreement
 3. Install Homebrew
 4. Install Go task

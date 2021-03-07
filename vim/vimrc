@@ -3,7 +3,7 @@ set nocompatible
 
 set autoread " Autoread the file if modified outside of Vim
 " source plugins file
-so ~/.dotfiles/vim/plugins.vim
+so ~/dotfiles/vim/plugins.vim
 
 syntax enable
 " Make backspace behave like every other editor.
@@ -351,7 +351,7 @@ let g:startify_commands = [
 
 let g:startify_bookmarks = [
     \ { 'c': '~/.vimrc' },
-    \ { 't': '~/.dotfiles/vim/plugins.vim' },
+    \ { 't': '~/dotfiles/vim/plugins.vim' },
     \ { 'g': '~/.gitconfig' },
     \ { 'z': '~/.zshrc' }
 \ ]

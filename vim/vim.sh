@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.dotfiles/zsh/functions.zsh
+source ~/dotfiles/zsh/functions.zsh
 
 brew install vim
 
@@ -16,7 +16,7 @@ ln -s $pwd/vim/plugins.vim ~/.vim/plugins.vim
 ln -s $pwd/vim/ideavimrc ~/.ideavimrc
 
 running "Add new colorscheme"
-cp -R ~/.dotfiles/vim/colors ~/.vim/
+cp -R ~/dotfiles/vim/colors ~/.vim/
 
 running "Cloning Vundle for vim"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
