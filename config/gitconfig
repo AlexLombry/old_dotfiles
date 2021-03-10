@@ -34,7 +34,7 @@
 	excludesfile = /Users/alex/.gitignore_global
     quotepath = false
     # editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
-	editor = 'vim'
+	editor = 'nvim'
 
 [color]
     ui = auto
