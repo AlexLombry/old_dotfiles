@@ -50,6 +50,7 @@ Plug 'nvim-treesitter/playground'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
+Plug 'udalov/kotlin-vim'
 
 call plug#end()
 
