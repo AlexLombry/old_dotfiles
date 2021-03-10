@@ -36,6 +36,13 @@ tasks:
       - bash vim/vim.sh
       - echo "Setup Vim done!"
 
+  neovim:
+    silent: true
+    desc: "Install NeoVim"
+    cmds:
+      - bash nvim/install.sh
+      - echo "Setup Vim done!"
+
   links:
     silent: true
     desc: "Create all dotfiles symlinks"
