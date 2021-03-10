@@ -1,3 +1,10 @@
+alias vimdiff='nvim -d'
+export EDITOR=nvim
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
+alias oldvim="\vim"
+
 # reload zsh config
 alias rld='echo "Reloading Zshrc file" && source ~/.zshrc'
 
