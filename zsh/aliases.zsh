@@ -114,10 +114,10 @@ alias simulator-list="xcrun simctl list"
 ## alias genpass="pwgen -CsB 26 1 | tr -d ' ' | tr -d '\n' | pbcopy"
 alias genpass="openssl rand -base64 32 | pbcopy"
 
-alias -s rb=vim
+alias -s rb=nvim
 alias -s log="less -MN"
 alias -s html="open"
-alias -s php=vim
+alias -s php=nvim
 
 alias mute="osascript -e 'set volume output muted true'"
 alias sup="osascript -e 'set volume 10'"
@@ -186,3 +186,4 @@ alias phptags="ctags -R --fields=+aimlS --languages=php"
 alias todo="todo -action"
 alias runmysql="cd ~/dotfiles/tools; docker-compose up -d"
 alias speed="speedtest --server-id=24215"
+alias vim=nvim
