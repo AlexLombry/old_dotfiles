@@ -97,6 +97,8 @@ brew "qlmarkdown"
 brew "quicklook-json" 
 brew "suspicious-package" 
 brew "apparency"
+brew "luarocks"
+brew "luv"
 
 # Languages
 # brew "php", restart_service: true, link: true
