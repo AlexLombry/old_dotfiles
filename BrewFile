@@ -99,6 +99,7 @@ brew "suspicious-package"
 brew "apparency"
 brew "luarocks"
 brew "luv"
+brew "ripgrep"
 
 # Languages
 # brew "php", restart_service: true, link: true
