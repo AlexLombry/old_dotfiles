@@ -26,8 +26,6 @@ Plug 'junegunn/gv.vim'
 Plug 'vim-utils/vim-man'
 Plug 'mbbill/undotree'
 
-Plug 'theprimeagen/vim-be-good'
-
 Plug 'tpope/vim-dispatch'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tpope/vim-projectionist'
@@ -47,6 +45,7 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'mhinz/vim-rfc'
+
 " prettier
 Plug 'sbdchd/neoformat'
 
@@ -62,5 +61,33 @@ Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'udalov/kotlin-vim'
 
+" Syntax
+Plug 'sheerun/vim-polyglot'
+Plug 'matthewbdaly/vim-filetype-settings'
+
+Plug 'chriskempson/base16-vim'
+
+" Looking
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Autoload ctags
+Plug 'ludovicchabant/vim-gutentags'
+
+" Show variables on a tab
+Plug 'majutsushi/tagbar'
+
+" Fancy start screen
+Plug 'mhinz/vim-startify'
+
+" Better Json Syntax Highlighting
+Plug 'elzr/vim-json', { 'for': 'json' }
+
+" Syntax for Dockerfile
+Plug 'ekalinin/Dockerfile.vim'
+
+" Cool Icons
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 

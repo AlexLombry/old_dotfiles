@@ -53,3 +53,5 @@ if (has("termguicolors"))
     set termguicolors
     hi LineNr ctermbg=NONE guibg=NONE
 endif
+
+set guifont=DroidSansMono\ Nerd\ Font:h11
