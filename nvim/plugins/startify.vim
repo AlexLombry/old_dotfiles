@@ -39,3 +39,6 @@ let g:startify_bookmarks = [
 \ ]
 
 let g:startify_enable_special = 0
+
+autocmd User Startified setlocal cursorline
+nmap <Leader>st :Startify<cr>

@@ -53,10 +53,9 @@ inoremap <C-c> <esc>
 "" Tabs
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
-nnoremap <silent> <S-t> :tabnew<CR>
 
 "" Set working directory
-nnoremap <leader>. :lcd %:p:h<CR>
+nnoremap <Leader>. :lcd %:p:h<CR>
 
 " fast save and quit
 nmap <leader>w :w<cr>
@@ -65,5 +64,12 @@ nmap <leader>wq :wq!<cr>
 
 nmap <Leader>vi :tabedit $MYVIMRC<cr>
 
-"Auto change directory to match current file ,cd
+" Auto change directory to match current file ,cd
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
+" FZF
+map <C-f> :Files<CR>
+map <Leader>b :Buffers<CR>
+nnoremap <Leader>g :Rg<CR>
+nnoremap <Leader>t :Tags<CR>
+nnoremap <Leader>m :Marks<CR>
