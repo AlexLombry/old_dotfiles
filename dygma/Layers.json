@@ -137,8 +137,9 @@
           "label": "ENTER"
         },
         {
-          "keyCode": 41,
-          "label": "ESC"
+          "keyCode": 17451,
+          "label": "1",
+          "extraLabel": "SHIFTTO"
         },
         {
           "keyCode": 4,
@@ -314,8 +315,9 @@
           "extraLabel": "SHIFTTO"
         },
         {
-          "keyCode": 80,
-          "label": "←"
+          "keyCode": 17451,
+          "label": "1",
+          "extraLabel": "SHIFTTO"
         },
         {
           "keyCode": 79,
@@ -445,9 +447,9 @@
           "verbose": "Disabled"
         },
         {
-          "keyCode": 20497,
-          "label": "UP",
-          "extraLabel": "M.Wheel"
+          "keyCode": 4690,
+          "label": "↑",
+          "extraLabel": "A+G+"
         },
         {
           "keyCode": 0,
@@ -518,19 +520,19 @@
           "verbose": "Disabled"
         },
         {
-          "keyCode": 20500,
-          "label": "LEFT",
-          "extraLabel": "M.Wheel"
+          "keyCode": 4688,
+          "label": "←",
+          "extraLabel": "A+G+"
         },
         {
-          "keyCode": 20498,
-          "label": "DOWN",
-          "extraLabel": "M.Wheel"
+          "keyCode": 4689,
+          "label": "↓",
+          "extraLabel": "A+G+"
         },
         {
-          "keyCode": 20504,
-          "label": "RIGHT",
-          "extraLabel": "M.Wheel"
+          "keyCode": 4687,
+          "label": "→",
+          "extraLabel": "A+G+"
         },
         {
           "keyCode": 0,
