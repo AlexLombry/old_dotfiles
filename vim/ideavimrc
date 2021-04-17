@@ -14,3 +14,11 @@ set commentary
 set surround
 set multiple-cursors
 let mapleader = ","
+
+" Esc command to quit faster
+inoremap <leader>. <Esc>
+inoremap <C-c> <esc>
+
+nmap <leader>w :w<cr>
+nmap <leader>q :q<cr>
+nmap <leader>wq :wq!<cr>

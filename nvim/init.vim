@@ -32,3 +32,5 @@ let g:webdevicons_enable_airline_statusline = 0
 "et g:webdevicons_enable_nerdtree = 1
 "let g:webdevicons_conceal_nerdtree_brackets = 1
 "let g:webdevicons_enable_airline_tabline = 1
+
+lua require"surround".setup{}

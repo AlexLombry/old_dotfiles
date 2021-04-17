@@ -89,5 +89,7 @@ Plug 'ekalinin/Dockerfile.vim'
 " Cool Icons
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
+
+Plug 'blackcauldron7/surround.nvim'
 call plug#end()
 
