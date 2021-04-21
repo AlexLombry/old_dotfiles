@@ -270,10 +270,8 @@
           "label": "/"
         },
         {
-          "keyCode": 229,
-          "label": "RIGHT SHIFT",
-          "extraLabel": "",
-          "verbose": "Right Shift"
+          "keyCode": 82,
+          "label": "↑"
         },
         {
           "keyCode": 224,
@@ -337,27 +335,22 @@
           "verbose": "Right Cmd"
         },
         {
-          "keyCode": 17451,
-          "label": "1",
-          "extraLabel": "SHIFTTO"
+          "keyCode": 80,
+          "label": "←"
         },
         {
-          "keyCode": 17493,
-          "label": "1",
-          "extraLabel": "MOVE"
+          "keyCode": 81,
+          "label": "↓"
         },
         {
-          "keyCode": 228,
-          "label": "RIGHT CTRL",
-          "verbose": "Right Control"
+          "keyCode": 79,
+          "label": "→"
         }
       ],
       [
         {
-          "keyCode": 65535,
-          "label": "",
-          "extraLabel": "TRANS",
-          "verbose": "Transparent"
+          "keyCode": 53,
+          "label": "`"
         },
         {
           "keyCode": 65535,
@@ -398,10 +391,6 @@
           "label": "F4"
         },
         {
-          "keyCode": 62,
-          "label": "F5"
-        },
-        {
           "keyCode": 22710,
           "label": "TRACK-",
           "extraLabel": "Media",
@@ -412,24 +401,6 @@
           "label": "PLAY",
           "extraLabel": "Media",
           "verbose": "Play / pause"
-        },
-        {
-          "keyCode": 22709,
-          "label": "TRACK+",
-          "extraLabel": "Media",
-          "verbose": "Next track"
-        },
-        {
-          "keyCode": 23786,
-          "label": "VOL-",
-          "extraLabel": "Media",
-          "verbose": "Volume down"
-        },
-        {
-          "keyCode": 23785,
-          "label": "VOL+",
-          "extraLabel": "Media",
-          "verbose": "Volume up"
         },
         {
           "keyCode": 22709,
@@ -455,9 +426,31 @@
           "verbose": "Volume up"
         },
         {
-          "keyCode": 42,
-          "label": "BACKSPACE",
-          "verbose": "Backspace"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
+        },
+        {
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
+        },
+        {
+          "keyCode": 336,
+          "label": "←",
+          "extraLabel": "C+"
+        },
+        {
+          "keyCode": 335,
+          "label": "→",
+          "extraLabel": "C+"
+        },
+        {
+          "keyCode": 2642,
+          "label": "↑",
+          "extraLabel": "A+S+"
         },
         {
           "keyCode": 43,
@@ -503,9 +496,9 @@
           "verbose": "Disabled"
         },
         {
-          "keyCode": 592,
-          "label": "←",
-          "extraLabel": "A+"
+          "keyCode": 0,
+          "label": "NO KEY",
+          "verbose": "Disabled"
         },
         {
           "keyCode": 82,
@@ -527,18 +520,19 @@
           "verbose": "Disabled"
         },
         {
-          "keyCode": 0,
-          "label": "NO KEY",
-          "verbose": "Disabled"
+          "keyCode": 2640,
+          "label": "←",
+          "extraLabel": "A+S+"
         },
         {
-          "keyCode": 40,
-          "label": "ENTER"
+          "keyCode": 2641,
+          "label": "↓",
+          "extraLabel": "A+S+"
         },
         {
-          "keyCode": 49226,
-          "label": "CAPSLOCK",
-          "extraLabel": "CTRL/"
+          "keyCode": 2639,
+          "label": "→",
+          "extraLabel": "A+S+"
         },
         {
           "keyCode": 0,
@@ -587,8 +581,10 @@
           "label": "←"
         },
         {
-          "keyCode": 81,
-          "label": "↓"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         },
         {
           "keyCode": 79,
@@ -605,16 +601,6 @@
           "verbose": "Disabled"
         },
         {
-          "keyCode": 17152,
-          "label": "NEXT",
-          "extraLabel": "LED"
-        },
-        {
-          "keyCode": 225,
-          "label": "LEFT SHIFT",
-          "verbose": "Left Shift"
-        },
-        {
           "keyCode": 0,
           "label": "NO KEY",
           "verbose": "Disabled"
@@ -648,6 +634,16 @@
           "keyCode": 0,
           "label": "NO KEY",
           "verbose": "Disabled"
+        },
+        {
+          "keyCode": 2640,
+          "label": "←",
+          "extraLabel": "A+S+"
+        },
+        {
+          "keyCode": 2639,
+          "label": "→",
+          "extraLabel": "A+S+"
         },
         {
           "keyCode": 0,
@@ -664,34 +660,40 @@
           "label": "HOME"
         },
         {
-          "keyCode": 75,
-          "label": "PAGE UP",
-          "verbose": "Page Up"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         },
         {
-          "keyCode": 78,
-          "label": "PAGE DOWN",
-          "verbose": "Page Down"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         },
         {
-          "keyCode": 77,
-          "label": "END"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         },
         {
-          "keyCode": 0,
-          "label": "NO KEY",
-          "verbose": "Disabled"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         },
         {
-          "keyCode": 49158,
-          "label": "RIGHT SHIFT",
-          "extraLabel": "OSM",
-          "verbose": "Right Shift"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         },
         {
-          "keyCode": 224,
-          "label": "LEFT CTRL",
-          "verbose": "Left Control"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         },
         {
           "keyCode": 226,
@@ -699,23 +701,28 @@
           "verbose": "Left Alt"
         },
         {
-          "keyCode": 227,
-          "label": "LEFT CMD",
-          "verbose": "Left Cmd"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         },
         {
-          "keyCode": 225,
-          "label": "LEFT SHIFT",
-          "verbose": "Left Shift"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         },
         {
-          "keyCode": 44,
-          "label": "SPACE"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         },
         {
-          "keyCode": 0,
-          "label": "NO KEY",
-          "verbose": "Disabled"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         },
         {
           "keyCode": 65535,
@@ -742,12 +749,16 @@
           "verbose": "Transparent"
         },
         {
-          "keyCode": 44,
-          "label": "SPACE"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         },
         {
-          "keyCode": 44,
-          "label": "SPACE"
+          "keyCode": 65535,
+          "label": "",
+          "extraLabel": "TRANS",
+          "verbose": "Transparent"
         }
       ],
       [
@@ -5320,105 +5331,111 @@
   },
   "colormap": [
     [
-      0,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      4,
+      4,
+      4,
+      4,
+      4,
+      1,
+      4,
+      4,
+      4,
+      4,
+      4,
+      1,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
       1,
       1,
       1,
+      11,
+      11,
+      11,
+      11,
       1,
+      7,
+      0,
+      2,
+      2,
+      2,
+      2,
       1,
-      1,
-      0,
-      4,
-      4,
-      4,
-      4,
-      4,
-      9,
-      4,
-      4,
-      4,
-      4,
-      4,
-      0,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
+      7,
+      7,
       0,
       0,
       0,
       0,
-      1,
+      0,
+      7,
+      7,
+      0,
+      0,
+      0,
+      0,
+      0,
       5,
       0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      5,
+      5,
+      1,
       11,
-      4,
-      4,
-      1,
-      1,
-      1,
-      1,
       11,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      11,
-      4,
-      4,
-      4,
-      4,
-      4,
       11,
       9,
-      9,
-      11,
+      1,
+      1,
       1,
       1,
       5,
-      9,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      5,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      5,
+      5,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      5,
+      5,
+      5,
       11,
       11,
       11,
@@ -5434,23 +5451,17 @@
       11,
       11,
       11,
-      11,
-      11,
-      11,
-      11,
-      11,
-      11,
-      11,
-      11,
-      11,
-      11,
-      11,
-      11,
-      11,
-      11,
-      11,
-      11,
-      11,
+      5,
+      5,
+      5,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
       4
     ],
     [
@@ -5461,11 +5472,11 @@
       8,
       8,
       8,
-      4,
       15,
-      13,
+      15,
+      15,
       0,
-      13,
+      15,
       13,
       7,
       13,
@@ -5487,13 +5498,13 @@
       1,
       5,
       0,
-      4,
+      15,
+      0,
+      0,
+      11,
+      7,
       8,
-      8,
-      8,
-      8,
-      8,
-      8,
+      7,
       6,
       15,
       14,
@@ -5504,19 +5515,19 @@
       14,
       11,
       15,
-      5,
+      1,
       11,
       11,
       11,
-      5,
+      1,
       15,
       14,
-      7,
-      7,
-      7,
-      7,
       15,
-      0,
+      15,
+      15,
+      14,
+      15,
+      14,
       15,
       4,
       1,
