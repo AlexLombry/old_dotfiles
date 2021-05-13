@@ -48,11 +48,16 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
+# # Base16 Shell
+# BASE16_SHELL="$HOME/.config/base16-shell/"
+# [ -n "$PS1" ] && \
+#     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+#         eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+# # White theme
+# base16_default-light
+# # Dark theme
+# # base16_default-dark
 
 # When doing cd command the ls is launch just after
 # chpwd() ls

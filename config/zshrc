@@ -1,20 +1,44 @@
+## # Default and Original ZSHRC file
+## export ZSH="/Users/alex/.oh-my-zsh"
+## ZSH_THEME="robbyrussell"
+## # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+##
+## # Would you like to use another custom folder than $ZSH/custom?
+## # ZSH_CUSTOM=/path/to/new-custom-folder
+##
+## plugins=(git)
+##
+## source $ZSH/oh-my-zsh.sh
+##
+## # User configuration
+
 export ZSH="$HOME/.oh-my-zsh"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-#ZSH_THEME="dracula"
-#ZSH_THEME="awesomepanda"
+
 ZSH_THEME="smt"
+
+# Default and Original ZSHRC file
+export ZSH="$HOME/.oh-my-zsh"
+
+# Which theme did you want to use
+ZSH_THEME="smt"
+
+# Would you like to use another custom folder than $ZSH/custom?
+ZSH_CUSTOM="$ZSH/custom"
 
 plugins=(git zsh-completions extract ssh-agent gpg-agent docker docker-compose fancy-ctrl-z)
 
+# Needed to reload plugins
 autoload -U compinit && compinit
+autoload -U promptinit; promptinit
 
 source $ZSH/oh-my-zsh.sh
 
+# User configuration
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 export CODEFOLDER="$HOME/code"
-autoload -U promptinit; promptinit
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
