@@ -667,10 +667,8 @@
           "label": "HOME"
         },
         {
-          "keyCode": 65535,
-          "label": "",
-          "extraLabel": "TRANS",
-          "verbose": "Transparent"
+          "keyCode": 82,
+          "label": "↑"
         },
         {
           "keyCode": 65535,
@@ -750,22 +748,16 @@
           "verbose": "Transparent"
         },
         {
-          "keyCode": 65535,
-          "label": "",
-          "extraLabel": "TRANS",
-          "verbose": "Transparent"
+          "keyCode": 80,
+          "label": "←"
         },
         {
-          "keyCode": 65535,
-          "label": "",
-          "extraLabel": "TRANS",
-          "verbose": "Transparent"
+          "keyCode": 81,
+          "label": "↓"
         },
         {
-          "keyCode": 65535,
-          "label": "",
-          "extraLabel": "TRANS",
-          "verbose": "Transparent"
+          "keyCode": 79,
+          "label": "→"
         }
       ],
       [
@@ -5369,7 +5361,7 @@
       4,
       4,
       1,
-      2,
+      11,
       4,
       1,
       2,
@@ -5405,7 +5397,7 @@
       4,
       1,
       1,
-      2,
+      11,
       9,
       11,
       11,
@@ -5527,15 +5519,15 @@
       11,
       11,
       1,
-      15,
+      2,
       14,
       15,
       15,
       15,
       14,
-      15,
-      14,
-      15,
+      2,
+      2,
+      2,
       4,
       1,
       1,
