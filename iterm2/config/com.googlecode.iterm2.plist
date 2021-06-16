@@ -2413,7 +2413,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.082350486236092924</real>
+			<real>0.065144899378272253</real>
 			<key>Blink Allowed</key>
 			<true/>
 			<key>Blinking Cursor</key>
@@ -2938,7 +2938,7 @@
 			<key>Title Components</key>
 			<integer>512</integer>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.044418743959407217</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
