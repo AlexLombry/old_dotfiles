@@ -445,14 +445,14 @@
           "verbose": "Transparent"
         },
         {
-          "keyCode": 336,
-          "label": "←",
-          "extraLabel": "C+"
+          "keyCode": 24579,
+          "label": "3",
+          "extraLabel": "MACRO"
         },
         {
-          "keyCode": 335,
-          "label": "→",
-          "extraLabel": "C+"
+          "keyCode": 24582,
+          "label": "6",
+          "extraLabel": "MACRO"
         },
         {
           "keyCode": 2130,
@@ -522,19 +522,19 @@
           "verbose": "Disabled"
         },
         {
-          "keyCode": 0,
-          "label": "NO KEY",
-          "verbose": "Disabled"
+          "keyCode": 24581,
+          "label": "5",
+          "extraLabel": "MACRO"
         },
         {
-          "keyCode": 2128,
-          "label": "←",
-          "extraLabel": "S+"
+          "keyCode": 24580,
+          "label": "4",
+          "extraLabel": "MACRO"
         },
         {
-          "keyCode": 2129,
-          "label": "↓",
-          "extraLabel": "S+"
+          "keyCode": 24583,
+          "label": "7",
+          "extraLabel": "MACRO"
         },
         {
           "keyCode": 2127,
@@ -605,14 +605,14 @@
           "extraLabel": "G+"
         },
         {
-          "keyCode": 0,
-          "label": "NO KEY",
-          "verbose": "Disabled"
+          "keyCode": 24578,
+          "label": "2",
+          "extraLabel": "MACRO"
         },
         {
-          "keyCode": 0,
-          "label": "NO KEY",
-          "verbose": "Disabled"
+          "keyCode": 24584,
+          "label": "8",
+          "extraLabel": "MACRO"
         },
         {
           "keyCode": 0,
