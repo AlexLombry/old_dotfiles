@@ -455,9 +455,9 @@
           "extraLabel": "MACRO"
         },
         {
-          "keyCode": 2130,
-          "label": "↑",
-          "extraLabel": "S+"
+          "keyCode": 24585,
+          "label": "9",
+          "extraLabel": "MACRO"
         },
         {
           "keyCode": 43,
