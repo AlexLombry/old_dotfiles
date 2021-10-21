@@ -26,7 +26,6 @@ let g:startify_fortune_use_unicode = 1
 let g:startify_session_persistence = 1
 
 let g:webdevicons_enable_startify = 1
-
 let g:startify_commands = [
 \   { 'up': [ 'Update Plugins', ':PlugUpdate' ] },
 \   { 'ug': [ 'Upgrade Plugin Manager', ':PlugUpgrade' ] },
@@ -38,7 +37,7 @@ let g:startify_bookmarks = [
     \ { 'z': '~/.zshrc' }
 \ ]
 
-let g:startify_enable_special = 0
+let g:startify_enable_special = 1
 
 autocmd User Startified setlocal cursorline
 nmap <Leader>st :Startify<cr>
