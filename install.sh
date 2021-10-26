@@ -67,6 +67,10 @@ function main() {
     running "Installing Docker"
     docker_install
     ok
+
+    running "Fixing fonts"
+    sudo chmod 775 ~/Library/Fonts/**/
+    ok
 }
 
 main "$@"
