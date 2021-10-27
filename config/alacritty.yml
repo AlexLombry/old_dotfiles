@@ -10,7 +10,7 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: .4
+background_opacity: .7
 window.dynamic_title: true
 
 # Font Customization
@@ -84,5 +84,4 @@ cursor:
     unfocused_hollow: true
 
 key_bindings:
-  - { key: N, mods: Control, action: SpawnNewInstance }
-
+  - { key: M, mods: Control, action: SpawnNewInstance }
