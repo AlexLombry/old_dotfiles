@@ -25,9 +25,9 @@ alias sl="ls"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias sublime=subl
 
-alias l="exa -abghl --git --color=automatic"
-alias la="exa -abghl --git --color=automatic"
-alias ll="exa -abghl --git --color=automatic"
+alias l="exa -abghl --git --color=automatic --icons"
+alias la="exa -abghl --git --color=automatic --icons"
+alias ll="exa -abghl --git --color=automatic --icons"
 alias lld="ls -l | grep ^d"
 alias gs="gst"
 # Helpers

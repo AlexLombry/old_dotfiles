@@ -1,30 +1,30 @@
 # Window Customization
 window:
   dimensions:
-    columns: 140
-    lines: 38
+    columns: 185
+    lines: 62
   padding:
     x: 35
     y: 35
-  decorations: full #Still won't show in a window manger, but will in a desktop environment
+  decorations: none #Still won't show in a window manger, but will in a desktop environment
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: .7
+background_opacity: .4
 window.dynamic_title: true
 
 # Font Customization
 font:
   normal:
-    family: Hack Nerd Font Mono
+    family: MesloLGS NF
     style: Regular
   bold:
-    family: Hack Nerd Font Mono
+    family: MesloLGS NF
     style: Bold
   italic:
-    family: Hack Nerd Font Mono
+    family: MesloLGS NF
     style: Italic
-  size: 9.5
+  size: 19.5
   offset:
     x: 0
     y: 0
@@ -85,3 +85,4 @@ cursor:
 
 key_bindings:
   - { key: N, mods: Control, action: SpawnNewInstance }
+
