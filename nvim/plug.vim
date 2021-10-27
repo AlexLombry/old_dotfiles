@@ -27,6 +27,7 @@ if has("nvim")
   " Syntax for Dockerfile
   Plug 'ekalinin/Dockerfile.vim'
   Plug 'preservim/nerdtree'
+  Plug 'udalov/kotlin-vim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

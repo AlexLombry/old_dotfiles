@@ -41,13 +41,6 @@ nmap te :tabedit
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
 
-" TAB in general mode will move to text buffer
-nnoremap <TAB> :bnext<CR>
-" SHIFT-TAB will go back
-nnoremap <S-TAB> :bprevious<CR>
-nnoremap <Tab> gt
-nnoremap <S-Tab> gT
-
 "------------------------------
 " Windows
 
@@ -73,22 +66,9 @@ nmap <C-w><down> <C-w>-
 " Auto change directory to match current file ,cd
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
-" Alternate way to save
-nnoremap <C-s> :w<CR>
-
-" Alternate way to quit
-nnoremap <C-Q> :wq!<CR>
-
-" Use control-c instead of escape
-nnoremap <C-c> <Esc>
-
 " fast save and quit
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
 nmap <leader>wq :wq!<cr>
 
-
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
