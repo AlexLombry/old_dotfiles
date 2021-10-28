@@ -1,21 +1,8 @@
-if !exists('g:loaded_completion') | finish | endif
-
 set completeopt=menuone,noinsert,noselect
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-let g:completion_confirm_key = ""
-let g:completion_chain_complete_list = {
-        \ 'default' : {
-        \   'default': [
-        \       {'complete_items': ['lsp', 'snippet', 'path']},
-        \       {'mode': '<c-p>'},
-        \       {'mode': '<c-n>'}],
-        \   'comment': []
-        \   }
-        \}
 
 lua <<EOF
 local remap = vim.api.nvim_set_keymap
@@ -25,22 +12,43 @@ if (not status) then return end
 -- skip it, if you use another global object
 _G.MUtils= {}
 
-vim.g.completion_confirm_key = ""
+  -- Setup nvim-cmp.
+  local cmp = require'cmp'
 
-MUtils.completion_confirm=function()
-  if vim.fn.pumvisible() ~= 0  then
-    if vim.fn.complete_info()["selected"] ~= -1 then
-      require'completion'.confirmCompletion()
-      return npairs.esc("<c-y>")
-    else
-      vim.api.nvim_select_popupmenu_item(0 , false , false ,{})
-      require'completion'.confirmCompletion()
-      return npairs.esc("<c-n><c-y>")
-    end
-  else
-    return npairs.autopairs_cr()
-  end
-end
+  cmp.setup({
+    mapping = {
+      ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+      ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+      ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+      ['<C-y>'] = cmp.config.disable, -- If you want to remove the default `<C-y>` mapping, You can specify `cmp.config.disable` value.
+      ['<C-e>'] = cmp.mapping({
+        i = cmp.mapping.abort(),
+        c = cmp.mapping.close(),
+      }),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    },
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+    }, {
+      { name = 'buffer' },
+    })
+  })
 
-remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
+  -- Use buffer source for `/`.
+  cmp.setup.cmdline('/', {
+    sources = {
+      { name = 'buffer' }
+    }
+  })
+
+  -- Use cmdline & path source for ':'.
+  cmp.setup.cmdline(':', {
+    sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    })
+  })
+
+
 EOF

@@ -100,6 +100,7 @@ brew "apparency"
 brew "luarocks"
 brew "luv"
 brew "ripgrep"
+brew "kotlin-language-server"
 
 # Languages
 # brew "php", restart_service: true, link: true

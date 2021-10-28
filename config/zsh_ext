@@ -30,6 +30,7 @@ PATH+=:/usr/local/sbin
 PATH+=:/usr/local/opt/awscli@1/bin
 PATH+=:$HOME/Library/Python/2.7/bin
 PATH+=:/usr/local/opt/openjdk/bin
+PATH+=:$(yarn global bin)
 
 #### JAVA FOR KOTLIN
 export JAVA_13_HOME=$(/usr/libexec/java_home -v13)
