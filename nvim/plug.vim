@@ -29,6 +29,7 @@ if has("nvim")
   " Syntax for Dockerfile
   Plug 'ekalinin/Dockerfile.vim'
   Plug 'udalov/kotlin-vim'
+  Plug 'kabouzeid/nvim-lspinstall'
 endif
 
 call plug#end()
