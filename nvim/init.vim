@@ -122,6 +122,20 @@ if has("unix")
 endif
 
 runtime ./maps.vim
+
+lua <<EOF
+  require('alex.autopairs')
+  require('alex.completion')
+  require('alex.lsp-colors')
+  require('alex.lspconfig')
+  require('alex.lspsaga')
+  require('alex.lualine')
+  require('alex.nvim-tree')
+  require('alex.tabline')
+  require('alex.telescope')
+  require('alex.treesitter')
+  require('alex.web-devicons')
+EOF
 "}}}
 
 " Syntax theme "{{{
@@ -232,3 +246,4 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 highlight NvimTreeFolderIcon guibg=blue
 
 " vim: set foldmethod=marker foldlevel=0:
+

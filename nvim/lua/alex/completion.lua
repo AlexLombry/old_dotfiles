@@ -1,10 +1,3 @@
-set completeopt=menuone,noinsert,noselect
-
-" Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-lua <<EOF
 local remap = vim.api.nvim_set_keymap
 local status, npairs = pcall(require, "nvim-autopairs")
 if (not status) then return end
@@ -49,6 +42,3 @@ _G.MUtils= {}
       { name = 'cmdline' }
     })
   })
-
-
-EOF
