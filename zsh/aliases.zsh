@@ -101,7 +101,7 @@ alias loadsshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias checkphp="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
 alias vrc="vim ~/.vimrc"
 alias zrc="vim ~/.zshrc"
-alias :q="exit"
+##alias :q="exit"
 
 # Wi-Fi Commands
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport"
