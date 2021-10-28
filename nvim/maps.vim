@@ -9,8 +9,8 @@ nnoremap x "_x
 inoremap <leader>. <Esc>
 
 " Increment/decrement
-nnoremap + <C-a>
-nnoremap - <C-x>
+" nnoremap + <C-a>
+" nnoremap - <C-x>
 
 " Delete a word backwards
 nnoremap dw vb"_d
