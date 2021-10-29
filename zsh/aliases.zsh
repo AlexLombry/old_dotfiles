@@ -194,3 +194,4 @@ alias todo="todo -action"
 alias runmysql="cd ~/dotfiles/tools; docker-compose up -d"
 alias speed="speedtest --server-id=24215"
 alias vim=nvim
+alias weather='clear && curl wttr.in'

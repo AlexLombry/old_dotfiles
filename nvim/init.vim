@@ -29,7 +29,7 @@ set ai
 set noswapfile
 set backupskip=/tmp/*,/private/tmp/*
 let g:mapleader = ","
-
+set mouse=a
 " incremental substitution (neovim)
 if has('nvim')
   set inccommand=split
