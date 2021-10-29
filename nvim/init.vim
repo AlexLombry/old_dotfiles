@@ -125,6 +125,20 @@ if has("unix")
 endif
 
 runtime ./maps.vim
+
+lua <<EOF
+require('alex.autopairs')
+require('alex.cmp')
+require('alex.lsp-colors')
+require('alex.lspconfig')
+require('alex.lspkind')
+require('alex.lspsaga')
+require('alex.lualine')
+require('alex.telescope')
+require('alex.treesitter')
+require('alex.web-devicons')
+EOF
+
 "}}}
 
 " Syntax theme "{{{
@@ -150,5 +164,37 @@ endif
 " ---------------------------------------------------------------------
 set exrc
 "}}}
+
+" CMD STUFF
+set completeopt=menuone,noinsert,noselect
+
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Fugitive stuff
+" Status line
+if !exists('*fugitive#statusline')
+  set statusline=%F\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}[L%l/%L,C%03v]
+  set statusline+=%=
+  set statusline+=%{fugitive#statusline()}
+endif
+
+cnoreabbrev g Git
+cnoreabbrev gopen GBrowse
+
+" LSPSaga
+nnoremap <silent> <C-j> :Lspsaga diagnostic_jump_next<CR>
+"nnoremap <silent> K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+nnoremap <silent> gh :Lspsaga lsp_finder<CR>
+nnoremap <silent> gp :Lspsaga preview_definition<CR>
+
+
+" Telescope
+nnoremap  <silent> ;f <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap  <silent> ;r <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap  <silent> ;b <cmd>lua require('telescope.builtin').file_browser()<cr>
+nnoremap <silent> \\ <cmd>Telescope buffers<cr>
+nnoremap <silent> ;; <cmd>Telescope help_tags<cr>
 
 " vim: set foldmethod=marker foldlevel=0:
