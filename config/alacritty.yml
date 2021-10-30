@@ -2,11 +2,11 @@ live_config_reload: true
 # Window Customization
 window:
   dimensions:
-    columns: 185
-    lines: 62
+    columns: 210
+    lines: 80
   padding:
-    x: 35
-    y: 35
+    x: 25
+    y: 25
   decorations: none #Still won't show in a window manger, but will in a desktop environment
 scrolling:
   history: 10000
