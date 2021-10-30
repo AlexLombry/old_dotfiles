@@ -67,7 +67,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 
-#
+# Show or hide secret file
 alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
@@ -76,10 +76,6 @@ alias killdock="defaults delete com.apple.dock expose-animation-duration; killal
 alias fastdock="defaults write com.apple.dock expose-animation-duration -float 0.01; killall Dock"
 
 alias killmenubar="killall -KILL SystemUIServer"
-
-# Enable/Disable Spotlight
-alias spoton="sudo mdutil -a -i on"
-alias spotoff="sudo mdutil -a -i off"
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
@@ -97,7 +93,7 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 # Divers
 alias loadsshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias checkphp="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
-alias vrc="vim ~/.vimrc"
+alias vrc="vim ~/.config/nvim/init.vim"
 alias zrc="vim ~/.zshrc"
 ##alias :q="exit"
 
@@ -149,7 +145,7 @@ alias paths='echo -e ${PATH//:/\\n}'
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 alias dss='du -sck * | sort -n'
 
-alias bubu="brew update && brew upgrade --all && brew cleanup"
+alias bubu="brew update && brew upgrade && brew cleanup"
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias bsr="brew services restart $1"
 
@@ -157,11 +153,8 @@ alias ng-web="ngrok http $1 -subdomain=webapp --region=eu"
 alias ng-api="ngrok http $1 -subdomain=webapi --region=eu"
 alias ng-lo="ngrok http $1 --subdomain=alombry"
 
-alias tojson="php ~/dotfiles/tools/toJson.php $1"
-
 alias generate-secure-string="openssl rand -base64 32"
 
-alias a="php artisan"
 alias opcode="phpdbg -p $1"
 
 alias perm_number="stat -f '%A %N' *"
@@ -171,11 +164,6 @@ alias messydesk="defaults write com.apple.finder CreateDesktop"
 
 alias bench="ab -n 500 -c 100 $1"
 
-# Go to development folders
-alias gih="cd ~/Code/GitHub"
-alias gla="cd ~/Code/GitLab"
-alias pri="cd ~/Code/Private"
-
 alias s="sublime"
 alias gentags="ctags -R --exclude=.git --exclude=node_modules"
 
@@ -184,7 +172,7 @@ alias heictojpg="magick convert $1 $1.jpg"
 alias heictojpgdir="magick mogrify -monitor -format jpg *.HEIC"
 
 alias meh="echo '¯\\\_(ツ)_/¯' | pbcopy"
-alias phptags="ctags -R --fields=+aimlS --languages=php"
+alias phptags="ctags -R --fields=+aimlS"
 alias todo="todo -action"
 alias runmysql="cd ~/dotfiles/tools; docker-compose up -d"
 alias speed="speedtest --server-id=24215"

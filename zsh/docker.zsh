@@ -3,32 +3,12 @@ function dshell() {
 }
 
 alias d="docker"
-alias docvker="docker"
-alias dovker="docker"
-alias docekr="docker"
-alias dockver="docker"
 
 alias ldc='lazydocker'
 alias lgi='lazygit'
-alias dsf="docker-compose exec app bin/console $1"
-alias dump-docker="docker-compose exec php php /var/www/symfony/bin/console server:dump"
 alias dc="docker-compose"
 alias k="kubectl"
 alias dcd="docker-compose down"
-alias dcud="docker-compose up -d"
-alias dclf="docker-compose logs -f"
-alias dps="docker ps"
-alias dcps="docker-compose ps"
-alias dsq="docker stop \$(docker ps -qa)"
-
-function buildtravis() {
-    BUILDID="build-$RANDOM"
-    INSTANCE="travisci/ci-garnet:packer-1512502276-986baf0"
-    # Run the headless server
-    docker run --name $BUILDID -dit $INSTANCE /sbin/init
-    # Run the attached client
-    docker exec -it $BUILDID bash -l
-}
 
 function reset-docker() {
     docker kill $(docker ps -q)
